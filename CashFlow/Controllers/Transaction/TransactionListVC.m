@@ -712,6 +712,12 @@
 
 #pragma mark - UISearchDisplayController Delegate
 
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+    // 検索用の tableView に、TransactionCell を register する。
+    [TransactionCell registerCell:controller.searchResultsTableView];
+}
+
 // 検索文字列が入力された
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
