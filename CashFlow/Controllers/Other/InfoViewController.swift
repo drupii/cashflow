@@ -14,7 +14,7 @@ class InfoViewController : UIViewController {
     @IBOutlet var _sendMailButton: UIButton!
     
     class func instantiate() -> UINavigationController {
-        return UIStoryboard(name: "InfoView", bundle:nil).instantiateInitialViewController() as UINavigationController
+        return UIStoryboard(name: "InfoView", bundle:nil).instantiateInitialViewController() as! UINavigationController
     }
     
     override func viewDidLoad() {
