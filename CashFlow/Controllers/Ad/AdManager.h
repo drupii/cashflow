@@ -8,8 +8,9 @@
 #import <UIKit/UIKit.h>
 
 #if FREE_VERSION
-#import "GADBannerView.h"
-#import "DFPBannerView.h"
+@import GoogleMobileAds;
+//#import "GADBannerView.h"
+//#import "DFPBannerView.h"
 
 //#define ADMOB_PUBLISHER_ID  @"a14a8b599ca8e92"  // CashFlow Free
 //#define ADMOB_MEDIATION_ID @"ca-app-pub-4621925249922081/9133593505"

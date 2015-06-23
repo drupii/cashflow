@@ -13,8 +13,9 @@
 #import "BackupVC.h"
 
 #import <iAd/iAd.h>
-#import "GADBannerView.h"
+//#import "GADBannerView.h"
 #import "AdManager.h"
+@import GoogleMobileAds;
 
 @class AssetListViewController;
 
