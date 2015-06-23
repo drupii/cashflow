@@ -19,6 +19,9 @@ target :free do
   pod 'Google-Mobile-Ads-SDK'
   pod 'AdMobMediationAdapterIAd'
 
+  pod 'NendSDK_iOS'
+  pod 'NendSDK_iOS_MediationAdapter'
+
   ### うまく動作しないため、一旦解除
   #pod 'InMobiSDK'
   #pod 'AdMobMediationAdapterInMobi', :podspec => './podspecs/AdMobMediationAdapterInMobi.podspec'
