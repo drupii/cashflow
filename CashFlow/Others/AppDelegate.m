@@ -18,6 +18,7 @@
 #import "UIDevice+Hardware.h"
 //#import "Crittercism.h"
 //#import <BugSense-iOS/BugSenseController.h>
+#import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
 #import "DropboxSecret.h"
@@ -75,9 +76,8 @@
     //[Crittercism enableWithAppID:CRITTERCISM_API_KEY];
     //[BugSenseController sharedControllerWithBugSenseAPIKey:BUGSENSE_API_KEY];
 
-    // Crashlytics
-    [Crashlytics startWithAPIKey:@"532ecad9ca165fccdfe2d04c731d6b7449375147"];
-
+    // Fabric
+    [Fabric with:@[CrashlyticsKit]];
 
     // Dropbox config
     DBSession *dbSession =

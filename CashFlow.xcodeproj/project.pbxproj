@@ -31,6 +31,10 @@
 		3E4C6775134793A400DA87F6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E50B5F91A14FBF400F5D034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E50B5F71A14FBF400F5D034 /* Localizable.strings */; };
 		3E50B5FA1A14FBF400F5D034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E50B5F71A14FBF400F5D034 /* Localizable.strings */; };
+		3E648E281B54181F00ED3AEA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E261B54181F00ED3AEA /* Fabric.framework */; };
+		3E648E291B54182000ED3AEA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E261B54181F00ED3AEA /* Fabric.framework */; };
+		3E648E2A1B54182000ED3AEA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E271B54181F00ED3AEA /* Crashlytics.framework */; };
+		3E648E2B1B54182000ED3AEA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E271B54181F00ED3AEA /* Crashlytics.framework */; };
 		3E69E8EA1616B3D800FAD808 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E69E8F21616B40D00FAD808 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69E8EB1616B3ED00FAD808 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E69E8F51616B41A00FAD808 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -323,6 +327,8 @@
 		3E50B6011A14FC1100F5D034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3E50B6021A14FC1600F5D034 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3E50B6031A14FC1900F5D034 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3E648E261B54181F00ED3AEA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = /Users/tmurakam/dev/cashflow/Pods/CrashlyticsFramework/Fabric.framework; sourceTree = "<absolute>"; };
+		3E648E271B54181F00ED3AEA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = /Users/tmurakam/dev/cashflow/Pods/CrashlyticsFramework/Crashlytics.framework; sourceTree = "<absolute>"; };
 		3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3E69E8EB1616B3ED00FAD808 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3E6F5D5E0EB8C30B0082F50A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -539,6 +545,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				3EB88E8517F6B5680045780D /* libz.dylib in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				3E648E281B54181F00ED3AEA /* Fabric.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				3E6F5D5F0EB8C30B0082F50A /* AudioToolbox.framework in Frameworks */,
 				3EB554B4103B92D700BA13D4 /* QuartzCore.framework in Frameworks */,
@@ -548,6 +555,7 @@
 				3E197BF7121271D200105B20 /* SystemConfiguration.framework in Frameworks */,
 				3E33821A1332123200861610 /* AVFoundation.framework in Frameworks */,
 				3E4C6775134793A400DA87F6 /* iAd.framework in Frameworks */,
+				3E648E2A1B54182000ED3AEA /* Crashlytics.framework in Frameworks */,
 				3E3F525014651654005CBD9A /* libsqlite3.dylib in Frameworks */,
 				CC9BF0CD63904CB28D3CCC88 /* libPods.a in Frameworks */,
 				662AB1336AD22E95E3570DB5 /* LocalAuthentication.framework in Frameworks */,
@@ -569,6 +577,7 @@
 				3E8B25B80F348C090007929E /* CoreGraphics.framework in Frameworks */,
 				3EE5E70F18A9260700B23A99 /* libNendAd.a in Frameworks */,
 				3E8B25B90F348C090007929E /* AudioToolbox.framework in Frameworks */,
+				3E648E291B54182000ED3AEA /* Fabric.framework in Frameworks */,
 				3EB554B5103B92D700BA13D4 /* QuartzCore.framework in Frameworks */,
 				3EB5552F103B930E00BA13D4 /* AddressBook.framework in Frameworks */,
 				3EB88E8617F6B5680045780D /* libz.dylib in Frameworks */,
@@ -577,6 +586,7 @@
 				3E035E9B1182B6E000711865 /* SystemConfiguration.framework in Frameworks */,
 				3E869307185F40C7007F2979 /* Social.framework in Frameworks */,
 				3E3382181332122700861610 /* Security.framework in Frameworks */,
+				3E648E2B1B54182000ED3AEA /* Crashlytics.framework in Frameworks */,
 				3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */,
 				3E3F525114651654005CBD9A /* libsqlite3.dylib in Frameworks */,
 				3EB88E8E17F702170045780D /* StoreKit.framework in Frameworks */,
@@ -649,6 +659,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E648E271B54181F00ED3AEA /* Crashlytics.framework */,
+				3E648E261B54181F00ED3AEA /* Fabric.framework */,
 				3EB691E119AA375C00C83C45 /* ImageIO.framework */,
 				3E869305185F40C1007F2979 /* Social.framework */,
 				3EFDC2DC18314BAC00070F72 /* MobileCoreServices.framework */,
@@ -1297,7 +1309,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Pods/CrashlyticsFramework/Crashlytics.framework/run 532ecad9ca165fccdfe2d04c731d6b7449375147 4a1b9ec5d0af491383edc13d851e0e4636e4845c4b8e468c5df8c445c1f917db";
+			shellScript = "./Pods/CrashlyticsFramework/Fabric.framework/run 532ecad9ca165fccdfe2d04c731d6b7449375147 4a1b9ec5d0af491383edc13d851e0e4636e4845c4b8e468c5df8c445c1f917db";
 		};
 		3E718AC219FEB548005AC821 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1310,7 +1322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Pods/CrashlyticsFramework/Crashlytics.framework/run 532ecad9ca165fccdfe2d04c731d6b7449375147 4a1b9ec5d0af491383edc13d851e0e4636e4845c4b8e468c5df8c445c1f917db";
+			shellScript = "./Pods/CrashlyticsFramework/Fabric.framework/run 532ecad9ca165fccdfe2d04c731d6b7449375147 4a1b9ec5d0af491383edc13d851e0e4636e4845c4b8e468c5df8c445c1f917db";
 		};
 		4837F226C2EA49DEAA1D3428 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1623,6 +1635,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
+					"$(PROJECT_DIR)/Pods/CrashlyticsFramework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -1647,6 +1660,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
+					"$(PROJECT_DIR)/Pods/CrashlyticsFramework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = CashFlow/Resources/Info.plist;
@@ -1677,6 +1691,7 @@
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 					"$(PROJECT_DIR)/Libraries/AdMob/AdapterIMobile",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/CrashlyticsFramework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1710,6 +1725,7 @@
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 					"$(PROJECT_DIR)/Libraries/AdMob/AdapterIMobile",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/CrashlyticsFramework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (

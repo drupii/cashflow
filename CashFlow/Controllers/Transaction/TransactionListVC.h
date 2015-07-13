@@ -15,7 +15,10 @@
 #import <iAd/iAd.h>
 //#import "GADBannerView.h"
 #import "AdManager.h"
+
+#if FREE_VERSION
 @import GoogleMobileAds;
+#endif
 
 @class AssetListViewController;
 
