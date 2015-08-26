@@ -253,7 +253,7 @@ static AdManager *theAdManager;
 
 #pragma mark - GADBannerViewDelegate
 
-- (void)adViewDidReceiveAd:(DFPBannerView *)view
+- (void)adViewDidReceiveAd:(GADBannerView *)view
 {
     NSLog(@"Ad loaded : class = %@", view.adNetworkClassName);
     _isAdLoaded = YES;
