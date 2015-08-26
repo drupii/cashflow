@@ -29,7 +29,7 @@ class InfoViewController : UIViewController {
             _purchaseButton.hidden = true
         }
         
-        var version: String = AppDelegate.appVersion()
+        let version: String = AppDelegate.appVersion()
         _versionLabel.text = "Version \(version)"
         
         _setButtonTitle(_purchaseButton, title: _L("Purchase Standard Version"))
@@ -53,19 +53,19 @@ class InfoViewController : UIViewController {
     
     @IBAction func webButtonTapped() {
         AppDelegate.trackEvent("help", action:"push", label:"help", value:0)
-        var url = NSURL(string: NSLocalizedString("HelpURL", comment:""))
+        let url = NSURL(string: NSLocalizedString("HelpURL", comment:""))
         UIApplication.sharedApplication().openURL(url!)
     }
     
     @IBAction func facebookButtonTapped() {
         AppDelegate.trackEvent("help", action:"push", label:"facebook", value:0)
-        var url = NSURL(string: "http://facebook.com/CashFlowApp")
+        let url = NSURL(string: "http://facebook.com/CashFlowApp")
         UIApplication.sharedApplication().openURL(url!)
     }
     
     @IBAction func purchaseStandardVerion() {
         AppDelegate.trackEvent("help", action:"push", label:"purchase", value:0)
-        var url = NSURL(string: "https://itunes.apple.com/jp/app/cashflow/id290776107?mt=8&uo=4")
+        let url = NSURL(string: "https://itunes.apple.com/jp/app/cashflow/id290776107?mt=8&uo=4")
         //var url = NSURL(string: "http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=290776107&mt=8")
         UIApplication.sharedApplication().openURL(url!)
     }
@@ -73,9 +73,9 @@ class InfoViewController : UIViewController {
     @IBAction func sendSupportMail() {
         AppDelegate.trackEvent("help", action:"push", label:"sendmail", value:0)
         
-        var m = SupportMail.getInstance()
+        let m = SupportMail.getInstance()
         if (!m.sendMail(self)) {
-            var v = UIAlertView(title: "Error", message: "Can't send mail", delegate: nil, cancelButtonTitle: "OK")
+            let v = UIAlertView(title: "Error", message: "Can't send mail", delegate: nil, cancelButtonTitle: "OK")
             v.show()
         }
     }
