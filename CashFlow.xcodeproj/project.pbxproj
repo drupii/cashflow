@@ -1635,14 +1635,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
-					"$(PROJECT_DIR)/Pods/CrashlyticsFramework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = CashFlow/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Libraries/AdMob/AdapterNend",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
 				PRODUCT_NAME = CashFlow;
@@ -1660,13 +1658,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
-					"$(PROJECT_DIR)/Pods/CrashlyticsFramework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = CashFlow/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Libraries/AdMob/AdapterNend",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
 				PRODUCT_NAME = CashFlow;
@@ -1691,7 +1687,6 @@
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 					"$(PROJECT_DIR)/Libraries/AdMob/AdapterIMobile",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Pods/CrashlyticsFramework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1702,7 +1697,6 @@
 				INFOPLIST_FILE = "CashFlow/Resources/Info-free.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Libraries/AdMob/AdapterNend",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
 				PRODUCT_NAME = CashFlowFree;
@@ -1725,7 +1719,6 @@
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 					"$(PROJECT_DIR)/Libraries/AdMob/AdapterIMobile",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Pods/CrashlyticsFramework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1735,7 +1728,6 @@
 				INFOPLIST_FILE = "CashFlow/Resources/Info-free.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Libraries/AdMob/AdapterNend",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
 				PRODUCT_NAME = CashFlowFree;
