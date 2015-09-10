@@ -20,8 +20,8 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
     // バージョン番号文字列を返す
     //
     class func appVersion() -> String {
-        var dict = NSBundle.mainBundle().infoDictionary as! [String:String]
-        return dict["CFBundleShortVersionString"]!
+        let dict = NSBundle.mainBundle().infoDictionary!
+        return dict["CFBundleShortVersionString"] as! String
     }
 
     class func isFreeVersion() -> Bool {
