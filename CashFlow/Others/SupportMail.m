@@ -11,6 +11,8 @@
 #import "SupportMail.h"
 #import "UIDevice+Hardware.h"
 
+#import "CashFlow-Swift.h"
+
 @implementation SupportMail
 
 static SupportMail *theInstance;

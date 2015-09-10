@@ -108,6 +108,7 @@
 		662AB18C97EB039056B19D4E /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE78751950BB4F72ADF8 /* Asset.m */; };
 		662AB1AA10C4D4C0D30FFC7D /* AssetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB77DF9FA9C3A5060A9B5 /* AssetVC.m */; };
 		662AB1C2AA7158C49334EAF6 /* SupportMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9D9EC684EED6E3555C2 /* SupportMail.m */; };
+		662AB1D7288A5760771CD027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; };
 		662AB1EA7ACDD881B671111F /* TransactionListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB5FC768CAE796CDDEC2A /* TransactionListView.storyboard */; };
 		662AB1FBA94D123DE73E8732 /* ConfigView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABB559663B1709F31433C /* ConfigView.storyboard */; };
 		662AB22C82AC33027AC91839 /* ReportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4F1B1EEDAC64D02C067 /* ReportCell.m */; };
@@ -129,7 +130,6 @@
 		662AB32ED8E8B6CDD90C4E92 /* InfoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB0D857F2C229E01A0A86 /* InfoView.storyboard */; };
 		662AB3346EF8247197E7B57A /* ReportCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABD898171C964B71187B8 /* ReportCatCell.m */; };
 		662AB33C6F671899B846DEEE /* EditDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB26BA59401CD8FCDE181 /* EditDateVC.m */; };
-		662AB353D159BDA9787C4B25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABBC76ED7A8B7FDF2872E /* main.m */; };
 		662AB368EE403D72F192DC19 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB518A2EB0E46E7308358 /* LaunchScreen.xib */; };
 		662AB3741D5C53C13EC1591A /* GenEditTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6B4A813C37CACEA1B8D /* GenEditTextVC.m */; };
 		662AB380190581C76DCC7DB0 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5A843B0137D18F91C90 /* SwiftUtils.swift */; };
@@ -177,6 +177,7 @@
 		662AB6B9A9F4ADABF69B7C54 /* ExportServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8350396E665A2067FD1 /* ExportServer.m */; };
 		662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB114258914291C3316FE /* ReportTests.m */; };
 		662AB6E3F98479830414021B /* ExportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABCB53174869FC778FDA9 /* ExportView.storyboard */; };
+		662AB70C19C4922E2397393F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; };
 		662AB72EF67749114D54020B /* AssetBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6FB8C37AC0F0BE71195 /* AssetBase.m */; };
 		662AB73777A61ED1DCC5681E /* CalculatorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB961C6EC6D996C2304E4 /* CalculatorView.storyboard */; };
 		662AB75DE7C37F698E22A88B /* DescLRU.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB13166AD062A3AD46234 /* DescLRU.m */; };
@@ -184,7 +185,6 @@
 		662AB78A217494280430CD95 /* CalcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */; };
 		662AB7A4C9491F1B02440777 /* WebServerBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3C0142643C4637E480F /* WebServerBackup.m */; };
 		662AB7B15FC748C668DB878D /* ORRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDE6B2440D05D6A85432 /* ORRecord.m */; };
-		662AB7B49D52820641D4F791 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABBC76ED7A8B7FDF2872E /* main.m */; };
 		662AB7D76DBE1FE9C9650A0A /* Ledger.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDCE99208EAC10451626 /* Ledger.m */; };
 		662AB7EFE375B501EC2EDBF4 /* AssetListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABAA20836AB99EE17C031 /* AssetListView.storyboard */; };
 		662AB804C61CE564A3A06EA8 /* ExportBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB434E5D488CE9605F27B /* ExportBase.m */; };
@@ -251,13 +251,11 @@
 		662ABBF3F9BEEB2B9343E5E0 /* EditDescView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB58889E462FBAC441E6C /* EditDescView.storyboard */; };
 		662ABBF51EAB1CD7FF1E530F /* CategoryListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662ABFD92A03C72D8D61AE38 /* CategoryListView.xib */; };
 		662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB263111447B37A3E9A60 /* LedgerTests.m */; };
-		662ABC1DD83197C1F414A219 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE80985849C286AE83AF /* AppDelegate.m */; };
 		662ABC25DF16EB432F3BE48A /* WebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB75AE68253A138C2AB3A /* WebServer.m */; };
 		662ABC4D89910A0A3E352132 /* CFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */; };
 		662ABC5386E278B457F6D73A /* AssetBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6FB8C37AC0F0BE71195 /* AssetBase.m */; };
 		662ABC54D88370A1A7DAAB05 /* EditDateView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB766200385B37D7BC644 /* EditDateView.storyboard */; };
 		662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC7E3FEE6245876F1B50 /* JournalTests.m */; };
-		662ABC94C6EF8955045CDFCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE80985849C286AE83AF /* AppDelegate.m */; };
 		662ABC95D956E3773A2EC0E4 /* ExportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB38D4410C04B96DF1C5D /* ExportVC.m */; };
 		662ABCBBE88473E97FB17DAB /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		662ABD2214EA890DFD188364 /* EditDateView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB766200385B37D7BC644 /* EditDateView.storyboard */; };
@@ -440,7 +438,6 @@
 		662AB809E5CDE381FBCA3763 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		662AB8187E121C6CC4711496 /* CurrencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 		662AB82EB1487667CBB05D82 /* BackupServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackupServer.m; sourceTree = "<group>"; };
-		662AB834891B7141D3A4A83A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		662AB8350396E665A2067FD1 /* ExportServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportServer.m; sourceTree = "<group>"; };
 		662AB86FCD18774AE9154079 /* EditMemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMemoView.xib; sourceTree = "<group>"; };
 		662AB8BF186568524BD6F97B /* EditDescVCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDescVCTests.m; sourceTree = "<group>"; };
@@ -458,6 +455,7 @@
 		662AB9AAB28ADE14CFB30ACE /* ExportBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportBase.h; sourceTree = "<group>"; };
 		662AB9D9EC684EED6E3555C2 /* SupportMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportMail.m; sourceTree = "<group>"; };
 		662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		662ABA19851F32FDCDB1002B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		662ABA2F022287478CC01609 /* AssetEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetEntry.h; sourceTree = "<group>"; };
 		662ABA2F74973F25E99AC1E1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		662ABA34C992D7C86B93C578 /* TransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionCell.m; sourceTree = "<group>"; };
@@ -480,7 +478,6 @@
 		662ABB5C2CC80A847C5DB12C /* CFCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFCalendarViewController.h; sourceTree = "<group>"; };
 		662ABB97377326AFF60ECE09 /* AssetListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetListVC.m; sourceTree = "<group>"; };
 		662ABBABD58A75D6EC5469F4 /* ExportServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportServer.h; sourceTree = "<group>"; };
-		662ABBC76ED7A8B7FDF2872E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		662ABBCF4900BC8E8DBEBF83 /* DescLRUManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRUManager.h; sourceTree = "<group>"; };
 		662ABBECC87A505590735192 /* PinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinController.m; sourceTree = "<group>"; };
 		662ABC0BBC45BD44C15D714B /* AssetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetTests.m; sourceTree = "<group>"; };
@@ -489,6 +486,7 @@
 		662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCatGraphCell.m; sourceTree = "<group>"; };
 		662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter2.m; sourceTree = "<group>"; };
 		662ABC584A2CCB4A9DD1F17A /* CashflowDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashflowDatabase.m; sourceTree = "<group>"; };
+		662ABC685A4413C6D86C01C6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		662ABC6E2E2273E1CE77A5B3 /* ViewControllerTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTestCase.h; sourceTree = "<group>"; };
 		662ABC77B99BD7662E07DA30 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
 		662ABC7E3FEE6245876F1B50 /* JournalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalTests.m; sourceTree = "<group>"; };
@@ -512,7 +510,6 @@
 		662ABE1B8C01DCFD97686C08 /* GenSelectListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenSelectListView.xib; sourceTree = "<group>"; };
 		662ABE31E0FCFE01B9244995 /* ORRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORRecord.h; sourceTree = "<group>"; };
 		662ABE78751950BB4F72ADF8 /* Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Asset.m; sourceTree = "<group>"; };
-		662ABE80985849C286AE83AF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		662ABEC51FECFB1BA6390555 /* ExportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportVC.h; sourceTree = "<group>"; };
 		662ABEC78735615895360852 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
 		662ABECFC32E98168EAA6735 /* DateFormatter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter2.h; sourceTree = "<group>"; };
@@ -917,7 +914,6 @@
 		662ABA2F6A2FBC7290D704C4 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				662AB834891B7141D3A4A83A /* AppDelegate.h */,
 				662ABC30AB29FE2EE37E5C09 /* WebServer.h */,
 				662AB29509F20565BA43545B /* DBLoadingView.h */,
 				662AB75AE68253A138C2AB3A /* WebServer.m */,
@@ -942,13 +938,13 @@
 				662AB9D9EC684EED6E3555C2 /* SupportMail.m */,
 				662AB3C0142643C4637E480F /* WebServerBackup.m */,
 				662ABF6D0B758426D5919D5B /* ExportOfx.m */,
-				662ABE80985849C286AE83AF /* AppDelegate.m */,
 				662AB70A1C5444CFF8C4C0A8 /* Config.h */,
 				662AB39DDC0D7301D1E024E0 /* ExportCsv.m */,
 				662AB5E6EBADB4068083DCBC /* UIDevice+Hardware.m */,
 				662ABF7CC9A344DB7C9AA61F /* DropboxSecret.h */,
 				662AB7FAFEB4A26F8DD2E770 /* CashFlow_Prefix.pch */,
-				662ABBC76ED7A8B7FDF2872E /* main.m */,
+				662ABC685A4413C6D86C01C6 /* AppDelegate.swift */,
+				662ABA19851F32FDCDB1002B /* AppDelegate.h */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -1481,10 +1477,9 @@
 				662AB1C2AA7158C49334EAF6 /* SupportMail.m in Sources */,
 				662AB7A4C9491F1B02440777 /* WebServerBackup.m in Sources */,
 				662AB613CA5E13EBEB478B3B /* ExportOfx.m in Sources */,
-				662ABC1DD83197C1F414A219 /* AppDelegate.m in Sources */,
 				662AB842F60291327BE646BF /* ExportCsv.m in Sources */,
 				662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */,
-				662AB353D159BDA9787C4B25 /* main.m in Sources */,
+				662AB1D7288A5760771CD027 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1552,10 +1547,9 @@
 				662AB4B65DB2951A0D24A841 /* SupportMail.m in Sources */,
 				662ABA77682F0EB6D92AB1BB /* WebServerBackup.m in Sources */,
 				662ABE7E031772A367626D2E /* ExportOfx.m in Sources */,
-				662ABC94C6EF8955045CDFCC /* AppDelegate.m in Sources */,
 				662AB93A9A20F94080B82263 /* ExportCsv.m in Sources */,
 				662AB254335CD0BABE4192B9 /* UIDevice+Hardware.m in Sources */,
-				662AB7B49D52820641D4F791 /* main.m in Sources */,
+				662AB70C19C4922E2397393F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

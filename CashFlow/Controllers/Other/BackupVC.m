@@ -10,6 +10,8 @@
 #import "DropboxBackup.h"
 #import "WebServerBackup.h"
 
+#import "CashFlow-Swift.h"
+
 @implementation BackupViewController
 {
     __weak id<BackupViewDelegate> _delegate;

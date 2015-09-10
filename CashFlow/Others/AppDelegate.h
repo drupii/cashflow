@@ -14,6 +14,7 @@
 
 #define DBNAME  @"CashFlow.db"
 
+/*
 @interface AppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic,strong) UIWindow *window;
@@ -27,6 +28,8 @@
 
 //+ (void)trackPageview:(NSString *)url;
 + (void)trackEvent:(NSString *)category action:(NSString *)action label:(NSString *)label value:(NSInteger)value;
+@end
+*/
 
 // Utility
 #define _L(msg)  NSLocalizedString(msg, @"")
@@ -39,6 +42,4 @@ void AssertFailed(const char *filename, int lineno);
 #endif
 
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-
-@end
 
