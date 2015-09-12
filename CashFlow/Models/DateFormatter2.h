@@ -9,6 +9,6 @@
 
 @interface DateFormatter2 :NSDateFormatter
 
-- (NSString *)fixDateString:(NSString *)string;
+- (nonnull NSString *)fixDateString:(nonnull NSString *)string;
 
 @end

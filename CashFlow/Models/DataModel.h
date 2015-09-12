@@ -18,46 +18,46 @@
 
 @interface DataModel : NSObject
 
-@property(nonatomic,strong) Journal *journal;
-@property(nonatomic,strong) Ledger *ledger;
-@property(nonatomic,strong) Categories *categories;
+@property(nonatomic,strong,nonnull) Journal *journal;
+@property(nonatomic,strong,nonnull) Ledger *ledger;
+@property(nonatomic,strong,nonnull) Categories *categories;
 @property(readonly) BOOL isLoadDone;
 
-+ (DataModel *)instance;
++ (nonnull DataModel *)instance;
 + (void)finalize;
 
-+ (void)setDbName:(NSString *)dbname; // for unit testing...
++ (void)setDbName:(nonnull NSString *)dbname; // for unit testing...
 
-+ (Journal *)journal;
-+ (Ledger *)ledger;
-+ (Categories *)categories;
++ (nonnull Journal *)journal;
++ (nonnull Ledger *)ledger;
++ (nonnull Categories *)categories;
 
-+ (NSDateFormatter *)dateFormatter;
-+ (NSDateFormatter *)dateFormatter:(BOOL)withDayOfWeek;
-+ (NSDateFormatter *)dateFormatter:(NSDateFormatterStyle)timeStyle withDayOfWeek:(BOOL)withDayOfWeek;
++ (nonnull NSDateFormatter *)dateFormatter;
++ (nonnull NSDateFormatter *)dateFormatter:(BOOL)withDayOfWeek;
++ (nonnull NSDateFormatter *)dateFormatter:(NSDateFormatterStyle)timeStyle withDayOfWeek:(BOOL)withDayOfWeek;
 
 
 // initializer
-- (instancetype)init;
+- (nonnull instancetype)init NS_DESIGNATED_INITIALIZER;
 
 // load/save
-- (void)startLoad:(id<DataModelDelegate>)delegate;
-- (void)loadThread:(id)dummy;
+- (void)startLoad:(nonnull id<DataModelDelegate>)delegate;
+- (void)loadThread:(nonnull id)dummy;
 - (void)load;
 
 // utility operation
 //+ (NSString*)currencyString:(double)x;
 
-- (NSInteger)categoryWithDescription:(NSString *)desc;
+- (NSInteger)categoryWithDescription:(nonnull NSString *)desc;
 
 // sql backup operation
-- (BOOL)backupDatabaseToSql:(NSString *)path;
-- (BOOL)restoreDatabaseFromSql:(NSString *)path;
-@property (nonatomic, getter=getBackupSqlPath, readonly, copy) NSString *backupSqlPath;
+- (BOOL)backupDatabaseToSql:(nonnull NSString *)path;
+- (BOOL)restoreDatabaseFromSql:(nonnull NSString *)path;
+@property (nonatomic, getter=getBackupSqlPath, readonly, copy, nonnull) NSString *backupSqlPath;
 
 // for sync
-- (void)setLastSyncRemoteRev:(NSString *)rev;
-- (BOOL)isRemoteModifiedAfterSync:(NSString *)currev;
+- (void)setLastSyncRemoteRev:(nonnull NSString *)rev;
+- (BOOL)isRemoteModifiedAfterSync:(nonnull NSString *)currev;
 - (void)setSyncFinished;
 @property (nonatomic, getter=isModifiedAfterSync, readonly) BOOL modifiedAfterSync;
 

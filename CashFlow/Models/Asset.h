@@ -31,19 +31,19 @@
 @interface Asset : AssetBase
 
 + (NSInteger)numAssetTypes;
-+ (NSArray*)typeNamesArray;
-+ (NSString*)typeNameWithType:(NSInteger)type;
-+ (NSString*)iconNameWithType:(NSInteger)type;
++ (nonnull NSArray*)typeNamesArray;
++ (nonnull NSString*)typeNameWithType:(NSInteger)type;
++ (nonnull NSString*)iconNameWithType:(NSInteger)type;
 
 - (void)rebuild;
 
 @property (nonatomic, readonly) NSInteger entryCount;
-- (AssetEntry *)entryAt:(NSInteger)n;
-- (void)insertEntry:(AssetEntry *)tr;
-- (void)replaceEntryAtIndex:(NSInteger)index withObject:(AssetEntry *)t;
+- (nonnull AssetEntry *)entryAt:(NSInteger)n;
+- (void)insertEntry:(nonnull AssetEntry *)tr;
+- (void)replaceEntryAtIndex:(NSInteger)index withObject:(nonnull AssetEntry *)t;
 - (void)deleteEntryAt:(NSInteger)n;
-- (void)deleteOldEntriesBefore:(NSDate*)date;
-- (NSInteger)firstEntryByDate:(NSDate*)date;
+- (void)deleteOldEntriesBefore:(nonnull NSDate*)date;
+- (NSInteger)firstEntryByDate:(nonnull NSDate*)date;
 
 @property (nonatomic, readonly) double lastBalance;
 - (void)updateInitialBalance;

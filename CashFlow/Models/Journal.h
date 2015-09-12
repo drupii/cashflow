@@ -17,13 +17,13 @@
 // 
 @interface Journal : NSObject <NSFastEnumeration>
 
-@property(nonatomic,readonly) NSMutableArray<Transaction *> *entries;
+@property(nonatomic,readonly,nonnull) NSMutableArray<Transaction *> *entries;
 
 - (void)reload;
 
-- (void)insertTransaction:(Transaction*)tr;
-- (void)replaceTransaction:(Transaction *)from withObject:(Transaction*)to;
-- (BOOL)deleteTransaction:(Transaction *)tr withAsset:(Asset *)asset;
-- (void)deleteAllTransactionsWithAsset:(Asset *)asset;
+- (void)insertTransaction:(nonnull Transaction*)tr;
+- (void)replaceTransaction:(nonnull Transaction *)from withObject:(nonnull Transaction*)to;
+- (BOOL)deleteTransaction:(nonnull Transaction *)tr withAsset:(nonnull Asset *)asset;
+- (void)deleteAllTransactionsWithAsset:(nonnull Asset *)asset;
 
 @end
