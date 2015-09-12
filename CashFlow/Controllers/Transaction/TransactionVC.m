@@ -29,7 +29,7 @@
 
     BOOL _isModified;
 
-    NSArray *_typeArray;
+    NSArray<NSString *> *_typeArray;
 	
     UIActionSheet *_asCancelTransaction;
     UIActionSheet *_asAction;
