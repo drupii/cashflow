@@ -25,7 +25,7 @@
 - (void)updateWithoutUpdateLRU;
 
 + (nonnull NSDate *)lastUsedDate;
-+ (void)setLastUsedDate:(nonnull NSDate *)date;
++ (void)setLastUsedDate:(nullable NSDate *)date;
 + (BOOL)hasLastUsedDate;
 
 @end

@@ -116,7 +116,7 @@
     return date;
 }
 
-+ (void)setLastUsedDate:(nonnull NSDate *)date
++ (void)setLastUsedDate:(nullable NSDate *)date
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:date forKey:@"lastUsedDate"];

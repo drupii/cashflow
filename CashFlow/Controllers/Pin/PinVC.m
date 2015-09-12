@@ -178,10 +178,18 @@
     _valueLabel.text = @"";
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD ? YES : interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark Rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 /**
  * アプリが foreground になった時の処理。

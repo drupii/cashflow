@@ -81,10 +81,6 @@ class InfoViewController : UIViewController {
     }
     
     override func shouldAutorotate() -> Bool {
-        if (isIpad()) {
-            return true
-        }
-        return interfaceOrientation == UIInterfaceOrientation.Portrait
+        return isIpad();
     }
-    
 }

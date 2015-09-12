@@ -243,11 +243,18 @@
             break;
     }
 }
-    
-#pragma mark utils
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end
