@@ -105,7 +105,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         srand(UInt32(NSDate().timeIntervalSinceReferenceDate))
 
         // 遅延実行
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "delayedLaunchProcess:", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "delayedLaunchProcess", userInfo: nil, repeats: false)
 
         print("application:didFinishLaunchingWithOptions: done")
         return true
@@ -160,7 +160,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
     }
 
     // 起動時の遅延実行処理
-    private func delayedLaunchProcess(timer: NSTimer) {
+    func delayedLaunchProcess() {
         print("delayedLaunchProcess")
 
         var tracker = GAI.sharedInstance().defaultTracker
