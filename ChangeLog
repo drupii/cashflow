@@ -1,3 +1,7 @@
+2015-09-12 : Takuya Murakami
+
+	* iOS 7 サポート終了、iOS 8 以上必須
+
 2015-07-14 : Takuya Murakami
 
 	* Crashlytics -> Fabric
