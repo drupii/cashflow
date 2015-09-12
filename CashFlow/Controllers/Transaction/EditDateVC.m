@@ -113,9 +113,9 @@
     if (aDate == nil) return; // do nothing (Clear button)
 
     // 時刻を取り出す
-    NSDateComponents *comps = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] 
-                                components:(NSHourCalendarUnit | NSMinuteCalendarUnit) 
-                                fromDate:_datePicker.date];
+    NSCalendar *greg = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [greg components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:_datePicker.date];
+
     NSInteger hour = comps.hour;
     NSInteger min = comps.minute;
     

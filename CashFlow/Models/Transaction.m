@@ -32,8 +32,8 @@
     
     if ([Config instance].dateTimeMode == DateTimeModeDateOnly) {
         // 時刻を 0:00:00 に設定
-        NSCalendar *greg = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-        NSDateComponents *dc = [greg components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:dt];
+        NSCalendar *greg = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        NSDateComponents *dc = [greg components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:dt];
         dt = [greg dateFromComponents:dc];
     }
     
