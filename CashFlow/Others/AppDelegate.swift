@@ -163,8 +163,9 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
     func delayedLaunchProcess() {
         print("delayedLaunchProcess")
 
-        var tracker = GAI.sharedInstance().defaultTracker
-        //TODO:tracker.send(GAIDictionaryBuilder.createEventWithCategory("Application", action: "launch", label: nil, value: nil).build())
+        let tracker = GAI.sharedInstance().defaultTracker
+        let dict = GAIDictionaryBuilder.createEventWithCategory("Application", action: "launch", label: nil, value: nil).build() as [NSObject: AnyObject]
+        tracker.send(dict);
     }
 
     func applicationWillResignActive(application: UIApplication) {

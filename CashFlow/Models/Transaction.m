@@ -20,7 +20,7 @@
     return ret;
 }
 
-- (instancetype)init
+- (nonnull instancetype)init
 {
     self = [super init];
 
@@ -48,7 +48,7 @@
 }
 
 
-- (instancetype)initWithDate: (NSDate*)dt description:(NSString*)desc value:(double)v
+- (nonnull instancetype)initWithDate: (nonnull NSDate*)dt description:(nonnull NSString*)desc value:(double)v
 {
     self = [super init];
 
@@ -106,7 +106,7 @@
     return date != nil;
 }
 
-+ (NSDate *)lastUsedDate
++ (nonnull NSDate *)lastUsedDate
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDate *date = [defaults objectForKey:@"lastUsedDate"];
@@ -116,7 +116,7 @@
     return date;
 }
 
-+ (void)setLastUsedDate:(NSDate *)date
++ (void)setLastUsedDate:(nonnull NSDate *)date
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:date forKey:@"lastUsedDate"];

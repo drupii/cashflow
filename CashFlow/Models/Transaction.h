@@ -21,11 +21,11 @@
 @property(nonatomic,assign) BOOL hasBalance;
 @property(nonatomic,assign) double balance;
 
-- (instancetype)initWithDate:(NSDate*)date description:(NSString*)desc value:(double)v;
+- (nonnull instancetype)initWithDate:(nonnull NSDate *)date description:(nonnull NSString *)desc value:(double)v;
 - (void)updateWithoutUpdateLRU;
 
-+ (NSDate *)lastUsedDate;
-+ (void)setLastUsedDate:(NSDate *)date;
++ (nonnull NSDate *)lastUsedDate;
++ (void)setLastUsedDate:(nonnull NSDate *)date;
 + (BOOL)hasLastUsedDate;
 
 @end
