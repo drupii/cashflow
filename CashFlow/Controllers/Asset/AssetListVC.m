@@ -619,7 +619,7 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)fromIndexPath
 }
 
 // iOS 6 later
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     if (IS_IPAD) return UIInterfaceOrientationMaskAll;
     if (IS_IPAD) return UIInterfaceOrientationPortrait;
