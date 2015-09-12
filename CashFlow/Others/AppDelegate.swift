@@ -42,7 +42,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
     // 開始処理
     //
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptionschingWithOptions: [NSObject : AnyObject]?) -> Bool {
-        println("application:didFinishLaunchingWithOptions")
+        print("application:didFinishLaunchingWithOptions")
         _application = application;
 
         // Crittercism or BugSense
@@ -63,7 +63,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.sharedInstance()])
 
         // Dropbox config
-        var dbSession = DBSession(appKey: DROPBOX_APP_KEY, appSecret: DROPBOX_APP_SECRET, root: kDBRootDropbox)
+        let dbSession = DBSession(appKey: DROPBOX_APP_KEY, appSecret: DROPBOX_APP_SECRET, root: kDBRootDropbox)
         //dbSession.delegate = self;
         DBSession.setSharedSession(dbSession);
 
@@ -72,7 +72,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         // Configure and show the window
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
-        var assetListNavigationController = UIStoryboard(name: "AssetListView", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let assetListNavigationController = UIStoryboard(name: "AssetListView", bundle: nil).instantiateInitialViewController() as! UINavigationController
 
         if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
             // iPhone 版 : Window 生成
@@ -81,10 +81,10 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
             self.window!.rootViewController = self.navigationController
         } else {
             // iPad 版 : Window 生成
-            var masterNavigationController = assetListNavigationController
-            var assetListViewController = masterNavigationController.topViewController as! AssetListViewController
+            let masterNavigationController = assetListNavigationController
+            let assetListViewController = masterNavigationController.topViewController as! AssetListViewController
 
-            var transactionListViewController = TransactionListViewController.instantiate()
+            let transactionListViewController = TransactionListViewController.instantiate()
             _detailNavigationController = UINavigationController(rootViewController: transactionListViewController)
 
             assetListViewController.splitTransactionListViewController = transactionListViewController
@@ -107,14 +107,14 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         // 遅延実行
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "delayedLaunchProcess:", userInfo: nil, repeats: false)
 
-        println("application:didFinishLaunchingWithOptions: done")
+        print("application:didFinishLaunchingWithOptions: done")
         return true
     }
 
     // Google Analytics 設定
     private func setupGoogleAnalytics() {
         // Google analytics
-        var gai = GAI.sharedInstance()
+        let gai = GAI.sharedInstance()
 
         gai.trackUncaughtExceptions = true
 
@@ -130,13 +130,13 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
 #endif
 
         // set custom dimensions
-        var version = AppDelegate.appVersion()
+        let version = AppDelegate.appVersion()
         tracker.set(GAIFields.customDimensionForIndex(2), value: version)
 
-        var dev = UIDevice.currentDevice()
+        let dev = UIDevice.currentDevice()
         //var model = dev.model()
-        var platform = dev.platform()
-        var systemVersion = dev.systemVersion
+        let platform = dev.platform()
+        let systemVersion = dev.systemVersion
 
         tracker.set(GAIFields.customDimensionForIndex(3), value: systemVersion)
         tracker.set(GAIFields.customDimensionForIndex(4), value: platform)
@@ -161,7 +161,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
 
     // 起動時の遅延実行処理
     private func delayedLaunchProcess(timer: NSTimer) {
-        println("delayedLaunchProcess")
+        print("delayedLaunchProcess")
 
         var tracker = GAI.sharedInstance().defaultTracker
         //TODO:tracker.send(GAIDictionaryBuilder.createEventWithCategory("Application", action: "launch", label: nil, value: nil).build())
@@ -199,7 +199,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
     }
 
     private func checkPin() {
-        var pinController = PinController.sharedController()
+        let pinController = PinController.sharedController()
         if (pinController != nil) {
             if (isIpad()) {
                 pinController.firstPinCheck(self.splitViewController)
@@ -224,8 +224,8 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         //UIAlertView *v;
         if (DBSession.sharedSession().handleOpenURL(url)) {
             if (DBSession.sharedSession().isLinked()) {
-                println("Dropbox linked successfully")
-                var v = UIAlertView(title: "Dropbox", message: "Login successful, please retry backup or export.",
+                print("Dropbox linked successfully")
+                let v = UIAlertView(title: "Dropbox", message: "Login successful, please retry backup or export.",
                         delegate: nil, cancelButtonTitle:"Close")
                 v.show()
             } else {
@@ -246,15 +246,15 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
  */
 
     class func trackEvent(category: String, action: String, label: String, value: Int) {
-        var tracker = GAI.sharedInstance().defaultTracker
-        var dict = GAIDictionaryBuilder.createEventWithCategory(category, action: action, label: label, value: value).build()
+        let tracker = GAI.sharedInstance().defaultTracker
+        let dict = GAIDictionaryBuilder.createEventWithCategory(category, action: action, label: label, value: value).build()
         tracker.send(dict as [NSObject : AnyObject])
     }
 
 
     // MARK: - Debug
     class func AssertFailed(filename: String, lineno: Int) {
-        var v = UIAlertView(title: "Assersion Failed", message: "\(filename) line \(lineno)", delegate: nil, cancelButtonTitle: "Close")
+        let v = UIAlertView(title: "Assersion Failed", message: "\(filename) line \(lineno)", delegate: nil, cancelButtonTitle: "Close")
         v.show()
     }
 }
