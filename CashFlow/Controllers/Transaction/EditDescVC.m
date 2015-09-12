@@ -28,7 +28,7 @@
     return [[UIStoryboard storyboardWithName:@"EditDescView" bundle:nil] instantiateInitialViewController];
 }
 
-- (id)initWithCoder:(NSCoder *)coder
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
     if (self) {
@@ -118,7 +118,7 @@
         return 1; // テキスト入力欄
     }
 
-    return [self.filteredDescArray count];
+    return (self.filteredDescArray).count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -243,7 +243,7 @@
         return;
     }
     
-    NSInteger count = [self.descArray count];
+    NSInteger count = (self.descArray).count;
     if (self.filteredDescArray == nil) {
         self.filteredDescArray = [[NSMutableArray alloc] initWithCapacity:count];
     } else {

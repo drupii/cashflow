@@ -39,7 +39,7 @@
 
 @implementation PinViewController
 
-- (id)init
+- (instancetype)init
 {
     if (IS_IPAD) {
         self = [super initWithNibName:@"PinView-ipad" bundle:nil];

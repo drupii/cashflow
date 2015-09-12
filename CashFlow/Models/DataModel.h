@@ -38,7 +38,7 @@
 
 
 // initializer
-- (id)init;
+- (instancetype)init;
 
 // load/save
 - (void)startLoad:(id<DataModelDelegate>)delegate;
@@ -53,12 +53,12 @@
 // sql backup operation
 - (BOOL)backupDatabaseToSql:(NSString *)path;
 - (BOOL)restoreDatabaseFromSql:(NSString *)path;
-- (NSString *)getBackupSqlPath;
+@property (nonatomic, getter=getBackupSqlPath, readonly, copy) NSString *backupSqlPath;
 
 // for sync
 - (void)setLastSyncRemoteRev:(NSString *)rev;
 - (BOOL)isRemoteModifiedAfterSync:(NSString *)currev;
 - (void)setSyncFinished;
-- (BOOL)isModifiedAfterSync;
+@property (nonatomic, getter=isModifiedAfterSync, readonly) BOOL modifiedAfterSync;
 
 @end

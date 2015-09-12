@@ -23,7 +23,7 @@
 
 @property(strong,readonly) DBRestClient *restClient;
 
-- (id)init:(id<DropboxBackupDelegate>)delegate;
+- (instancetype)init:(id<DropboxBackupDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 
 - (void)doSync:(UIViewController *)viewController;
 - (void)doBackup:(UIViewController *)viewController;

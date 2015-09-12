@@ -14,7 +14,7 @@
 
 @implementation Journal
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -52,7 +52,7 @@
 - (void)insertTransaction:(Transaction*)tr
 {
     NSInteger i;
-    NSInteger max = [_entries count];
+    NSInteger max = _entries.count;
     Transaction *t = nil;
 
     // 挿入位置を探す
@@ -68,7 +68,7 @@
     [tr save];
 
     // 上限チェック
-    if ([_entries count] > MAX_TRANSACTIONS) {
+    if (_entries.count > MAX_TRANSACTIONS) {
         // 最も古い取引を削除する
         // Note: 初期残高を調整するため、Asset 側で削除させる
         Transaction *t = _entries[0];
@@ -148,7 +148,7 @@ static NSInteger compareByDate(Transaction *t1, Transaction *t2, void *context)
 - (void)deleteAllTransactionsWithAsset:(Asset *)asset
 {
     Transaction *t;
-    NSInteger max = [_entries count];
+    NSInteger max = _entries.count;
 
     for (NSInteger i = 0; i < max; i++) {
         t = _entries[i];

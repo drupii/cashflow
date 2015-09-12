@@ -25,7 +25,7 @@ static NSInteger sortCatReport(id x, id y, void *context);
    @param start 開始日
    @param end 終了日
  */
-- (id)initWithAsset:(NSInteger)assetKey start:(NSDate *)start end:(NSDate *)end
+- (instancetype)initWithAsset:(NSInteger)assetKey start:(NSDate *)start end:(NSDate *)end
 {
     self = [super init];
     if (self == nil) return nil;
@@ -128,11 +128,11 @@ static NSInteger sortCatReport(id x, id y, void *context);
     
     _maxIncome = _maxOutgo = 0;
     CatReport *cr;
-    if ([_incomeCatReports count] > 0) {
+    if (_incomeCatReports.count > 0) {
         cr = _incomeCatReports[0];
         _maxIncome = cr.sum;
     }
-    if ([_outgoCatReports count] > 0) {
+    if (_outgoCatReports.count > 0) {
         cr = _outgoCatReports[0];
         _maxOutgo = cr.sum;
     }
@@ -141,7 +141,7 @@ static NSInteger sortCatReport(id x, id y, void *context);
 - (double)_sortAndTotalUp:(NSMutableArray *)ary
 {		
     // 金額が 0 のエントリを削除する
-    NSInteger count = [ary count];
+    NSInteger count = ary.count;
     for (NSInteger i = 0; i < count; i++) {
         CatReport *cr = ary[i];
         if (cr.sum == 0.0) {

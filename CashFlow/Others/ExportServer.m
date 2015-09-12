@@ -22,11 +22,11 @@
     if ([filereq isEqualToString:@"/"])
     {
         NSString *outcontent = [NSString stringWithFormat:@"HTTP/1.0 200 OK\r\nContent-Type: text/html\r\n\r\n"];
-        p = [outcontent UTF8String];
+        p = outcontent.UTF8String;
         write(s, p, strlen(p));
 		
         outcontent = [NSString stringWithFormat:@"<html><head><meta http-equiv=\"refresh\" content=\"0;url=%@\"></head></html>", _filename];
-        p = [outcontent UTF8String];
+        p = outcontent.UTF8String;
         write(s, p, strlen(p));
 		
         return;
@@ -35,12 +35,12 @@
     // Ad hoc...
     // No need to read request... Just send only one file!
     NSString *content = [NSString stringWithFormat:@"HTTP/1.0 200 OK\r\nContent-Type: %@\r\n\r\n", _contentType];
-    p = [content UTF8String];
+    p = content.UTF8String;
     write(s, p, strlen(p));
 	
-    NSInteger clen = [_contentBody length];
+    NSInteger clen = _contentBody.length;
     if (clen > 0) {
-        write(s, [_contentBody bytes], clen);
+        write(s, _contentBody.bytes, clen);
     }
 
 }

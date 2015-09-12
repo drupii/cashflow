@@ -132,7 +132,7 @@
     }
 
     currencyLabel.text = _L(@"Currency");
-    NSString *currency = [[CurrencyManager instance] baseCurrency];
+    NSString *currency = [CurrencyManager instance].baseCurrency;
     if (currency == nil) {
         currency = @"System";
     }
@@ -232,17 +232,17 @@
                     break;
                     
                 case ROW_CURRENCY:
-                    typeArray = [[NSMutableArray alloc] initWithArray:[[CurrencyManager instance] currencies]];
+                    typeArray = [[NSMutableArray alloc] initWithArray:[CurrencyManager instance].currencies];
                     [typeArray insertObject:@"System" atIndex:0];
                     gt = [GenSelectListViewController
                           genSelectListViewController:self
                           items:typeArray
                           title:_L(@"Currency")
                           identifier:ROW_CURRENCY];
-                    NSString *currency = [[CurrencyManager instance] baseCurrency];
+                    NSString *currency = [CurrencyManager instance].baseCurrency;
                     gt.selectedIndex = 0;
                     if (currency != nil) {
-                        for (int i = 1; i < [typeArray count]; i++) {
+                        for (int i = 1; i < typeArray.count; i++) {
                             if ([currency isEqualToString:typeArray[i]]) {
                                 gt.selectedIndex = i;
                                 break;

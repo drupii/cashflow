@@ -33,7 +33,7 @@
 @property(nonatomic,strong) NSMutableArray *reportEntries;
 
 - (void)generate:(NSInteger)type asset:(Asset *)asset;
-- (double)getMaxAbsValue;
+@property (nonatomic, getter=getMaxAbsValue, readonly) double maxAbsValue;
 
 @end
 
@@ -66,7 +66,7 @@
 /** カテゴリ毎の支出レポート */
 @property(nonatomic,strong,readonly) NSMutableArray *outgoCatReports;
 
-- (id)initWithAsset:(NSInteger)assetKey start:(NSDate *)start end:(NSDate *)end;
+- (instancetype)initWithAsset:(NSInteger)assetKey start:(NSDate *)start end:(NSDate *)end NS_DESIGNATED_INITIALIZER;
 
 - (BOOL)addTransaction:(Transaction*)t;
 - (void)sortAndTotalUp;
@@ -92,9 +92,9 @@
 /** 本カテゴリに含まれる Transaction 一覧 */
 @property(nonatomic,strong,readonly) NSMutableArray *transactions;
 
-- (id)initWithCategory:(NSInteger)category withAsset:(NSInteger)assetKey;
+- (instancetype)initWithCategory:(NSInteger)category withAsset:(NSInteger)assetKey NS_DESIGNATED_INITIALIZER;
 - (void)addTransaction:(Transaction*)t;
 
-- (NSString *)title;
+@property (nonatomic, readonly, copy) NSString *title;
 
 @end

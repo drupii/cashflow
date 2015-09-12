@@ -15,7 +15,7 @@
 
 @implementation Report
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     _type = REPORT_MONTHLY;
@@ -58,7 +58,7 @@
         case REPORT_DAILY:;
             dateComponents = [greg components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:firstDate];
             nextStartDay = [greg dateFromComponents:dateComponents];
-            [steps setDay:1];
+            steps.day = 1;
             break;
 
         case REPORT_WEEKLY:
@@ -66,13 +66,13 @@
             nextStartDay = [greg dateFromComponents:dateComponents];
             
             // 日曜が 1, 土曜が 7
-            NSInteger weekday = [dateComponents weekday];
+            NSInteger weekday = dateComponents.weekday;
             
             // 前週の指定曜日に設定
-            [steps setDay:- (weekday - 1) - 7+ [Config instance].startOfWeek];
+            steps.day = - (weekday - 1) - 7+ [Config instance].startOfWeek;
             
             nextStartDay = [greg dateByAddingComponents:steps toDate:nextStartDay options:0];
-            [steps setDay:7];
+            steps.day = 7;
             break;
 
         case REPORT_MONTHLY:
@@ -82,32 +82,32 @@
             NSInteger cutoffDate = [Config instance].cutoffDate;
             if (cutoffDate == 0) {
                 // 月末締め ⇒ 開始は同月1日から。
-                [dateComponents setDay:1];
+                dateComponents.day = 1;
             }
             else {
                 // 一つ前の月の締め日翌日から開始
-                NSInteger year = [dateComponents year];
-                NSInteger month = [dateComponents month];
+                NSInteger year = dateComponents.year;
+                NSInteger month = dateComponents.month;
                 month--;
                 if (month < 1) {
                     month = 12;
                     year--;
                 }
-                [dateComponents setYear:year];
-                [dateComponents setMonth:month];
-                [dateComponents setDay:cutoffDate + 1];
+                dateComponents.year = year;
+                dateComponents.month = month;
+                dateComponents.day = cutoffDate + 1;
             }
 
             nextStartDay = [greg dateFromComponents:dateComponents];
-            [steps setMonth:1];
+            steps.month = 1;
             break;
 			
         case REPORT_ANNUAL:
             dateComponents = [greg components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:firstDate];
-            [dateComponents setMonth:1];
-            [dateComponents setDay:1];
+            dateComponents.month = 1;
+            dateComponents.day = 1;
             nextStartDay = [greg dateFromComponents:dateComponents];
-            [steps setYear:1];
+            steps.year = 1;
             break;
     }
 	
@@ -124,7 +124,7 @@
         [self.reportEntries addObject:r];
 
         // レポート上限数を制限
-        if ([self.reportEntries count] > MAX_REPORT_ENTRIES) {
+        if ((self.reportEntries).count > MAX_REPORT_ENTRIES) {
             [self.reportEntries removeObjectAtIndex:0];
         }
     }
@@ -183,7 +183,7 @@
     Transaction *t = nil;
     NSInteger i;
 
-    for (i = [entries count] - 1; i >= 0; i--) {
+    for (i = entries.count - 1; i >= 0; i--) {
         t = entries[i];
         if (asset < 0) break;
         if (t.asset == asset || t.dstAsset == asset) break;

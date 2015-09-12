@@ -135,7 +135,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
 
         let dev = UIDevice.currentDevice()
         //var model = dev.model()
-        let platform = dev.platform()
+        let platform = dev.platform
         let systemVersion = dev.systemVersion
 
         tracker.set(GAIFields.customDimensionForIndex(3), value: systemVersion)

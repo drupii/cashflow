@@ -29,7 +29,7 @@
     return [[UIStoryboard storyboardWithName:@"ReportView" bundle:nil] instantiateInitialViewController];
 }
 
-- (id)initWithCoder:(NSCoder *)coder
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
     _dateFormatter = [NSDateFormatter new];
@@ -89,23 +89,23 @@
             // FALLTHROUGH
         case REPORT_DAILY:
             self.title = _L(@"Daily Report");
-            [_dateFormatter setDateFormat:@"yyyy/MM/dd"];
+            _dateFormatter.dateFormat = @"yyyy/MM/dd";
             break;
 
         case REPORT_WEEKLY:
             self.title = _L(@"Weekly Report");
-            [_dateFormatter setDateFormat:@"yyyy/MM/dd~"];
+            _dateFormatter.dateFormat = @"yyyy/MM/dd~";
             break;
 
         case REPORT_MONTHLY:
             self.title = _L(@"Monthly Report");
             //[dateFormatter setDateFormat:@"yyyy/MM"];
-            [_dateFormatter setDateFormat:@"~yyyy/MM/dd"];
+            _dateFormatter.dateFormat = @"~yyyy/MM/dd";
             break;
 
         case REPORT_ANNUAL:
             self.title = _L(@"Annual Report");
-            [_dateFormatter setDateFormat:@"yyyy"];
+            _dateFormatter.dateFormat = @"yyyy";
             break;
     }
 
@@ -173,7 +173,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_reports.reportEntries count];
+    return (_reports.reportEntries).count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -183,7 +183,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger count = [_reports.reportEntries count];
+    NSInteger count = (_reports.reportEntries).count;
     ReportEntry *report = (_reports.reportEntries)[count - indexPath.row - 1];
 	
     ReportCell *cell = (ReportCell*)[tv dequeueReusableCellWithIdentifier:@"ReportCell"];
@@ -200,7 +200,7 @@
 {
     [tv deselectRowAtIndexPath:indexPath animated:NO];
 	
-    NSInteger count = [_reports.reportEntries count];
+    NSInteger count = (_reports.reportEntries).count;
     _showingReportEntry = (_reports.reportEntries)[count - indexPath.row - 1];
 
     [self performSegueWithIdentifier:@"show" sender:self];
@@ -208,7 +208,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    CatReportViewController *vc = [segue destinationViewController];
+    CatReportViewController *vc = segue.destinationViewController;
     
     vc.title = [self _reportTitle:_showingReportEntry];
     vc.reportEntry = _showingReportEntry;

@@ -305,7 +305,7 @@
 
     // 資産タイプ範囲外対応
     NSInteger type = asset.type;
-    if (type < 0 || [_iconArray count] <= type) {
+    if (type < 0 || _iconArray.count <= type) {
         type = 0;
     }
     cell.imageView.image = _iconArray[type];
@@ -378,7 +378,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"show"]) {
-        AssetViewController *vc = [segue destinationViewController];
+        AssetViewController *vc = segue.destinationViewController;
         [vc setAssetIndex:_selectedAssetIndex];
     }
 }
@@ -543,7 +543,7 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)fromIndexPath
     //    [mAsActionButton showFromBarButtonItem:mBarActionButton animated:YES];
     //}
     
-    [_asActionButton showInView:[self view]];
+    [_asActionButton showInView:self.view];
 }
 
 - (void)_actionActionButton:(NSInteger)buttonIndex

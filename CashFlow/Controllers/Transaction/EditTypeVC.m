@@ -19,7 +19,7 @@
 
 @implementation EditTypeViewController
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithNibName:@"EditTypeView" bundle:nil];
     if (self) {
@@ -44,7 +44,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[self tableView] reloadData];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {

@@ -45,14 +45,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_catReport.transactions count];
+    return (_catReport.transactions).count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TransactionCell *cell = [TransactionCell transactionCell:tv forIndexPath:indexPath];
     
-    Transaction *t = (_catReport.transactions)[[_catReport.transactions count] - 1 - indexPath.row];
+    Transaction *t = (_catReport.transactions)[(_catReport.transactions).count - 1 - indexPath.row];
     double value;
     if (_catReport.assetKey < 0) {
         // 全資産指定の場合

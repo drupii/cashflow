@@ -66,21 +66,21 @@
 }
 
 // Storyboard では init ではなく initWithCoder が呼ばれる
-- (id)initWithCoder:(NSCoder *)coder
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
     if (self) {
         [self allClear];
         _numberFormatter = [NSNumberFormatter new];
-        [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-        [_numberFormatter setLocale:[NSLocale currentLocale]];
+        _numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+        _numberFormatter.locale = [NSLocale currentLocale];
     }
     return self;
 }
 
 - (NSInteger)iosVersion
 {
-    NSArray  *aOsVersions = [[[UIDevice currentDevice]systemVersion] componentsSeparatedByString:@"."];
+    NSArray  *aOsVersions = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
     NSInteger iOsVersionMajor  = [aOsVersions[0] intValue];
     return iOsVersionMajor;
 }
@@ -92,14 +92,14 @@
     // iOS6 以前には Helvetica Neue Thin がない
     if ([self iosVersion] < 7) {
         UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:68.0];
-        [numLabel setFont:font];
+        numLabel.font = font;
     }
     
     //[AppDelegate trackPageview:@"/CalcViewController"];
     
     // 4inch 用 hack : 数字表示領域を上にずらす。
     // 本当は AutoLayout を使いたいが、iOS5 では AutoLayout が使えない
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
     if (screenSize.height == 568.0) {
         CGRect frame = numLabel.frame;
         frame.origin.y -= 40.0;
@@ -135,7 +135,7 @@
 {
     [_delegate calculatorViewChanged:self];
 
-    if (!IS_IPAD && [self.navigationController.viewControllers count] == 1) {
+    if (!IS_IPAD && (self.navigationController.viewControllers).count == 1) {
         // I am modal view!
         [self dismissViewControllerAnimated:YES completion:NULL];
     } else {
@@ -355,8 +355,8 @@
 
 #if 1
     if (dp < 0) dp = 0;
-    [_numberFormatter setMinimumFractionDigits:dp];
-    [_numberFormatter setMaximumFractionDigits:dp];
+    _numberFormatter.minimumFractionDigits = dp;
+    _numberFormatter.maximumFractionDigits = dp;
 
     NSString *numstr = [_numberFormatter stringFromNumber:@(_value)];
     numLabel.text = numstr;

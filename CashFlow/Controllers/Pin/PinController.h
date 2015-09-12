@@ -21,7 +21,7 @@
 - (void)firstPinCheck:(UIViewController *)currentVc;
 - (void)modifyPin:(UIViewController *)currentVc;
 
-- (BOOL)hasPin;
+@property (nonatomic, readonly) BOOL hasPin;
 - (void)deletePin;
 
 // for debug / test

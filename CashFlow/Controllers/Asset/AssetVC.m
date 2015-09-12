@@ -60,7 +60,7 @@
         [self.view addSubview:_delButton];
     }
 		
-    [[self tableView] reloadData];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated

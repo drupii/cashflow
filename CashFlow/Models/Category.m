@@ -16,7 +16,7 @@
     NSMutableArray *_categories;
 }
 
--(id)init
+-(instancetype)init
 {
     self = [super init];
     _categories = nil;
@@ -32,7 +32,7 @@
 
 -(NSInteger)count
 {
-    return [_categories count];
+    return _categories.count;
 }
 
 -(TCategory*)categoryAtIndex:(NSInteger)n
@@ -43,7 +43,7 @@
 
 - (NSInteger)categoryIndexWithKey:(NSInteger)key
 {
-    NSInteger i, max = [_categories count];
+    NSInteger i, max = _categories.count;
     for (i = 0; i < max; i++) {
         TCategory *c = _categories[i];
         if (c.pid == key) {
@@ -99,7 +99,7 @@
 
 -(void)renumber
 {
-    NSInteger i, max = [_categories count];
+    NSInteger i, max = _categories.count;
 
     for (i = 0; i < max; i++) {
         TCategory *c = _categories[i];

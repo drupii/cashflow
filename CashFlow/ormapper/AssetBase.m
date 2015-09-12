@@ -15,7 +15,7 @@
 
 @implementation AssetBase
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     return self;

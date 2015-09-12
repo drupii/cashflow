@@ -29,30 +29,30 @@
     NSDateFormatter *dateFormatter3;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     
     _needFixDateFormat = false;
 	
     dateFormatter = [NSDateFormatter new];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
-    [dateFormatter setDateFormat: @"yyyyMMddHHmmss"];
+    dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+    dateFormatter.dateFormat = @"yyyyMMddHHmmss";
     
     // Set US locale, because JP locale for date formatter is buggy,
     // especially for 12 hour settings.
     NSLocale *us = [[NSLocale alloc] initWithLocaleIdentifier:@"US"];
-    [dateFormatter setLocale:us];
+    dateFormatter.locale = us;
 
     // backward compat.
     dateFormatter2 = [DateFormatter2 new];
-    [dateFormatter2 setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
-    [dateFormatter2 setDateFormat: @"yyyyMMddHHmm"];
+    dateFormatter2.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+    dateFormatter2.dateFormat = @"yyyyMMddHHmm";
     
     // for broken data...
     dateFormatter3 = [DateFormatter2 new];
-    [dateFormatter3 setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
-    [dateFormatter3 setDateFormat: @"yyyyMMdd"];
+    dateFormatter3.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+    dateFormatter3.dateFormat = @"yyyyMMdd";
     
     return self;
 }
@@ -66,7 +66,7 @@
 {
     NSDate *date = nil;
     
-    if ([str length] == 14) { // yyyyMMddHHmmss
+    if (str.length == 14) { // yyyyMMddHHmmss
         date = [dateFormatter dateFromString:str];
     }
     if (date == nil) {

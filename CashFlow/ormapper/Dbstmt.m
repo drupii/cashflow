@@ -38,7 +38,7 @@
 /**
    Initialize with sqlite3_stmt
 */
-- (id)initWithStmt:(sqlite3_stmt *)stmt
+- (instancetype)initWithStmt:(sqlite3_stmt *)stmt
 {
     self = [super init];
     if (self != nil) {
@@ -104,7 +104,7 @@
 */
 - (void)bindString:(NSInteger)idx val:(NSString*)val
 {
-    sqlite3_bind_text(_stmt, (int)(idx+1), [val UTF8String], -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(_stmt, (int)(idx+1), val.UTF8String, -1, SQLITE_TRANSIENT);
 }
 
 /**
@@ -116,7 +116,7 @@
     
     if (date != NULL) {
         str = [_db stringFromDate:date];
-        sqlite3_bind_text(_stmt, (int)(idx+1), [str UTF8String], -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(_stmt, (int)(idx+1), str.UTF8String, -1, SQLITE_TRANSIENT);
     }
 }
 
@@ -165,7 +165,7 @@
 {
     NSDate *date = nil;
     NSString *ds = [self colString:idx];
-    if (ds && [ds length] > 0) {
+    if (ds && ds.length > 0) {
         date = [_db dateFromString:ds];
     }
     return date;

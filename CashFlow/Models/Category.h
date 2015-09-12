@@ -15,7 +15,7 @@
 @interface Categories : NSObject
 
 - (void)reload;
-- (NSInteger)count;
+@property (nonatomic, readonly) NSInteger count;
 - (TCategory*)categoryAtIndex:(NSInteger)n;
 - (NSInteger)categoryIndexWithKey:(NSInteger)key;
 - (NSString*)categoryStringWithKey:(NSInteger)key;

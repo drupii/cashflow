@@ -21,7 +21,7 @@
 @property(nonatomic,assign) BOOL hasBalance;
 @property(nonatomic,assign) double balance;
 
-- (id)initWithDate:(NSDate*)date description:(NSString*)desc value:(double)v;
+- (instancetype)initWithDate:(NSDate*)date description:(NSString*)desc value:(double)v NS_DESIGNATED_INITIALIZER;
 - (void)updateWithoutUpdateLRU;
 
 + (NSDate *)lastUsedDate;

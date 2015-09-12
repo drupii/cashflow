@@ -37,7 +37,7 @@
 
 - (void)rebuild;
 
-- (NSInteger)entryCount;
+@property (nonatomic, readonly) NSInteger entryCount;
 - (AssetEntry *)entryAt:(NSInteger)n;
 - (void)insertEntry:(AssetEntry *)tr;
 - (void)replaceEntryAtIndex:(NSInteger)index withObject:(AssetEntry *)t;
@@ -45,7 +45,7 @@
 - (void)deleteOldEntriesBefore:(NSDate*)date;
 - (NSInteger)firstEntryByDate:(NSDate*)date;
 
-- (double)lastBalance;
+@property (nonatomic, readonly) double lastBalance;
 - (void)updateInitialBalance;
 
 @end

@@ -26,7 +26,7 @@
 
 - (NSInteger)assetCount
 {
-    return [self.assets count];
+    return (self.assets).count;
 }
 
 - (Asset*)assetAtIndex:(NSInteger)n
@@ -45,7 +45,7 @@
 - (NSInteger)assetIndexWithKey:(NSInteger)pid
 {
     int i;
-    for (i = 0; i < [self.assets count]; i++) {
+    for (i = 0; i < (self.assets).count; i++) {
         Asset *as = self.assets[i];
         if (as.pid == pid) return i;
     }
@@ -83,7 +83,7 @@
     // renumbering sorder
     Database *db = [Database instance];
     [db beginTransaction];
-    for (NSInteger i = 0; i < [self.assets count]; i++) {
+    for (NSInteger i = 0; i < (self.assets).count; i++) {
         as = self.assets[i];
         as.sorder = i;
         [as save];

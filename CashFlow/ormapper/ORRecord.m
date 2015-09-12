@@ -37,7 +37,7 @@
 }
 
 /** Constructor */ 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self != nil) {
@@ -78,7 +78,7 @@
     }
 
     // add columns
-    NSInteger count = [array count] / 2;
+    NSInteger count = array.count / 2;
 
     for (NSInteger i = 0; i < count; i++) {
         NSString *column = array[i * 2];

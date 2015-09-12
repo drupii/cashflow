@@ -35,7 +35,7 @@
     BOOL mIsLocalModified;
 }
 
-- (id)init:(id<DropboxBackupDelegate>)delegate
+- (instancetype)init:(id<DropboxBackupDelegate>)delegate
 {
     self = [super init];
     if (self) {
@@ -215,7 +215,7 @@
 // backup failed
 - (void)restClient:(DBRestClient*)client uploadFileFailedWithError:(NSError*)error
 {
-    NSString *msg = [error localizedDescription];
+    NSString *msg = error.localizedDescription;
     [self _showResult:msg withTitle:_L(@"upload_failed")];
     [mDelegate dropboxBackupFinished];
 }
@@ -246,7 +246,7 @@
 // restore failed
 - (void)restClient:(DBRestClient*)client loadFileFailedWithError:(NSError*)error
 {
-    NSString *msg = [error localizedDescription];
+    NSString *msg = error.localizedDescription;
     [self _showResult:msg withTitle:_L(@"download_failed")];
     [[DataModel instance] startLoad:self];
 }

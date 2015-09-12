@@ -45,12 +45,12 @@
 
 + (void)shutdown;
 
-- (id)init;
+- (instancetype)init;
 - (void)dealloc;
 
 - (BOOL)exec:(NSString *)sql;
 - (dbstmt*)prepare:(NSString *)sql;
-- (NSInteger)lastInsertRowId;
+@property (nonatomic, readonly) NSInteger lastInsertRowId;
 
 - (void)beginTransaction;
 - (void)commitTransaction;
@@ -63,7 +63,7 @@
 - (void)updateModificationDate;
 
 // utilities
-- (NSDateFormatter *)dateFormatter;
+@property (nonatomic, readonly, copy) NSDateFormatter *dateFormatter;
 - (NSDate*)dateFromString:(NSString *)str;
 - (NSString *)stringFromDate:(NSDate*)date;
 

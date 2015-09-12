@@ -12,7 +12,7 @@
 
 @implementation AssetEntry
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
 
@@ -24,7 +24,7 @@
     return self;
 }
 
-- (id)initWithTransaction:(Transaction *)t withAsset:(Asset *)asset
+- (instancetype)initWithTransaction:(Transaction *)t withAsset:(Asset *)asset
 {
     self = [self init];
 

@@ -80,7 +80,7 @@
     
     if ([self isNewTransaction]) {
         // 日付記憶関連処理
-        [_rememberDateSwitch setOn:[Transaction hasLastUsedDate]];
+        _rememberDateSwitch.on = [Transaction hasLastUsedDate];
     }
     
     // 削除ボタンの背景と位置調整
@@ -172,7 +172,7 @@
 	
 	_rememberDateView.hidden = !isNewTransaction;
 
-    [[self tableView] reloadData];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -286,7 +286,7 @@
         case ROW_DATE:
             if ([Config instance].dateTimeMode == DateTimeModeDateOnly) {
                 CFCalendarViewController *calendarVc = [CFCalendarViewController new];
-                [calendarVc setDelegate:self];
+                calendarVc.delegate = self;
                 calendarVc.selectedDate = _editingEntry.transaction.date;
                 //calendarVc.selectedDate = _editingEntry.transaction.date;
                 //[calendarVc setCalendarViewControllerDelegate:self];
@@ -369,7 +369,7 @@
 {
     if (IS_IPAD) {
         if (_currentPopoverController != nil
-            && [_currentPopoverController isPopoverVisible]
+            && _currentPopoverController.popoverVisible
             && self.view != nil && self.view.window != nil /* for crash problem */) {
             [_currentPopoverController dismissPopoverAnimated:YES];
         }
@@ -461,7 +461,7 @@
 {
     _isModified = YES;
 
-    [_editingEntry setEvalue:vc.value];
+    _editingEntry.evalue = vc.value;
     [self dismissPopover];
 }
 
@@ -501,7 +501,7 @@
 
 - (IBAction)rememberLastUsedDateChanged:(id)view
 {
-    if ([_rememberDateSwitch isOn]) {
+    if (_rememberDateSwitch.on) {
         [Transaction setLastUsedDate:_editingEntry.transaction.date];
     } else {
         [Transaction setLastUsedDate:nil];
@@ -535,7 +535,7 @@
     if (IS_IPAD) {
         [as showFromBarButtonItem:_barActionButton animated:YES];
     } else {
-        [as showInView:[self view]];
+        [as showInView:self.view];
     }
     _asAction = as;
 }
@@ -589,7 +589,7 @@
         // 新規追加
         [_asset insertEntry:_editingEntry];
         
-        if ([_rememberDateSwitch isOn]) {
+        if (_rememberDateSwitch.on) {
             [Transaction setLastUsedDate:_editingEntry.transaction.date];
         }
     } else {

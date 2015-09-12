@@ -20,7 +20,7 @@
 // asset operation
 - (void)load;
 - (void)rebuild;
-- (NSInteger)assetCount;
+@property (nonatomic, readonly) NSInteger assetCount;
 - (Asset *)assetAtIndex:(NSInteger)n;
 - (Asset*)assetWithKey:(NSInteger)key;
 - (NSInteger)assetIndexWithKey:(NSInteger)key;

@@ -59,7 +59,7 @@
     return [sb instantiateInitialViewController];
 }
 
-- (id)initWithCoder:(NSCoder *)coder
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
     if (self) {
@@ -82,7 +82,7 @@
     mAssetCache = [[[DataModel instance] ledger] assetWithKey:mAssetKey];
     return mAssetCache;
 #endif
-    return  [[[DataModel instance] ledger] assetWithKey:_assetKey];
+    return  [[DataModel instance].ledger assetWithKey:_assetKey];
 }
 
 - (void)viewDidLoad
@@ -173,7 +173,7 @@
 {
     if (IS_IPAD
         && mPopoverController != nil
-        && [mPopoverController isPopoverVisible]
+        && mPopoverController.popoverVisible
         && _tableView != nil && _tableView.window != nil /* for crash problem */)
     {
         [mPopoverController dismissPopoverAnimated:YES];
@@ -370,7 +370,7 @@
 
     NSInteger n;
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        n = [self.searchResults count];
+        n = (self.searchResults).count;
     } else {
         n = [self.asset entryCount] + 1;
     }
@@ -387,7 +387,7 @@
 {
     NSInteger idx;
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        idx = ([self.searchResults count] - 1) - indexPath.row;
+        idx = ((self.searchResults).count - 1) - indexPath.row;
     } else {
         idx = ([self.asset entryCount] - 1) - indexPath.row;
     }
@@ -480,7 +480,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"show"]) {
-        TransactionViewController *vc = [segue destinationViewController];
+        TransactionViewController *vc = segue.destinationViewController;
         vc.asset = self.asset;
         [vc setTransactionIndex:_tappedIndex];
     }
@@ -600,7 +600,7 @@
     if (IS_IPAD) {
         [_actionSheet showFromBarButtonItem:_barActionButton animated:YES];
     } else {
-        [_actionSheet showInView:[self view]];
+        [_actionSheet showInView:self.view];
     }
 }
 

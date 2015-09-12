@@ -15,7 +15,7 @@
     BOOL _isAddCategoryRowDisplayed;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithNibName:@"CategoryListView" bundle:nil];
     if (self) {

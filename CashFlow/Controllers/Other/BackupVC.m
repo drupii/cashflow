@@ -39,9 +39,9 @@
     [_labelUpload setText:_L(@"Upload")];
     [_labelDownload setText:_L(@"Download")];
     [_labelBackupRestore setText:_L(@"Backup / Restore")];
-    [_labelBackupRestore setText:[NSString stringWithFormat:@"%@ / %@",
+    _labelBackupRestore.text = [NSString stringWithFormat:@"%@ / %@",
                            _L(@"Backup"),
-                           _L(@"Restore")]];
+                           _L(@"Restore")];
 }
 
 - (IBAction)doneAction:(id)sender
@@ -228,7 +228,7 @@
                        cancelButtonTitle:_L(@"Cancel")
                   destructiveButtonTitle:nil
                        otherButtonTitles:_L(@"Use local (upload)"), _L(@"Use remote (download)"), nil];
-    [as showInView:[self view]];
+    [as showInView:self.view];
 }
 
 - (void)actionSheet:(UIActionSheet*)as clickedButtonAtIndex:(NSInteger)buttonIndex

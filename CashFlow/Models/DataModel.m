@@ -15,7 +15,7 @@
 #import "DescLRUManager.h"
 
 @interface DataModel()
-- (NSDate *)_lastModificationDateOfDatabase;
+@property (nonatomic, readonly, copy) NSDate *_lastModificationDateOfDatabase;
 @end
 
 @implementation DataModel
@@ -48,7 +48,7 @@ static NSString *theDbName = DBNAME;
     theDbName = dbname;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
 
@@ -163,18 +163,18 @@ static NSString *theDbName = DBNAME;
 + (NSDateFormatter *)dateFormatter:(NSDateFormatterStyle)timeStyle withDayOfWeek:(BOOL)withDayOfWeek
 {
     NSDateFormatter *df = [NSDateFormatter new];
-    [df setDateStyle:NSDateFormatterMediumStyle];
-    [df setTimeStyle:timeStyle];
+    df.dateStyle = NSDateFormatterMediumStyle;
+    df.timeStyle = timeStyle;
     
     NSMutableString *s = [NSMutableString stringWithCapacity:30];
-    [s setString:[df dateFormat]];
+    [s setString:df.dateFormat];
 
     if (withDayOfWeek) {
-        [s replaceOccurrencesOfString:@"MMM d, y" withString:@"EEE, MMM d, y" options:NSLiteralSearch range:NSMakeRange(0, [s length])];
-        [s replaceOccurrencesOfString:@"yyyy/MM/dd" withString:@"yyyy/MM/dd(EEEEE)" options:NSLiteralSearch range:NSMakeRange(0, [s length])];
+        [s replaceOccurrencesOfString:@"MMM d, y" withString:@"EEE, MMM d, y" options:NSLiteralSearch range:NSMakeRange(0, s.length)];
+        [s replaceOccurrencesOfString:@"yyyy/MM/dd" withString:@"yyyy/MM/dd(EEEEE)" options:NSLiteralSearch range:NSMakeRange(0, s.length)];
     }
 
-    [df setDateFormat:s];
+    df.dateFormat = s;
     return df;
 }
 
@@ -224,7 +224,7 @@ static NSString *theDbName = DBNAME;
     if (match == nil) return -1;
     
     NSString *verString = [line substringWithRange:[match rangeAtIndex:1]];
-    int ver = [verString intValue];
+    int ver = verString.intValue;
     
     return ver;
 }

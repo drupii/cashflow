@@ -46,7 +46,7 @@
 {
     NSArray *typeNames = [Asset typeNamesArray];
 
-    if (type < 0 || type >= [typeNames count]) {
+    if (type < 0 || type >= typeNames.count) {
         NSLog(@"WARNING: typeNameWithType: type out of range");
         return @"???";
     }
@@ -73,7 +73,7 @@
     return nil; // ERROR!
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     
@@ -167,7 +167,7 @@
 {
     // 先頭エントリ削除の場合は、初期残高を変更する
     if (index == 0) {
-        self.initialBalance = [[self entryAt:0] balance];
+        self.initialBalance = [self entryAt:0].balance;
         [self updateInitialBalance];
     }
 
@@ -221,7 +221,7 @@
 
 - (double)lastBalance
 {
-    NSInteger max = [_entries count];
+    NSInteger max = _entries.count;
     if (max == 0) {
         return self.initialBalance;
     }

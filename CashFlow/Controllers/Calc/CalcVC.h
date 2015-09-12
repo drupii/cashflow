@@ -16,19 +16,19 @@
 - (void)calculatorViewChanged:(CalculatorViewController *)vc;
 @end
 
-typedef enum {
+typedef NS_ENUM(unsigned int, calcOperator) {
     OP_NONE = 0,
     OP_EQUAL,
     OP_PLUS,
     OP_MINUS,
     OP_MULTIPLY,
     OP_DIVIDE
-} calcOperator;
+};
 
-typedef enum {
+typedef NS_ENUM(unsigned int, calcState) {
     ST_DISPLAY,
     ST_INPUT,
-} calcState;
+};
 
 @interface CalculatorViewController : UIViewController
 

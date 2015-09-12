@@ -17,7 +17,7 @@
     NSMutableArray *ary;
     
     ary = [self getDescLRUs:-1];
-    if ([ary count] > 0) {
+    if (ary.count > 0) {
         return;
     }
     
@@ -36,7 +36,7 @@
 
 + (void)addDescLRU:(NSString *)desc category:(NSInteger)category date:(NSDate*)date
 {
-    if ([desc length] == 0) return;
+    if (desc.length == 0) return;
 
     // find desc LRU from history
     DescLRU *lru = [DescLRU find_by_description:desc];

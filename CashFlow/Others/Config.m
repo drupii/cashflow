@@ -25,7 +25,7 @@ static Config *sConfig = nil;
     return sConfig;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (!self) return nil;

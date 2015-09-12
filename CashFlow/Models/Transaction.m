@@ -20,7 +20,7 @@
     return ret;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
 
@@ -48,7 +48,7 @@
 }
 
 
-- (id)initWithDate: (NSDate*)dt description:(NSString*)desc value:(double)v
+- (instancetype)initWithDate: (NSDate*)dt description:(NSString*)desc value:(double)v
 {
     self = [super init];
 

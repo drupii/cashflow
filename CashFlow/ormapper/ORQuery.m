@@ -24,7 +24,7 @@
     return [[ORQuery alloc] initWithClass:class tableName:tableName];
 }
 
-- (id)initWithClass:(Class)class tableName:(NSString *)tableName
+- (instancetype)initWithClass:(Class)class tableName:(NSString *)tableName
 {
     self = [super init];
     if (self != nil) {
@@ -107,7 +107,7 @@
     // bind arguments
     dbstmt *stmt = [[Database instance] prepare:sql];
     
-    for (NSInteger i = 0; i < [_whereParams count]; i++) {
+    for (NSInteger i = 0; i < _whereParams.count; i++) {
         [stmt bindString:i val:(NSString *)_whereParams[i]];
     }
 
@@ -128,7 +128,7 @@
     _limit = 1;
         
     NSMutableArray *ary = [self all];
-    if ([ary count] == 0) {
+    if (ary.count == 0) {
         return nil;
     }
     return ary[0];
