@@ -122,7 +122,7 @@
     
         // Loading View を表示させる
         _loadingView = [[DBLoadingView alloc] initWithTitle:@"Loading"];
-        [_loadingView setOrientation:self.interfaceOrientation];
+        [_loadingView setOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
         _loadingView.userInteractionEnabled = YES; // 下の View の操作不可にする
         [_loadingView show:self.view.window];
     }

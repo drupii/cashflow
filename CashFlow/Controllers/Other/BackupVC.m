@@ -204,7 +204,7 @@
     }
     _loadingView = [[DBLoadingView alloc] initWithTitle:msg];
     _loadingView.userInteractionEnabled = YES; // 下の View の操作不可にする
-    [_loadingView setOrientation:self.interfaceOrientation];
+    [_loadingView setOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
     [_loadingView show:self.view.window];
 }
 

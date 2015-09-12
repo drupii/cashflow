@@ -36,7 +36,7 @@
 	
     self.reportEntries = [NSMutableArray new];
 
-    NSCalendar *greg = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *greg = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	
     // レポートの開始日と終了日を取得
     NSInteger assetKey;
@@ -56,13 +56,13 @@
     steps = [NSDateComponents new];
     switch (self.type) {
         case REPORT_DAILY:;
-            dateComponents = [greg components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:firstDate];
+            dateComponents = [greg components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:firstDate];
             nextStartDay = [greg dateFromComponents:dateComponents];
             steps.day = 1;
             break;
 
         case REPORT_WEEKLY:
-            dateComponents = [greg components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekdayCalendarUnit | NSDayCalendarUnit) fromDate:firstDate];
+            dateComponents = [greg components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitWeekday | NSCalendarUnitDay) fromDate:firstDate];
             nextStartDay = [greg dateFromComponents:dateComponents];
             
             // 日曜が 1, 土曜が 7
@@ -76,7 +76,7 @@
             break;
 
         case REPORT_MONTHLY:
-            dateComponents = [greg components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:firstDate];
+            dateComponents = [greg components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:firstDate];
 
             // 締め日設定
             NSInteger cutoffDate = [Config instance].cutoffDate;
@@ -103,7 +103,7 @@
             break;
 			
         case REPORT_ANNUAL:
-            dateComponents = [greg components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:firstDate];
+            dateComponents = [greg components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:firstDate];
             dateComponents.month = 1;
             dateComponents.day = 1;
             nextStartDay = [greg dateFromComponents:dateComponents];

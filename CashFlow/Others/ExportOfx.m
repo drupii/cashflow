@@ -215,13 +215,13 @@
 - (NSString*)_dateStr:(NSDate *)date
 {
     if (mGregCalendar == nil) {
-        mGregCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        mGregCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         mDateFormatter = [NSDateFormatter new];
     }
     NSTimeZone *tz = mDateFormatter.timeZone;
 			  
-    NSDateComponents *c = [mGregCalendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit 
-                                            | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit)
+    NSDateComponents *c = [mGregCalendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
+                                            | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond)
                                 fromDate:date];
 
     NSString *d = [NSString stringWithFormat:@"%04d%02d%02d%02d%02d%02d[%+d:%@]",
@@ -235,7 +235,7 @@
  */
 - (NSString*)_fitIdWithAssetEntry:(AssetEntry*)e
 {
-    NSDateComponents *c = [mGregCalendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:e.transaction.date];
+    NSDateComponents *c = [mGregCalendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:e.transaction.date];
     NSString *f = [NSString stringWithFormat:@"%04d%02d%02d%ld", (int)c.year, (int)c.month, (int)c.day, (long)e.transaction.pid];
     return f;
 }
