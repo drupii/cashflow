@@ -16,12 +16,12 @@
 
 - (void)reload;
 @property (nonatomic, readonly) NSInteger count;
-- (TCategory*)categoryAtIndex:(NSInteger)n;
+- (nonnull TCategory*)categoryAtIndex:(NSInteger)n;
 - (NSInteger)categoryIndexWithKey:(NSInteger)key;
-- (NSString*)categoryStringWithKey:(NSInteger)key;
+- (nonnull NSString*)categoryStringWithKey:(NSInteger)key;
 
--(TCategory*)addCategory:(NSString *)name;
--(void)updateCategory:(TCategory*)category;
+-(nonnull TCategory*)addCategory:(nonnull NSString *)name;
+-(void)updateCategory:(nonnull TCategory*)category;
 -(void)deleteCategoryAtIndex:(NSInteger)index;
 -(void)reorderCategory:(NSInteger)from to:(NSInteger)to;
 -(void)renumber;

@@ -13,13 +13,13 @@
 
 @implementation Categories
 {
-    NSMutableArray *_categories;
+    NSMutableArray<TCategory *> *_categories;
 }
 
 -(instancetype)init
 {
     self = [super init];
-    _categories = nil;
+    _categories = [NSMutableArray new];
 
     return self;
 }
@@ -35,9 +35,9 @@
     return _categories.count;
 }
 
--(TCategory*)categoryAtIndex:(NSInteger)n
+-(nonnull TCategory*)categoryAtIndex:(NSInteger)n
 {
-    ASSERT(mCategories != nil);
+    ASSERT(_categories != nil);
     return _categories[n];
 }
 
@@ -53,7 +53,7 @@
     return -1;
 }
 
--(NSString*)categoryStringWithKey:(NSInteger)key
+-(nonnull NSString*)categoryStringWithKey:(NSInteger)key
 {
     NSInteger idx = [self categoryIndexWithKey:key];
     if (idx < 0) {
@@ -63,7 +63,7 @@
     return c.name;
 }
 
--(TCategory*)addCategory:(NSString *)name
+-(nonnull TCategory*)addCategory:(nonnull NSString *)name
 {
     TCategory *c = [TCategory new];
     c.name = name;
@@ -75,7 +75,7 @@
     return c;
 }
 
--(void)updateCategory:(TCategory*)category
+-(void)updateCategory:(nonnull TCategory*)category
 {
     [category save];
 }
