@@ -17,7 +17,7 @@
 
 @implementation Asset
 {
-    NSMutableArray *_entries; // AssetEntry の配列
+    NSMutableArray<AssetEntry *> *_entries; // AssetEntry の配列
     //double mLastBalance;
 }
 
@@ -26,9 +26,9 @@
     return NUM_ASSET_TYPES;
 }
 
-+ (NSArray*)typeNamesArray
++ (NSArray<NSString *> *)typeNamesArray
 {
-    static NSArray *typeNames = nil;
+    static NSArray<NSString *> *typeNames = nil;
 
     if (typeNames == nil) {
         typeNames = 
@@ -44,7 +44,7 @@
 
 + (NSString*)typeNameWithType:(NSInteger)type
 {
-    NSArray *typeNames = [Asset typeNamesArray];
+    NSArray<NSString *> *typeNames = [Asset typeNamesArray];
 
     if (type < 0 || type >= typeNames.count) {
         NSLog(@"WARNING: typeNameWithType: type out of range");

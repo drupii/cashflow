@@ -30,7 +30,7 @@
     
     Ledger *_ledger;
 
-    NSMutableArray *_iconArray;
+    NSMutableArray<UIImage *> *_iconArray;
 
     NSInteger _selectedAssetIndex;
     
@@ -78,7 +78,7 @@
     self.navigationItem.leftBarButtonItem = [self editButtonItem];
 	
     // icon image をロード
-    _iconArray = [NSMutableArray new];
+    _iconArray = [NSMutableArray<UIImage *> new];
     NSInteger n = [Asset numAssetTypes];
 
     for (NSInteger i = 0; i < n; i++) {

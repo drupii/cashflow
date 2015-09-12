@@ -188,7 +188,7 @@
     Config *config = [Config instance];
 
     GenSelectListViewController *gt = nil;
-    NSMutableArray *typeArray;
+    NSMutableArray<NSString *> *typeArray;
     CategoryListViewController *categoryVC;
     DropboxBackup *dbb;
 
