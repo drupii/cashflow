@@ -69,6 +69,7 @@
 /** カテゴリ毎の支出レポート */
 @property(nonatomic,strong,readonly) NSMutableArray<CatReport *> *outgoCatReports;
 
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithAsset:(NSInteger)assetKey start:(NSDate *)start end:(NSDate *)end NS_DESIGNATED_INITIALIZER;
 
 - (BOOL)addTransaction:(Transaction*)t;
@@ -95,6 +96,7 @@
 /** 本カテゴリに含まれる Transaction 一覧 */
 @property(nonatomic,strong,readonly) NSMutableArray<Transaction *> *transactions;
 
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithCategory:(NSInteger)category withAsset:(NSInteger)assetKey NS_DESIGNATED_INITIALIZER;
 - (void)addTransaction:(Transaction*)t;
 
