@@ -1,6 +1,8 @@
-//
-// Created by 村上 卓弥 on 15/09/08.
-//
+/*
+ * CashFlow for iOS
+ * Copyright (C) 2008-2015, Takuya Murakami, All rights reserved.
+ * For conditions of distribution and use, see LICENSE file.
+ */
 import Foundation
 
 @UIApplicationMain
@@ -44,6 +46,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         _application = application;
 
         // Crittercism or BugSense
+        /*
 #if FREE_VERSION
         let CRITTERCISM_API_KEY = "50cdc6bb86ef114132000002"
         let BUGSENSE_API_KEY = "70f8a5d3"
@@ -51,6 +54,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         let CRITTERCISM_API_KEY = "50cdc6697e69a342c7000005"
         let BUGSENSE_API_KEY = "b64aaa9e"
 #endif
+        */
 
         //[Crittercism enableWithAppID:CRITTERCISM_API_KEY];
         //[BugSenseController sharedControllerWithBugSenseAPIKey:BUGSENSE_API_KEY];
