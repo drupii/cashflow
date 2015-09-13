@@ -54,7 +54,7 @@
    @return YES - Table was newly created, NO - Table already exists.
 */
 
-+ (BOOL)migrate:(NSArray *)array primaryKey:(NSString*)key
++ (BOOL)migrate:(NSArray<NSString *> *)array primaryKey:(NSString*)key
 {
     Database *db = [Database instance];
     dbstmt *stmt;
@@ -92,39 +92,6 @@
         }
     }
     return ret;
-}
-
-/**
-   get all records
-   @return array of all record
-*/
-+ (NSMutableArray *)find_all
-{
-    return [self find_all:nil];
-}
-
-/**
-   Get all records matche the conditions
-
-   @param cond Conditions (WHERE phrase and so on)
-   @return array of records
-
-   @note You must override this.
-*/
-+ (NSMutableArray *)find_all:(NSString *)cond
-{
-    return nil;
-}
-
-/**
-   Get the record matchs the id
-
-   @param id Primary key of the record
-   @return record
-*/
-+ (id)find:(NSInteger)pid
-{
-    return nil;
 }
 
 /**
