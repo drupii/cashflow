@@ -31,6 +31,8 @@
 
 #import "Dbstmt.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
    Wrapper class of sqlite3 database (base class)
 */
@@ -68,3 +70,5 @@
 - (NSString *)stringFromDate:(NSDate*)date;
 
 @end
+
+NS_ASSUME_NONNULL_END

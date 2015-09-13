@@ -31,6 +31,8 @@
 
 @class Database;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
    Wrapper class of sqlite3_stmt
 */
@@ -53,3 +55,5 @@
 - (NSString*)colString:(NSInteger)idx;
 - (NSDate*)colDate:(NSInteger)idx;
 @end
+
+NS_ASSUME_NONNULL_END

@@ -3,6 +3,8 @@
 #import <UIKit/UIKit.h>
 #import "Database.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
    O/R query
  */
@@ -23,4 +25,4 @@
 
 @end
 
-
+NS_ASSUME_NONNULL_END
