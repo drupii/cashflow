@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithStmt:(sqlite3_stmt *)st NS_DESIGNATED_INITIALIZER;
-@property (nonatomic, readonly) NSInteger step;
+- (NSInteger)step;
 - (void)reset;
 
 - (void)bindInt:(NSInteger)idx val:(NSInteger)val;
