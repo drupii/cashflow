@@ -22,7 +22,7 @@
 // for search filter (TransactionListViewController)
 @property(nonatomic) NSInteger originalIndex;
 
-- (nonnull instancetype)initWithTransaction:(nonnull Transaction *)t withAsset:(nonnull Asset *)asset;
+- (nonnull instancetype)initWithTransaction:(nullable Transaction *)t withAsset:(nonnull Asset *)asset;
 - (BOOL)changeType:(NSInteger)type assetKey:(NSInteger)as dstAssetKey:(NSInteger)das;
 @property (nonatomic) NSInteger dstAsset;
 - (BOOL)isDstAsset;

@@ -24,7 +24,7 @@
     return self;
 }
 
-- (instancetype)initWithTransaction:(Transaction *)t withAsset:(Asset *)asset
+- (nonnull instancetype)initWithTransaction:(nullable Transaction *)t withAsset:(nonnull Asset *)asset
 {
     self = [self init];
 
