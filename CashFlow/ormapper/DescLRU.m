@@ -46,7 +46,7 @@
   @param pid Primary key of the record
   @return record
 */
-+ (DescLRU *)find:(NSInteger)pid
++ (nullable DescLRU *)find:(NSInteger)pid
 {
     Database *db = [Database instance];
 
@@ -63,7 +63,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (DescLRU*)find_by_description:(NSString*)key cond:(NSString *)cond
++ (nullable DescLRU*)find_by_description:(NSString*)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE description = ? LIMIT 1";
@@ -75,7 +75,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (DescLRU*)find_by_description:(NSString*)key
++ (nullable DescLRU*)find_by_description:(NSString*)key
 {
     return [self find_by_description:key cond:nil];
 }
@@ -87,7 +87,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (DescLRU*)find_by_lastUse:(NSDate*)key cond:(NSString *)cond
++ (nullable DescLRU*)find_by_lastUse:(NSDate*)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE lastUse = ? LIMIT 1";
@@ -99,7 +99,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (DescLRU*)find_by_lastUse:(NSDate*)key
++ (nullable DescLRU*)find_by_lastUse:(NSDate*)key
 {
     return [self find_by_lastUse:key cond:nil];
 }
@@ -111,7 +111,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (DescLRU*)find_by_category:(NSInteger)key cond:(NSString *)cond
++ (nullable DescLRU*)find_by_category:(NSInteger)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE category = ? LIMIT 1";
@@ -123,7 +123,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (DescLRU*)find_by_category:(NSInteger)key
++ (nullable DescLRU*)find_by_category:(NSInteger)key
 {
     return [self find_by_category:key cond:nil];
 }
@@ -135,7 +135,7 @@
   @param cond Conditions (WHERE phrase and so on)
   @return array of records
 */
-+ (DescLRU *)find_first:(NSString *)cond
++ (nullable DescLRU *)find_first:(NSString *)cond
 {
     if (cond == nil) {
         cond = @"LIMIT 1";
@@ -152,7 +152,7 @@
   @param cond Conditions (WHERE phrase and so on)
   @return array of records
 */
-+ (NSMutableArray *)find_all:(NSString *)cond
++ (nonnull NSMutableArray *)find_all:(NSString *)cond
 {
     dbstmt *stmt = [self gen_stmt:cond];
     return  [self find_all_stmt:stmt];
@@ -164,7 +164,7 @@
   @param s condition
   @return dbstmt
 */
-+ (dbstmt *)gen_stmt:(NSString *)cond
++ (nonnull dbstmt *)gen_stmt:(nullable NSString *)cond
 {
     NSString *sql;
     if (cond == nil) {
@@ -182,12 +182,12 @@
   @param stmt Statement
   @return array of records
 */
-+ (DescLRU *)find_first_stmt:(dbstmt *)stmt
++ (nullable DescLRU *)find_first_stmt:(nonnull dbstmt *)stmt
 {
     if ([stmt step] == SQLITE_ROW) {
         DescLRU *e = [[self class] new];
         [e _loadRow:stmt];
-        return e;
+        return (DescLRU *)e;
     }
     return nil;
 }
@@ -198,7 +198,7 @@
   @param stmt Statement
   @return array of records
 */
-+ (NSMutableArray *)find_all_stmt:(dbstmt *)stmt
++ (nonnull NSMutableArray *)find_all_stmt:(nonnull dbstmt *)stmt
 {
     NSMutableArray *array = [NSMutableArray new];
 
@@ -210,7 +210,7 @@
     return array;
 }
 
-- (void)_loadRow:(dbstmt *)stmt
+- (void)_loadRow:(nonnull dbstmt *)stmt
 {
     self.pid = [stmt colInt:0];
     self.desc = [stmt colString:1];
@@ -285,7 +285,7 @@
 /**
   @brief Delete all records
 */
-+ (void)delete_cond:(NSString *)cond
++ (void)delete_cond:(nullable NSString *)cond
 {
     Database *db = [Database instance];
 
@@ -306,7 +306,7 @@
 /**
  * get table sql
  */
-+ (void)getTableSql:(NSMutableString *)s
++ (void)getTableSql:(nonnull NSMutableString *)s
 {
     [s appendString:@"DROP TABLE DescLRUs;\n"];
     [s appendString:@"CREATE TABLE DescLRUs (key INTEGER PRIMARY KEY"];
@@ -327,7 +327,7 @@
 /**
  * get "INSERT" SQL
  */
-- (void)getInsertSql:(NSMutableString *)s
+- (void)getInsertSql:(nonnull NSMutableString *)s
 {
     [s appendFormat:@"INSERT INTO DescLRUs VALUES(%ld", (long)self.pid];
     [s appendString:@","];

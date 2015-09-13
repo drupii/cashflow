@@ -7,6 +7,8 @@
 
 @class Transaction;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface TransactionBase : ORRecord
 
 @property(nonatomic,assign) NSInteger asset;
@@ -24,36 +26,36 @@
 // CRUD (Create/Read/Update/Delete) operations
 
 // Read operations (Finder)
-+ (Transaction *)find:(NSInteger)pid;
++ (nullable Transaction *)find:(NSInteger)pid;
 
-+ (Transaction *)find_by_asset:(NSInteger)key cond:(NSString*)cond;
-+ (Transaction *)find_by_asset:(NSInteger)key;
-+ (Transaction *)find_by_dst_asset:(NSInteger)key cond:(NSString*)cond;
-+ (Transaction *)find_by_dst_asset:(NSInteger)key;
-+ (Transaction *)find_by_date:(NSDate*)key cond:(NSString*)cond;
-+ (Transaction *)find_by_date:(NSDate*)key;
-+ (Transaction *)find_by_type:(NSInteger)key cond:(NSString*)cond;
-+ (Transaction *)find_by_type:(NSInteger)key;
-+ (Transaction *)find_by_category:(NSInteger)key cond:(NSString*)cond;
-+ (Transaction *)find_by_category:(NSInteger)key;
-+ (Transaction *)find_by_value:(double)key cond:(NSString*)cond;
-+ (Transaction *)find_by_value:(double)key;
-+ (Transaction *)find_by_description:(NSString*)key cond:(NSString*)cond;
-+ (Transaction *)find_by_description:(NSString*)key;
-+ (Transaction *)find_by_memo:(NSString*)key cond:(NSString*)cond;
-+ (Transaction *)find_by_memo:(NSString*)key;
-+ (Transaction *)find_by_identifier:(NSString*)key cond:(NSString*)cond;
-+ (Transaction *)find_by_identifier:(NSString*)key;
++ (nullable Transaction *)find_by_asset:(NSInteger)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_asset:(NSInteger)key;
++ (nullable Transaction *)find_by_dst_asset:(NSInteger)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_dst_asset:(NSInteger)key;
++ (nullable Transaction *)find_by_date:(NSDate*)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_date:(NSDate*)key;
++ (nullable Transaction *)find_by_type:(NSInteger)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_type:(NSInteger)key;
++ (nullable Transaction *)find_by_category:(NSInteger)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_category:(NSInteger)key;
++ (nullable Transaction *)find_by_value:(double)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_value:(double)key;
++ (nullable Transaction *)find_by_description:(NSString*)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_description:(NSString*)key;
++ (nullable Transaction *)find_by_memo:(NSString*)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_memo:(NSString*)key;
++ (nullable Transaction *)find_by_identifier:(NSString*)key cond:(nullable NSString*)cond;
++ (nullable Transaction *)find_by_identifier:(NSString*)key;
 
-+ (NSMutableArray *)find_all:(NSString *)cond;
++ (NSMutableArray<Transaction *> *)find_all:(nullable NSString *)cond;
 
-+ (dbstmt *)gen_stmt:(NSString *)cond;
-+ (Transaction *)find_first_stmt:(dbstmt *)stmt;
-+ (NSMutableArray *)find_all_stmt:(dbstmt *)stmt;
++ (dbstmt *)gen_stmt:(nullable NSString *)cond;
++ (nullable Transaction *)find_first_stmt:(dbstmt *)stmt;
++ (NSMutableArray<Transaction *> *)find_all_stmt:(dbstmt *)stmt;
 
 // Delete operations
 - (void)delete;
-+ (void)delete_cond:(NSString *)cond;
++ (void)delete_cond:(nullable NSString *)cond;
 + (void)delete_all;
 
 // Dump SQL
@@ -61,3 +63,5 @@
 - (void)getInsertSql:(NSMutableString *)s;
 
 @end
+
+NS_ASSUME_NONNULL_END

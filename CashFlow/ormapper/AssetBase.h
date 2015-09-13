@@ -7,6 +7,8 @@
 
 @class Asset;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface AssetBase : ORRecord
 
 @property(nonatomic,strong) NSString* name;
@@ -20,28 +22,28 @@
 // CRUD (Create/Read/Update/Delete) operations
 
 // Read operations (Finder)
-+ (Asset *)find:(NSInteger)pid;
++ (nullable Asset *)find:(NSInteger)pid;
 
-+ (Asset *)find_by_name:(NSString*)key cond:(NSString*)cond;
-+ (Asset *)find_by_name:(NSString*)key;
-+ (Asset *)find_by_type:(NSInteger)key cond:(NSString*)cond;
-+ (Asset *)find_by_type:(NSInteger)key;
-+ (Asset *)find_by_initialBalance:(double)key cond:(NSString*)cond;
-+ (Asset *)find_by_initialBalance:(double)key;
-+ (Asset *)find_by_sorder:(NSInteger)key cond:(NSString*)cond;
-+ (Asset *)find_by_sorder:(NSInteger)key;
-+ (Asset *)find_by_identifier:(NSString*)key cond:(NSString*)cond;
-+ (Asset *)find_by_identifier:(NSString*)key;
++ (nullable Asset *)find_by_name:(NSString*)key cond:(nullable NSString*)cond;
++ (nullable Asset *)find_by_name:(NSString*)key;
++ (nullable Asset *)find_by_type:(NSInteger)key cond:(nullable NSString*)cond;
++ (nullable Asset *)find_by_type:(NSInteger)key;
++ (nullable Asset *)find_by_initialBalance:(double)key cond:(nullable NSString*)cond;
++ (nullable Asset *)find_by_initialBalance:(double)key;
++ (nullable Asset *)find_by_sorder:(NSInteger)key cond:(nullable NSString*)cond;
++ (nullable Asset *)find_by_sorder:(NSInteger)key;
++ (nullable Asset *)find_by_identifier:(NSString*)key cond:(nullable NSString*)cond;
++ (nullable Asset *)find_by_identifier:(NSString*)key;
 
-+ (NSMutableArray *)find_all:(NSString *)cond;
++ (NSMutableArray<Asset *> *)find_all:(nullable NSString *)cond;
 
-+ (dbstmt *)gen_stmt:(NSString *)cond;
-+ (Asset *)find_first_stmt:(dbstmt *)stmt;
-+ (NSMutableArray *)find_all_stmt:(dbstmt *)stmt;
++ (dbstmt *)gen_stmt:(nullable NSString *)cond;
++ (nullable Asset *)find_first_stmt:(dbstmt *)stmt;
++ (NSMutableArray<Asset *> *)find_all_stmt:(dbstmt *)stmt;
 
 // Delete operations
 - (void)delete;
-+ (void)delete_cond:(NSString *)cond;
++ (void)delete_cond:(nullable NSString *)cond;
 + (void)delete_all;
 
 // Dump SQL
@@ -49,3 +51,5 @@
 - (void)getInsertSql:(NSMutableString *)s;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -14,7 +14,7 @@
 @interface AssetEntry : NSObject
 
 @property(nonatomic,assign) NSInteger assetKey;
-@property(nonatomic,strong,nonnull) Transaction *transaction;
+@property(nonatomic,strong,nullable) Transaction *transaction;
 @property(nonatomic,assign) double value;
 @property(nonatomic,assign) double balance;
 @property(nonatomic,assign) double evalue;

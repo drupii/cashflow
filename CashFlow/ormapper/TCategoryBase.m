@@ -15,7 +15,7 @@
 
 @implementation TCategoryBase
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     return self;
@@ -45,7 +45,7 @@
   @param pid Primary key of the record
   @return record
 */
-+ (TCategory *)find:(NSInteger)pid
++ (nullable TCategory *)find:(NSInteger)pid
 {
     Database *db = [Database instance];
 
@@ -62,7 +62,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (TCategory*)find_by_name:(NSString*)key cond:(NSString *)cond
++ (nullable TCategory*)find_by_name:(NSString*)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE name = ? LIMIT 1";
@@ -74,7 +74,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (TCategory*)find_by_name:(NSString*)key
++ (nullable TCategory*)find_by_name:(NSString*)key
 {
     return [self find_by_name:key cond:nil];
 }
@@ -86,7 +86,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (TCategory*)find_by_sorder:(NSInteger)key cond:(NSString *)cond
++ (nullable TCategory*)find_by_sorder:(NSInteger)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE sorder = ? LIMIT 1";
@@ -98,7 +98,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (TCategory*)find_by_sorder:(NSInteger)key
++ (nullable TCategory*)find_by_sorder:(NSInteger)key
 {
     return [self find_by_sorder:key cond:nil];
 }
@@ -110,7 +110,7 @@
   @param cond Conditions (WHERE phrase and so on)
   @return array of records
 */
-+ (TCategory *)find_first:(NSString *)cond
++ (nullable TCategory *)find_first:(NSString *)cond
 {
     if (cond == nil) {
         cond = @"LIMIT 1";
@@ -127,7 +127,7 @@
   @param cond Conditions (WHERE phrase and so on)
   @return array of records
 */
-+ (NSMutableArray *)find_all:(NSString *)cond
++ (nonnull NSMutableArray *)find_all:(NSString *)cond
 {
     dbstmt *stmt = [self gen_stmt:cond];
     return  [self find_all_stmt:stmt];
@@ -139,7 +139,7 @@
   @param s condition
   @return dbstmt
 */
-+ (dbstmt *)gen_stmt:(NSString *)cond
++ (nonnull dbstmt *)gen_stmt:(nullable NSString *)cond
 {
     NSString *sql;
     if (cond == nil) {
@@ -157,7 +157,7 @@
   @param stmt Statement
   @return array of records
 */
-+ (TCategory *)find_first_stmt:(dbstmt *)stmt
++ (nullable TCategory *)find_first_stmt:(nonnull dbstmt *)stmt
 {
     if ([stmt step] == SQLITE_ROW) {
         TCategoryBase *e = [[self class] new];
@@ -173,7 +173,7 @@
   @param stmt Statement
   @return array of records
 */
-+ (NSMutableArray *)find_all_stmt:(dbstmt *)stmt
++ (nonnull NSMutableArray *)find_all_stmt:(nonnull dbstmt *)stmt
 {
     NSMutableArray *array = [NSMutableArray new];
 
@@ -185,7 +185,7 @@
     return array;
 }
 
-- (void)_loadRow:(dbstmt *)stmt
+- (void)_loadRow:(nonnull dbstmt *)stmt
 {
     self.pid = [stmt colInt:0];
     self.name = [stmt colString:1];
@@ -256,7 +256,7 @@
 /**
   @brief Delete all records
 */
-+ (void)delete_cond:(NSString *)cond
++ (void)delete_cond:(nullable NSString *)cond
 {
     Database *db = [Database instance];
 
@@ -277,7 +277,7 @@
 /**
  * get table sql
  */
-+ (void)getTableSql:(NSMutableString *)s
++ (void)getTableSql:(nonnull NSMutableString *)s
 {
     [s appendString:@"DROP TABLE Categories;\n"];
     [s appendString:@"CREATE TABLE Categories (key INTEGER PRIMARY KEY"];
@@ -297,7 +297,7 @@
 /**
  * get "INSERT" SQL
  */
-- (void)getInsertSql:(NSMutableString *)s
+- (void)getInsertSql:(nonnull NSMutableString *)s
 {
     [s appendFormat:@"INSERT INTO Categories VALUES(%ld", (long)self.pid];
     [s appendString:@","];

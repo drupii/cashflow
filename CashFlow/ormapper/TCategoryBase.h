@@ -7,6 +7,8 @@
 
 @class TCategory;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface TCategoryBase : ORRecord
 
 @property(nonatomic,strong) NSString* name;
@@ -17,22 +19,22 @@
 // CRUD (Create/Read/Update/Delete) operations
 
 // Read operations (Finder)
-+ (TCategory *)find:(NSInteger)pid;
++ (nullable TCategory *)find:(NSInteger)pid;
 
-+ (TCategory *)find_by_name:(NSString*)key cond:(NSString*)cond;
-+ (TCategory *)find_by_name:(NSString*)key;
-+ (TCategory *)find_by_sorder:(NSInteger)key cond:(NSString*)cond;
-+ (TCategory *)find_by_sorder:(NSInteger)key;
++ (nullable TCategory *)find_by_name:(NSString*)key cond:(nullable NSString*)cond;
++ (nullable TCategory *)find_by_name:(NSString*)key;
++ (nullable TCategory *)find_by_sorder:(NSInteger)key cond:(nullable NSString*)cond;
++ (nullable TCategory *)find_by_sorder:(NSInteger)key;
 
-+ (NSMutableArray *)find_all:(NSString *)cond;
++ (NSMutableArray<TCategory *> *)find_all:(nullable NSString *)cond;
 
-+ (dbstmt *)gen_stmt:(NSString *)cond;
-+ (TCategory *)find_first_stmt:(dbstmt *)stmt;
-+ (NSMutableArray *)find_all_stmt:(dbstmt *)stmt;
++ (dbstmt *)gen_stmt:(nullable NSString *)cond;
++ (nullable TCategory *)find_first_stmt:(dbstmt *)stmt;
++ (NSMutableArray<TCategory *> *)find_all_stmt:(dbstmt *)stmt;
 
 // Delete operations
 - (void)delete;
-+ (void)delete_cond:(NSString *)cond;
++ (void)delete_cond:(nullable NSString *)cond;
 + (void)delete_all;
 
 // Dump SQL
@@ -40,3 +42,5 @@
 - (void)getInsertSql:(NSMutableString *)s;
 
 @end
+
+NS_ASSUME_NONNULL_END

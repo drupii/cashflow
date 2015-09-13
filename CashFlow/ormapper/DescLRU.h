@@ -7,6 +7,8 @@
 
 @class DescLRU;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DescLRU : ORRecord
 
 @property(nonatomic,strong) NSString* desc;
@@ -18,24 +20,24 @@
 // CRUD (Create/Read/Update/Delete) operations
 
 // Read operations (Finder)
-+ (DescLRU *)find:(NSInteger)pid;
++ (nullable DescLRU *)find:(NSInteger)pid;
 
-+ (DescLRU *)find_by_description:(NSString*)key cond:(NSString*)cond;
-+ (DescLRU *)find_by_description:(NSString*)key;
-+ (DescLRU *)find_by_lastUse:(NSDate*)key cond:(NSString*)cond;
-+ (DescLRU *)find_by_lastUse:(NSDate*)key;
-+ (DescLRU *)find_by_category:(NSInteger)key cond:(NSString*)cond;
-+ (DescLRU *)find_by_category:(NSInteger)key;
++ (nullable DescLRU *)find_by_description:(NSString*)key cond:(nullable NSString*)cond;
++ (nullable DescLRU *)find_by_description:(NSString*)key;
++ (nullable DescLRU *)find_by_lastUse:(NSDate*)key cond:(nullable NSString*)cond;
++ (nullable DescLRU *)find_by_lastUse:(NSDate*)key;
++ (nullable DescLRU *)find_by_category:(NSInteger)key cond:(nullable NSString*)cond;
++ (nullable DescLRU *)find_by_category:(NSInteger)key;
 
-+ (NSMutableArray *)find_all:(NSString *)cond;
++ (NSMutableArray<DescLRU *> *)find_all:(nullable NSString *)cond;
 
-+ (dbstmt *)gen_stmt:(NSString *)cond;
-+ (DescLRU *)find_first_stmt:(dbstmt *)stmt;
-+ (NSMutableArray *)find_all_stmt:(dbstmt *)stmt;
++ (dbstmt *)gen_stmt:(nullable NSString *)cond;
++ (nullable DescLRU *)find_first_stmt:(dbstmt *)stmt;
++ (NSMutableArray<DescLRU *> *)find_all_stmt:(dbstmt *)stmt;
 
 // Delete operations
 - (void)delete;
-+ (void)delete_cond:(NSString *)cond;
++ (void)delete_cond:(nullable NSString *)cond;
 + (void)delete_all;
 
 // Dump SQL
@@ -43,3 +45,5 @@
 - (void)getInsertSql:(NSMutableString *)s;
 
 @end
+
+NS_ASSUME_NONNULL_END

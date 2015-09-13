@@ -48,7 +48,7 @@
   @param pid Primary key of the record
   @return record
 */
-+ (Asset *)find:(NSInteger)pid
++ (nullable Asset *)find:(NSInteger)pid
 {
     Database *db = [Database instance];
 
@@ -65,7 +65,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (Asset*)find_by_name:(NSString*)key cond:(NSString *)cond
++ (nullable Asset*)find_by_name:(NSString*)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE name = ? LIMIT 1";
@@ -77,7 +77,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (Asset*)find_by_name:(NSString*)key
++ (nullable Asset*)find_by_name:(NSString*)key
 {
     return [self find_by_name:key cond:nil];
 }
@@ -89,7 +89,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (Asset*)find_by_type:(NSInteger)key cond:(NSString *)cond
++ (nullable Asset*)find_by_type:(NSInteger)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE type = ? LIMIT 1";
@@ -101,7 +101,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (Asset*)find_by_type:(NSInteger)key
++ (nullable Asset*)find_by_type:(NSInteger)key
 {
     return [self find_by_type:key cond:nil];
 }
@@ -113,7 +113,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (Asset*)find_by_initialBalance:(double)key cond:(NSString *)cond
++ (nullable Asset*)find_by_initialBalance:(double)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE initialBalance = ? LIMIT 1";
@@ -125,7 +125,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (Asset*)find_by_initialBalance:(double)key
++ (nullable Asset*)find_by_initialBalance:(double)key
 {
     return [self find_by_initialBalance:key cond:nil];
 }
@@ -137,7 +137,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (Asset*)find_by_sorder:(NSInteger)key cond:(NSString *)cond
++ (nullable Asset*)find_by_sorder:(NSInteger)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE sorder = ? LIMIT 1";
@@ -149,7 +149,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (Asset*)find_by_sorder:(NSInteger)key
++ (nullable Asset*)find_by_sorder:(NSInteger)key
 {
     return [self find_by_sorder:key cond:nil];
 }
@@ -161,7 +161,7 @@
   @param cond Conditions (ORDER BY etc)
   @note If you specify WHERE conditions, you must start cond with "AND" keyword.
 */
-+ (Asset*)find_by_identifier:(NSString*)key cond:(NSString *)cond
++ (nullable Asset*)find_by_identifier:(NSString*)key cond:(nullable NSString *)cond
 {
     if (cond == nil) {
         cond = @"WHERE identifier = ? LIMIT 1";
@@ -173,7 +173,7 @@
     return [self find_first_stmt:stmt];
 }
 
-+ (Asset*)find_by_identifier:(NSString*)key
++ (nullable Asset*)find_by_identifier:(NSString*)key
 {
     return [self find_by_identifier:key cond:nil];
 }
@@ -185,7 +185,7 @@
   @param cond Conditions (WHERE phrase and so on)
   @return array of records
 */
-+ (Asset *)find_first:(NSString *)cond
++ (nullable Asset *)find_first:(NSString *)cond
 {
     if (cond == nil) {
         cond = @"LIMIT 1";
@@ -202,7 +202,7 @@
   @param cond Conditions (WHERE phrase and so on)
   @return array of records
 */
-+ (NSMutableArray *)find_all:(NSString *)cond
++ (nonnull NSMutableArray *)find_all:(NSString *)cond
 {
     dbstmt *stmt = [self gen_stmt:cond];
     return  [self find_all_stmt:stmt];
@@ -214,7 +214,7 @@
   @param s condition
   @return dbstmt
 */
-+ (dbstmt *)gen_stmt:(NSString *)cond
++ (nonnull dbstmt *)gen_stmt:(nullable NSString *)cond
 {
     NSString *sql;
     if (cond == nil) {
@@ -232,7 +232,7 @@
   @param stmt Statement
   @return array of records
 */
-+ (Asset *)find_first_stmt:(dbstmt *)stmt
++ (nullable Asset *)find_first_stmt:(nonnull dbstmt *)stmt
 {
     if ([stmt step] == SQLITE_ROW) {
         AssetBase *e = [[self class] new];
@@ -248,7 +248,7 @@
   @param stmt Statement
   @return array of records
 */
-+ (NSMutableArray *)find_all_stmt:(dbstmt *)stmt
++ (nonnull NSMutableArray *)find_all_stmt:(nonnull dbstmt *)stmt
 {
     NSMutableArray *array = [NSMutableArray new];
 
@@ -260,7 +260,7 @@
     return array;
 }
 
-- (void)_loadRow:(dbstmt *)stmt
+- (void)_loadRow:(nonnull dbstmt *)stmt
 {
     self.pid = [stmt colInt:0];
     self.name = [stmt colString:1];
@@ -343,7 +343,7 @@
 /**
   @brief Delete all records
 */
-+ (void)delete_cond:(NSString *)cond
++ (void)delete_cond:(nullable NSString *)cond
 {
     Database *db = [Database instance];
 
@@ -364,7 +364,7 @@
 /**
  * get table sql
  */
-+ (void)getTableSql:(NSMutableString *)s
++ (void)getTableSql:(nonnull NSMutableString *)s
 {
     [s appendString:@"DROP TABLE Assets;\n"];
     [s appendString:@"CREATE TABLE Assets (key INTEGER PRIMARY KEY"];
@@ -387,7 +387,7 @@
 /**
  * get "INSERT" SQL
  */
-- (void)getInsertSql:(NSMutableString *)s
+- (void)getInsertSql:(nonnull NSMutableString *)s
 {
     [s appendFormat:@"INSERT INTO Assets VALUES(%ld", (long)self.pid];
     [s appendString:@","];
