@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Report.h"
-#import "ReportEntry.h"
 
 @interface CatReportViewController : UITableViewController
 

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Report.h"
-#import "ReportEntry.h"
 
 @class GraphEntry;
 
