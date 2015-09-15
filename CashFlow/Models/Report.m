@@ -6,9 +6,12 @@
  */
 
 #import "AppDelegate.h"
-#import "Report.h"
 #import "Database.h"
 #import "Config.h"
+
+#import "Report.h"
+#import "ReportEntry.h"
+#import "CatReport.h"
 
 /////////////////////////////////////////////////////////////////////
 // Report

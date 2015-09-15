@@ -5,8 +5,10 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import "Report.h"
 #import "AppDelegate.h"
+#import "Report.h"
+#import "ReportEntry.h"
+#import "CatReport.h"
 
 @implementation CatReport
 

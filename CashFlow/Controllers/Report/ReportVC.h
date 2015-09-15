@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Report.h"
+#import "ReportEntry.h"
+#import "CatReport.h"
 #import "Asset.h"
 
 @interface ReportViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
