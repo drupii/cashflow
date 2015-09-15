@@ -5,12 +5,13 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
+#import "CashFlow-Swift.h"
+
 #import "AppDelegate.h"
 #import "Database.h"
 #import "Config.h"
 #import "Report.h"
 #import "ReportEntry.h"
-#import "CatReport.h"
 
 @implementation ReportEntry
 {
@@ -56,10 +57,10 @@ static NSInteger sortCatReport(id x, id y, void *context);
             catkey = [categories categoryAtIndex:i].pid;
         }
 
-        cr = [[CatReport alloc] initWithCategory:catkey withAsset:assetKey];
+        cr = [[CatReport alloc] initWithCategory:catkey asset:assetKey];
         [_incomeCatReports addObject:cr];
 
-        cr = [[CatReport alloc] initWithCategory:catkey withAsset:assetKey];
+        cr = [[CatReport alloc] initWithCategory:catkey asset:assetKey];
         [_outgoCatReports addObject:cr];
     }
 

@@ -6,6 +6,8 @@
  */
 // ReportCatGraphCell.m
 
+#import "CashFlow-Swift.h"
+
 #import "ReportCatGraphCell.h"
 #import "AppDelegate.h"
 

@@ -11,6 +11,9 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		265FAB39679D451185D48518 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 914D96536A094E7EAB063096 /* libPods.a */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		3E007EC61BA8694E00923757 /* CatReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC51BA8694E00923757 /* CatReport.swift */; settings = {ASSET_TAGS = (); }; };
+		3E007EC71BA8694E00923757 /* CatReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC51BA8694E00923757 /* CatReport.swift */; settings = {ASSET_TAGS = (); }; };
+		3E007EC81BA8694E00923757 /* CatReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC51BA8694E00923757 /* CatReport.swift */; settings = {ASSET_TAGS = (); }; };
 		3E035E9B1182B6E000711865 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -139,9 +142,7 @@
 		662AB38D91112AB8DB431A49 /* BackupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB45ECA675DB52757BD7D /* BackupView.storyboard */; };
 		662AB3AF63A652A2728E280B /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5A843B0137D18F91C90 /* SwiftUtils.swift */; };
 		662AB3B22938BFFC206F3C13 /* ReportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB943BAFEE09051FD3803 /* ReportView.storyboard */; };
-		662AB3C9A01A9D65DC3AAF13 /* CatReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB97D6B6A6F9A1CBD0DF6 /* CatReport.m */; };
 		662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */; };
-		662AB3DE506A8CC009134ECA /* CatReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB97D6B6A6F9A1CBD0DF6 /* CatReport.m */; };
 		662AB3ECDBD28A5D2C89DA56 /* AssetListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABAA20836AB99EE17C031 /* AssetListView.storyboard */; };
 		662AB3EEBE8359B2C44F885F /* TestCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB001A9958896013FA894 /* TestCommon.m */; };
 		662AB3F4042957BAF12DA6DA /* PinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA85E4FE950C1B4176F3 /* PinVC.m */; };
@@ -311,8 +312,8 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		357DFF059FE4B2E114DFCF57 /* libPods-free.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-free.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E007EC31BA868B800923757 /* CatReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatReport.h; sourceTree = "<group>"; };
 		3E007EC41BA868B800923757 /* ReportEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportEntry.h; sourceTree = "<group>"; };
+		3E007EC51BA8694E00923757 /* CatReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatReport.swift; sourceTree = "<group>"; };
 		3E035E9A1182B6E000711865 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E13EE58114007D600523938 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -453,7 +454,6 @@
 		662AB943BAFEE09051FD3803 /* ReportView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportView.storyboard; sourceTree = "<group>"; };
 		662AB961C6EC6D996C2304E4 /* CalculatorView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculatorView.storyboard; sourceTree = "<group>"; };
 		662AB974D05597FE31AD6B26 /* CashflowDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashflowDatabase.h; sourceTree = "<group>"; };
-		662AB97D6B6A6F9A1CBD0DF6 /* CatReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatReport.m; sourceTree = "<group>"; };
 		662AB9A739106627A769F3CF /* Dbstmt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dbstmt.m; sourceTree = "<group>"; };
 		662AB9AAB28ADE14CFB30ACE /* ExportBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportBase.h; sourceTree = "<group>"; };
 		662AB9D9EC684EED6E3555C2 /* SupportMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportMail.m; sourceTree = "<group>"; };
@@ -830,8 +830,7 @@
 				662ABC11E63DF5F296E47AC9 /* Report.m */,
 				3E007EC41BA868B800923757 /* ReportEntry.h */,
 				662ABCA9533585AD703DE3F9 /* ReportEntry.m */,
-				3E007EC31BA868B800923757 /* CatReport.h */,
-				662AB97D6B6A6F9A1CBD0DF6 /* CatReport.m */,
+				3E007EC51BA8694E00923757 /* CatReport.swift */,
 				662ABC584A2CCB4A9DD1F17A /* CashflowDatabase.m */,
 				662ABBCF4900BC8E8DBEBF83 /* DescLRUManager.h */,
 				662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */,
@@ -1435,7 +1434,6 @@
 				662AB85CCFE87E88587C7894 /* AssetEntry.m in Sources */,
 				662ABFEFB6047DFEDF362BF7 /* DateFormatter2.m in Sources */,
 				662ABE00B7A13F4DAD0197A4 /* ReportEntry.m in Sources */,
-				662AB3DE506A8CC009134ECA /* CatReport.m in Sources */,
 				662ABFCAA4B9071523BB0321 /* Report.m in Sources */,
 				662AB92560A6EC3DE897DBE3 /* Category.m in Sources */,
 				662AB836858AB4A86D44494E /* Journal.m in Sources */,
@@ -1486,6 +1484,7 @@
 				662AB613CA5E13EBEB478B3B /* ExportOfx.m in Sources */,
 				662AB842F60291327BE646BF /* ExportCsv.m in Sources */,
 				662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */,
+				3E007EC61BA8694E00923757 /* CatReport.swift in Sources */,
 				662AB1D7288A5760771CD027 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1505,7 +1504,6 @@
 				662AB597348399D0C641F973 /* AssetEntry.m in Sources */,
 				662AB64868D919F247214D32 /* DateFormatter2.m in Sources */,
 				662ABF2A2E8F8B82F7492B95 /* ReportEntry.m in Sources */,
-				662AB3C9A01A9D65DC3AAF13 /* CatReport.m in Sources */,
 				662AB970CEF27F8E563462DB /* Report.m in Sources */,
 				662ABB921B6646BF78ACADBB /* Category.m in Sources */,
 				662ABB9C48A1CA599A6DD18D /* Journal.m in Sources */,
@@ -1556,6 +1554,7 @@
 				662ABE7E031772A367626D2E /* ExportOfx.m in Sources */,
 				662AB93A9A20F94080B82263 /* ExportCsv.m in Sources */,
 				662AB254335CD0BABE4192B9 /* UIDevice+Hardware.m in Sources */,
+				3E007EC71BA8694E00923757 /* CatReport.swift in Sources */,
 				662AB70C19C4922E2397393F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1576,6 +1575,7 @@
 				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,
 				662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */,
 				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
+				3E007EC81BA8694E00923757 /* CatReport.swift in Sources */,
 				662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */,
 				662AB5290BA65A5E254DA9CA /* TimeTests.m in Sources */,
 				662ABA395B0AF6A61160E653 /* TransactionTests.m in Sources */,
