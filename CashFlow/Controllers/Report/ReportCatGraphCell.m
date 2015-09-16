@@ -19,7 +19,7 @@
     IBOutlet UIImageView *_imageView;
     
     double _total;
-    NSMutableArray *_catReports;
+    NSArray *_catReports;
 }
 
 + (CGFloat)cellHeight
@@ -36,7 +36,7 @@
 */
 - (void)setReport:(ReportEntry*)reportEntry isOutgo:(BOOL)isOutgo
 {
-    NSMutableArray *ary;
+    NSArray *ary;
 
     if (isOutgo) {
         ary = reportEntry.outgoCatReports;
