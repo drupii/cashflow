@@ -85,30 +85,22 @@
         _type = config.lastReportType;
     }
 
-    switch (_type) {
-        default:
-            _type = REPORT_DAILY;
-            // FALLTHROUGH
-        case REPORT_DAILY:
-            self.title = _L(@"Daily Report");
-            _dateFormatter.dateFormat = @"yyyy/MM/dd";
-            break;
-
-        case REPORT_WEEKLY:
-            self.title = _L(@"Weekly Report");
-            _dateFormatter.dateFormat = @"yyyy/MM/dd~";
-            break;
-
-        case REPORT_MONTHLY:
-            self.title = _L(@"Monthly Report");
-            //[dateFormatter setDateFormat:@"yyyy/MM"];
-            _dateFormatter.dateFormat = @"~yyyy/MM/dd";
-            break;
-
-        case REPORT_ANNUAL:
-            self.title = _L(@"Annual Report");
-            _dateFormatter.dateFormat = @"yyyy";
-            break;
+    if (_type == Report.DAILY) {
+        self.title = _L(@"Daily Report");
+        _dateFormatter.dateFormat = @"yyyy/MM/dd";
+    }
+    else if (_type == Report.WEEKLY) {
+        self.title = _L(@"Weekly Report");
+        _dateFormatter.dateFormat = @"yyyy/MM/dd~";
+    }
+    else if (_type == Report.MONTHLY) {
+        self.title = _L(@"Monthly Report");
+        //[dateFormatter setDateFormat:@"yyyy/MM"];
+        _dateFormatter.dateFormat = @"~yyyy/MM/dd";
+    }
+    else if (_type == Report.ANNUAL) {
+        self.title = _L(@"Annual Report");
+        _dateFormatter.dateFormat = @"yyyy";
     }
 
     // 設定保存
@@ -128,7 +120,7 @@
 // レポートのタイトルを得る
 - (NSString *)_reportTitle:(ReportEntry *)report
 {
-    if (_reports.type == REPORT_MONTHLY) {
+    if (_reports.type == Report.MONTHLY) {
         // 終了日の時刻の１分前の時刻から年月を得る
         //
         // 1) 締め日が月末の場合、endDate は翌月1日0:00を指しているので、
@@ -146,25 +138,25 @@
 
 - (IBAction)setReportDaily:(id)sender
 {
-    _type = REPORT_DAILY;
+    _type = Report.DAILY;
     [self _updateReport];
 }
 
 - (IBAction)setReportWeekly:(id)sender;
 {
-    _type = REPORT_WEEKLY;
+    _type = Report.WEEKLY;
     [self _updateReport];
 }
 
 - (IBAction)setReportMonthly:(id)sender;
 {
-    _type = REPORT_MONTHLY;
+    _type = Report.MONTHLY;
     [self _updateReport];
 }
 
 - (IBAction)setReportAnnual:(id)sender;
 {
-    _type = REPORT_ANNUAL;
+    _type = Report.ANNUAL;
     [self _updateReport];
 }
 

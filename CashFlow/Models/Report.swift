@@ -7,12 +7,7 @@
 
 import Foundation
 
-let REPORT_DAILY  = 0
-let REPORT_WEEKLY = 1
-let REPORT_MONTHLY  = 2
-let REPORT_ANNUAL = 3
 
-let MAX_REPORT_ENTRIES = 365
 
 /**
  * レポートの構造
@@ -23,16 +18,21 @@ let MAX_REPORT_ENTRIES = 365
  *  レポート
  */
 class Report : NSObject {
+    static let DAILY  = 0
+    static let WEEKLY = 1
+    static let MONTHLY  = 2
+    static let ANNUAL = 3
+
+    static let MAX_REPORT_ENTRIES = 365
+    
     /** レポート種別 (REPORT_XXX) */
-    var type: Int
+    var type: Int = MONTHLY
     
     /** 期間毎の ReportEntry の配列 */
-    var reportEntries: [ReportEntry]
+    var reportEntries: [ReportEntry] = []
 
     override init() {
         super.init()
-        self.type = REPORT_MONTHLY;
-        self.reportEntries = []
     }
 
     /**
@@ -62,13 +62,13 @@ class Report : NSObject {
 	
         var steps = NSDateComponents()
         switch (self.type) {
-            case REPORT_DAILY:
+            case Report.DAILY:
                 dateComponents = greg.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate: firstDate!)
                 nextStartDay = greg.dateFromComponents(dateComponents)
                 steps.day = 1
                 break
 
-            case REPORT_WEEKLY:
+            case Report.WEEKLY:
                 dateComponents = greg.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Weekday, NSCalendarUnit.Day], fromDate:firstDate!)
                 nextStartDay = greg.dateFromComponents(dateComponents)
             
@@ -82,7 +82,7 @@ class Report : NSObject {
                 steps.day = 7;
                 break;
 
-            case REPORT_MONTHLY:
+            case Report.MONTHLY:
                 dateComponents = greg.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate:firstDate!)
 
                 // 締め日設定
@@ -109,7 +109,7 @@ class Report : NSObject {
                 steps.month = 1;
                 break;
 			
-            case REPORT_ANNUAL:
+            case Report.ANNUAL:
                 dateComponents = greg.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate:firstDate!)
                 dateComponents.month = 1
                 dateComponents.day = 1
@@ -133,7 +133,7 @@ class Report : NSObject {
             self.reportEntries.append(r)
 
             // レポート上限数を制限
-            if self.reportEntries.count > MAX_REPORT_ENTRIES {
+            if self.reportEntries.count > Report.MAX_REPORT_ENTRIES {
                 self.reportEntries.removeAtIndex(0)
             }
         }
@@ -157,7 +157,7 @@ class Report : NSObject {
      */
     func getMaxAbsValue() -> Double {
         var maxAbsValue: Double = 1.0
-        for var rep in self.reportEntries {
+        for rep in self.reportEntries {
             if (rep.totalIncome > maxAbsValue) {
                 maxAbsValue = rep.totalIncome
             }
@@ -176,13 +176,14 @@ class Report : NSObject {
         let entries = DataModel.journal().entries
 
         var found: Transaction? = nil
-        for t in entries {
+        for _t in entries {
+            let t: Transaction = _t as! Transaction
             if (asset < 0) {
-                found = t as! Transaction
+                found = t
                 break
             }
             if (t.asset == asset || t.dstAsset == asset) {
-                found = t as! Transaction
+                found = t
                 break
             }
         }

@@ -17,6 +17,9 @@
 		3E007ECA1BA86DE700923757 /* ReportEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC91BA86DE700923757 /* ReportEntry.swift */; settings = {ASSET_TAGS = (); }; };
 		3E007ECB1BA86DE700923757 /* ReportEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC91BA86DE700923757 /* ReportEntry.swift */; settings = {ASSET_TAGS = (); }; };
 		3E007ECC1BA86DE700923757 /* ReportEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC91BA86DE700923757 /* ReportEntry.swift */; settings = {ASSET_TAGS = (); }; };
+		3E007ECE1BA9BA2900923757 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007ECD1BA9BA2900923757 /* Report.swift */; settings = {ASSET_TAGS = (); }; };
+		3E007ECF1BA9BA2900923757 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007ECD1BA9BA2900923757 /* Report.swift */; settings = {ASSET_TAGS = (); }; };
+		3E007ED01BA9BA2900923757 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007ECD1BA9BA2900923757 /* Report.swift */; settings = {ASSET_TAGS = (); }; };
 		3E035E9B1182B6E000711865 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -214,7 +217,6 @@
 		662AB96A640F061268F769F1 /* PinView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB102FEA9549692A14BA3 /* PinView-ipad.xib */; };
 		662AB96D02DFB559BFF39CEF /* ExportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB38D4410C04B96DF1C5D /* ExportVC.m */; };
 		662AB96F022FDC56F35ECC27 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8187E121C6CC4711496 /* CurrencyManager.swift */; };
-		662AB970CEF27F8E563462DB /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC11E63DF5F296E47AC9 /* Report.m */; };
 		662AB9BA16DEC1B246BE68CB /* CalculatorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB961C6EC6D996C2304E4 /* CalculatorView.storyboard */; };
 		662AB9C489A90A07A482941B /* ReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB11A149EECD59514A19D /* ReportVC.m */; };
 		662AB9C92C71ADA3CDA9CBEE /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3FA5D32E12BBDA04AB4 /* Database.m */; };
@@ -287,7 +289,6 @@
 		662ABF4E80595B30B2F88BE8 /* ReportCatGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */; };
 		662ABF5D53690328D77C3E34 /* ExportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABCB53174869FC778FDA9 /* ExportView.storyboard */; };
 		662ABF978C506C23FCD55017 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB142EB1301EB4C50AA /* InfoViewController.swift */; };
-		662ABFCAA4B9071523BB0321 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC11E63DF5F296E47AC9 /* Report.m */; };
 		662ABFECFCD6CEEC48222E25 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB719DFAE01D69A82BB /* DataModel.m */; };
 		662ABFEFB6047DFEDF362BF7 /* DateFormatter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */; };
 		662ABFFDEF707D176344864A /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662AB4529F18D3B7927856D5 /* images.xcassets */; };
@@ -315,6 +316,7 @@
 		357DFF059FE4B2E114DFCF57 /* libPods-free.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-free.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E007EC51BA8694E00923757 /* CatReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatReport.swift; sourceTree = "<group>"; };
 		3E007EC91BA86DE700923757 /* ReportEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportEntry.swift; sourceTree = "<group>"; };
+		3E007ECD1BA9BA2900923757 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		3E035E9A1182B6E000711865 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E13EE58114007D600523938 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -370,7 +372,6 @@
 		662AB11A149EECD59514A19D /* ReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportVC.m; sourceTree = "<group>"; };
 		662AB12E9D846E31BB9DD3BA /* ExportCsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportCsv.h; sourceTree = "<group>"; };
 		662AB13166AD062A3AD46234 /* DescLRU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescLRU.m; sourceTree = "<group>"; };
-		662AB145DA1C0D52312CD49D /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
 		662AB14CBF21BAA3849668FF /* CalcVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcVC.h; sourceTree = "<group>"; };
 		662AB14DDD3F0ABF1D8365B0 /* TransactionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionVC.h; sourceTree = "<group>"; };
 		662AB1542F3EE3CFBA7E9604 /* ORQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORQuery.m; sourceTree = "<group>"; };
@@ -485,7 +486,6 @@
 		662ABBCF4900BC8E8DBEBF83 /* DescLRUManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRUManager.h; sourceTree = "<group>"; };
 		662ABBECC87A505590735192 /* PinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinController.m; sourceTree = "<group>"; };
 		662ABC0BBC45BD44C15D714B /* AssetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetTests.m; sourceTree = "<group>"; };
-		662ABC11E63DF5F296E47AC9 /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
 		662ABC30AB29FE2EE37E5C09 /* WebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServer.h; sourceTree = "<group>"; };
 		662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCatGraphCell.m; sourceTree = "<group>"; };
 		662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter2.m; sourceTree = "<group>"; };
@@ -826,8 +826,7 @@
 				662AB6750468E22D0A04C36E /* Journal.m */,
 				662ABD23F134469744B8F265 /* Category.h */,
 				662AB0A3BB4870106242B819 /* Category.m */,
-				662AB145DA1C0D52312CD49D /* Report.h */,
-				662ABC11E63DF5F296E47AC9 /* Report.m */,
+				3E007ECD1BA9BA2900923757 /* Report.swift */,
 				3E007EC91BA86DE700923757 /* ReportEntry.swift */,
 				3E007EC51BA8694E00923757 /* CatReport.swift */,
 				662ABC584A2CCB4A9DD1F17A /* CashflowDatabase.m */,
@@ -1432,7 +1431,6 @@
 				662AB551CAC740B07BF35F23 /* TCategoryBase.m in Sources */,
 				662AB85CCFE87E88587C7894 /* AssetEntry.m in Sources */,
 				662ABFEFB6047DFEDF362BF7 /* DateFormatter2.m in Sources */,
-				662ABFCAA4B9071523BB0321 /* Report.m in Sources */,
 				662AB92560A6EC3DE897DBE3 /* Category.m in Sources */,
 				662AB836858AB4A86D44494E /* Journal.m in Sources */,
 				662ABB59FBF21022CDAE7980 /* CashflowDatabase.m in Sources */,
@@ -1457,6 +1455,7 @@
 				662AB4F31A14A00F7BB7D6A5 /* ReportCatDetailVC.m in Sources */,
 				662AB22C82AC33027AC91839 /* ReportCell.m in Sources */,
 				662ABBC04AC5A71CF6990A9A /* ReportCatVC.m in Sources */,
+				3E007ECE1BA9BA2900923757 /* Report.swift in Sources */,
 				662AB139188CAF1D60B68416 /* ReportCatGraphCell.m in Sources */,
 				662AB65F1A05FBDF6A6E8AE4 /* ReportVC.m in Sources */,
 				662ABAB8FED7C40CD12A05D2 /* ReportCatCell.m in Sources */,
@@ -1502,7 +1501,6 @@
 				662AB771F7847DD1B29FBFA6 /* TCategoryBase.m in Sources */,
 				662AB597348399D0C641F973 /* AssetEntry.m in Sources */,
 				662AB64868D919F247214D32 /* DateFormatter2.m in Sources */,
-				662AB970CEF27F8E563462DB /* Report.m in Sources */,
 				662ABB921B6646BF78ACADBB /* Category.m in Sources */,
 				662ABB9C48A1CA599A6DD18D /* Journal.m in Sources */,
 				662ABDC5D64BEE8991EC20E4 /* CashflowDatabase.m in Sources */,
@@ -1527,6 +1525,7 @@
 				662AB28E1B66AAE37838FF78 /* ReportCatDetailVC.m in Sources */,
 				662ABE931E423B1C7B72DA08 /* ReportCell.m in Sources */,
 				662AB8662D04372384915B9E /* ReportCatVC.m in Sources */,
+				3E007ECF1BA9BA2900923757 /* Report.swift in Sources */,
 				662ABF4E80595B30B2F88BE8 /* ReportCatGraphCell.m in Sources */,
 				662AB9C489A90A07A482941B /* ReportVC.m in Sources */,
 				662AB3346EF8247197E7B57A /* ReportCatCell.m in Sources */,
@@ -1573,6 +1572,7 @@
 				662AB5D51A8462384571543A /* CurrencyManagerTests.m in Sources */,
 				662AB42368874E330C5451F2 /* DataModelTests.m in Sources */,
 				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,
+				3E007ED01BA9BA2900923757 /* Report.swift in Sources */,
 				662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */,
 				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
 				3E007EC81BA8694E00923757 /* CatReport.swift in Sources */,
