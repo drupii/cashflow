@@ -19,6 +19,7 @@
 
 @property(nonatomic,readonly,nonnull) NSMutableArray<Transaction *> *entries;
 
+- (nonnull NSArray<Transaction *> *)immutableEntries;
 - (void)reload;
 
 - (void)insertTransaction:(nonnull Transaction*)tr;

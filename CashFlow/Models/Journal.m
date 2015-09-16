@@ -23,6 +23,10 @@
     return self;
 }
 
+- (nonnull NSArray<Transaction *> *)immutableEntries
+{
+    return _entries;
+}
 
 - (void)reload
 {

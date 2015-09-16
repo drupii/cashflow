@@ -123,14 +123,14 @@ class Report : NSObject {
 	
         // レポートエントリを生成する
         while nextStartDay!.compare(lastDate!) != NSComparisonResult.OrderedDescending {
-            var start = nextStartDay!
+            let start = nextStartDay!
 
             // 次の期間開始時期を計算する
             nextStartDay = greg.dateByAddingComponents(steps, toDate:nextStartDay!, options:[])
 
             // Report 生成
-            var r = ReportEntry(asset:assetKey, start:start, end:nextStartDay)
-            self.reportEntries.append(r)
+            let entry = ReportEntry(asset:assetKey, start:start, end:nextStartDay)
+            self.reportEntries.append(entry)
 
             // レポート上限数を制限
             if self.reportEntries.count > Report.MAX_REPORT_ENTRIES {
@@ -140,15 +140,15 @@ class Report : NSObject {
 
         // 集計実行
         // 全取引について、該当する ReportEntry へ transaction を追加する
-        for t in DataModel.journal().entries {
-            for r in self.reportEntries {
-                if r.addTransaction(t as! Transaction) {
+        for transaction in DataModel.journal().entries {
+            for entry in self.reportEntries {
+                if entry.addTransaction(transaction as! Transaction) {
                     break
                 }
             }
         }
-        for r in self.reportEntries {
-            r.sortAndTotalUp()
+        for entry in self.reportEntries {
+            entry.sortAndTotalUp()
         }
     }
 
@@ -173,11 +173,10 @@ class Report : NSObject {
      * 指定された資産の最初の取引日を取得
      */
     private func firstDateOfAsset(asset: Int) -> NSDate? {
-        let entries = DataModel.journal().entries
+        let entries = DataModel.journal().immutableEntries()
 
         var found: Transaction? = nil
-        for _t in entries {
-            let t: Transaction = _t as! Transaction
+        for t in entries {
             if (asset < 0) {
                 found = t
                 break
@@ -194,13 +193,13 @@ class Report : NSObject {
      * 指定された資産の最後の取引日を取得
      */
     private func lastDateOfAsset(asset: Int) -> NSDate? {
-        let entries = DataModel.journal().entries
+        let entries = DataModel.journal().immutableEntries()
 
         var t: Transaction?
         var i: Int
 
         for (i = entries.count - 1; i >= 0; i--) {
-            t = entries[i] as! Transaction
+            t = entries[i]
             if (asset < 0) {
                 break
             }
