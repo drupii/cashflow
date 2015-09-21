@@ -17,9 +17,8 @@
 // 
 @interface Journal : NSObject <NSFastEnumeration>
 
-@property(nonatomic,readonly,nonnull) NSMutableArray<Transaction *> *entries;
+@property(nonatomic,readonly,nonnull) NSArray<Transaction *> *entries;
 
-- (nonnull NSArray<Transaction *> *)immutableEntries;
 - (void)reload;
 
 - (void)insertTransaction:(nonnull Transaction*)tr;

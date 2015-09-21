@@ -13,6 +13,11 @@
 #import "CashflowDatabase.h"
 
 @implementation Journal
+{
+    NSMutableArray<Transaction *> *_entries;
+}
+
+@synthesize entries = _entries;
 
 - (instancetype)init
 {
@@ -21,11 +26,6 @@
         _entries = nil;
     }
     return self;
-}
-
-- (nonnull NSArray<Transaction *> *)immutableEntries
-{
-    return _entries;
 }
 
 - (void)reload

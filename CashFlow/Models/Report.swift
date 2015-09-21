@@ -142,7 +142,7 @@ class Report : NSObject {
         // 全取引について、該当する ReportEntry へ transaction を追加する
         for transaction in DataModel.journal().entries {
             for entry in self.reportEntries {
-                if entry.addTransaction(transaction as! Transaction) {
+                if entry.addTransaction(transaction) {
                     break
                 }
             }
@@ -173,7 +173,7 @@ class Report : NSObject {
      * 指定された資産の最初の取引日を取得
      */
     private func firstDateOfAsset(asset: Int) -> NSDate? {
-        let entries = DataModel.journal().immutableEntries()
+        let entries = DataModel.journal().entries
 
         var found: Transaction? = nil
         for t in entries {
@@ -193,7 +193,7 @@ class Report : NSObject {
      * 指定された資産の最後の取引日を取得
      */
     private func lastDateOfAsset(asset: Int) -> NSDate? {
-        let entries = DataModel.journal().immutableEntries()
+        let entries = DataModel.journal().entries
 
         var t: Transaction?
         var i: Int
