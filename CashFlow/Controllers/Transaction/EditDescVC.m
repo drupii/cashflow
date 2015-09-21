@@ -14,14 +14,14 @@
 - (UITableViewCell *)_textFieldCell:(UITableView*)tv;
 - (UITableViewCell *)_descCell:(UITableView*)tv row:(NSInteger)row;
 
-@property (nonatomic) NSMutableArray *descArray;
-@property (nonatomic) NSMutableArray *filteredDescArray;
-
 @end
 
 @implementation EditDescViewController
 {
     UITextField *_textField;
+
+    NSMutableArray *_descArray;
+    NSMutableArray *_filteredDescArray;
 }
 
 + (EditDescViewController *)instantiate {
@@ -74,8 +74,8 @@
     _textField.text = self.desc;
     [super viewWillAppear:animated];
 
-    self.descArray = [DescLRUManager getDescLRUs:_category];
-    self.filteredDescArray = [self.descArray mutableCopy];
+    _descArray = [[DescLRUManager getDescLRUs:_category] mutableCopy];
+    _filteredDescArray = [_descArray mutableCopy];
 
     // キーボードを消す ###
     [_textField resignFirstResponder];
@@ -118,7 +118,7 @@
         return 1; // テキスト入力欄
     }
 
-    return (self.filteredDescArray).count;
+    return _filteredDescArray.count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -164,7 +164,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"descCell"];
     }
-    DescLRU *lru = self.filteredDescArray[row];
+    DescLRU *lru = _filteredDescArray[row];
     cell.textLabel.text = lru.desc;
     return cell;
 }
@@ -179,7 +179,7 @@
     [tv deselectRowAtIndexPath:indexPath animated:NO];
 
     if (tv == self.searchDisplayController.searchResultsTableView || indexPath.section == 1) {
-        DescLRU *lru = self.filteredDescArray[indexPath.row];
+        DescLRU *lru = _filteredDescArray[indexPath.row];
         _textField.text = lru.desc;
         [self doneAction];
     }
@@ -203,11 +203,11 @@
         return; // do nothing
     }
 
-    DescLRU *lru = self.filteredDescArray[indexPath.row];
-    [self.descArray removeObject:lru]; // フィルタ前リストから抜く
+    DescLRU *lru = _filteredDescArray[indexPath.row];
+    [_descArray removeObject:lru]; // フィルタ前リストから抜く
     [lru delete]; // delete from DB
     
-    [self.filteredDescArray removeObjectAtIndex:indexPath.row];
+    [_filteredDescArray removeObjectAtIndex:indexPath.row];
     [tv deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
@@ -230,7 +230,7 @@
 // 検索終了
 - (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
 {
-    self.filteredDescArray = [self.descArray mutableCopy];
+    _filteredDescArray = [_descArray mutableCopy];
 }
 
 
@@ -239,24 +239,24 @@
 // サーチテキスト変更時の処理：フィルタリングをし直す
 - (void)updateFilteredDescArray:(NSString *)searchString {
     if (searchString == nil || searchString.length == 0) {
-        self.filteredDescArray = [self.descArray mutableCopy];
+        _filteredDescArray = [_descArray mutableCopy];
         return;
     }
     
-    NSInteger count = (self.descArray).count;
-    if (self.filteredDescArray == nil) {
-        self.filteredDescArray = [[NSMutableArray alloc] initWithCapacity:count];
+    NSInteger count = (_descArray).count;
+    if (_filteredDescArray == nil) {
+        _filteredDescArray = [[NSMutableArray alloc] initWithCapacity:count];
     } else {
-        [self.filteredDescArray removeAllObjects];
+        [_filteredDescArray removeAllObjects];
     }
     
     NSUInteger searchOptions = NSCaseInsensitivePredicateOption | NSDiacriticInsensitiveSearch;
     for (NSInteger i = 0; i < count; i++) {
-        DescLRU *lru = (self.descArray)[i];
+        DescLRU *lru = (_descArray)[i];
         NSRange range = NSMakeRange(0, lru.desc.length);
         NSRange foundRange = [lru.desc rangeOfString:searchString options:searchOptions range:range];
         if (foundRange.length > 0) {
-            [self.filteredDescArray addObject:lru];
+            [_filteredDescArray addObject:lru];
         }
     }
 }

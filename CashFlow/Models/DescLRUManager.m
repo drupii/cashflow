@@ -51,7 +51,7 @@
     [lru save];
 }
 
-+ (NSMutableArray<DescLRU *> *)getDescLRUs:(NSInteger)category
++ (NSArray<DescLRU *> *)getDescLRUs:(NSInteger)category
 {
     NSMutableArray *ary;
 
