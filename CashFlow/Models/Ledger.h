@@ -15,7 +15,7 @@
 
 @interface Ledger : NSObject
 
-@property(nonatomic,strong,nonnull) NSMutableArray<Asset *> *assets;
+@property(nonatomic,readonly,nonnull) NSArray<Asset *> *assets;
 
 // asset operation
 - (void)load;

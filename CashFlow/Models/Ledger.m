@@ -11,10 +11,15 @@
 #import "Ledger.h"
 
 @implementation Ledger
+{
+    NSMutableArray<Asset *> *_assets;
+}
+
+@synthesize assets = _assets;
 
 - (void)load
 {
-    self.assets = [Asset find_all:@"ORDER BY sorder"];
+    _assets = [Asset find_all:@"ORDER BY sorder"];
 }
 
 - (void)rebuild
@@ -54,7 +59,7 @@
 
 - (void)addAsset:(Asset *)as
 {
-    [self.assets addObject:as];
+    [_assets addObject:as];
     [as save];
 }
 
@@ -64,7 +69,7 @@
 
     [[DataModel journal] deleteAllTransactionsWithAsset:as];
 
-    [self.assets removeObject:as];
+    [_assets removeObject:as];
 
     [self rebuild];
 }
@@ -77,8 +82,8 @@
 - (void)reorderAsset:(NSInteger)from to:(NSInteger)to
 {
     Asset *as = self.assets[from];
-    [self.assets removeObjectAtIndex:from];
-    [self.assets insertObject:as atIndex:to];
+    [_assets removeObjectAtIndex:from];
+    [_assets insertObject:as atIndex:to];
 	
     // renumbering sorder
     Database *db = [Database instance];
