@@ -17,7 +17,8 @@
 #import "CategoryListVC.h"
 //#import "CalendarViewController.h"
 #import "CFCalendarViewController.h"
-#import "AssetEntry.h"
+
+@class AssetEntry;
 
 @interface TransactionViewController : UIViewController 
     <UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate,UIActionSheetDelegate,

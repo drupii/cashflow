@@ -32,7 +32,7 @@
     Asset *a = [Asset new];
     a.pid = 999;
 
-    e = [[AssetEntry alloc] initWithTransaction:nil withAsset:a];
+    e = [[AssetEntry alloc] initWithTransaction:nil asset:a];
 
     XCTAssertEqual(e.assetKey, 999);
     XCTAssertEqual(e.value, 0.0);

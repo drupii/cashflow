@@ -9,7 +9,8 @@
 #import "Transaction.h"
 #import "Database.h"
 #import "AssetBase.h"
-#import "AssetEntry.h"
+
+@class AssetEntry;
 
 // asset types
 #define NUM_ASSET_TYPES 5

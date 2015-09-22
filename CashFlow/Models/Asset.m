@@ -98,7 +98,7 @@
     AssetEntry *e;
     for (Transaction *t in [DataModel journal]) {
         if (t.asset == self.pid || t.dstAsset == self.pid) {
-            e = [[AssetEntry alloc] initWithTransaction:t withAsset:self];
+            e = [[AssetEntry alloc] initWithTransaction:t asset:self];
 
             // 残高計算
             if (t.type == TYPE_ADJ && t.hasBalance) {
