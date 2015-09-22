@@ -434,10 +434,10 @@
     }
 
     NSInteger type = _editingEntry.transaction.type;
-    if (type == TYPE_ADJ) {
+    if (type == TransactionTypeAdj) {
         _editingEntry.transaction.desc = _typeArray[_editingEntry.transaction.type];
     }
-    else if (type == TYPE_TRANSFER) {
+    else if (type == TransactionTypeTransfer) {
         Asset *from, *to;
         Ledger *ledger = [DataModel ledger];
         from = [ledger assetWithKey:_editingEntry.transaction.asset];

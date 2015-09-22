@@ -57,7 +57,7 @@ class AssetEntry : NSObject {
     // 資産間移動の移動先取引なら YES を返す
     //
     func isDstAsset() -> Bool {
-        return self._transaction.type == TYPE_TRANSFER && self.assetKey == _transaction.dstAsset
+        return self._transaction.etype == .Transfer && self.assetKey == _transaction.dstAsset
     }
 
     // property transaction : read 処理
@@ -68,7 +68,7 @@ class AssetEntry : NSObject {
 
     // 値を Transaction に書き戻す
     private func _setupTransaction() {
-        if (_transaction.type == TYPE_ADJ) {
+        if (_transaction.etype == .Adj) {
             _transaction.balance = self.balance
             _transaction.hasBalance = true
         } else {
@@ -85,26 +85,23 @@ class AssetEntry : NSObject {
     private func getEvalue() -> Double {
         var ret: Double = 0.0
 
-        switch (_transaction.type) {
-        case TYPE_INCOME:
+        switch (_transaction.etype) {
+        case .Income:
             ret = self.value;
             break;
-        case TYPE_OUTGO:
+        case .Outgo:
             ret = -self.value;
             break;
-        case TYPE_ADJ:
+        case .Adj:
             ret = self.balance;
             break;
-        case TYPE_TRANSFER:
+        case .Transfer:
             if (self.isDstAsset()) {
                 ret = self.value;
             } else {
                 ret = -self.value;
             }
             break;
-        default:
-            // TODO
-            break
         }
 	
         if (ret == 0.0) {
@@ -115,45 +112,42 @@ class AssetEntry : NSObject {
 
     // 編集値をセット
     private func setEvalue(v: Double) {
-        switch (_transaction.type) {
-        case TYPE_INCOME:
+        switch (_transaction.etype) {
+        case .Income:
             self.value = v;
             break;
-        case TYPE_OUTGO:
+        case .Outgo:
             self.value = -v;
             break;
-        case TYPE_ADJ:
+        case .Adj:
             self.balance = v;
             break;
-        case TYPE_TRANSFER:
+        case .Transfer:
             if (self.isDstAsset()) {
                 self.value = v;
             } else {
                 self.value = -v;
             }
             break;
-        default:
-            // TODO:
-            break
         }
     }
 
     // 種別変更
     //   type のほか、transaction の dst_asset, asset, value も調整する
-    func changeType(type :Int, assetKey:Int, dstAssetKey:Int) -> Bool {
-        if (type == TYPE_TRANSFER) {
+    func changeType(type :TransactionType, assetKey:Int, dstAssetKey:Int) -> Bool {
+        if (type == .Transfer) {
             if (dstAssetKey == self.assetKey) {
                 // 自分あて転送は許可しない
                 // ### TBD
                 return false
             }
 
-            _transaction.type = TYPE_TRANSFER
+            _transaction.etype = .Transfer
             self.setDstAsset(dstAssetKey)
         } else {
             // 資産間移動でない取引に変更した場合、強制的に指定資産の取引に変更する
             let ev = self.evalue;
-            _transaction.type = type
+            _transaction.etype = type
             _transaction.asset = assetKey
             _transaction.dstAsset = -1
             self.evalue = ev
@@ -163,7 +157,7 @@ class AssetEntry : NSObject {
 
     // 転送先資産のキーを返す
     func dstAsset() -> Int {
-        if (_transaction.type != TYPE_TRANSFER) {
+        if (_transaction.etype != .Transfer) {
             //TODO: ASSERT(false)
             return -1;
         }
@@ -176,7 +170,7 @@ class AssetEntry : NSObject {
     }
 
     func setDstAsset(asset: Int) {
-        if (_transaction.type != TYPE_TRANSFER) {
+        if (_transaction.etype != .Transfer) {
             //TODO:ASSERT(NO);
             return
         }

@@ -101,7 +101,7 @@
             e = [[AssetEntry alloc] initWithTransaction:t asset:self];
 
             // 残高計算
-            if (t.type == TYPE_ADJ && t.hasBalance) {
+            if (t.type == TransactionTypeAdj && t.hasBalance) {
                 // 残高から金額を逆算
                 double oldval = t.value;
                 t.value = t.balance - balance;
@@ -118,7 +118,7 @@
                 balance = balance + e.value;
                 e.balance = balance;
 
-                if (t.type == TYPE_ADJ) {
+                if (t.type == TransactionTypeAdj) {
                     t.balance = balance;
                     t.hasBalance = YES;
                 }

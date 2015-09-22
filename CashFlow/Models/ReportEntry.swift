@@ -90,7 +90,7 @@ class ReportEntry : NSObject {
         var value: Double
         if (self.assetKey < 0) {
             // 資産指定なしレポートの場合、資産間移動は計上しない
-            if (t.type == numericCast(TYPE_TRANSFER)) {
+            if (t.type == TransactionType.Transfer.rawValue) {
                 return true
             }
             value = t.value;

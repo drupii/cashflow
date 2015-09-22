@@ -10,12 +10,6 @@
 #import "Config.h"
 #import "DescLRUManager.h"
 
-
-const NSInteger TYPE_OUTGO = 0;
-const NSInteger TYPE_INCOME = 1;
-const NSInteger TYPE_ADJ = 2;
-const NSInteger TYPE_TRANSFER = 3;
-
 @implementation Transaction
 
 /*
@@ -47,7 +41,7 @@ const NSInteger TYPE_TRANSFER = 3;
     self.desc = @"";
     self.memo = @"";
     self.value = 0.0;
-    self.type = 0;
+    self.type = TransactionTypeOutgo;
     self.category = -1;
     self.hasBalance = NO;
     return self;
@@ -86,6 +80,15 @@ const NSInteger TYPE_TRANSFER = 3;
     n.hasBalance = self.hasBalance;
     n.balance = self.balance;
     return n;
+}
+
+- (TransactionType)etype
+{
+    return (TransactionType)self.type;
+}
+
+- (void)setEtype:(TransactionType)type {
+    self.type = type;
 }
 
 - (void)_insert

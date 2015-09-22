@@ -8,10 +8,12 @@
 #import <UIKit/UIKit.h>
 #import "TransactionBase.h"
 
-extern NSInteger const TYPE_OUTGO; // 支払い
-extern NSInteger const TYPE_INCOME; // 入金
-extern NSInteger const TYPE_ADJ; // 残高調整
-extern NSInteger const TYPE_TRANSFER; // 資産間移動
+typedef NS_ENUM(NSInteger, TransactionType) {
+    TransactionTypeOutgo = 0, //支払い
+    TransactionTypeIncome = 1, // 入金
+    TransactionTypeAdj = 2, // 残高調整
+    TransactionTypeTransfer = 3 // 資産間移動
+};
 
 @class Asset;
 
@@ -23,6 +25,8 @@ extern NSInteger const TYPE_TRANSFER; // 資産間移動
 
 - (nonnull instancetype)initWithDate:(nonnull NSDate *)date description:(nonnull NSString *)desc value:(double)v;
 - (void)updateWithoutUpdateLRU;
+
+@property(nonatomic,assign) TransactionType etype;
 
 + (nonnull NSDate *)lastUsedDate;
 + (void)setLastUsedDate:(nullable NSDate *)date;

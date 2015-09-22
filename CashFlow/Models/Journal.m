@@ -118,7 +118,7 @@ static NSInteger compareByDate(Transaction *t1, Transaction *t2, void *context)
 */
 - (BOOL)deleteTransaction:(Transaction *)t withAsset:(Asset *)asset
 {
-    if (t.type != TYPE_TRANSFER) {
+    if (t.type != TransactionTypeTransfer) {
         // 資産間移動取引以外の場合
         [t delete];
         [_entries removeObject:t];
@@ -137,9 +137,9 @@ static NSInteger compareByDate(Transaction *t1, Transaction *t2, void *context)
 
     // 取引タイプを変更
     if (t.value >= 0) {
-        t.type = TYPE_INCOME;
+        t.type = TransactionTypeIncome;
     } else {
-        t.type = TYPE_OUTGO;
+        t.type = TransactionTypeOutgo;
     }
 
     // データベース書き換え
