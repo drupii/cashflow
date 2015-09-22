@@ -96,7 +96,7 @@
     double balance = self.initialBalance;
 
     AssetEntry *e;
-    for (Transaction *t in [DataModel journal]) {
+    for (Transaction *t in [DataModel journal].entries) {
         if (t.asset == self.pid || t.dstAsset == self.pid) {
             e = [[AssetEntry alloc] initWithTransaction:t asset:self];
 
@@ -159,7 +159,7 @@
 {
     AssetEntry *orig = [self entryAt:index];
 
-    [[DataModel journal] replaceTransaction:orig.transaction withObject:e.transaction];
+    [[DataModel journal] replaceTransaction:orig.transaction to:e.transaction];
     [[DataModel ledger] rebuild];
 }
 
@@ -175,7 +175,7 @@
 
     // エントリ削除
     AssetEntry *e = [self entryAt:index];
-    [[DataModel journal] deleteTransaction:e.transaction withAsset:self];
+    [[DataModel journal] deleteTransaction:e.transaction asset:self];
 }
 
 // エントリ削除

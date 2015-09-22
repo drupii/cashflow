@@ -127,7 +127,7 @@ class ReportEntry : NSObject {
         } else {
             ary = self.incomeCatReports;
         }
-        for var cr in ary {
+        for cr in ary {
             if (cr.category == t.category) {
                 cr.addTransaction(t)
                 break;
@@ -180,7 +180,7 @@ class ReportEntry : NSObject {
 
         // 集計
         var total = 0.0
-        for var cr2 in ary {
+        for cr2 in ary {
             total += cr2.sum;
         }
         

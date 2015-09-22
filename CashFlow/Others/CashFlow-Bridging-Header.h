@@ -20,6 +20,7 @@
 #import "TransactionListVC.h"
 
 #import "Config.h"
+#import "CashflowDatabase.h"
 
 #import "Asset.h"
 
