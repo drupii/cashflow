@@ -10,6 +10,12 @@
 #import "Config.h"
 #import "DescLRUManager.h"
 
+
+const NSInteger TYPE_OUTGO = 0;
+const NSInteger TYPE_INCOME = 1;
+const NSInteger TYPE_ADJ = 2;
+const NSInteger TYPE_TRANSFER = 3;
+
 @implementation Transaction
 
 /*

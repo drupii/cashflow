@@ -433,25 +433,18 @@
         return;
     }
 
-    switch (_editingEntry.transaction.type) {
-    case TYPE_ADJ:
+    NSInteger type = _editingEntry.transaction.type;
+    if (type == TYPE_ADJ) {
         _editingEntry.transaction.desc = _typeArray[_editingEntry.transaction.type];
-        break;
+    }
+    else if (type == TYPE_TRANSFER) {
+        Asset *from, *to;
+        Ledger *ledger = [DataModel ledger];
+        from = [ledger assetWithKey:_editingEntry.transaction.asset];
+        to = [ledger assetWithKey:_editingEntry.transaction.dstAsset];
 
-    case TYPE_TRANSFER:
-        {
-            Asset *from, *to;
-            Ledger *ledger = [DataModel ledger];
-            from = [ledger assetWithKey:_editingEntry.transaction.asset];
-            to = [ledger assetWithKey:_editingEntry.transaction.dstAsset];
-
-            _editingEntry.transaction.desc =
-                [NSString stringWithFormat:@"%@/%@", from.name, to.name];
-        }
-        break;
-
-    default:
-        break;
+        _editingEntry.transaction.desc =
+            [NSString stringWithFormat:@"%@/%@", from.name, to.name];
     }
 
     [self dismissPopover];
