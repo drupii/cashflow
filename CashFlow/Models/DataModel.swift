@@ -119,53 +119,6 @@ class DataModel : NSObject {
     ////////////////////////////////////////////////////////////////////////////
     // Utility
 
-    //
-    // DateFormatter
-    //
-    private static var dfDateOnly: NSDateFormatter?
-    private static var dfDateTime: NSDateFormatter?
-    
-    static func dateFormatter() -> NSDateFormatter {
-        if (Config.instance().dateTimeMode == DateTimeModeDateOnly) {
-            if (dfDateOnly == nil) {
-                dfDateOnly = DataModel.dateFormatter(NSDateFormatterNoStyle, withDayOfWeek:true)
-            }
-            return dfDateOnly!
-        } else {
-            if (dfDateTime == nil) {
-                dfDateTime = DataModel.dateFormatter(NSDateFormatterShortStyle, withDayOfWeek:true)
-            }
-            return dfDateTime;
-        }
-    }
-
-    private static func dateFormatter(dayOfWeek: Bool) -> NSDateFormatter {
-        if (Config.instance().dateTimeMode == DateTimeModeDateOnly) {
-            return Datamodel.dateFormatter(NSDateFormatterNoStyle, dayOfWeek:withDayOfWeek)
-        } else {
-            return DataModel.dateFormatter(NSDateFormatterShortStyle, dayOfWeek:withDayOfWeek)
-        }
-    }
-    
-    static func dateFormatter(timeStyle: NSDateFormatterStyle, dayOfWeek: Bool) -> NSDateFormatter {
-        let df = NSDateFormatter()
-        df.dateStyle = NSDateFormatterMediumStyle
-        df.timeStyle = timeStyle
-    
-        var s = df.dateFormat
-
-        if (withDayOfWeek) {
-            // TODO:
-            s.replaceRange(<#T##subRange: Range<Index>##Range<Index>#>, with: <#T##C#>)
-            [s replaceOccurrencesOfString:@"MMM d, y" withString:@"EEE, MMM d, y" options:NSLiteralSearch range:NSMakeRange(0, s.length)];
-            [s replaceOccurrencesOfString:@"yyyy/MM/dd" withString:@"yyyy/MM/dd(EEEEE)" options:NSLiteralSearch range:NSMakeRange(0, s.length)];
-        }
-
-        df.dateFormat = s;
-        return df;
-    }
-
-
 // 摘要からカテゴリを推定する
 //
 // note: 本メソッドは Asset ではなく DataModel についているべき

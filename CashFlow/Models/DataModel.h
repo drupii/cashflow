@@ -33,11 +33,6 @@
 + (nonnull Ledger *)ledger;
 + (nonnull Categories *)categories;
 
-+ (nonnull NSDateFormatter *)dateFormatter;
-+ (nonnull NSDateFormatter *)dateFormatter:(BOOL)withDayOfWeek;
-+ (nonnull NSDateFormatter *)dateFormatter:(NSDateFormatterStyle)timeStyle withDayOfWeek:(BOOL)withDayOfWeek;
-
-
 // initializer
 - (nonnull instancetype)init NS_DESIGNATED_INITIALIZER;
 
