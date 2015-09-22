@@ -79,9 +79,6 @@
 		3ED414E81A58428A00B1AEB8 /* Pods-free.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3ED414E61A58428A00B1AEB8 /* Pods-free.release.xcconfig */; };
 		3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A1D1BB13A82009CBE96 /* CashflowDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */; settings = {ASSET_TAGS = (); }; };
-		3EE38A211BB149BB009CBE96 /* DataModelDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */; settings = {ASSET_TAGS = (); }; };
-		3EE38A221BB149BB009CBE96 /* DataModelDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */; settings = {ASSET_TAGS = (); }; };
-		3EE38A231BB149BB009CBE96 /* DataModelDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A271BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A281BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
@@ -105,6 +102,7 @@
 		3EF152741462C38800C724E4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE629E910D7E8C500EB7399 /* MediaPlayer.framework */; };
 		3EF152751462C38800C724E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3EF152761462C38800C724E4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
+		3EFB94CA1BB18B630083ACA7 /* DataModelDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB94C91BB18B630083ACA7 /* DataModelDateUtils.swift */; settings = {ASSET_TAGS = (); }; };
 		3EFDC2DD18314BAC00070F72 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2DC18314BAC00070F72 /* MobileCoreServices.framework */; };
 		3EFDC2DE18314BB900070F72 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2DC18314BAC00070F72 /* MobileCoreServices.framework */; };
 		3EFDC2DF18314D5500070F72 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2DC18314BAC00070F72 /* MobileCoreServices.framework */; };
@@ -358,8 +356,6 @@
 		3ED414E61A58428A00B1AEB8 /* Pods-free.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-free.release.xcconfig"; path = "Pods/Target Support Files/Pods-free/Pods-free.release.xcconfig"; sourceTree = "<group>"; };
 		3EE38A1A1BB13421009CBE96 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashflowDatabase.swift; sourceTree = "<group>"; };
-		3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelDateUtils.m; sourceTree = "<group>"; };
-		3EE38A241BB149D6009CBE96 /* DataModelDateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModelDateUtils.h; sourceTree = "<group>"; };
 		3EE38A251BB14D93009CBE96 /* DataModelBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelBackup.m; sourceTree = "<group>"; };
 		3EE38A261BB14D93009CBE96 /* DataModelBackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModelBackup.h; sourceTree = "<group>"; };
 		3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelSync.m; sourceTree = "<group>"; };
@@ -367,6 +363,7 @@
 		3EE629E910D7E8C500EB7399 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3EF1523D1462C2B300C724E4 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF966FD1464FD3900A24626 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3EFB94C91BB18B630083ACA7 /* DataModelDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelDateUtils.swift; sourceTree = "<group>"; };
 		3EFDC2C01831495600070F72 /* libAdapterNend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterNend.a; sourceTree = "<group>"; };
 		3EFDC2C11831495600070F72 /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
 		3EFDC2C21831495600070F72 /* NADIconLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconLoader.h; sourceTree = "<group>"; };
@@ -820,8 +817,7 @@
 				3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */,
 				662ABAFDFEA8A1528273DC79 /* DataModel.h */,
 				662ABAB719DFAE01D69A82BB /* DataModel.m */,
-				3EE38A241BB149D6009CBE96 /* DataModelDateUtils.h */,
-				3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */,
+				3EFB94C91BB18B630083ACA7 /* DataModelDateUtils.swift */,
 				3EE38A261BB14D93009CBE96 /* DataModelBackup.h */,
 				3EE38A251BB14D93009CBE96 /* DataModelBackup.m */,
 				3EE38A2B1BB14EF2009CBE96 /* DataModelSync.h */,
@@ -1472,7 +1468,6 @@
 				662ABC4D89910A0A3E352132 /* CFCalendarViewController.m in Sources */,
 				662ABA238848910180228BBA /* EditTypeVC.m in Sources */,
 				662ABD8BC68E60A50EDDB01F /* EditDescVC.m in Sources */,
-				3EE38A211BB149BB009CBE96 /* DataModelDateUtils.m in Sources */,
 				662AB33C6F671899B846DEEE /* EditDateVC.m in Sources */,
 				662AB04E09393BC877F02F5C /* TransactionCell.m in Sources */,
 				662ABC25DF16EB432F3BE48A /* WebServer.m in Sources */,
@@ -1489,6 +1484,7 @@
 				3E10A5811BB10BFD006BCD6E /* Ledger.swift in Sources */,
 				662AB613CA5E13EBEB478B3B /* ExportOfx.m in Sources */,
 				662AB842F60291327BE646BF /* ExportCsv.m in Sources */,
+				3EFB94CA1BB18B630083ACA7 /* DataModelDateUtils.swift in Sources */,
 				662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */,
 				3E10A5831BB11227006BCD6E /* AssetEntry.swift in Sources */,
 				3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */,
@@ -1529,7 +1525,6 @@
 				662AB8B7604AC82268B92219 /* ConfigViewController.m in Sources */,
 				3EE38A281BB14D93009CBE96 /* DataModelBackup.m in Sources */,
 				662ABB290254E7C52AC6BC5D /* PinController.m in Sources */,
-				3EE38A221BB149BB009CBE96 /* DataModelDateUtils.m in Sources */,
 				662AB3F4042957BAF12DA6DA /* PinVC.m in Sources */,
 				662AB28E1B66AAE37838FF78 /* ReportCatDetailVC.m in Sources */,
 				662ABE931E423B1C7B72DA08 /* ReportCell.m in Sources */,
@@ -1582,7 +1577,6 @@
 				662AB5D51A8462384571543A /* CurrencyManagerTests.m in Sources */,
 				662AB42368874E330C5451F2 /* DataModelTests.m in Sources */,
 				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,
-				3EE38A231BB149BB009CBE96 /* DataModelDateUtils.m in Sources */,
 				3E007ED01BA9BA2900923757 /* Report.swift in Sources */,
 				662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */,
 				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
