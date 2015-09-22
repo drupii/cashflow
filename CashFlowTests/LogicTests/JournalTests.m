@@ -42,7 +42,7 @@
     journal = [DataModel getJournal];
     
     int i = 1;
-    for (Transaction *t in journal) {
+    for (Transaction *t in journal.entries) {
         XCTAssertEqual(i, t.pid);
         i++;
     }
@@ -84,7 +84,7 @@
     Transaction *orig = (journal.entries)[3];
     XCTAssertEqual(4, orig.pid);
 
-    [journal replaceTransaction:orig withObject:t];
+    [journal replaceTransaction:orig to:t];
 
     XCTAssertEqual(6, [journal.entries count]); // 数は変更なし
     Transaction *tt = (journal.entries)[5];
@@ -101,7 +101,7 @@
     // 資産間取引を削除 (pid == 4 の取引)
     asset.pid = 2;
     Transaction *t = (journal.entries)[3];
-    XCTAssert(![journal deleteTransaction:t withAsset:asset]);
+    XCTAssert(![journal deleteTransaction:t asset:asset]);
     XCTAssertEqual(6, [journal.entries count]); // 置換されたので消えてないはず
     
     t = (journal.entries)[2];
@@ -116,7 +116,7 @@
     
     // 今度は置換された資産間取引を消す
     asset.pid = 1;
-    XCTAssert([journal deleteTransaction:t withAsset:asset]);
+    XCTAssert([journal deleteTransaction:t asset:asset]);
     
     t = (journal.entries)[2];
     XCTAssertEqual(3, t.pid);
@@ -133,7 +133,7 @@
     // 資産間取引を削除 (pid == 4 の取引)、ただし、testDeleteTransaction とは逆方向
     asset.pid = 1;
     Transaction *t = (journal.entries)[3];
-    XCTAssert(![journal deleteTransaction:t withAsset:asset]);
+    XCTAssert(![journal deleteTransaction:t asset:asset]);
     
     // 置換されていることを確認する
     XCTAssertEqual(2, t.asset);
@@ -142,7 +142,7 @@
     
     // 置換された資産間取引を消す
     asset.pid = 2;
-    XCTAssert([journal deleteTransaction:t withAsset:asset]);
+    XCTAssert([journal deleteTransaction:t asset:asset]);
     
     t = (journal.entries)[2];
     XCTAssertEqual(3, t.pid);

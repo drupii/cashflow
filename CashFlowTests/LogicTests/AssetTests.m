@@ -99,10 +99,10 @@
     XCTAssertEqual(9000, [asset lastBalance]);
 
     // 新規エントリ
-    AssetEntry *ae = [[AssetEntry alloc] initWithTransaction:nil withAsset:asset];
+    AssetEntry *ae = [[AssetEntry alloc] initWithTransaction:nil asset:asset];
 
     ae.assetKey = asset.pid;
-    ae.transaction.type = TYPE_ADJ;
+    ae.transaction.type = TransactionTypeAdj;
     [ae setEvalue:10000.0];
     ae.transaction.date = [TestCommon dateWithString:@"20090201000000"];
 

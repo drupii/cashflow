@@ -1788,7 +1788,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Libraries/AdMob/AdapterNend",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
 				OTHER_LDFLAGS = (
@@ -1819,7 +1818,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Libraries/AdMob/AdapterNend",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
 				OTHER_LDFLAGS = (

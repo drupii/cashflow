@@ -2,7 +2,6 @@
 
 #import "TestCommon.h"
 #import "DataModel.h"
-#import "Report.h"
 
 @interface CurrencyManagerTests : XCTestCase {
     CurrencyManager *manager;

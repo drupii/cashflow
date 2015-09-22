@@ -2,7 +2,6 @@
 
 #import "TestCommon.h"
 #import "DataModel.h"
-#import "Report.h"
 
 @interface ReportTest : XCTestCase {
     Report *mReports;
@@ -26,7 +25,7 @@
 
 - (void)testMonthly
 {
-    [mReports generate:REPORT_MONTHLY asset:nil];
+    [mReports generate:[Report MONTHLY] asset:nil];
 
     XCTAssertEqual(1, [mReports.reportEntries count]);
     ReportEntry *report = (mReports.reportEntries)[0];

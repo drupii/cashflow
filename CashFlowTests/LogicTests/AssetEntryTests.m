@@ -52,12 +52,12 @@
     Asset *a = [Asset new];
     a.pid = 111;
     Transaction *t = [Transaction new];
-    t.type = TYPE_TRANSFER;
+    t.type = TransactionTypeTransfer;
     t.asset = 111;
     t.dstAsset = 222;
     t.value = 10000.0;
 
-    AssetEntry *e = [[AssetEntry alloc] initWithTransaction:t withAsset:a];
+    AssetEntry *e = [[AssetEntry alloc] initWithTransaction:t asset:a];
 
     XCTAssertEqual(e.assetKey, 111);
     XCTAssertEqual(e.value, 10000.0);
@@ -77,12 +77,12 @@
     Asset *a = [Asset new];
     a.pid = 111;
     Transaction *t = [Transaction new];
-    t.type = TYPE_TRANSFER;
+    t.type = TransactionTypeTransfer;
     t.asset = 222;
     t.dstAsset = 111;
     t.value = 10000.0;
 
-    AssetEntry *e = [[AssetEntry alloc] initWithTransaction:t withAsset:a];
+    AssetEntry *e = [[AssetEntry alloc] initWithTransaction:t asset:a];
 
     XCTAssertEqual(e.assetKey, 111);
     XCTAssertEqual(e.value, -10000.0);
@@ -104,28 +104,28 @@
     t.asset = 111;
     t.dstAsset = -1;
 
-    AssetEntry *e = [[AssetEntry alloc] initWithTransaction:t withAsset:a];
+    AssetEntry *e = [[AssetEntry alloc] initWithTransaction:t asset:a];
     e.balance = 99999.0;
 
-    t.type = TYPE_INCOME;
+    t.type = TransactionTypeIncome;
     e.value = 10000;
     XCTAssertEqual(e.evalue, 10000.0);
     e.evalue = 20000;
     XCTAssertEqual(e.transaction.value, 20000.0);
 
-    t.type = TYPE_OUTGO;
+    t.type = TransactionTypeOutgo;
     e.value = 10000;
     XCTAssertEqual(e.evalue, -10000.0);
     e.evalue = 20000;
     XCTAssertEqual(e.transaction.value, -20000.0);
 
-    t.type = TYPE_ADJ;
+    t.type = TransactionTypeAdj;
     e.balance = 99999;
     XCTAssertEqual([e evalue], 99999.0);
     e.evalue = 88888;
     XCTAssertEqual(e.balance, 88888.0);
 
-    t.type = TYPE_TRANSFER;
+    t.type = TransactionTypeTransfer;
     e.value = 10000;
     XCTAssertEqual([e evalue], -10000.0);
     e.evalue = 20000;
