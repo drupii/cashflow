@@ -26,11 +26,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable TCategory *)find_by_sorder:(NSInteger)key cond:(nullable NSString*)cond;
 + (nullable TCategory *)find_by_sorder:(NSInteger)key;
 
-+ (NSMutableArray<TCategory *> *)find_all:(nullable NSString *)cond;
++ (NSArray<TCategory *> *)find_all:(nullable NSString *)cond;
 
 + (dbstmt *)gen_stmt:(nullable NSString *)cond;
 + (nullable TCategory *)find_first_stmt:(dbstmt *)stmt;
-+ (NSMutableArray<TCategory *> *)find_all_stmt:(dbstmt *)stmt;
++ (NSArray<TCategory *> *)find_all_stmt:(dbstmt *)stmt;
 
 // Delete operations
 - (void)delete;

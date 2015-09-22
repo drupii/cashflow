@@ -30,7 +30,7 @@
 
 - (void)reload
 {
-    _entries = [Transaction find_all:@"ORDER BY date, key"];
+    _entries = [[Transaction find_all:@"ORDER BY date, key"] mutableCopy];
     
     // upgrade data
     CashflowDatabase *db = (CashflowDatabase *)[Database instance];

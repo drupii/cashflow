@@ -302,7 +302,7 @@
   @param cond Conditions (WHERE phrase and so on)
   @return array of records
 */
-+ (nonnull NSMutableArray *)find_all:(NSString *)cond
++ (nonnull NSArray *)find_all:(NSString *)cond
 {
     dbstmt *stmt = [self gen_stmt:cond];
     return  [self find_all_stmt:stmt];
@@ -348,7 +348,7 @@
   @param stmt Statement
   @return array of records
 */
-+ (nonnull NSMutableArray *)find_all_stmt:(nonnull dbstmt *)stmt
++ (nonnull NSArray *)find_all_stmt:(nonnull dbstmt *)stmt
 {
     NSMutableArray *array = [NSMutableArray new];
 
@@ -497,7 +497,7 @@
     
     [s appendString:@");\n"];
 
-    NSMutableArray *ary = [self find_all:nil];
+    NSArray *ary = [self find_all:nil];
     for (TransactionBase *e in ary) {
         [e getInsertSql:s];
         [s appendString:@"\n"];

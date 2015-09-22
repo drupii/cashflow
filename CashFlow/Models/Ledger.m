@@ -19,7 +19,7 @@
 
 - (void)load
 {
-    _assets = [Asset find_all:@"ORDER BY sorder"];
+    _assets = [[Asset find_all:@"ORDER BY sorder"] mutableCopy];
 }
 
 - (void)rebuild

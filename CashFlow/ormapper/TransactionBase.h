@@ -47,11 +47,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable Transaction *)find_by_identifier:(NSString*)key cond:(nullable NSString*)cond;
 + (nullable Transaction *)find_by_identifier:(NSString*)key;
 
-+ (NSMutableArray<Transaction *> *)find_all:(nullable NSString *)cond;
++ (NSArray<Transaction *> *)find_all:(nullable NSString *)cond;
 
 + (dbstmt *)gen_stmt:(nullable NSString *)cond;
 + (nullable Transaction *)find_first_stmt:(dbstmt *)stmt;
-+ (NSMutableArray<Transaction *> *)find_all_stmt:(dbstmt *)stmt;
++ (NSArray<Transaction *> *)find_all_stmt:(dbstmt *)stmt;
 
 // Delete operations
 - (void)delete;

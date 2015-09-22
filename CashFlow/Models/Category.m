@@ -27,7 +27,7 @@
 
 -(void)reload
 {
-    _categories = [TCategory find_all:@"ORDER BY sorder"];
+    _categories = [[TCategory find_all:@"ORDER BY sorder"] mutableCopy];
 }
 
 -(NSInteger)count

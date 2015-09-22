@@ -14,7 +14,7 @@
 // Transaction から DescLRU を生成する
 + (void)migrate
 {
-    NSMutableArray *ary;
+    NSArray *ary;
     
     ary = [self getDescLRUs:-1];
     if (ary.count > 0) {
@@ -57,11 +57,11 @@
 
     if (category < 0) {
         // 全検索
-        ary = [DescLRU find_all:@"ORDER BY lastUse DESC LIMIT 100"];
+        ary = [[DescLRU find_all:@"ORDER BY lastUse DESC LIMIT 100"] mutableCopy];
     } else {
         dbstmt *stmt = [DescLRU gen_stmt:@"WHERE category = ? ORDER BY lastUse DESC LIMIT 100"];
         [stmt bindInt:0 val:category];
-        ary = [DescLRU find_all_stmt:stmt];
+        ary = [[DescLRU find_all_stmt:stmt] mutableCopy];
     }
     return ary;
 }
