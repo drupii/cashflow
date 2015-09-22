@@ -82,6 +82,9 @@
 		3EE38A211BB149BB009CBE96 /* DataModelDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A221BB149BB009CBE96 /* DataModelDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A231BB149BB009CBE96 /* DataModelDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */; settings = {ASSET_TAGS = (); }; };
+		3EE38A271BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
+		3EE38A281BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
+		3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
 		3EE5E70C18A9260200B23A99 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C01831495600070F72 /* libAdapterNend.a */; };
 		3EE5E70F18A9260700B23A99 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C11831495600070F72 /* libNendAd.a */; };
 		3EE5E71218A9262200B23A99 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2CF18314B6500070F72 /* libAdapterIMobile.a */; };
@@ -354,6 +357,8 @@
 		3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashflowDatabase.swift; sourceTree = "<group>"; };
 		3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelDateUtils.m; sourceTree = "<group>"; };
 		3EE38A241BB149D6009CBE96 /* DataModelDateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModelDateUtils.h; sourceTree = "<group>"; };
+		3EE38A251BB14D93009CBE96 /* DataModelBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelBackup.m; sourceTree = "<group>"; };
+		3EE38A261BB14D93009CBE96 /* DataModelBackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModelBackup.h; sourceTree = "<group>"; };
 		3EE629E910D7E8C500EB7399 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3EF1523D1462C2B300C724E4 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF966FD1464FD3900A24626 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -812,6 +817,8 @@
 				662ABAB719DFAE01D69A82BB /* DataModel.m */,
 				3EE38A241BB149D6009CBE96 /* DataModelDateUtils.h */,
 				3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */,
+				3EE38A261BB14D93009CBE96 /* DataModelBackup.h */,
+				3EE38A251BB14D93009CBE96 /* DataModelBackup.m */,
 				662AB2241CAFB76B86B3ECD4 /* Asset.h */,
 				662ABE78751950BB4F72ADF8 /* Asset.m */,
 				3E10A5821BB11227006BCD6E /* AssetEntry.swift */,
@@ -1445,6 +1452,7 @@
 				662AB5076F346FEB346306F9 /* PinVC.m in Sources */,
 				662AB4F31A14A00F7BB7D6A5 /* ReportCatDetailVC.m in Sources */,
 				662AB22C82AC33027AC91839 /* ReportCell.m in Sources */,
+				3EE38A271BB14D93009CBE96 /* DataModelBackup.m in Sources */,
 				662ABBC04AC5A71CF6990A9A /* ReportCatVC.m in Sources */,
 				3E007ECE1BA9BA2900923757 /* Report.swift in Sources */,
 				662AB139188CAF1D60B68416 /* ReportCatGraphCell.m in Sources */,
@@ -1511,6 +1519,7 @@
 				662AB0B5FB7725D125496B5D /* InfoViewController.swift in Sources */,
 				662AB856F134AFE4837D56F6 /* GenSelectListVC.m in Sources */,
 				662AB8B7604AC82268B92219 /* ConfigViewController.m in Sources */,
+				3EE38A281BB14D93009CBE96 /* DataModelBackup.m in Sources */,
 				662ABB290254E7C52AC6BC5D /* PinController.m in Sources */,
 				3EE38A221BB149BB009CBE96 /* DataModelDateUtils.m in Sources */,
 				662AB3F4042957BAF12DA6DA /* PinVC.m in Sources */,
@@ -1569,6 +1578,7 @@
 				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
 				3E007EC81BA8694E00923757 /* CatReport.swift in Sources */,
 				662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */,
+				3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */,
 				662AB5290BA65A5E254DA9CA /* TimeTests.m in Sources */,
 				662ABA395B0AF6A61160E653 /* TransactionTests.m in Sources */,
 				662AB3EEBE8359B2C44F885F /* TestCommon.m in Sources */,

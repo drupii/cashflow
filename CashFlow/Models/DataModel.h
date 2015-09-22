@@ -46,11 +46,6 @@
 
 - (NSInteger)categoryWithDescription:(nonnull NSString *)desc;
 
-// sql backup operation
-- (BOOL)backupDatabaseToSql:(nonnull NSString *)path;
-- (BOOL)restoreDatabaseFromSql:(nonnull NSString *)path;
-@property (nonatomic, getter=getBackupSqlPath, readonly, copy, nonnull) NSString *backupSqlPath;
-
 // for sync
 - (void)setLastSyncRemoteRev:(nonnull NSString *)rev;
 - (BOOL)isRemoteModifiedAfterSync:(nonnull NSString *)currev;
