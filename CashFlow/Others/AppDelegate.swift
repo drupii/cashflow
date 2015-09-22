@@ -44,6 +44,9 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptionschingWithOptions: [NSObject : AnyObject]?) -> Bool {
         print("application:didFinishLaunchingWithOptions")
         _application = application;
+        
+        // DB 初期化
+        CashflowDatabase.instantiate()
 
         // Crittercism or BugSense
         /*

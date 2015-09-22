@@ -78,6 +78,7 @@
 		3ED414E71A58428A00B1AEB8 /* Pods-free.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3ED414E51A58428A00B1AEB8 /* Pods-free.debug.xcconfig */; };
 		3ED414E81A58428A00B1AEB8 /* Pods-free.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3ED414E61A58428A00B1AEB8 /* Pods-free.release.xcconfig */; };
 		3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
+		3EE38A1D1BB13A82009CBE96 /* CashflowDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE5E70C18A9260200B23A99 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C01831495600070F72 /* libAdapterNend.a */; };
 		3EE5E70F18A9260700B23A99 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C11831495600070F72 /* libNendAd.a */; };
 		3EE5E71218A9262200B23A99 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2CF18314B6500070F72 /* libAdapterIMobile.a */; };
@@ -240,7 +241,6 @@
 		662ABB1EBD7201F2ADB780C6 /* GenEditTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB7F1C8388EF9E38A4D79 /* GenEditTextView.xib */; };
 		662ABB21611C4469358C9708 /* EditDescView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB58889E462FBAC441E6C /* EditDescView.storyboard */; };
 		662ABB290254E7C52AC6BC5D /* PinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABBECC87A505590735192 /* PinController.m */; };
-		662ABB59FBF21022CDAE7980 /* CashflowDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC584A2CCB4A9DD1F17A /* CashflowDatabase.m */; };
 		662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */; };
 		662ABB8414248F5883C66078 /* TransactionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8FE55579EB49E68194B /* TransactionBase.m */; };
 		662ABB8984ADF017D9E55B6B /* EditMemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8E7413740C6A594F849 /* EditMemoVC.m */; };
@@ -266,7 +266,6 @@
 		662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC0BBC45BD44C15D714B /* AssetTests.m */; };
 		662ABD6A6701E8DAE26CFC18 /* Dbstmt.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9A739106627A769F3CF /* Dbstmt.m */; };
 		662ABD8BC68E60A50EDDB01F /* EditDescVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABD14E5481392EFB97B79 /* EditDescVC.m */; };
-		662ABDC5D64BEE8991EC20E4 /* CashflowDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC584A2CCB4A9DD1F17A /* CashflowDatabase.m */; };
 		662ABDC864D93C8B12B622A6 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */; };
 		662ABDDF6D92BBB7EE6DD396 /* CalcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */; };
 		662ABE3BD08184BEDBF9E738 /* EditDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB26BA59401CD8FCDE181 /* EditDateVC.m */; };
@@ -349,6 +348,7 @@
 		3ED414E51A58428A00B1AEB8 /* Pods-free.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-free.debug.xcconfig"; path = "Pods/Target Support Files/Pods-free/Pods-free.debug.xcconfig"; sourceTree = "<group>"; };
 		3ED414E61A58428A00B1AEB8 /* Pods-free.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-free.release.xcconfig"; path = "Pods/Target Support Files/Pods-free/Pods-free.release.xcconfig"; sourceTree = "<group>"; };
 		3EE38A1A1BB13421009CBE96 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashflowDatabase.swift; sourceTree = "<group>"; };
 		3EE629E910D7E8C500EB7399 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3EF1523D1462C2B300C724E4 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF966FD1464FD3900A24626 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -451,7 +451,6 @@
 		662AB93A469BA46121E9E6BF /* EditTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTypeVC.m; sourceTree = "<group>"; };
 		662AB943BAFEE09051FD3803 /* ReportView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportView.storyboard; sourceTree = "<group>"; };
 		662AB961C6EC6D996C2304E4 /* CalculatorView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculatorView.storyboard; sourceTree = "<group>"; };
-		662AB974D05597FE31AD6B26 /* CashflowDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashflowDatabase.h; sourceTree = "<group>"; };
 		662AB9A739106627A769F3CF /* Dbstmt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dbstmt.m; sourceTree = "<group>"; };
 		662AB9AAB28ADE14CFB30ACE /* ExportBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportBase.h; sourceTree = "<group>"; };
 		662AB9D9EC684EED6E3555C2 /* SupportMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportMail.m; sourceTree = "<group>"; };
@@ -483,7 +482,6 @@
 		662ABC30AB29FE2EE37E5C09 /* WebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServer.h; sourceTree = "<group>"; };
 		662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCatGraphCell.m; sourceTree = "<group>"; };
 		662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter2.m; sourceTree = "<group>"; };
-		662ABC584A2CCB4A9DD1F17A /* CashflowDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashflowDatabase.m; sourceTree = "<group>"; };
 		662ABC685A4413C6D86C01C6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		662ABC6E2E2273E1CE77A5B3 /* ViewControllerTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTestCase.h; sourceTree = "<group>"; };
 		662ABC77B99BD7662E07DA30 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
@@ -804,7 +802,7 @@
 		662AB60EEC795F17E627E7AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				662AB974D05597FE31AD6B26 /* CashflowDatabase.h */,
+				3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */,
 				662ABAFDFEA8A1528273DC79 /* DataModel.h */,
 				662ABAB719DFAE01D69A82BB /* DataModel.m */,
 				662AB2241CAFB76B86B3ECD4 /* Asset.h */,
@@ -819,7 +817,6 @@
 				3E007ECD1BA9BA2900923757 /* Report.swift */,
 				3E007EC91BA86DE700923757 /* ReportEntry.swift */,
 				3E007EC51BA8694E00923757 /* CatReport.swift */,
-				662ABC584A2CCB4A9DD1F17A /* CashflowDatabase.m */,
 				662ABBCF4900BC8E8DBEBF83 /* DescLRUManager.h */,
 				662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */,
 				662ABECFC32E98168EAA6735 /* DateFormatter2.h */,
@@ -1422,7 +1419,6 @@
 				662AB551CAC740B07BF35F23 /* TCategoryBase.m in Sources */,
 				662ABFEFB6047DFEDF362BF7 /* DateFormatter2.m in Sources */,
 				662AB92560A6EC3DE897DBE3 /* Category.m in Sources */,
-				662ABB59FBF21022CDAE7980 /* CashflowDatabase.m in Sources */,
 				662AB59E39EDA91A9E2A09B0 /* DataModel.m in Sources */,
 				662ABF2D9D776C71A48B41E2 /* DescLRUManager.m in Sources */,
 				662ABBCB303E2177FEE03B9C /* Transaction.m in Sources */,
@@ -1472,6 +1468,7 @@
 				662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */,
 				3E10A5831BB11227006BCD6E /* AssetEntry.swift in Sources */,
 				3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */,
+				3EE38A1D1BB13A82009CBE96 /* CashflowDatabase.swift in Sources */,
 				3E007EC61BA8694E00923757 /* CatReport.swift in Sources */,
 				662AB1D7288A5760771CD027 /* AppDelegate.swift in Sources */,
 			);
@@ -1491,7 +1488,6 @@
 				662AB771F7847DD1B29FBFA6 /* TCategoryBase.m in Sources */,
 				662AB64868D919F247214D32 /* DateFormatter2.m in Sources */,
 				662ABB921B6646BF78ACADBB /* Category.m in Sources */,
-				662ABDC5D64BEE8991EC20E4 /* CashflowDatabase.m in Sources */,
 				662ABFECFCD6CEEC48222E25 /* DataModel.m in Sources */,
 				662ABBA5D93EE82C5E477F06 /* DescLRUManager.m in Sources */,
 				662ABE4D69C52BF40194AC12 /* Transaction.m in Sources */,
