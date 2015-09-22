@@ -9,12 +9,14 @@
 #import <DropboxSDK/DropboxSDK.h>
 #import "DataModel.h"
 
-#define MODE_BACKUP 0
-#define MODE_RESTORE 1
-#define MODE_SYNC 2
+typedef NS_ENUM(NSInteger, BackupMode) {
+    BackupModeBackup = 0,
+    BackupModeRestore = 1,
+    BackupModeSync = 2
+};
 
 @protocol DropboxBackupDelegate
-- (void)dropboxBackupStarted:(int)mode;
+- (void)dropboxBackupStarted:(BackupMode)mode;
 - (void)dropboxBackupFinished;
 - (void)dropboxBackupConflicted;
 @end
