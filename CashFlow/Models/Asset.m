@@ -58,15 +58,15 @@
 + (NSString*)iconNameWithType:(NSInteger)type
 {
     switch (type) {
-        case ASSET_CASH:
+        case AssetTypeCash:
             return @"cash";
-        case ASSET_BANK:
+        case AssetTypeBank:
             return @"bank";
-        case ASSET_CARD:
+        case AssetTypeCard:
             return @"card";
-        case ASSET_INVEST:
+        case AssetTypeInvest:
             return @"invest";
-        case ASSET_EMONEY:
+        case AssetTypeEmoney:
             return @"cash";
             //return @"emoney";
     }
@@ -80,7 +80,7 @@
     self = [super init];
     
     _entries = [NSMutableArray new];
-    self.type = ASSET_CASH;
+    self.type = AssetTypeCash;
 	
     return self;
 }
@@ -241,7 +241,7 @@
         // newly created...
         Asset *as = [Asset new];
         as.name = _L(@"Cash");
-        as.type = ASSET_CASH;
+        as.type = AssetTypeCash;
         as.initialBalance = 0;
         as.sorder = 0;
         [as save];
