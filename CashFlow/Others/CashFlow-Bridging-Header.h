@@ -23,5 +23,9 @@
 #import "DateFormatter2.h"
 
 #import "Asset.h"
+#import "DescLRUManager.h"
+#import "Category.h"
+
+
 
 
