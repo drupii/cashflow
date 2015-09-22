@@ -140,8 +140,13 @@ class ReportEntry : NSObject {
      ソートと集計
      */
     func sortAndTotalUp() {
-        self.totalIncome = sortAndTotalUp(self.incomeCatReports)
-        self.totalOutgo  = sortAndTotalUp(self.outgoCatReports)
+        let s1 = sortAndTotalUp(self.incomeCatReports)
+        self.incomeCatReports = s1.0
+        self.totalIncome = s1.1
+        
+        let s2 = sortAndTotalUp(self.outgoCatReports)
+        self.outgoCatReports = s2.0
+        self.totalOutgo = s2.1
 
         self.maxIncome = 0.0
         self.maxOutgo = 0.0
@@ -156,7 +161,7 @@ class ReportEntry : NSObject {
         }
     }
 
-    private func sortAndTotalUp(var ary: [CatReport]) -> Double {
+    private func sortAndTotalUp(var ary: [CatReport]) -> ([CatReport], Double) {
         // 金額が 0 のエントリを削除する
         var count = ary.count;
         for (var i = 0; i < count; i++) {
@@ -178,7 +183,8 @@ class ReportEntry : NSObject {
         for var cr2 in ary {
             total += cr2.sum;
         }
-        return total
+        
+        return (ary, total)
     }
 
     /**
@@ -195,11 +201,11 @@ class ReportEntry : NSObject {
         }
 	
         if (xv == yv) {
-            return false
+            return true
         }
         if (xv > yv) {
-            return false
+            return true
         }
-        return true
+        return false
     }
 }
