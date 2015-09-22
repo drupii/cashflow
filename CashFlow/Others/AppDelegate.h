@@ -11,6 +11,7 @@
 #import "DataModel.h"
 #import "DataModelDateUtils.h"
 #import "DataModelBackup.h"
+#import "DataModelSync.h"
 
 #import "AssetListVC.h"
 #import "TransactionListVC.h"

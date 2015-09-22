@@ -27,6 +27,7 @@
 + (nonnull DataModel *)instance;
 + (void)finalize;
 
++ (nonnull NSString *)dbname;
 + (void)setDbName:(nonnull NSString *)dbname; // for unit testing...
 
 + (nonnull Journal *)getJournal;
@@ -45,11 +46,5 @@
 //+ (NSString*)currencyString:(double)x;
 
 - (NSInteger)categoryWithDescription:(nonnull NSString *)desc;
-
-// for sync
-- (void)setLastSyncRemoteRev:(nonnull NSString *)rev;
-- (BOOL)isRemoteModifiedAfterSync:(nonnull NSString *)currev;
-- (void)setSyncFinished;
-@property (nonatomic, getter=isModifiedAfterSync, readonly) BOOL modifiedAfterSync;
 
 @end

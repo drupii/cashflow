@@ -85,6 +85,9 @@
 		3EE38A271BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A281BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
+		3EE38A2C1BB14EF2009CBE96 /* DataModelSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */; settings = {ASSET_TAGS = (); }; };
+		3EE38A2D1BB14EF2009CBE96 /* DataModelSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */; settings = {ASSET_TAGS = (); }; };
+		3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */; settings = {ASSET_TAGS = (); }; };
 		3EE5E70C18A9260200B23A99 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C01831495600070F72 /* libAdapterNend.a */; };
 		3EE5E70F18A9260700B23A99 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C11831495600070F72 /* libNendAd.a */; };
 		3EE5E71218A9262200B23A99 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2CF18314B6500070F72 /* libAdapterIMobile.a */; };
@@ -359,6 +362,8 @@
 		3EE38A241BB149D6009CBE96 /* DataModelDateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModelDateUtils.h; sourceTree = "<group>"; };
 		3EE38A251BB14D93009CBE96 /* DataModelBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelBackup.m; sourceTree = "<group>"; };
 		3EE38A261BB14D93009CBE96 /* DataModelBackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModelBackup.h; sourceTree = "<group>"; };
+		3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelSync.m; sourceTree = "<group>"; };
+		3EE38A2B1BB14EF2009CBE96 /* DataModelSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModelSync.h; sourceTree = "<group>"; };
 		3EE629E910D7E8C500EB7399 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3EF1523D1462C2B300C724E4 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF966FD1464FD3900A24626 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -819,6 +824,8 @@
 				3EE38A201BB149BB009CBE96 /* DataModelDateUtils.m */,
 				3EE38A261BB14D93009CBE96 /* DataModelBackup.h */,
 				3EE38A251BB14D93009CBE96 /* DataModelBackup.m */,
+				3EE38A2B1BB14EF2009CBE96 /* DataModelSync.h */,
+				3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */,
 				662AB2241CAFB76B86B3ECD4 /* Asset.h */,
 				662ABE78751950BB4F72ADF8 /* Asset.m */,
 				3E10A5821BB11227006BCD6E /* AssetEntry.swift */,
@@ -1424,6 +1431,7 @@
 			files = (
 				662AB7B15FC748C668DB878D /* ORRecord.m in Sources */,
 				662ABE7FC99773371973BD3D /* ORQuery.m in Sources */,
+				3EE38A2C1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
 				662ABC5386E278B457F6D73A /* AssetBase.m in Sources */,
 				3E10A5851BB12A48006BCD6E /* Journal.swift in Sources */,
 				662AB07FF87CE568D1FBB279 /* Database.m in Sources */,
@@ -1546,6 +1554,7 @@
 				662AB5865B2BD4F518A4BBB3 /* DBLoadingView.m in Sources */,
 				662AB96F022FDC56F35ECC27 /* CurrencyManager.swift in Sources */,
 				662AB8363B5693B5D8C94E5D /* SwiftUtils.swift in Sources */,
+				3EE38A2D1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
 				662AB4B65DB2951A0D24A841 /* SupportMail.m in Sources */,
 				662ABA77682F0EB6D92AB1BB /* WebServerBackup.m in Sources */,
 				3E007ECB1BA86DE700923757 /* ReportEntry.swift in Sources */,
@@ -1569,6 +1578,7 @@
 				662AB259CBAA4A4D686B8FE7 /* ViewControllerTestCase.m in Sources */,
 				662ABACE6F699F4A130E8870 /* AssetEntryTests.m in Sources */,
 				662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */,
+				3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
 				662AB5D51A8462384571543A /* CurrencyManagerTests.m in Sources */,
 				662AB42368874E330C5451F2 /* DataModelTests.m in Sources */,
 				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,
