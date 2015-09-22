@@ -107,7 +107,7 @@
     }
 
     // 資産間移動
-    Ledger *ledger = [DataModel ledger];
+    Ledger *ledger = [DataModel getLedger];
     NSInteger assetCount = [ledger assetCount];
     NSMutableArray *assetNames = [[NSMutableArray alloc] initWithCapacity:assetCount];
     for (int i = 0; i < assetCount; i++) {
@@ -128,7 +128,7 @@
 // 資産選択
 - (BOOL)genSelectListViewChanged:(GenSelectListViewController*)vc identifier:(NSInteger)id
 {
-    Asset *as = [[DataModel ledger] assetAtIndex:vc.selectedIndex];
+    Asset *as = [[DataModel getLedger] assetAtIndex:vc.selectedIndex];
     _dstAsset = as.pid;
 
     [_delegate editTypeViewChanged:self];

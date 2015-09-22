@@ -250,7 +250,7 @@
 			
     case ROW_CATEGORY:
         name.text = _L(@"Category");
-        value.text = [[DataModel categories] categoryStringWithKey:_editingEntry.transaction.category];
+        value.text = [[DataModel getCategories] categoryStringWithKey:_editingEntry.transaction.category];
         break;
 			
     case ROW_MEMO:
@@ -335,7 +335,7 @@
             editCategoryVC = [CategoryListViewController new];
             editCategoryVC.isSelectMode = YES;
             editCategoryVC.delegate = self;
-            editCategoryVC.selectedIndex = [[DataModel categories] categoryIndexWithKey:_editingEntry.transaction.category];
+            editCategoryVC.selectedIndex = [[DataModel getCategories] categoryIndexWithKey:_editingEntry.transaction.category];
             vc = editCategoryVC;
             break;
     }
@@ -439,7 +439,7 @@
     }
     else if (type == TransactionTypeTransfer) {
         Asset *from, *to;
-        Ledger *ledger = [DataModel ledger];
+        Ledger *ledger = [DataModel getLedger];
         from = [ledger assetWithKey:_editingEntry.transaction.asset];
         to = [ledger assetWithKey:_editingEntry.transaction.dstAsset];
 
@@ -486,7 +486,7 @@
     if (vc.selectedIndex < 0) {
         _editingEntry.transaction.category = -1;
     } else {
-        TCategory *c = [[DataModel categories] categoryAtIndex:vc.selectedIndex];
+        TCategory *c = [[DataModel getCategories] categoryAtIndex:vc.selectedIndex];
         _editingEntry.transaction.category = c.pid;
     }
     [self dismissPopover];

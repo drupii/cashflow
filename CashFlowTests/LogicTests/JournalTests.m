@@ -13,7 +13,7 @@
 {
     [super setUp];
     [TestCommon initDatabase];
-    journal = [DataModel journal];
+    journal = [DataModel getJournal];
 }
 
 - (void)tearDown
@@ -29,7 +29,7 @@
     XCTAssertEqual(0, [journal.entries count]);
     
     [TestCommon installDatabase:@"testdata1"];
-    journal = [DataModel journal];
+    journal = [DataModel getJournal];
     XCTAssertEqual(6, [journal.entries count]);
 
     [journal reload];
@@ -39,7 +39,7 @@
 - (void)testFastEnumeration
 {
     [TestCommon installDatabase:@"testdata1"];
-    journal = [DataModel journal];
+    journal = [DataModel getJournal];
     
     int i = 1;
     for (Transaction *t in journal) {
@@ -51,7 +51,7 @@
 - (void)testInsertTransaction
 {
     [TestCommon installDatabase:@"testdata1"];
-    journal = [DataModel journal];
+    journal = [DataModel getJournal];
 
     // 途中に挿入する
     Transaction *t = [Transaction new];
@@ -71,7 +71,7 @@
 - (void)testReplaceTransaction
 {
     [TestCommon installDatabase:@"testdata1"];
-    journal = [DataModel journal];
+    journal = [DataModel getJournal];
 
     // 途中に挿入する
     Transaction *t = [Transaction new];
@@ -95,7 +95,7 @@
 - (void)testDeleteTransaction
 {
     [TestCommon installDatabase:@"testdata1"];
-    journal = [DataModel journal];
+    journal = [DataModel getJournal];
     Asset *asset = [Asset new];
 
     // 資産間取引を削除 (pid == 4 の取引)
@@ -127,7 +127,7 @@
 - (void)testDeleteTransaction2
 {
     [TestCommon installDatabase:@"testdata1"];
-    journal = [DataModel journal];
+    journal = [DataModel getJournal];
     Asset *asset = [Asset new];
     
     // 資産間取引を削除 (pid == 4 の取引)、ただし、testDeleteTransaction とは逆方向
@@ -153,7 +153,7 @@
 - (void)testDeleteTransactionWithAsset
 {
     [TestCommon installDatabase:@"testdata1"];
-    journal = [DataModel journal];
+    journal = [DataModel getJournal];
     Asset *asset = [Asset new];
 
     XCTAssertEqual(6, [journal.entries count]);

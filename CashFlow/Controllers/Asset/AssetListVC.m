@@ -139,7 +139,7 @@
     NSLog(@"AssetListViewController:dataModelLoaded");
 
     _isLoadDone = YES;
-    _ledger = [DataModel ledger];
+    _ledger = [DataModel getLedger];
     
     [self performSelectorOnMainThread:@selector(_dataModelLoadedOnMainThread:) withObject:nil waitUntilDone:NO];
 }
@@ -228,7 +228,7 @@
 {
     if (!_isLoadDone) return;
     
-    _ledger = [DataModel ledger];
+    _ledger = [DataModel getLedger];
     [_ledger rebuild];
     [_tableView reloadData];
 
@@ -496,7 +496,7 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)fromIndexPath
     NSInteger toIndex = [self _assetIndex:to];
     if (fromIndex < 0 || toIndex < 0) return;
 
-    [[DataModel ledger] reorderAsset:fromIndex to:toIndex];
+    [[DataModel getLedger] reorderAsset:fromIndex to:toIndex];
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////

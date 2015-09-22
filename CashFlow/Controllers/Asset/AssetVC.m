@@ -48,7 +48,7 @@
         _asset.sorder = 99999;
     } else {
         // 変更
-        _asset = [[DataModel ledger] assetAtIndex:_assetIndex];
+        _asset = [[DataModel getLedger] assetAtIndex:_assetIndex];
     }
 }
 
@@ -207,7 +207,7 @@
 // 保存処理
 - (void)saveAction
 {
-    Ledger *ledger = [DataModel ledger];
+    Ledger *ledger = [DataModel getLedger];
 
     if (_assetIndex < 0) {
         [ledger addAsset:_asset];

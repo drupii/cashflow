@@ -96,7 +96,7 @@
     double balance = self.initialBalance;
 
     AssetEntry *e;
-    for (Transaction *t in [DataModel journal].entries) {
+    for (Transaction *t in [DataModel getJournal].entries) {
         if (t.asset == self.pid || t.dstAsset == self.pid) {
             e = [[AssetEntry alloc] initWithTransaction:t asset:self];
 
@@ -151,16 +151,16 @@
 
 - (void)insertEntry:(AssetEntry *)e
 {    
-    [[DataModel journal] insertTransaction:e.transaction];
-    [[DataModel ledger] rebuild];
+    [[DataModel getJournal] insertTransaction:e.transaction];
+    [[DataModel getLedger] rebuild];
 }
 
 - (void)replaceEntryAtIndex:(NSInteger)index withObject:(AssetEntry *)e
 {
     AssetEntry *orig = [self entryAt:index];
 
-    [[DataModel journal] replaceTransaction:orig.transaction to:e.transaction];
-    [[DataModel ledger] rebuild];
+    [[DataModel getJournal] replaceTransaction:orig.transaction to:e.transaction];
+    [[DataModel getLedger] rebuild];
 }
 
 // エントリ削除
@@ -175,7 +175,7 @@
 
     // エントリ削除
     AssetEntry *e = [self entryAt:index];
-    [[DataModel journal] deleteTransaction:e.transaction asset:self];
+    [[DataModel getJournal] deleteTransaction:e.transaction asset:self];
 }
 
 // エントリ削除
@@ -184,7 +184,7 @@
     [self _deleteEntryAt:index];
     
     // 転記し直す
-    [[DataModel ledger] rebuild];
+    [[DataModel getLedger] rebuild];
 }
 
 // 指定日以前の取引をまとめて削除
@@ -204,7 +204,7 @@
     }
     [db commitTransaction];
 
-    [[DataModel ledger] rebuild];
+    [[DataModel getLedger] rebuild];
 }
 
 - (NSInteger)firstEntryByDate:(NSDate*)date

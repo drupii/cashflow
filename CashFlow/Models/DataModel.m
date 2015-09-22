@@ -62,17 +62,17 @@ static NSString *theDbName = DBNAME;
 }
 
 
-+ (Journal *)journal
++ (Journal *)getJournal
 {
     return [DataModel instance].journal;
 }
 
-+ (Ledger *)ledger
++ (Ledger *)getLedger
 {
     return [DataModel instance].ledger;
 }
 
-+ (Categories *)categories
++ (Categories *)getCategories
 {
     return [DataModel instance].categories;
 }

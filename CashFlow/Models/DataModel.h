@@ -29,9 +29,9 @@
 
 + (void)setDbName:(nonnull NSString *)dbname; // for unit testing...
 
-+ (nonnull Journal *)journal;
-+ (nonnull Ledger *)ledger;
-+ (nonnull Categories *)categories;
++ (nonnull Journal *)getJournal;
++ (nonnull Ledger *)getLedger;
++ (nonnull Categories *)getCategories;
 
 // initializer
 - (nonnull instancetype)init NS_DESIGNATED_INITIALIZER;

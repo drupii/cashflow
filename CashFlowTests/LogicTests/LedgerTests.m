@@ -13,7 +13,7 @@
 {
     [TestCommon deleteDatabase];
     [[DataModel instance] load];
-    ledger = [DataModel ledger];
+    ledger = [DataModel getLedger];
 }
 
 - (void)tearDown
@@ -35,7 +35,7 @@
 - (void)testNormal
 {
     [TestCommon installDatabase:@"testdata1"];
-    ledger = [DataModel ledger];
+    ledger = [DataModel getLedger];
     
     // 現金のみがあるはず
     XCTAssertEqual([ledger.assets count], 3);

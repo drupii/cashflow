@@ -24,7 +24,7 @@
 - (void)testWithData
 {
     [TestCommon installDatabase:@"testdata1"];
-    Ledger *ledger = [DataModel ledger];
+    Ledger *ledger = [DataModel getLedger];
     AssetEntry *e;
 
     asset = [ledger assetAtIndex:0];
@@ -93,7 +93,7 @@
 - (void)testInsertAdjustment
 {
     [TestCommon installDatabase:@"testdata1"];
-    Ledger *ledger = [DataModel ledger];
+    Ledger *ledger = [DataModel getLedger];
     asset = [ledger assetAtIndex:0];
     
     XCTAssertEqual(9000, [asset lastBalance]);
@@ -120,7 +120,7 @@
 - (void)testChangeInitialBalance
 {
     [TestCommon installDatabase:@"testdata1"];
-    Ledger *ledger = [DataModel ledger];
+    Ledger *ledger = [DataModel getLedger];
     asset = [ledger assetAtIndex:0];
 
     XCTAssertEqual(5000, [asset initialBalance]);
@@ -146,7 +146,7 @@
 - (void)testDeleteEntryAt
 {
     [TestCommon installDatabase:@"testdata1"];
-    Ledger *ledger = [DataModel ledger];
+    Ledger *ledger = [DataModel getLedger];
     
     asset = [ledger assetAtIndex:0];
     XCTAssertEqual(5000, asset.initialBalance);
@@ -175,7 +175,7 @@
 - (void)testDeleteOldEntriesBefore
 {
     [TestCommon installDatabase:@"testdata1"];
-    Ledger *ledger = [DataModel ledger];
+    Ledger *ledger = [DataModel getLedger];
     AssetEntry *e;
     NSDate *date;
 
