@@ -38,12 +38,12 @@ extension DataModel {
         df.timeStyle = timeStyle;
     
         var s = df.dateFormat
-    
+        
         if (dayOfWeek) {
             s = s.stringByReplacingOccurrencesOfString("MMM d, y", withString: "EEE, MMM d, y")
-            s = s.stringByReplacingOccurrencesOfString("yyyy/MM/dd", withString: "yyyy/MM/dd(EEEEE)")
+            s = s.stringByReplacingOccurrencesOfString("y/MM/dd", withString: "y/MM/dd(EEEEE)")
         }
-    
+        
         df.dateFormat = s;
         return df;
     }
