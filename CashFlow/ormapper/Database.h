@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,readonly) sqlite3 *handle;
 
-+ (Database*)instance;
++ (nonnull Database*)instance;
 
 + (Database*)_instance;
 + (void)_setInstance:(Database*)db;

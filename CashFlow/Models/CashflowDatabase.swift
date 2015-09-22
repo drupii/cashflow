@@ -14,12 +14,19 @@ class CashflowDatabase: Database {
     private let dateFormatter2: DateFormatter2
     private let dateFormatter3: DateFormatter2
 
+    static private var theInstance: CashflowDatabase?
+
     /**
      * 初期化
      */
     static func instantiate() {
         let db = CashflowDatabase()
+        theInstance = db
         Database._setInstance(db)
+    }
+
+    override static func instance() -> CashflowDatabase {
+        return theInstance!
     }
     
     override init() {

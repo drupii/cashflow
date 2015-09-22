@@ -27,7 +27,7 @@ class Journal : NSObject {
         self.entries = Transaction.find_all("ORDER BY date, key")
     
         // upgrade data
-        let db = Database.instance() as! CashflowDatabase
+        let db = CashflowDatabase.instance()
         if db.needFixDateFormat {
             self._sortByDate()
         

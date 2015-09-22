@@ -43,7 +43,7 @@ static Database *sDatabase = nil;
    @return Database singleton instance
    @note If you want to modify this class, use category.
 */
-+ (Database *)instance
++ (nonnull Database *)instance
 {
     if (sDatabase == nil) {
         sDatabase = [[self class] new];

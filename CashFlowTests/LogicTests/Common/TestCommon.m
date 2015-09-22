@@ -53,6 +53,7 @@ static NSString *kTestDbName = @"CashFlowTest.db";
     }
 
     [Database shutdown];
+    [CashflowDatabase instantiate];
 }
 
 // 空のデータベースから開始する
