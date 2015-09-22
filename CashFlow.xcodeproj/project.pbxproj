@@ -77,6 +77,7 @@
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3ED414E71A58428A00B1AEB8 /* Pods-free.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3ED414E51A58428A00B1AEB8 /* Pods-free.debug.xcconfig */; };
 		3ED414E81A58428A00B1AEB8 /* Pods-free.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3ED414E61A58428A00B1AEB8 /* Pods-free.release.xcconfig */; };
+		3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE5E70C18A9260200B23A99 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C01831495600070F72 /* libAdapterNend.a */; };
 		3EE5E70F18A9260700B23A99 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C11831495600070F72 /* libNendAd.a */; };
 		3EE5E71218A9262200B23A99 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2CF18314B6500070F72 /* libAdapterIMobile.a */; };
@@ -116,7 +117,6 @@
 		662AB1336AD22E95E3570DB5 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		662AB139188CAF1D60B68416 /* ReportCatGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */; };
 		662AB1513C67FD3E858A9CEF /* ORQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB1542F3EE3CFBA7E9604 /* ORQuery.m */; };
-		662AB1752B805792C09D9627 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB27771FF8C0730A4DDD1 /* Config.m */; };
 		662AB17945843BC0B3F2D1E7 /* TransactionListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB5FC768CAE796CDDEC2A /* TransactionListView.storyboard */; };
 		662AB18C97EB039056B19D4E /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE78751950BB4F72ADF8 /* Asset.m */; };
 		662AB1AA10C4D4C0D30FFC7D /* AssetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB77DF9FA9C3A5060A9B5 /* AssetVC.m */; };
@@ -139,7 +139,6 @@
 		662AB2D63F4ED87AC56AAAC8 /* ExportServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8350396E665A2067FD1 /* ExportServer.m */; };
 		662AB2F4DE3442009EAFE51B /* GenEditTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB7F1C8388EF9E38A4D79 /* GenEditTextView.xib */; };
 		662AB2F90D665299AD2E1B1B /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8187E121C6CC4711496 /* CurrencyManager.swift */; };
-		662AB31E3DAAFD94EDB03FCD /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB27771FF8C0730A4DDD1 /* Config.m */; };
 		662AB32ED8E8B6CDD90C4E92 /* InfoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB0D857F2C229E01A0A86 /* InfoView.storyboard */; };
 		662AB3346EF8247197E7B57A /* ReportCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABD898171C964B71187B8 /* ReportCatCell.m */; };
 		662AB33C6F671899B846DEEE /* EditDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB26BA59401CD8FCDE181 /* EditDateVC.m */; };
@@ -349,6 +348,7 @@
 		3ECD5A861347603800B499A6 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		3ED414E51A58428A00B1AEB8 /* Pods-free.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-free.debug.xcconfig"; path = "Pods/Target Support Files/Pods-free/Pods-free.debug.xcconfig"; sourceTree = "<group>"; };
 		3ED414E61A58428A00B1AEB8 /* Pods-free.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-free.release.xcconfig"; path = "Pods/Target Support Files/Pods-free/Pods-free.release.xcconfig"; sourceTree = "<group>"; };
+		3EE38A1A1BB13421009CBE96 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3EE629E910D7E8C500EB7399 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3EF1523D1462C2B300C724E4 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF966FD1464FD3900A24626 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -388,7 +388,6 @@
 		662AB263111447B37A3E9A60 /* LedgerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LedgerTests.m; sourceTree = "<group>"; };
 		662AB267427DAA82536D9442 /* TCategoryBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCategoryBase.m; sourceTree = "<group>"; };
 		662AB26BA59401CD8FCDE181 /* EditDateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDateVC.m; sourceTree = "<group>"; };
-		662AB27771FF8C0730A4DDD1 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		662AB29509F20565BA43545B /* DBLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBLoadingView.h; sourceTree = "<group>"; };
 		662AB34A8D636D2461F1DC5A /* AssetBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetBase.h; sourceTree = "<group>"; };
 		662AB38D4410C04B96DF1C5D /* ExportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportVC.m; sourceTree = "<group>"; };
@@ -914,7 +913,7 @@
 				662AB8187E121C6CC4711496 /* CurrencyManager.swift */,
 				662AB5A843B0137D18F91C90 /* SwiftUtils.swift */,
 				662AB70A1C5444CFF8C4C0A8 /* Config.h */,
-				662AB27771FF8C0730A4DDD1 /* Config.m */,
+				3EE38A1A1BB13421009CBE96 /* Config.swift */,
 				662ABF7CC9A344DB7C9AA61F /* DropboxSecret.h */,
 				662AB7DE9511F69534511280 /* DropboxBackup.h */,
 				662AB7BBE61AA613A3167C9A /* DropboxBackup.m */,
@@ -1458,7 +1457,6 @@
 				662AB04E09393BC877F02F5C /* TransactionCell.m in Sources */,
 				662ABC25DF16EB432F3BE48A /* WebServer.m in Sources */,
 				662AB0F90BB60BFAF84D310E /* BackupServer.m in Sources */,
-				662AB31E3DAAFD94EDB03FCD /* Config.m in Sources */,
 				662AB912C9FB0167F2727A30 /* DropboxBackup.m in Sources */,
 				662AB0CE75D927C4DBAE15D6 /* ExportBase.m in Sources */,
 				662AB6B9A9F4ADABF69B7C54 /* ExportServer.m in Sources */,
@@ -1473,6 +1471,7 @@
 				662AB842F60291327BE646BF /* ExportCsv.m in Sources */,
 				662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */,
 				3E10A5831BB11227006BCD6E /* AssetEntry.swift in Sources */,
+				3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */,
 				3E007EC61BA8694E00923757 /* CatReport.swift in Sources */,
 				662AB1D7288A5760771CD027 /* AppDelegate.swift in Sources */,
 			);
@@ -1527,7 +1526,6 @@
 				662AB38BF6AFE6BBA32DE01E /* TransactionCell.m in Sources */,
 				662AB8FA70258039618A8ACC /* WebServer.m in Sources */,
 				662ABA1C854FC63F02950E08 /* BackupServer.m in Sources */,
-				662AB1752B805792C09D9627 /* Config.m in Sources */,
 				662AB26125143CC66416EC28 /* DropboxBackup.m in Sources */,
 				662AB804C61CE564A3A06EA8 /* ExportBase.m in Sources */,
 				662AB2D63F4ED87AC56AAAC8 /* ExportServer.m in Sources */,

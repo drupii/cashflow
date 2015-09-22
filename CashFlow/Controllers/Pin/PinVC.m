@@ -8,6 +8,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <LocalAuthentication/LocalAuthentication.h>
 
+#import "CashFlow-Swift.h"
+
 #import "PinVC.h"
 #import "AppDelegate.h"
 #import "Config.h"
