@@ -47,6 +47,6 @@ class CatReport : NSObject {
         if (self.category < 0) {
             return NSLocalizedString("No category", comment:"")
         }
-        return DataModel.categories().categoryStringWithKey(self.category)
+        return DataModel.getCategories().categoryStringWithKey(self.category)
     }
 }

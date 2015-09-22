@@ -64,7 +64,7 @@ class Ledger : NSObject {
         let idx = assetIndexWithKey(asset.pid)
         
         asset.delete()
-        DataModel.journal().deleteAllTransactionsWithAsset(asset)
+        DataModel.getJournal().deleteAllTransactionsWithAsset(asset)
         self.assets.removeAtIndex(idx)
         self.rebuild()
     }

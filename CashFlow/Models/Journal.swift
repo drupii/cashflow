@@ -71,7 +71,7 @@ class Journal : NSObject {
             // 最も古い取引を削除する
             // Note: 初期残高を調整するため、Asset 側で削除させる
             let t = self.entries[0]
-            let asset = DataModel.ledger().assetWithKey(t.asset)
+            let asset = DataModel.getLedger().assetWithKey(t.asset)
             asset!.deleteEntryAt(0)
         }
     }
