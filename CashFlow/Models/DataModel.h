@@ -6,12 +6,12 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "Journal.h"
 #import "Category.h"
 #import "DescLRU.h"
 #import "Database.h"
 
 @class Ledger;
+@class Journal;
 
 @protocol DataModelDelegate
 - (void)dataModelLoaded;

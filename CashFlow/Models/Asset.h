@@ -9,19 +9,19 @@
 #import "Transaction.h"
 #import "Database.h"
 #import "AssetBase.h"
-#import "AssetEntry.h"
+
+@class AssetEntry;
 
 // asset types
 #define NUM_ASSET_TYPES 5
 
-#define ASSET_CASH  0
-#define ASSET_BANK  1
-#define	ASSET_CARD  2
-#define ASSET_INVEST 3
-#define ASSET_EMONEY 4
-
-
-#define MAX_TRANSACTIONS	50000
+typedef NS_ENUM(NSInteger, AssetType) {
+    AssetTypeCash = 0,
+    AssetTypeBank = 1,
+    AssetTypeCard = 2,
+    AssetTypeInvest = 3,
+    AssetTypeEmoney = 4
+};
 
 @class Database;
 

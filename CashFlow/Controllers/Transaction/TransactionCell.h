@@ -7,7 +7,8 @@
 //  TransactionCell.h
 
 #import <UIKit/UIKit.h>
-#import "AssetEntry.h"
+
+@class AssetEntry;
 
 @interface TransactionCell : UITableViewCell
 

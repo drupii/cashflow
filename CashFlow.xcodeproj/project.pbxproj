@@ -25,6 +25,8 @@
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E10A5811BB10BFD006BCD6E /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5801BB10BFD006BCD6E /* Ledger.swift */; settings = {ASSET_TAGS = (); }; };
+		3E10A5831BB11227006BCD6E /* AssetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5821BB11227006BCD6E /* AssetEntry.swift */; settings = {ASSET_TAGS = (); }; };
+		3E10A5851BB12A48006BCD6E /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5841BB12A48006BCD6E /* Journal.swift */; settings = {ASSET_TAGS = (); }; };
 		3E13EE59114007D600523938 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13EE58114007D600523938 /* AVFoundation.framework */; };
 		3E197BF7121271D200105B20 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
 		3E2376C51107481F00E4C329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -171,7 +173,6 @@
 		662AB551CAC740B07BF35F23 /* TCategoryBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB267427DAA82536D9442 /* TCategoryBase.m */; };
 		662AB5865B2BD4F518A4BBB3 /* DBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB551FD151CEF1F579143 /* DBLoadingView.m */; };
 		662AB594A96D2933D66D8545 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB8D90BC1E43B40E0750D /* TransactionCell.xib */; };
-		662AB597348399D0C641F973 /* AssetEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB23A80E50CC4F56E0B00 /* AssetEntry.m */; };
 		662AB59E39EDA91A9E2A09B0 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB719DFAE01D69A82BB /* DataModel.m */; };
 		662AB5D51A8462384571543A /* CurrencyManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCA4032D8C12FC18DEA9 /* CurrencyManagerTests.m */; };
 		662AB5F32BF882F46478F771 /* BackupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB45ECA675DB52757BD7D /* BackupView.storyboard */; };
@@ -197,10 +198,8 @@
 		662AB7EFE375B501EC2EDBF4 /* AssetListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABAA20836AB99EE17C031 /* AssetListView.storyboard */; };
 		662AB804C61CE564A3A06EA8 /* ExportBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB434E5D488CE9605F27B /* ExportBase.m */; };
 		662AB8363B5693B5D8C94E5D /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5A843B0137D18F91C90 /* SwiftUtils.swift */; };
-		662AB836858AB4A86D44494E /* Journal.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6750468E22D0A04C36E /* Journal.m */; };
 		662AB842F60291327BE646BF /* ExportCsv.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB39DDC0D7301D1E024E0 /* ExportCsv.m */; };
 		662AB856F134AFE4837D56F6 /* GenSelectListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF41E1D67D8823553504 /* GenSelectListVC.m */; };
-		662AB85CCFE87E88587C7894 /* AssetEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB23A80E50CC4F56E0B00 /* AssetEntry.m */; };
 		662AB8662D04372384915B9E /* ReportCatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB414AF4CCDC010CC654F /* ReportCatVC.m */; };
 		662AB8952EE964FF13B0C7D5 /* ReportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB943BAFEE09051FD3803 /* ReportView.storyboard */; };
 		662AB8B7604AC82268B92219 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA7E583EE4CCC39387C9 /* ConfigViewController.m */; };
@@ -248,7 +247,6 @@
 		662ABB8984ADF017D9E55B6B /* EditMemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8E7413740C6A594F849 /* EditMemoVC.m */; };
 		662ABB91B652141D39C26383 /* artwork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 662AB64D40A3695CC9DC421C /* artwork.jpg */; };
 		662ABB921B6646BF78ACADBB /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A3BB4870106242B819 /* Category.m */; };
-		662ABB9C48A1CA599A6DD18D /* Journal.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6750468E22D0A04C36E /* Journal.m */; };
 		662ABBA5D93EE82C5E477F06 /* DescLRUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */; };
 		662ABBBB404C1E439FC4A414 /* CFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */; };
 		662ABBC04AC5A71CF6990A9A /* ReportCatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB414AF4CCDC010CC654F /* ReportCatVC.m */; };
@@ -319,6 +317,8 @@
 		3E035E9A1182B6E000711865 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E10A5801BB10BFD006BCD6E /* Ledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
+		3E10A5821BB11227006BCD6E /* AssetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntry.swift; sourceTree = "<group>"; };
+		3E10A5841BB12A48006BCD6E /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		3E13EE58114007D600523938 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3E338212133211C500861610 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3E347BB1169DC7B0002307AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -383,9 +383,7 @@
 		662AB1C7750C5BC665D2901D /* TransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTests.m; sourceTree = "<group>"; };
 		662AB1DC3351798DF355157B /* DescLRU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRU.h; sourceTree = "<group>"; };
 		662AB1EB555DDFCC29FDA21F /* AssetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetVC.h; sourceTree = "<group>"; };
-		662AB22286250904CA35075C /* Journal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Journal.h; sourceTree = "<group>"; };
 		662AB2241CAFB76B86B3ECD4 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
-		662AB23A80E50CC4F56E0B00 /* AssetEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetEntry.m; sourceTree = "<group>"; };
 		662AB24B435ECE7C9389383A /* ReportCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCell.h; sourceTree = "<group>"; };
 		662AB263111447B37A3E9A60 /* LedgerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LedgerTests.m; sourceTree = "<group>"; };
 		662AB267427DAA82536D9442 /* TCategoryBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCategoryBase.m; sourceTree = "<group>"; };
@@ -421,7 +419,6 @@
 		662AB62B9A455175E2A76DC0 /* GenEditTextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenEditTextVC.h; sourceTree = "<group>"; };
 		662AB64D40A3695CC9DC421C /* artwork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = artwork.jpg; sourceTree = "<group>"; };
 		662AB65EEB4F00F6B04073C7 /* AssetListVCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetListVCTests.m; sourceTree = "<group>"; };
-		662AB6750468E22D0A04C36E /* Journal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Journal.m; sourceTree = "<group>"; };
 		662AB67AFDF6279282F327C1 /* TestCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCommon.h; sourceTree = "<group>"; };
 		662AB68107DC2C386A764C4A /* SupportMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportMail.h; sourceTree = "<group>"; };
 		662AB684249CA0E490B8CFFD /* CategoryListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryListVC.h; sourceTree = "<group>"; };
@@ -461,7 +458,6 @@
 		662AB9D9EC684EED6E3555C2 /* SupportMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportMail.m; sourceTree = "<group>"; };
 		662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		662ABA19851F32FDCDB1002B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		662ABA2F022287478CC01609 /* AssetEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetEntry.h; sourceTree = "<group>"; };
 		662ABA2F74973F25E99AC1E1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		662ABA34C992D7C86B93C578 /* TransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionCell.m; sourceTree = "<group>"; };
 		662ABA6118F7DA3277EB8407 /* testdata1.sql */ = {isa = PBXFileReference; lastKnownFileType = file.sql; name = testdata1.sql; path = testdata/testdata1.sql; sourceTree = "<group>"; };
@@ -814,13 +810,11 @@
 				662ABAB719DFAE01D69A82BB /* DataModel.m */,
 				662AB2241CAFB76B86B3ECD4 /* Asset.h */,
 				662ABE78751950BB4F72ADF8 /* Asset.m */,
-				662ABA2F022287478CC01609 /* AssetEntry.h */,
-				662AB23A80E50CC4F56E0B00 /* AssetEntry.m */,
+				3E10A5821BB11227006BCD6E /* AssetEntry.swift */,
 				662AB5E6D90C6E0EB353C500 /* Transaction.h */,
 				662AB809E5CDE381FBCA3763 /* Transaction.m */,
 				3E10A5801BB10BFD006BCD6E /* Ledger.swift */,
-				662AB22286250904CA35075C /* Journal.h */,
-				662AB6750468E22D0A04C36E /* Journal.m */,
+				3E10A5841BB12A48006BCD6E /* Journal.swift */,
 				662ABD23F134469744B8F265 /* Category.h */,
 				662AB0A3BB4870106242B819 /* Category.m */,
 				3E007ECD1BA9BA2900923757 /* Report.swift */,
@@ -1421,15 +1415,14 @@
 				662AB7B15FC748C668DB878D /* ORRecord.m in Sources */,
 				662ABE7FC99773371973BD3D /* ORQuery.m in Sources */,
 				662ABC5386E278B457F6D73A /* AssetBase.m in Sources */,
+				3E10A5851BB12A48006BCD6E /* Journal.swift in Sources */,
 				662AB07FF87CE568D1FBB279 /* Database.m in Sources */,
 				662AB01898315F140F59C485 /* Dbstmt.m in Sources */,
 				662ABAE89582370C0A2C21EE /* DescLRU.m in Sources */,
 				662ABB8414248F5883C66078 /* TransactionBase.m in Sources */,
 				662AB551CAC740B07BF35F23 /* TCategoryBase.m in Sources */,
-				662AB85CCFE87E88587C7894 /* AssetEntry.m in Sources */,
 				662ABFEFB6047DFEDF362BF7 /* DateFormatter2.m in Sources */,
 				662AB92560A6EC3DE897DBE3 /* Category.m in Sources */,
-				662AB836858AB4A86D44494E /* Journal.m in Sources */,
 				662ABB59FBF21022CDAE7980 /* CashflowDatabase.m in Sources */,
 				662AB59E39EDA91A9E2A09B0 /* DataModel.m in Sources */,
 				662ABF2D9D776C71A48B41E2 /* DescLRUManager.m in Sources */,
@@ -1479,6 +1472,7 @@
 				662AB613CA5E13EBEB478B3B /* ExportOfx.m in Sources */,
 				662AB842F60291327BE646BF /* ExportCsv.m in Sources */,
 				662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */,
+				3E10A5831BB11227006BCD6E /* AssetEntry.swift in Sources */,
 				3E007EC61BA8694E00923757 /* CatReport.swift in Sources */,
 				662AB1D7288A5760771CD027 /* AppDelegate.swift in Sources */,
 			);
@@ -1496,10 +1490,8 @@
 				662AB75DE7C37F698E22A88B /* DescLRU.m in Sources */,
 				662AB8C4F36A516FAF722B0D /* TransactionBase.m in Sources */,
 				662AB771F7847DD1B29FBFA6 /* TCategoryBase.m in Sources */,
-				662AB597348399D0C641F973 /* AssetEntry.m in Sources */,
 				662AB64868D919F247214D32 /* DateFormatter2.m in Sources */,
 				662ABB921B6646BF78ACADBB /* Category.m in Sources */,
-				662ABB9C48A1CA599A6DD18D /* Journal.m in Sources */,
 				662ABDC5D64BEE8991EC20E4 /* CashflowDatabase.m in Sources */,
 				662ABFECFCD6CEEC48222E25 /* DataModel.m in Sources */,
 				662ABBA5D93EE82C5E477F06 /* DescLRUManager.m in Sources */,

@@ -90,7 +90,7 @@ class ReportEntry : NSObject {
         var value: Double
         if (self.assetKey < 0) {
             // 資産指定なしレポートの場合、資産間移動は計上しない
-            if (t.type == numericCast(TYPE_TRANSFER)) {
+            if (t.type == TransactionType.Transfer.rawValue) {
                 return true
             }
             value = t.value;
@@ -127,7 +127,7 @@ class ReportEntry : NSObject {
         } else {
             ary = self.incomeCatReports;
         }
-        for var cr in ary {
+        for cr in ary {
             if (cr.category == t.category) {
                 cr.addTransaction(t)
                 break;
@@ -140,8 +140,13 @@ class ReportEntry : NSObject {
      ソートと集計
      */
     func sortAndTotalUp() {
-        self.totalIncome = sortAndTotalUp(self.incomeCatReports)
-        self.totalOutgo  = sortAndTotalUp(self.outgoCatReports)
+        let s1 = sortAndTotalUp(self.incomeCatReports)
+        self.incomeCatReports = s1.0
+        self.totalIncome = s1.1
+        
+        let s2 = sortAndTotalUp(self.outgoCatReports)
+        self.outgoCatReports = s2.0
+        self.totalOutgo = s2.1
 
         self.maxIncome = 0.0
         self.maxOutgo = 0.0
@@ -156,7 +161,7 @@ class ReportEntry : NSObject {
         }
     }
 
-    private func sortAndTotalUp(var ary: [CatReport]) -> Double {
+    private func sortAndTotalUp(var ary: [CatReport]) -> ([CatReport], Double) {
         // 金額が 0 のエントリを削除する
         var count = ary.count;
         for (var i = 0; i < count; i++) {
@@ -175,10 +180,11 @@ class ReportEntry : NSObject {
 
         // 集計
         var total = 0.0
-        for var cr2 in ary {
+        for cr2 in ary {
             total += cr2.sum;
         }
-        return total
+        
+        return (ary, total)
     }
 
     /**
@@ -195,11 +201,11 @@ class ReportEntry : NSObject {
         }
 	
         if (xv == yv) {
-            return false
+            return true
         }
         if (xv > yv) {
-            return false
+            return true
         }
-        return true
+        return false
     }
 }

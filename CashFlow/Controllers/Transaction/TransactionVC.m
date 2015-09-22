@@ -147,7 +147,7 @@
 
     if (_transactionIndex < 0) {
         // 新規トランザクション
-        self.editingEntry = [[AssetEntry alloc] initWithTransaction:nil withAsset:_asset];
+        self.editingEntry = [[AssetEntry alloc] initWithTransaction:nil asset:_asset];
     } else {
         // 変更
         AssetEntry *orig = [_asset entryAt:_transactionIndex];
@@ -433,25 +433,18 @@
         return;
     }
 
-    switch (_editingEntry.transaction.type) {
-    case TYPE_ADJ:
+    NSInteger type = _editingEntry.transaction.type;
+    if (type == TransactionTypeAdj) {
         _editingEntry.transaction.desc = _typeArray[_editingEntry.transaction.type];
-        break;
+    }
+    else if (type == TransactionTypeTransfer) {
+        Asset *from, *to;
+        Ledger *ledger = [DataModel ledger];
+        from = [ledger assetWithKey:_editingEntry.transaction.asset];
+        to = [ledger assetWithKey:_editingEntry.transaction.dstAsset];
 
-    case TYPE_TRANSFER:
-        {
-            Asset *from, *to;
-            Ledger *ledger = [DataModel ledger];
-            from = [ledger assetWithKey:_editingEntry.transaction.asset];
-            to = [ledger assetWithKey:_editingEntry.transaction.dstAsset];
-
-            _editingEntry.transaction.desc =
-                [NSString stringWithFormat:@"%@/%@", from.name, to.name];
-        }
-        break;
-
-    default:
-        break;
+        _editingEntry.transaction.desc =
+            [NSString stringWithFormat:@"%@/%@", from.name, to.name];
     }
 
     [self dismissPopover];

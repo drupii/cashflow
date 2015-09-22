@@ -26,7 +26,7 @@
     
     DBRestClient *mRestClient;
     UIViewController *mViewController;
-    int mMode;
+    BackupMode mMode;
     
     // リモートのリビジョン
     NSString *mRemoteRev;
@@ -46,21 +46,21 @@
 
 - (void)doSync:(UIViewController *)viewController
 {
-    mMode = MODE_SYNC;
+    mMode = BackupModeSync;
     mViewController = viewController;
     [self _login:viewController];
 }
 
 - (void)doBackup:(UIViewController *)viewController
 {
-    mMode = MODE_BACKUP;
+    mMode = BackupModeBackup;
     mViewController = viewController;
     [self _login:viewController];
 }
 
 - (void)doRestore:(UIViewController *)viewController
 {
-    mMode = MODE_RESTORE;
+    mMode = BackupModeRestore;
     mViewController = viewController;
     [self _login:viewController];
 }
@@ -125,7 +125,7 @@
     BOOL isRemoteModified = [[DataModel instance] isRemoteModifiedAfterSync:mRemoteRev];
     
     switch (mMode) {
-        case MODE_SYNC:
+        case BackupModeSync:
             if (mIsLocalModified && isRemoteModified) {
                 // 衝突
                 [mDelegate dropboxBackupConflicted];
@@ -142,11 +142,11 @@
             }
             break;
             
-        case MODE_BACKUP:
+        case BackupModeBackup:
             [self _uploadBackupWithParentRev:mRemoteRev];
             break;
             
-        case MODE_RESTORE:
+        case BackupModeRestore:
             [self.restClient loadFile:BACKUP_FULLPATH intoPath:[[DataModel instance] getBackupSqlPath]];
             break;
     }
@@ -158,12 +158,12 @@
     mRemoteRev = nil;
     
     switch (mMode) {
-        case MODE_BACKUP:
-        case MODE_SYNC:
+        case BackupModeBackup:
+        case BackupModeSync:
             [self _uploadBackupWithParentRev:nil];
             break;
             
-        case MODE_RESTORE:
+        case BackupModeRestore:
             [self.restClient loadFile:BACKUP_FULLPATH intoPath:[[DataModel instance] getBackupSqlPath]];
             break;
     }

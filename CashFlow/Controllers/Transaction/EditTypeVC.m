@@ -100,7 +100,7 @@
 {
     self.type = indexPath.row;
 
-    if (self.type != TYPE_TRANSFER) {
+    if (self.type != TransactionTypeTransfer) {
         // pop しない
         [_delegate editTypeViewChanged:self];
         return;

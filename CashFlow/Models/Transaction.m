@@ -41,7 +41,7 @@
     self.desc = @"";
     self.memo = @"";
     self.value = 0.0;
-    self.type = 0;
+    self.type = TransactionTypeOutgo;
     self.category = -1;
     self.hasBalance = NO;
     return self;
@@ -80,6 +80,15 @@
     n.hasBalance = self.hasBalance;
     n.balance = self.balance;
     return n;
+}
+
+- (TransactionType)etype
+{
+    return (TransactionType)self.type;
+}
+
+- (void)setEtype:(TransactionType)type {
+    self.type = type;
 }
 
 - (void)_insert

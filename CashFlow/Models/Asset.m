@@ -58,15 +58,15 @@
 + (NSString*)iconNameWithType:(NSInteger)type
 {
     switch (type) {
-        case ASSET_CASH:
+        case AssetTypeCash:
             return @"cash";
-        case ASSET_BANK:
+        case AssetTypeBank:
             return @"bank";
-        case ASSET_CARD:
+        case AssetTypeCard:
             return @"card";
-        case ASSET_INVEST:
+        case AssetTypeInvest:
             return @"invest";
-        case ASSET_EMONEY:
+        case AssetTypeEmoney:
             return @"cash";
             //return @"emoney";
     }
@@ -80,7 +80,7 @@
     self = [super init];
     
     _entries = [NSMutableArray new];
-    self.type = ASSET_CASH;
+    self.type = AssetTypeCash;
 	
     return self;
 }
@@ -96,12 +96,12 @@
     double balance = self.initialBalance;
 
     AssetEntry *e;
-    for (Transaction *t in [DataModel journal]) {
+    for (Transaction *t in [DataModel journal].entries) {
         if (t.asset == self.pid || t.dstAsset == self.pid) {
-            e = [[AssetEntry alloc] initWithTransaction:t withAsset:self];
+            e = [[AssetEntry alloc] initWithTransaction:t asset:self];
 
             // 残高計算
-            if (t.type == TYPE_ADJ && t.hasBalance) {
+            if (t.type == TransactionTypeAdj && t.hasBalance) {
                 // 残高から金額を逆算
                 double oldval = t.value;
                 t.value = t.balance - balance;
@@ -118,7 +118,7 @@
                 balance = balance + e.value;
                 e.balance = balance;
 
-                if (t.type == TYPE_ADJ) {
+                if (t.type == TransactionTypeAdj) {
                     t.balance = balance;
                     t.hasBalance = YES;
                 }
@@ -159,7 +159,7 @@
 {
     AssetEntry *orig = [self entryAt:index];
 
-    [[DataModel journal] replaceTransaction:orig.transaction withObject:e.transaction];
+    [[DataModel journal] replaceTransaction:orig.transaction to:e.transaction];
     [[DataModel ledger] rebuild];
 }
 
@@ -175,7 +175,7 @@
 
     // エントリ削除
     AssetEntry *e = [self entryAt:index];
-    [[DataModel journal] deleteTransaction:e.transaction withAsset:self];
+    [[DataModel journal] deleteTransaction:e.transaction asset:self];
 }
 
 // エントリ削除
@@ -241,7 +241,7 @@
         // newly created...
         Asset *as = [Asset new];
         as.name = _L(@"Cash");
-        as.type = ASSET_CASH;
+        as.type = AssetTypeCash;
         as.initialBalance = 0;
         as.sorder = 0;
         [as save];

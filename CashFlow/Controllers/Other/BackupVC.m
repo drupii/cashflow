@@ -184,21 +184,21 @@
 
 #pragma mark DropboxBackupDelegate
 
-- (void)dropboxBackupStarted:(int)mode
+- (void)dropboxBackupStarted:(BackupMode)mode
 {
     NSLog(@"DropboxBackupStarted");
     
     NSString *msg = nil;
     switch (mode) {
-        case MODE_SYNC:
+        case BackupModeSync:
             msg = _L(@"Syncing");
             break;
 
-        case MODE_BACKUP:
+        case BackupModeBackup:
             msg = _L(@"Uploading");
             break;
             
-        case MODE_RESTORE:
+        case BackupModeRestore:
             msg = _L(@"Downloading");
             break;
     }

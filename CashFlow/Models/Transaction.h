@@ -8,10 +8,12 @@
 #import <UIKit/UIKit.h>
 #import "TransactionBase.h"
 
-#define TYPE_OUTGO      0       // 支払
-#define TYPE_INCOME	1       // 入金
-#define	TYPE_ADJ        2       // 残高調整
-#define TYPE_TRANSFER   3       // 資産間移動
+typedef NS_ENUM(NSInteger, TransactionType) {
+    TransactionTypeOutgo = 0, //支払い
+    TransactionTypeIncome = 1, // 入金
+    TransactionTypeAdj = 2, // 残高調整
+    TransactionTypeTransfer = 3 // 資産間移動
+};
 
 @class Asset;
 
@@ -23,6 +25,8 @@
 
 - (nonnull instancetype)initWithDate:(nonnull NSDate *)date description:(nonnull NSString *)desc value:(double)v;
 - (void)updateWithoutUpdateLRU;
+
+@property(nonatomic,assign) TransactionType etype;
 
 + (nonnull NSDate *)lastUsedDate;
 + (void)setLastUsedDate:(nullable NSDate *)date;
