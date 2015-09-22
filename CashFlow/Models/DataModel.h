@@ -7,10 +7,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Journal.h"
-#import "Ledger.h"
 #import "Category.h"
 #import "DescLRU.h"
 #import "Database.h"
+
+@class Ledger;
 
 @protocol DataModelDelegate
 - (void)dataModelLoaded;

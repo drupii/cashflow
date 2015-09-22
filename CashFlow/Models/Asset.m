@@ -7,6 +7,8 @@
 
 // Asset
 
+#import "CashFlow-Swift.h"
+
 #import "AppDelegate.h"
 #import "Asset.h"
 #import "DataModel.h"

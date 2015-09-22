@@ -8,6 +8,8 @@
 // DataModel V2
 // (SQLite ver)
 
+#import "CashFlow-Swift.h"
+
 #import "AppDelegate.h"
 #import "DataModel.h"
 #import "CashflowDatabase.h"

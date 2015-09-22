@@ -4,6 +4,7 @@
  * Copyright (C) 2008-2011, Takuya Murakami, All rights reserved.
  * For conditions of distribution and use, see LICENSE file.
  */
+#import "CashFlow-Swift.h"
 
 #import "AssetVC.h"
 #import "AppDelegate.h"

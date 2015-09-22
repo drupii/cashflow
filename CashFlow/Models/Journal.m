@@ -6,6 +6,7 @@
  */
 
 // 仕訳帳
+#import "CashFlow-Swift.h"
 
 #import "AppDelegate.h"
 #import "DataModel.h"

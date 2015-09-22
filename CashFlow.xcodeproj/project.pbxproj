@@ -24,6 +24,7 @@
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
+		3E10A5811BB10BFD006BCD6E /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5801BB10BFD006BCD6E /* Ledger.swift */; settings = {ASSET_TAGS = (); }; };
 		3E13EE59114007D600523938 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13EE58114007D600523938 /* AVFoundation.framework */; };
 		3E197BF7121271D200105B20 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
 		3E2376C51107481F00E4C329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -193,7 +194,6 @@
 		662AB78A217494280430CD95 /* CalcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */; };
 		662AB7A4C9491F1B02440777 /* WebServerBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3C0142643C4637E480F /* WebServerBackup.m */; };
 		662AB7B15FC748C668DB878D /* ORRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDE6B2440D05D6A85432 /* ORRecord.m */; };
-		662AB7D76DBE1FE9C9650A0A /* Ledger.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDCE99208EAC10451626 /* Ledger.m */; };
 		662AB7EFE375B501EC2EDBF4 /* AssetListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABAA20836AB99EE17C031 /* AssetListView.storyboard */; };
 		662AB804C61CE564A3A06EA8 /* ExportBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB434E5D488CE9605F27B /* ExportBase.m */; };
 		662AB8363B5693B5D8C94E5D /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5A843B0137D18F91C90 /* SwiftUtils.swift */; };
@@ -224,7 +224,6 @@
 		662AB9E26E02374F78BBDAC3 /* ConfigView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABB559663B1709F31433C /* ConfigView.storyboard */; };
 		662AB9FD586BE8617E1F9E3B /* CategoryListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6B4BD5ABDD91D16795C /* CategoryListVC.m */; };
 		662AB9FDF77C72C3E37BF9C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 662ABAC3CE5F4C8B308C5A02 /* InfoPlist.strings */; };
-		662AB9FEB5D11451E65B48AB /* Ledger.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDCE99208EAC10451626 /* Ledger.m */; };
 		662ABA038FC21480AD3CECA9 /* GenEditTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6B4A813C37CACEA1B8D /* GenEditTextVC.m */; };
 		662ABA16D73263CBA361C8B5 /* ConfigView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABB559663B1709F31433C /* ConfigView.storyboard */; };
 		662ABA1C854FC63F02950E08 /* BackupServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB82EB1487667CBB05D82 /* BackupServer.m */; };
@@ -319,6 +318,7 @@
 		3E007ECD1BA9BA2900923757 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		3E035E9A1182B6E000711865 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3E10A5801BB10BFD006BCD6E /* Ledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		3E13EE58114007D600523938 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3E338212133211C500861610 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3E347BB1169DC7B0002307AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -477,7 +477,6 @@
 		662ABAFDFEA8A1528273DC79 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		662ABB0EA93BB55F0CFA4055 /* EditTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTypeView.xib; sourceTree = "<group>"; };
 		662ABB1248C6AA7AB34AB458 /* CashFlow-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CashFlow-Bridging-Header.h"; sourceTree = "<group>"; };
-		662ABB4A87EFEA6888B35172 /* Ledger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ledger.h; sourceTree = "<group>"; };
 		662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFCalendarViewController.m; sourceTree = "<group>"; };
 		662ABB559663B1709F31433C /* ConfigView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigView.storyboard; sourceTree = "<group>"; };
 		662ABB5C2CC80A847C5DB12C /* CFCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFCalendarViewController.h; sourceTree = "<group>"; };
@@ -505,7 +504,6 @@
 		662ABDA1038E3F1DC14B1267 /* ExportOfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportOfx.h; sourceTree = "<group>"; };
 		662ABDA5A5CFE796EFCD8935 /* AdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdManager.h; sourceTree = "<group>"; };
 		662ABDACF2882ED559DA9BED /* ReportCatDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCatDetailVC.h; sourceTree = "<group>"; };
-		662ABDCE99208EAC10451626 /* Ledger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ledger.m; sourceTree = "<group>"; };
 		662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcVC.m; sourceTree = "<group>"; };
 		662ABDE36BB11EB0D3B06596 /* TransactionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionBase.h; sourceTree = "<group>"; };
 		662ABDE6B2440D05D6A85432 /* ORRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORRecord.m; sourceTree = "<group>"; };
@@ -820,8 +818,7 @@
 				662AB23A80E50CC4F56E0B00 /* AssetEntry.m */,
 				662AB5E6D90C6E0EB353C500 /* Transaction.h */,
 				662AB809E5CDE381FBCA3763 /* Transaction.m */,
-				662ABB4A87EFEA6888B35172 /* Ledger.h */,
-				662ABDCE99208EAC10451626 /* Ledger.m */,
+				3E10A5801BB10BFD006BCD6E /* Ledger.swift */,
 				662AB22286250904CA35075C /* Journal.h */,
 				662AB6750468E22D0A04C36E /* Journal.m */,
 				662ABD23F134469744B8F265 /* Category.h */,
@@ -1437,7 +1434,6 @@
 				662AB59E39EDA91A9E2A09B0 /* DataModel.m in Sources */,
 				662ABF2D9D776C71A48B41E2 /* DescLRUManager.m in Sources */,
 				662ABBCB303E2177FEE03B9C /* Transaction.m in Sources */,
-				662AB7D76DBE1FE9C9650A0A /* Ledger.m in Sources */,
 				662AB04C0DE1CCA221E2A2E8 /* Asset.m in Sources */,
 				662AB647AE223A283B3E48C2 /* AdManager.m in Sources */,
 				662AB4FB90DF84D52F980B0F /* AssetListVC.m in Sources */,
@@ -1479,6 +1475,7 @@
 				662AB1C2AA7158C49334EAF6 /* SupportMail.m in Sources */,
 				662AB7A4C9491F1B02440777 /* WebServerBackup.m in Sources */,
 				3E007ECA1BA86DE700923757 /* ReportEntry.swift in Sources */,
+				3E10A5811BB10BFD006BCD6E /* Ledger.swift in Sources */,
 				662AB613CA5E13EBEB478B3B /* ExportOfx.m in Sources */,
 				662AB842F60291327BE646BF /* ExportCsv.m in Sources */,
 				662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */,
@@ -1507,7 +1504,6 @@
 				662ABFECFCD6CEEC48222E25 /* DataModel.m in Sources */,
 				662ABBA5D93EE82C5E477F06 /* DescLRUManager.m in Sources */,
 				662ABE4D69C52BF40194AC12 /* Transaction.m in Sources */,
-				662AB9FEB5D11451E65B48AB /* Ledger.m in Sources */,
 				662AB18C97EB039056B19D4E /* Asset.m in Sources */,
 				662ABEE6F9B4AEC2170814B4 /* AdManager.m in Sources */,
 				662AB0C4F63384F8EC7AA7EC /* AssetListVC.m in Sources */,

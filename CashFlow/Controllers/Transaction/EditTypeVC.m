@@ -12,6 +12,7 @@
    理由は、別の View を上に乗せており、利用する側のクラスで
    popToViewController するため。
 */
+#import "CashFlow-Swift.h"
 
 #import "AppDelegate.h"
 #import "EditTypeVC.h"

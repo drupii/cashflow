@@ -21,4 +21,6 @@
 
 #import "Config.h"
 
+#import "Asset.h"
+
 
