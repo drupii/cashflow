@@ -87,8 +87,6 @@
 		3EB88E8E17F702170045780D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB88E8C17F700B00045780D /* StoreKit.framework */; };
 		3EC572D71107451F00A551D5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		3ED414E71A58428A00B1AEB8 /* Pods-free.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3ED414E51A58428A00B1AEB8 /* Pods-free.debug.xcconfig */; };
-		3ED414E81A58428A00B1AEB8 /* Pods-free.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3ED414E61A58428A00B1AEB8 /* Pods-free.release.xcconfig */; };
 		3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A1D1BB13A82009CBE96 /* CashflowDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A271BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
@@ -1178,7 +1176,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 5HUHR3STUG;
@@ -1265,7 +1263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				662AB1FBA94D123DE73E8732 /* ConfigView.storyboard in Resources */,
-				3ED414E71A58428A00B1AEB8 /* Pods-free.debug.xcconfig in Resources */,
 				662AB292B6820E4ADC26E601 /* EditMemoView.xib in Resources */,
 				662ABBF51EAB1CD7FF1E530F /* CategoryListView.xib in Resources */,
 				662AB3ECDBD28A5D2C89DA56 /* AssetListView.storyboard in Resources */,
@@ -1287,7 +1284,6 @@
 				662AB96A640F061268F769F1 /* PinView-ipad.xib in Resources */,
 				662ABFFDEF707D176344864A /* images.xcassets in Resources */,
 				662ABB91B652141D39C26383 /* artwork.jpg in Resources */,
-				3ED414E81A58428A00B1AEB8 /* Pods-free.release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1675,6 +1671,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = CashFlow;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
@@ -1697,6 +1694,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = CashFlow;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7bf73d0f-2a24-4a77-a907-ea42930d8b68";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -1731,6 +1729,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.CashFlow-Free";
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
 			};
@@ -1762,6 +1761,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.CashFlow-Free";
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3196f994-8a42-4aea-9841-addd8fbda8cc";
@@ -1795,6 +1795,7 @@
 					"-framework",
 					XCTest,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1825,6 +1826,7 @@
 					"-framework",
 					XCTest,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALIDATE_PRODUCT = YES;
@@ -1839,6 +1841,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
