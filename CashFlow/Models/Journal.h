@@ -12,6 +12,8 @@
 #import <UIKit/UIKit.h>
 #import "Transaction.h"
 
+#define MAX_TRANSACTIONS	50000
+
 //
 // 仕訳帳
 // 

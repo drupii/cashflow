@@ -23,8 +23,6 @@ typedef NS_ENUM(NSInteger, AssetType) {
     AssetTypeEmoney = 4
 };
 
-#define MAX_TRANSACTIONS	50000
-
 @class Database;
 
 //
