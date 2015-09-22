@@ -10,10 +10,13 @@
 @interface Config : NSObject
 
 // 日時モード
-#define DateTimeModeWithTime 0  // 日＋時
-#define DateTimeModeWithTime5min 1  // 日＋時
-#define DateTimeModeDateOnly 2  // 日のみ
-@property(nonatomic,assign) NSInteger dateTimeMode;
+typedef NS_ENUM(NSInteger, DateTimeMode) {
+    DateTimeModeWithTime = 0,  // 日＋時
+    DateTimeModeWithTime5min = 1,  // 日＋時
+    DateTimeModeDateOnly = 2  // 日のみ
+};
+
+@property(nonatomic,assign) DateTimeMode dateTimeMode;
 
 // 週の開始日 : 日曜 - 0, 月曜 - 1
 @property(nonatomic,assign) NSInteger startOfWeek;
