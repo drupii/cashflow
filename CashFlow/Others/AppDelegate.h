@@ -13,7 +13,7 @@
 #import "DataModelBackup.h"
 #import "DataModelSync.h"
 
-#import "AssetListVC.h"
+//#import "AssetListVC.h"
 #import "TransactionListVC.h"
 
 #define DBNAME  @"CashFlow.db"

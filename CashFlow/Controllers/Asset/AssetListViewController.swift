@@ -10,7 +10,7 @@ class AssetListViewController : UIViewController,
         DataModelDelegate, UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UIAlertViewDelegate, BackupViewDelegate
 {
     @IBOutlet var tableView: UITableView?
-    @IBOutlet var splitTransactionListViewController: TransactionListViewController?
+    var splitTransactionListViewController: TransactionListViewController?
 
     @IBOutlet var barActionButton: UIBarButtonItem?
     @IBOutlet var barSumLabel: UIBarButtonItem?
@@ -19,24 +19,23 @@ class AssetListViewController : UIViewController,
     private var _isLoadDone: Bool = false
     private var _loadingView: DBLoadingView?
     
-    var _ledger: Ledger?
+    private var _ledger: Ledger?
 
-    var _iconArray: [UIImage] = []
+    private var _iconArray: [UIImage] = []
 
-    var _selectedAssetIndex: Int = 0
+    private var _selectedAssetIndex: Int = 0
     
-    var _asDisplaying: Bool = false
-    var _asActionButton: UIActionSheet?
-    var _asDelete: UIActionSheet?
+    private var _asDisplaying: Bool = false
+    private var _asActionButton: UIActionSheet?
 
-    var _assetToBeDelete: Asset?
+    private var _assetToBeDelete: Asset?
     
-    var _pinChecked: Bool = false
+    private var _pinChecked: Bool = false
 
     override func viewDidLoad() {
         print("AssetListViewController:viewDidLoad")
         super.viewDidLoad()
-        
+
         //[AppDelegate trackPageview:@"/AssetListViewController"];
 
         if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1) {
@@ -96,14 +95,7 @@ class AssetListViewController : UIViewController,
             s.height = 600
             self.preferredContentSize = s
         }
-    
-        if isIpad() {
-            // action button を消す
-            var items = toolbar!.items!
-            items.removeLast()
-            toolbar!.items = items
-        }
-    
+
         // データロード開始
         let dm = DataModel.instance()
         _isLoadDone = dm.isLoadDone;
@@ -148,16 +140,22 @@ class AssetListViewController : UIViewController,
         '12/8/12 一旦元に戻す。
         */
         //if (IS_IPAD) {
-            self._showInitialAsset()
+            self.showInitialAsset()
         //}
     }
 
-    private func _firstShowAssetIndex() -> Int {
+    /**
+     * 初回表示する資産インデックスを返す
+     */
+    private func firstShowAssetIndex() -> Int {
         let defaults = NSUserDefaults.standardUserDefaults()
         return defaults.integerForKey("firstShowAssetIndex")
     }
 
-    private func _setFirstShowAssetIndex(assetIndex: Int) {
+    /**
+     * 初回表示する資産インデックスを保存する
+     */
+    private func setFirstShowAssetIndex(assetIndex: Int) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(assetIndex, forKey: "firstShowAssetIndex")
         defaults.synchronize()
@@ -166,11 +164,11 @@ class AssetListViewController : UIViewController,
     /**
      * 最後に使用した資産を表示
      */
-    private func _showInitialAsset() {
+    private func showInitialAsset() {
         var asset: Asset?
     
         // 前回選択資産を選択
-        let firstShowAssetIndex = self._firstShowAssetIndex()
+        let firstShowAssetIndex = self.firstShowAssetIndex()
         if (firstShowAssetIndex >= 0 && _ledger!.assetCount > firstShowAssetIndex) {
             asset = _ledger!.assetAtIndex(firstShowAssetIndex)
         }
@@ -197,12 +195,18 @@ class AssetListViewController : UIViewController,
         }
     }
 
+    /**
+     * 資産が存在しないという警告を表示
+     */
     class func noAssetAlert() {
         let v = UIAlertView(title: "No assets", message: _L("At first, please create and select an asset."),
             delegate: nil, cancelButtonTitle: _L("Dismiss"))
         v.show()
     }
 
+    /**
+     * リロード
+     */
     func reload() {
         if (!_isLoadDone) {
             return
@@ -242,7 +246,7 @@ class AssetListViewController : UIViewController,
         }
         else if !isIpad() {
             // 初回以外：初期起動する画面を資産一覧画面に戻しておく
-            self._setFirstShowAssetIndex(-1)
+            self.setFirstShowAssetIndex(-1)
         }
     }
 
@@ -261,7 +265,7 @@ class AssetListViewController : UIViewController,
         return _ledger!.assetCount
     }
 
-    func _assetIndex(indexPath: NSIndexPath) -> Int {
+    private func assetIndex(indexPath: NSIndexPath) -> Int {
         return indexPath.row
     }
 
@@ -276,7 +280,7 @@ class AssetListViewController : UIViewController,
         // prototype cell を使用するため、cell は常に自動生成される
 
         // 資産
-        let asset = _ledger!.assetAtIndex(self._assetIndex(indexPath))
+        let asset = _ledger!.assetAtIndex(self.assetIndex(indexPath))
 
         // 資産タイプ範囲外対応
         var type = asset.type
@@ -310,13 +314,13 @@ class AssetListViewController : UIViewController,
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
 
-        let assetIndex = self._assetIndex(indexPath)
+        let assetIndex = self.assetIndex(indexPath)
         if (assetIndex < 0) {
             return
         }
 
         // 最後に選択した asset を記憶
-        self._setFirstShowAssetIndex(assetIndex)
+        self.setFirstShowAssetIndex(assetIndex)
 	
         let asset = _ledger!.assetAtIndex(assetIndex)
 
@@ -334,7 +338,7 @@ class AssetListViewController : UIViewController,
 
     // アクセサリボタンをタップしたときの処理 : アセット変更
     func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        let assetIndex = self._assetIndex(indexPath)
+        let assetIndex = self.assetIndex(indexPath)
         if assetIndex >= 0 {
             _selectedAssetIndex = indexPath.row;
             self.performSegueWithIdentifier("show", sender: self)
@@ -342,7 +346,7 @@ class AssetListViewController : UIViewController,
     }
 
     // 新規アセット追加
-    func addAsset() {
+    private func addAsset() {
         _selectedAssetIndex = -1;
         self.performSegueWithIdentifier("show", sender:self)
     }
@@ -365,7 +369,7 @@ class AssetListViewController : UIViewController,
     }
 
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if self._assetIndex(indexPath) < 0 {
+        if self.assetIndex(indexPath) < 0 {
             return false
         }
         return true
@@ -373,7 +377,7 @@ class AssetListViewController : UIViewController,
 
     // 編集スタイルを返す
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        if self._assetIndex(indexPath) < 0 {
+        if self.assetIndex(indexPath) < 0 {
             return .None
         }
         return .Delete
@@ -385,7 +389,7 @@ class AssetListViewController : UIViewController,
             return
         }
         
-        let assetIndex = self._assetIndex(indexPath)
+        let assetIndex = self.assetIndex(indexPath)
         _assetToBeDelete = _ledger!.assetAtIndex(assetIndex)
 
         // iOS8 : UIAlertController を使う
@@ -394,7 +398,7 @@ class AssetListViewController : UIViewController,
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         let okAction = UIAlertAction(title: _L("Delete Asset"), style: UIAlertActionStyle.Destructive,
             handler: {(action:UIAlertAction!) -> Void in
-                self._actionDelete(0)
+                self.actionDelete(0)
             })
         
         alertController.addAction(cancelAction)
@@ -403,7 +407,10 @@ class AssetListViewController : UIViewController,
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
-    func _actionDelete(buttonIndex: Int) {
+    /**
+     * 削除処理
+     */
+    private func actionDelete(buttonIndex: Int) {
         if (buttonIndex != 0) {
             return // cancelled;
         }
@@ -424,7 +431,7 @@ class AssetListViewController : UIViewController,
 
     // 並べ替え処理
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return self._assetIndex(indexPath) >= 0
+        return self.assetIndex(indexPath) >= 0
     }
 
     func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
@@ -434,8 +441,8 @@ class AssetListViewController : UIViewController,
     }
 
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        let fromIndex = self._assetIndex(sourceIndexPath)
-        let toIndex = self._assetIndex(destinationIndexPath)
+        let fromIndex = self.assetIndex(sourceIndexPath)
+        let toIndex = self.assetIndex(destinationIndexPath)
         if fromIndex < 0 || toIndex < 0 {
             return
         }
@@ -448,7 +455,7 @@ class AssetListViewController : UIViewController,
     //////////////////////////////////////////////////////////////////////////////////////////
     // Report
 
-    func showReport(sender: AnyObject?) {
+    @IBAction func showReport(sender: AnyObject?) {
         let reportVC = ReportViewController.instantiate()
         reportVC.setAsset(nil)
     
@@ -464,7 +471,7 @@ class AssetListViewController : UIViewController,
     //////////////////////////////////////////////////////////////////////////////////////////
     // Action Sheet 処理
 
-    func doAction(sender: AnyObject?) {
+    @IBAction func doAction(sender: AnyObject?) {
         if _asDisplaying {
             return
         }
@@ -500,21 +507,21 @@ class AssetListViewController : UIViewController,
         var nv: UINavigationController? = nil
         
         switch (buttonIndex) {
-            case 0:
+            case 1:
                 nv = ExportVC.instantiate(nil)
                 break;
             
-            case 1:
+            case 2:
                 nv = (UIStoryboard(name: "BackupView", bundle: nil).instantiateInitialViewController() as! UINavigationController)
                 backupVC = (nv!.topViewController as! BackupViewController)
                 backupVC!.setDelegate(self)
                 break;
             
-            case 2:
+            case 3:
                 nv = (UIStoryboard(name: "ConfigView", bundle: nil).instantiateInitialViewController() as! UINavigationController)
                 break;
             
-            case 3:
+            case 4:
                 nv = InfoViewController.instantiate()
                 break;
             
@@ -533,10 +540,6 @@ class AssetListViewController : UIViewController,
         if (actionSheet == _asActionButton) {
             _asActionButton = nil;
             self._actionActionButton(buttonIndex)
-        }
-        else if (actionSheet == _asDelete) {
-            _asDelete = nil;
-            self._actionDelete(buttonIndex)
         }
         else {
             assert(false)

@@ -24,7 +24,7 @@
 
 // Controllers
 #import "PinController.h"
-#import "AssetListVC.h"
+//#import "AssetListVC.h"
 #import "TransactionListVC.h"
 #import "GenEditTextVC.h"
 #import "GenSelectListVC.h"

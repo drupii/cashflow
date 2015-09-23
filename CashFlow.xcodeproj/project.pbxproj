@@ -60,6 +60,9 @@
 		3E4C6775134793A400DA87F6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E50B5F91A14FBF400F5D034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E50B5F71A14FBF400F5D034 /* Localizable.strings */; };
 		3E50B5FA1A14FBF400F5D034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E50B5F71A14FBF400F5D034 /* Localizable.strings */; };
+		3E5C63EE1BB2D41600CA60AA /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5C63EF1BB2EEC000CA60AA /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5C63F01BB2EEC100CA60AA /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E648E281B54181F00ED3AEA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E261B54181F00ED3AEA /* Fabric.framework */; };
 		3E648E291B54182000ED3AEA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E261B54181F00ED3AEA /* Fabric.framework */; };
 		3E648E2A1B54182000ED3AEA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E271B54181F00ED3AEA /* Crashlytics.framework */; };
@@ -133,7 +136,6 @@
 		662AB0577515FDD38550D9BF /* ReportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB943BAFEE09051FD3803 /* ReportView.storyboard */; };
 		662AB07FF87CE568D1FBB279 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3FA5D32E12BBDA04AB4 /* Database.m */; };
 		662AB0B5FB7725D125496B5D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB142EB1301EB4C50AA /* InfoViewController.swift */; };
-		662AB0C4F63384F8EC7AA7EC /* AssetListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB97377326AFF60ECE09 /* AssetListVC.m */; };
 		662AB0CE75D927C4DBAE15D6 /* ExportBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB434E5D488CE9605F27B /* ExportBase.m */; };
 		662AB0D9A2A8FCFE00D50E4B /* EditDateView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB766200385B37D7BC644 /* EditDateView.storyboard */; };
 		662AB0F90BB60BFAF84D310E /* BackupServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB82EB1487667CBB05D82 /* BackupServer.m */; };
@@ -183,7 +185,6 @@
 		662AB4D633989C2F96647019 /* PinView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB102FEA9549692A14BA3 /* PinView-ipad.xib */; };
 		662AB4DD2EBD20A7937D50F9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB142EB1301EB4C50AA /* InfoViewController.swift */; };
 		662AB4F31A14A00F7BB7D6A5 /* ReportCatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A9A413A840094876F6 /* ReportCatDetailVC.m */; };
-		662AB4FB90DF84D52F980B0F /* AssetListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB97377326AFF60ECE09 /* AssetListVC.m */; };
 		662AB5076F346FEB346306F9 /* PinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA85E4FE950C1B4176F3 /* PinVC.m */; };
 		662AB50BCAB8EA701356AB0B /* EditDescView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB58889E462FBAC441E6C /* EditDescView.storyboard */; };
 		662AB515185A5DB6D66FD86E /* BackupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE0DB0603900D19CF07A /* BackupVC.m */; };
@@ -352,6 +353,7 @@
 		3E50B6011A14FC1100F5D034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3E50B6021A14FC1600F5D034 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3E50B6031A14FC1900F5D034 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListViewController.swift; sourceTree = "<group>"; };
 		3E648E261B54181F00ED3AEA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = /Users/tmurakam/dev/cashflow/Pods/CrashlyticsFramework/Fabric.framework; sourceTree = "<absolute>"; };
 		3E648E271B54181F00ED3AEA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = /Users/tmurakam/dev/cashflow/Pods/CrashlyticsFramework/Crashlytics.framework; sourceTree = "<absolute>"; };
 		3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -406,7 +408,6 @@
 		662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescLRUManagerTests.m; sourceTree = "<group>"; };
 		662AB18E3A787D95D81A463B /* ORQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORQuery.h; sourceTree = "<group>"; };
 		662AB1B4CEC8AFE20AE85E01 /* LogicTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogicTests-Prefix.pch"; sourceTree = "<group>"; };
-		662AB1B98F944CA68C93446D /* AssetListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetListVC.h; sourceTree = "<group>"; };
 		662AB1C7750C5BC665D2901D /* TransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTests.m; sourceTree = "<group>"; };
 		662AB1DC3351798DF355157B /* DescLRU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRU.h; sourceTree = "<group>"; };
 		662AB2241CAFB76B86B3ECD4 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
@@ -496,7 +497,6 @@
 		662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFCalendarViewController.m; sourceTree = "<group>"; };
 		662ABB559663B1709F31433C /* ConfigView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigView.storyboard; sourceTree = "<group>"; };
 		662ABB5C2CC80A847C5DB12C /* CFCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFCalendarViewController.h; sourceTree = "<group>"; };
-		662ABB97377326AFF60ECE09 /* AssetListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetListVC.m; sourceTree = "<group>"; };
 		662ABBABD58A75D6EC5469F4 /* ExportServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportServer.h; sourceTree = "<group>"; };
 		662ABBCF4900BC8E8DBEBF83 /* DescLRUManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRUManager.h; sourceTree = "<group>"; };
 		662ABBECC87A505590735192 /* PinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinController.m; sourceTree = "<group>"; };
@@ -812,8 +812,7 @@
 		662AB3B76045EC38F7350A95 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				662AB1B98F944CA68C93446D /* AssetListVC.h */,
-				662ABB97377326AFF60ECE09 /* AssetListVC.m */,
+				3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */,
 				3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */,
 			);
 			path = Asset;
@@ -1436,6 +1435,7 @@
 				3EE38A2C1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
 				662ABC5386E278B457F6D73A /* AssetBase.m in Sources */,
 				3E10A5851BB12A48006BCD6E /* Journal.swift in Sources */,
+				3E5C63EE1BB2D41600CA60AA /* AssetListViewController.swift in Sources */,
 				662AB07FF87CE568D1FBB279 /* Database.m in Sources */,
 				662AB01898315F140F59C485 /* Dbstmt.m in Sources */,
 				662ABAE89582370C0A2C21EE /* DescLRU.m in Sources */,
@@ -1449,7 +1449,6 @@
 				662ABBCB303E2177FEE03B9C /* Transaction.m in Sources */,
 				662AB04C0DE1CCA221E2A2E8 /* Asset.m in Sources */,
 				662AB647AE223A283B3E48C2 /* AdManager.m in Sources */,
-				662AB4FB90DF84D52F980B0F /* AssetListVC.m in Sources */,
 				662ABDDF6D92BBB7EE6DD396 /* CalcVC.m in Sources */,
 				662AB3741D5C53C13EC1591A /* GenEditTextVC.m in Sources */,
 				662AB515185A5DB6D66FD86E /* BackupVC.m in Sources */,
@@ -1520,7 +1519,6 @@
 				662ABE4D69C52BF40194AC12 /* Transaction.m in Sources */,
 				662AB18C97EB039056B19D4E /* Asset.m in Sources */,
 				662ABEE6F9B4AEC2170814B4 /* AdManager.m in Sources */,
-				662AB0C4F63384F8EC7AA7EC /* AssetListVC.m in Sources */,
 				662AB78A217494280430CD95 /* CalcVC.m in Sources */,
 				662ABA038FC21480AD3CECA9 /* GenEditTextVC.m in Sources */,
 				3E3C01601BB1ACF400A39B97 /* Journal.swift in Sources */,
@@ -1550,6 +1548,7 @@
 				662AB29A88E05FDE442B8138 /* EditDescVC.m in Sources */,
 				662ABE3BD08184BEDBF9E738 /* EditDateVC.m in Sources */,
 				3E3C015E1BB1ACE000A39B97 /* Config.swift in Sources */,
+				3E5C63EF1BB2EEC000CA60AA /* AssetListViewController.swift in Sources */,
 				662AB8FA70258039618A8ACC /* WebServer.m in Sources */,
 				662ABA1C854FC63F02950E08 /* BackupServer.m in Sources */,
 				662AB26125143CC66416EC28 /* DropboxBackup.m in Sources */,
@@ -1593,6 +1592,7 @@
 				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
 				3E007EC81BA8694E00923757 /* CatReport.swift in Sources */,
 				3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */,
+				3E5C63F01BB2EEC100CA60AA /* AssetListViewController.swift in Sources */,
 				662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */,
 				3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */,
 				3E3C01611BB1ACF500A39B97 /* Journal.swift in Sources */,
