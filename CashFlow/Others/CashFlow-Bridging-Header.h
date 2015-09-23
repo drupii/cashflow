@@ -28,5 +28,8 @@
 #import "TransactionListVC.h"
 #import "GenEditTextVC.h"
 #import "GenSelectListVC.h"
+#import "ReportVC.h"
+#import "BackupVC.h"
+
 
 
