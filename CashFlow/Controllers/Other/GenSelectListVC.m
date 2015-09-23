@@ -10,7 +10,7 @@
 
 @implementation GenSelectListViewController
 
-+ (GenSelectListViewController *)genSelectListViewController:(id<GenSelectListViewDelegate>)delegate items:(NSArray*)ary title:(NSString*)title identifier:(NSInteger)id
++ (GenSelectListViewController *)create:(id<GenSelectListViewDelegate>)delegate items:(NSArray*)ary title:(NSString*)title identifier:(NSInteger)id
 {
     GenSelectListViewController *vc = [[GenSelectListViewController alloc]
                                          initWithNibName:@"GenSelectListView"

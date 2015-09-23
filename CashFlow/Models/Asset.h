@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, AssetType) {
 @interface Asset : AssetBase
 
 + (NSInteger)numAssetTypes;
-+ (nonnull NSArray*)typeNamesArray;
++ (nonnull NSArray<NSString *>*)typeNamesArray;
 + (nonnull NSString*)typeNameWithType:(NSInteger)type;
 + (nonnull NSString*)iconNameWithType:(NSInteger)type;
 

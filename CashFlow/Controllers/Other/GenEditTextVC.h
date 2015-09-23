@@ -20,5 +20,5 @@
 @property(nonatomic,assign) NSInteger identifier;
 @property(nonatomic,strong) NSString *text;
 
-+ (GenEditTextViewController *)genEditTextViewController:(id<GenEditTextViewDelegate>)delegate title:(NSString*)title identifier:(NSInteger)id;
++ (nonnull GenEditTextViewController *)create:(id<GenEditTextViewDelegate>)delegate title:(NSString*)title identifier:(NSInteger)id;
 @end

@@ -200,7 +200,7 @@
                 case ROW_DATE_TIME_MODE:
                     typeArray = [@[_L(@"Date and time (1 min)"), _L(@"Date and time (5 min)"), _L(@"Date only")] mutableCopy];
                     gt = [GenSelectListViewController
-                          genSelectListViewController:self
+                          create:self
                           items:typeArray
                           title:_L(@"Date style")
                           identifier:ROW_DATE_TIME_MODE];
@@ -210,7 +210,7 @@
                 case ROW_START_OF_WEEK:
                     typeArray = [@[_L(@"Sunday"), _L(@"Monday")] mutableCopy];
                     gt = [GenSelectListViewController
-                          genSelectListViewController:self
+                          create:self
                           items:typeArray
                           title:_L(@"Start of week")
                           identifier:ROW_START_OF_WEEK];
@@ -224,7 +224,7 @@
                         [typeArray addObject:[NSString stringWithFormat:@"%d", i]];
                     }
                     gt = [GenSelectListViewController
-                          genSelectListViewController:self
+                          create:self
                           items:typeArray
                           title:_L(@"Cutoff date")
                           identifier:ROW_CUTOFF_DATE];
@@ -235,7 +235,7 @@
                     typeArray = [[NSMutableArray alloc] initWithArray:[CurrencyManager instance].currencies];
                     [typeArray insertObject:@"System" atIndex:0];
                     gt = [GenSelectListViewController
-                          genSelectListViewController:self
+                          create:self
                           items:typeArray
                           title:_L(@"Currency")
                           identifier:ROW_CURRENCY];

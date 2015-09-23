@@ -13,7 +13,7 @@
     IBOutlet UITextField *_textField;
 }
 
-+ (GenEditTextViewController *)genEditTextViewController:(id<GenEditTextViewDelegate>)delegate title:(NSString*)title identifier:(NSInteger)id
++ (GenEditTextViewController *)create:(id<GenEditTextViewDelegate>)delegate title:(NSString*)title identifier:(NSInteger)id
 {
     GenEditTextViewController *vc = [[GenEditTextViewController alloc]
                                          initWithNibName:@"GenEditTextView"

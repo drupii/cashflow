@@ -125,7 +125,7 @@
         idx = -1; // insert row
     }
     GenEditTextViewController *vc = [GenEditTextViewController
-                                        genEditTextViewController:self
+                                        create:self
                                         title:_L(@"Category")
                                         identifier:idx];
     if (idx >= 0) {
@@ -192,7 +192,7 @@
 {
     if (indexPath.row >= [[DataModel instance].categories count]) {
         // add
-        GenEditTextViewController *vc = [GenEditTextViewController genEditTextViewController:self title:_L(@"Category") identifier:-1];
+        GenEditTextViewController *vc = [GenEditTextViewController create:self title:_L(@"Category") identifier:-1];
         [self.navigationController pushViewController:vc animated:YES];
     }
 	

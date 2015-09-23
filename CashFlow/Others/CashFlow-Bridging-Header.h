@@ -15,10 +15,6 @@
 #import "SupportMail.h"
 #import "UIDevice+Hardware.h"
 
-#import "PinController.h"
-#import "AssetListVC.h"
-#import "TransactionListVC.h"
-
 #import "Config.h"
 #import "DateFormatter2.h"
 
@@ -26,6 +22,11 @@
 #import "DescLRUManager.h"
 #import "Category.h"
 
-
+// Controllers
+#import "PinController.h"
+#import "AssetListVC.h"
+#import "TransactionListVC.h"
+#import "GenEditTextVC.h"
+#import "GenSelectListVC.h"
 
 

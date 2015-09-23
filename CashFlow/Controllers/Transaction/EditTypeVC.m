@@ -116,7 +116,7 @@
     }
     
     GenSelectListViewController *vc;
-    vc = [GenSelectListViewController genSelectListViewController:self
+    vc = [GenSelectListViewController create:self
                                     items:assetNames
                                       title:_L(@"Asset")
                                     identifier:0];

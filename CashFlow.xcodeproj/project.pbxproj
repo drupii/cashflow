@@ -69,6 +69,7 @@
 		3E69E8F51616B41A00FAD808 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E69E8F61616B41A00FAD808 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E6F5D5F0EB8C30B0082F50A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6F5D5E0EB8C30B0082F50A /* AudioToolbox.framework */; };
+		3E75D53F1BB29D9C00C76CF2 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E869306185F40C1007F2979 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E869305185F40C1007F2979 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E869307185F40C7007F2979 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E869305185F40C1007F2979 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E869308185F40CA007F2979 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E869305185F40C1007F2979 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -143,7 +144,6 @@
 		662AB1513C67FD3E858A9CEF /* ORQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB1542F3EE3CFBA7E9604 /* ORQuery.m */; };
 		662AB17945843BC0B3F2D1E7 /* TransactionListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB5FC768CAE796CDDEC2A /* TransactionListView.storyboard */; };
 		662AB18C97EB039056B19D4E /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE78751950BB4F72ADF8 /* Asset.m */; };
-		662AB1AA10C4D4C0D30FFC7D /* AssetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB77DF9FA9C3A5060A9B5 /* AssetVC.m */; };
 		662AB1C2AA7158C49334EAF6 /* SupportMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9D9EC684EED6E3555C2 /* SupportMail.m */; };
 		662AB1D7288A5760771CD027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; };
 		662AB1EA7ACDD881B671111F /* TransactionListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB5FC768CAE796CDDEC2A /* TransactionListView.storyboard */; };
@@ -298,7 +298,6 @@
 		662ABEE6F9B4AEC2170814B4 /* AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB42C12D48A04A279FF4D /* AdManager.m */; };
 		662ABF042574B1352DA5F9B1 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		662ABF2D9D776C71A48B41E2 /* DescLRUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */; };
-		662ABF335EA49B37BA41A987 /* AssetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB77DF9FA9C3A5060A9B5 /* AssetVC.m */; };
 		662ABF4E80595B30B2F88BE8 /* ReportCatGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */; };
 		662ABF5D53690328D77C3E34 /* ExportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABCB53174869FC778FDA9 /* ExportView.storyboard */; };
 		662ABF978C506C23FCD55017 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB142EB1301EB4C50AA /* InfoViewController.swift */; };
@@ -358,6 +357,7 @@
 		3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3E69E8EB1616B3ED00FAD808 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3E6F5D5E0EB8C30B0082F50A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetViewController.swift; sourceTree = "<group>"; };
 		3E869305185F40C1007F2979 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Social.framework; sourceTree = "<group>"; };
 		3E8B25C20F348C090007929E /* CashFlowFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlowFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB554B3103B92D700BA13D4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -409,7 +409,6 @@
 		662AB1B98F944CA68C93446D /* AssetListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetListVC.h; sourceTree = "<group>"; };
 		662AB1C7750C5BC665D2901D /* TransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTests.m; sourceTree = "<group>"; };
 		662AB1DC3351798DF355157B /* DescLRU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRU.h; sourceTree = "<group>"; };
-		662AB1EB555DDFCC29FDA21F /* AssetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetVC.h; sourceTree = "<group>"; };
 		662AB2241CAFB76B86B3ECD4 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
 		662AB24B435ECE7C9389383A /* ReportCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCell.h; sourceTree = "<group>"; };
 		662AB263111447B37A3E9A60 /* LedgerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LedgerTests.m; sourceTree = "<group>"; };
@@ -456,7 +455,6 @@
 		662AB725A174348F3EB415BF /* BackupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackupVC.h; sourceTree = "<group>"; };
 		662AB75AE68253A138C2AB3A /* WebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServer.m; sourceTree = "<group>"; };
 		662AB766200385B37D7BC644 /* EditDateView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditDateView.storyboard; sourceTree = "<group>"; };
-		662AB77DF9FA9C3A5060A9B5 /* AssetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetVC.m; sourceTree = "<group>"; };
 		662AB7BBE61AA613A3167C9A /* DropboxBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxBackup.m; sourceTree = "<group>"; };
 		662AB7DA432C54B102964953 /* ReportCatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCatCell.h; sourceTree = "<group>"; };
 		662AB7DE9511F69534511280 /* DropboxBackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxBackup.h; sourceTree = "<group>"; };
@@ -816,8 +814,7 @@
 			children = (
 				662AB1B98F944CA68C93446D /* AssetListVC.h */,
 				662ABB97377326AFF60ECE09 /* AssetListVC.m */,
-				662AB1EB555DDFCC29FDA21F /* AssetVC.h */,
-				662AB77DF9FA9C3A5060A9B5 /* AssetVC.m */,
+				3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -1453,7 +1450,6 @@
 				662AB04C0DE1CCA221E2A2E8 /* Asset.m in Sources */,
 				662AB647AE223A283B3E48C2 /* AdManager.m in Sources */,
 				662AB4FB90DF84D52F980B0F /* AssetListVC.m in Sources */,
-				662ABF335EA49B37BA41A987 /* AssetVC.m in Sources */,
 				662ABDDF6D92BBB7EE6DD396 /* CalcVC.m in Sources */,
 				662AB3741D5C53C13EC1591A /* GenEditTextVC.m in Sources */,
 				662AB515185A5DB6D66FD86E /* BackupVC.m in Sources */,
@@ -1484,6 +1480,7 @@
 				662AB912C9FB0167F2727A30 /* DropboxBackup.m in Sources */,
 				662AB0CE75D927C4DBAE15D6 /* ExportBase.m in Sources */,
 				662AB6B9A9F4ADABF69B7C54 /* ExportServer.m in Sources */,
+				3E75D53F1BB29D9C00C76CF2 /* AssetViewController.swift in Sources */,
 				662ABE762C06BF9834447C61 /* DBLoadingView.m in Sources */,
 				662AB2F90D665299AD2E1B1B /* CurrencyManager.swift in Sources */,
 				662AB380190581C76DCC7DB0 /* SwiftUtils.swift in Sources */,
@@ -1524,7 +1521,6 @@
 				662AB18C97EB039056B19D4E /* Asset.m in Sources */,
 				662ABEE6F9B4AEC2170814B4 /* AdManager.m in Sources */,
 				662AB0C4F63384F8EC7AA7EC /* AssetListVC.m in Sources */,
-				662AB1AA10C4D4C0D30FFC7D /* AssetVC.m in Sources */,
 				662AB78A217494280430CD95 /* CalcVC.m in Sources */,
 				662ABA038FC21480AD3CECA9 /* GenEditTextVC.m in Sources */,
 				3E3C01601BB1ACF400A39B97 /* Journal.swift in Sources */,
