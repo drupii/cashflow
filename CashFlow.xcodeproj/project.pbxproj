@@ -31,6 +31,7 @@
 		3E197BF7121271D200105B20 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
 		3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19827F1BB2630C00177021 /* AssetEntryTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E1982841BB266AE00177021 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E2376C51107481F00E4C329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3E338213133211C500861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -175,7 +176,6 @@
 		662AB3EEBE8359B2C44F885F /* TestCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB001A9958896013FA894 /* TestCommon.m */; };
 		662AB3F4042957BAF12DA6DA /* PinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA85E4FE950C1B4176F3 /* PinVC.m */; };
 		662AB3F4E233DAFD6A216A9B /* PinVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF4EAE053DFFBB925491 /* PinVCTests.m */; };
-		662AB42368874E330C5451F2 /* DataModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB79B95B87D749EA03CBF /* DataModelTests.m */; };
 		662AB44A22AE94B0BA8720E1 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB8D90BC1E43B40E0750D /* TransactionCell.xib */; };
 		662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5E6EBADB4068083DCBC /* UIDevice+Hardware.m */; };
 		662AB4B65DB2951A0D24A841 /* SupportMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9D9EC684EED6E3555C2 /* SupportMail.m */; };
@@ -337,6 +337,8 @@
 		3E13EE58114007D600523938 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3E19827F1BB2630C00177021 /* AssetEntryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntryTests.swift; sourceTree = "<group>"; };
 		3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyManagerTests.swift; sourceTree = "<group>"; };
+		3E1982831BB266AE00177021 /* DataModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelTests.swift; sourceTree = "<group>"; };
+		3E1982851BB2675200177021 /* CashFlowTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CashFlowTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E338212133211C500861610 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3E347BB1169DC7B0002307AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3E50B5F81A14FBF400F5D034 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -454,7 +456,6 @@
 		662AB75AE68253A138C2AB3A /* WebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServer.m; sourceTree = "<group>"; };
 		662AB766200385B37D7BC644 /* EditDateView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditDateView.storyboard; sourceTree = "<group>"; };
 		662AB77DF9FA9C3A5060A9B5 /* AssetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetVC.m; sourceTree = "<group>"; };
-		662AB79B95B87D749EA03CBF /* DataModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelTests.m; sourceTree = "<group>"; };
 		662AB7BBE61AA613A3167C9A /* DropboxBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxBackup.m; sourceTree = "<group>"; };
 		662AB7DA432C54B102964953 /* ReportCatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCatCell.h; sourceTree = "<group>"; };
 		662AB7DE9511F69534511280 /* DropboxBackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxBackup.h; sourceTree = "<group>"; };
@@ -855,6 +856,7 @@
 		662AB6289EDF57F52B01FB0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3E1982851BB2675200177021 /* CashFlowTests-Bridging-Header.h */,
 				662AB67AFDF6279282F327C1 /* TestCommon.h */,
 				662AB001A9958896013FA894 /* TestCommon.m */,
 			);
@@ -1080,7 +1082,7 @@
 				3E19827F1BB2630C00177021 /* AssetEntryTests.swift */,
 				662ABC0BBC45BD44C15D714B /* AssetTests.m */,
 				3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */,
-				662AB79B95B87D749EA03CBF /* DataModelTests.m */,
+				3E1982831BB266AE00177021 /* DataModelTests.swift */,
 				662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */,
 				662ABC7E3FEE6245876F1B50 /* JournalTests.m */,
 				662AB263111447B37A3E9A60 /* LedgerTests.m */,
@@ -1585,11 +1587,11 @@
 				3E3C015F1BB1ACE000A39B97 /* Config.swift in Sources */,
 				662ABD51B132C111EDBDD3C0 /* EditDescVCTests.m in Sources */,
 				662AB12482FD2CE7593FD54C /* PinControllerTests.m in Sources */,
+				3E1982841BB266AE00177021 /* DataModelTests.swift in Sources */,
 				662AB3F4E233DAFD6A216A9B /* PinVCTests.m in Sources */,
 				662AB259CBAA4A4D686B8FE7 /* ViewControllerTestCase.m in Sources */,
 				662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */,
 				3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
-				662AB42368874E330C5451F2 /* DataModelTests.m in Sources */,
 				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,
 				3E007ED01BA9BA2900923757 /* Report.swift in Sources */,
 				662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */,
@@ -1798,6 +1800,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashFlowTests/LogicTests/Common/CashFlowTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1830,6 +1833,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashFlowTests/LogicTests/Common/CashFlowTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;

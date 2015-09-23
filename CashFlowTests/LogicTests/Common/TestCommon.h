@@ -4,7 +4,9 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#ifndef IGNORE_SWIFT_HEADER
 #import "CashFlow-Swift.h" // Bridge
+#endif
 
 #import "ViewControllerTestCase.h"
 
