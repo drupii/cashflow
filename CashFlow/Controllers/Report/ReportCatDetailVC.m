@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 #import "DataModel.h"
 #import "ReportCatDetailVC.h"
-#import "TransactionCell.h"
 
 @implementation CatReportDetailViewController
 

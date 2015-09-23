@@ -1,14 +1,13 @@
 // -*-  Mode:ObjC; c-basic-offset:4; tab-width:8; indent-tabs-mode:nil -*-
 /*
  * CashFlow for iOS
- * Copyright (C) 2008-2011, Takuya Murakami, All rights reserved.
+ * Copyright (C) 2008-2015, Takuya Murakami, All rights reserved.
  * For conditions of distribution and use, see LICENSE file.
  */
 
 #import "CashFlow-Swift.h"
 
 #import "TransactionListVC.h"
-#import "TransactionCell.h"
 #import "AppDelegate.h"
 #import "Transaction.h"
 #import "CalcVC.h"

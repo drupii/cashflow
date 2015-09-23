@@ -91,6 +91,9 @@
 		3EB88E8E17F702170045780D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB88E8C17F700B00045780D /* StoreKit.framework */; };
 		3EC572D71107451F00A551D5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3EDA9BE91BB293D700C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3EDA9BEA1BB2944900C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3EDA9BEB1BB2944A00C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A1D1BB13A82009CBE96 /* CashflowDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A271BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
@@ -126,7 +129,6 @@
 		662AB041782B0030FA8DAE23 /* CalculatorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB961C6EC6D996C2304E4 /* CalculatorView.storyboard */; };
 		662AB04AB10FBA0EC8C05E1D /* CategoryListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662ABFD92A03C72D8D61AE38 /* CategoryListView.xib */; };
 		662AB04C0DE1CCA221E2A2E8 /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE78751950BB4F72ADF8 /* Asset.m */; };
-		662AB04E09393BC877F02F5C /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA34C992D7C86B93C578 /* TransactionCell.m */; };
 		662AB0577515FDD38550D9BF /* ReportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB943BAFEE09051FD3803 /* ReportView.storyboard */; };
 		662AB07FF87CE568D1FBB279 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3FA5D32E12BBDA04AB4 /* Database.m */; };
 		662AB0B5FB7725D125496B5D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB142EB1301EB4C50AA /* InfoViewController.swift */; };
@@ -168,7 +170,6 @@
 		662AB3741D5C53C13EC1591A /* GenEditTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6B4A813C37CACEA1B8D /* GenEditTextVC.m */; };
 		662AB380190581C76DCC7DB0 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5A843B0137D18F91C90 /* SwiftUtils.swift */; };
 		662AB380A90DE10CE0670AE3 /* ExportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABCB53174869FC778FDA9 /* ExportView.storyboard */; };
-		662AB38BF6AFE6BBA32DE01E /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA34C992D7C86B93C578 /* TransactionCell.m */; };
 		662AB38D91112AB8DB431A49 /* BackupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB45ECA675DB52757BD7D /* BackupView.storyboard */; };
 		662AB3AF63A652A2728E280B /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5A843B0137D18F91C90 /* SwiftUtils.swift */; };
 		662AB3B22938BFFC206F3C13 /* ReportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB943BAFEE09051FD3803 /* ReportView.storyboard */; };
@@ -369,6 +370,7 @@
 		3ECD5A861347603800B499A6 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		3ED414E51A58428A00B1AEB8 /* Pods-free.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-free.debug.xcconfig"; path = "Pods/Target Support Files/Pods-free/Pods-free.debug.xcconfig"; sourceTree = "<group>"; };
 		3ED414E61A58428A00B1AEB8 /* Pods-free.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-free.release.xcconfig"; path = "Pods/Target Support Files/Pods-free/Pods-free.release.xcconfig"; sourceTree = "<group>"; };
+		3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		3EE38A1A1BB13421009CBE96 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashflowDatabase.swift; sourceTree = "<group>"; };
 		3EE38A251BB14D93009CBE96 /* DataModelBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelBackup.m; sourceTree = "<group>"; };
@@ -390,7 +392,6 @@
 		662AB0A9A413A840094876F6 /* ReportCatDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCatDetailVC.m; sourceTree = "<group>"; };
 		662AB0BA51A0243F4A2A98E3 /* TransactionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionListVC.h; sourceTree = "<group>"; };
 		662AB0D857F2C229E01A0A86 /* InfoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoView.storyboard; sourceTree = "<group>"; };
-		662AB0FB528C501A04668172 /* TransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionCell.h; sourceTree = "<group>"; };
 		662AB0FB7BC05AC8974EF01D /* EditTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTypeVC.h; sourceTree = "<group>"; };
 		662AB102FEA9549692A14BA3 /* PinView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "PinView-ipad.xib"; sourceTree = "<group>"; };
 		662AB114258914291C3316FE /* ReportTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTests.m; sourceTree = "<group>"; };
@@ -481,7 +482,6 @@
 		662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		662ABA19851F32FDCDB1002B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		662ABA2F74973F25E99AC1E1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		662ABA34C992D7C86B93C578 /* TransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionCell.m; sourceTree = "<group>"; };
 		662ABA6118F7DA3277EB8407 /* testdata1.sql */ = {isa = PBXFileReference; lastKnownFileType = file.sql; name = testdata1.sql; path = testdata/testdata1.sql; sourceTree = "<group>"; };
 		662ABA73C75F81D6138A623E /* TCategoryBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCategoryBase.h; sourceTree = "<group>"; };
 		662ABA7E40E71F01D1F98AAF /* ReportCatGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCatGraphCell.h; sourceTree = "<group>"; };
@@ -981,8 +981,7 @@
 			children = (
 				662AB0BA51A0243F4A2A98E3 /* TransactionListVC.h */,
 				662ABF23945AB924DD3F8BB7 /* TransactionListVC.m */,
-				662AB0FB528C501A04668172 /* TransactionCell.h */,
-				662ABA34C992D7C86B93C578 /* TransactionCell.m */,
+				3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */,
 				662AB14DDD3F0ABF1D8365B0 /* TransactionVC.h */,
 				662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */,
 				662AB69944CC356EEE70DA28 /* EditDateVC.h */,
@@ -1448,6 +1447,7 @@
 				662ABFEFB6047DFEDF362BF7 /* DateFormatter2.m in Sources */,
 				662AB92560A6EC3DE897DBE3 /* Category.m in Sources */,
 				662AB59E39EDA91A9E2A09B0 /* DataModel.m in Sources */,
+				3EDA9BE91BB293D700C4F3EB /* TransactionCell.swift in Sources */,
 				662ABF2D9D776C71A48B41E2 /* DescLRUManager.m in Sources */,
 				662ABBCB303E2177FEE03B9C /* Transaction.m in Sources */,
 				662AB04C0DE1CCA221E2A2E8 /* Asset.m in Sources */,
@@ -1479,7 +1479,6 @@
 				662ABA238848910180228BBA /* EditTypeVC.m in Sources */,
 				662ABD8BC68E60A50EDDB01F /* EditDescVC.m in Sources */,
 				662AB33C6F671899B846DEEE /* EditDateVC.m in Sources */,
-				662AB04E09393BC877F02F5C /* TransactionCell.m in Sources */,
 				662ABC25DF16EB432F3BE48A /* WebServer.m in Sources */,
 				662AB0F90BB60BFAF84D310E /* BackupServer.m in Sources */,
 				662AB912C9FB0167F2727A30 /* DropboxBackup.m in Sources */,
@@ -1554,7 +1553,6 @@
 				662AB02CA4B7874DBE16D696 /* EditTypeVC.m in Sources */,
 				662AB29A88E05FDE442B8138 /* EditDescVC.m in Sources */,
 				662ABE3BD08184BEDBF9E738 /* EditDateVC.m in Sources */,
-				662AB38BF6AFE6BBA32DE01E /* TransactionCell.m in Sources */,
 				3E3C015E1BB1ACE000A39B97 /* Config.swift in Sources */,
 				662AB8FA70258039618A8ACC /* WebServer.m in Sources */,
 				662ABA1C854FC63F02950E08 /* BackupServer.m in Sources */,
@@ -1565,6 +1563,7 @@
 				662AB96F022FDC56F35ECC27 /* CurrencyManager.swift in Sources */,
 				662AB8363B5693B5D8C94E5D /* SwiftUtils.swift in Sources */,
 				3EE38A2D1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
+				3EDA9BEA1BB2944900C4F3EB /* TransactionCell.swift in Sources */,
 				662AB4B65DB2951A0D24A841 /* SupportMail.m in Sources */,
 				662ABA77682F0EB6D92AB1BB /* WebServerBackup.m in Sources */,
 				3E007ECB1BA86DE700923757 /* ReportEntry.swift in Sources */,
@@ -1604,6 +1603,7 @@
 				3E19828A1BB271E000177021 /* TestCommon.swift in Sources */,
 				662AB5290BA65A5E254DA9CA /* TimeTests.m in Sources */,
 				662ABA395B0AF6A61160E653 /* TransactionTests.m in Sources */,
+				3EDA9BEB1BB2944A00C4F3EB /* TransactionCell.swift in Sources */,
 				3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */,
 				662AB4DD2EBD20A7937D50F9 /* InfoViewController.swift in Sources */,
 				662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */,
