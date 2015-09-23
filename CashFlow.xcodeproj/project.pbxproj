@@ -32,6 +32,7 @@
 		3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19827F1BB2630C00177021 /* AssetEntryTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E1982841BB266AE00177021 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E19828A1BB271E000177021 /* TestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982881BB26F3D00177021 /* TestCommon.swift */; settings = {ASSET_TAGS = (); }; };
 		3E2376C51107481F00E4C329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3E338213133211C500861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -173,7 +174,6 @@
 		662AB3B22938BFFC206F3C13 /* ReportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB943BAFEE09051FD3803 /* ReportView.storyboard */; };
 		662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */; };
 		662AB3ECDBD28A5D2C89DA56 /* AssetListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABAA20836AB99EE17C031 /* AssetListView.storyboard */; };
-		662AB3EEBE8359B2C44F885F /* TestCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB001A9958896013FA894 /* TestCommon.m */; };
 		662AB3F4042957BAF12DA6DA /* PinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA85E4FE950C1B4176F3 /* PinVC.m */; };
 		662AB3F4E233DAFD6A216A9B /* PinVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF4EAE053DFFBB925491 /* PinVCTests.m */; };
 		662AB44A22AE94B0BA8720E1 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB8D90BC1E43B40E0750D /* TransactionCell.xib */; };
@@ -339,6 +339,7 @@
 		3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyManagerTests.swift; sourceTree = "<group>"; };
 		3E1982831BB266AE00177021 /* DataModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelTests.swift; sourceTree = "<group>"; };
 		3E1982851BB2675200177021 /* CashFlowTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CashFlowTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E1982881BB26F3D00177021 /* TestCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCommon.swift; sourceTree = "<group>"; };
 		3E338212133211C500861610 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3E347BB1169DC7B0002307AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3E50B5F81A14FBF400F5D034 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -385,7 +386,6 @@
 		3EFDC2C41831495600070F72 /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
 		3EFDC2CF18314B6500070F72 /* libAdapterIMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterIMobile.a; sourceTree = "<group>"; };
 		3EFDC2DC18314BAC00070F72 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCoreServices.framework; sourceTree = "<group>"; };
-		662AB001A9958896013FA894 /* TestCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCommon.m; sourceTree = "<group>"; };
 		662AB0A3BB4870106242B819 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		662AB0A9A413A840094876F6 /* ReportCatDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCatDetailVC.m; sourceTree = "<group>"; };
 		662AB0BA51A0243F4A2A98E3 /* TransactionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionListVC.h; sourceTree = "<group>"; };
@@ -858,7 +858,7 @@
 			children = (
 				3E1982851BB2675200177021 /* CashFlowTests-Bridging-Header.h */,
 				662AB67AFDF6279282F327C1 /* TestCommon.h */,
-				662AB001A9958896013FA894 /* TestCommon.m */,
+				3E1982881BB26F3D00177021 /* TestCommon.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1601,10 +1601,10 @@
 				662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */,
 				3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */,
 				3E3C01611BB1ACF500A39B97 /* Journal.swift in Sources */,
+				3E19828A1BB271E000177021 /* TestCommon.swift in Sources */,
 				662AB5290BA65A5E254DA9CA /* TimeTests.m in Sources */,
 				662ABA395B0AF6A61160E653 /* TransactionTests.m in Sources */,
 				3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */,
-				662AB3EEBE8359B2C44F885F /* TestCommon.m in Sources */,
 				662AB4DD2EBD20A7937D50F9 /* InfoViewController.swift in Sources */,
 				662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */,
 				3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */,

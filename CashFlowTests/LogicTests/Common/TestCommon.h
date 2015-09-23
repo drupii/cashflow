@@ -26,19 +26,3 @@
 //#define AssertEqualInt(a, b) XCTAssertEqual((int)(a), (int)(b), @"")
 //#define AssertEqualDouble(a, b) XCTAssertEqual((double)(a), (double)(b), @"")
 //#define AssertEqualObjects(a, b) XCTAssertEqualObjects(a, b, @"")
-
-@interface TestCommon : NSObject
-{
-}
-
-+ (NSDate *)dateWithString:(NSString *)s;
-+ (NSString *)stringWithDate:(NSDate *)date;
-
-+ (void)deleteDatabase;
-+ (void)initDatabase;
-+ (BOOL)installDatabase:(NSString *)sqlFileName;
-
-+ (void)_setupTestDbName;
-+ (void)_createDocumentsDir;
-
-@end
