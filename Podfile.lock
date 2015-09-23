@@ -7,9 +7,19 @@ PODS:
     - Fabric/Base (= 1.4.0)
   - Fabric/Base (1.4.0)
   - Google-Mobile-Ads-SDK (7.4.1)
-  - GoogleAnalytics-iOS-SDK (3.12):
-    - GoogleAnalytics-iOS-SDK/Core (= 3.12)
-  - GoogleAnalytics-iOS-SDK/Core (3.12)
+  - Google/Analytics (1.0.7):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (1.0.7):
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+    - GoogleUtilities (~> 1.0)
+  - GoogleAnalytics (3.13.0)
+  - GoogleNetworkingUtilities (1.0.0):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSymbolUtilities (1.0.0)
+  - GoogleUtilities (1.0.1):
+    - GoogleSymbolUtilities (~> 1.0)
   - NendSDK_iOS (2.7.0)
   - NendSDK_iOS_MediationAdapter (1.2.1.1)
   - RDVCalendarView (1.0.7)
@@ -20,7 +30,7 @@ DEPENDENCIES:
   - Dropbox-iOS-SDK
   - Fabric
   - Google-Mobile-Ads-SDK
-  - GoogleAnalytics-iOS-SDK
+  - Google/Analytics (~> 1.0.0)
   - NendSDK_iOS
   - NendSDK_iOS_MediationAdapter
   - RDVCalendarView (~> 1.0.7)
@@ -30,8 +40,12 @@ SPEC CHECKSUMS:
   Crashlytics: 39ab395565bc03c29cdecd2b9d103ebf30930c10
   Dropbox-iOS-SDK: e0c9b08d1604b39cb78c1d0333251de0f6bdec60
   Fabric: 6d1d1c1eaf7ebc76fc3307e2c0259456411baf26
+  Google: 875f5a8ade86dd02e36586e4a54814843938c7f6
   Google-Mobile-Ads-SDK: dce4c2728daa0bcbd88b6e3dc111b718a07b1eb6
-  GoogleAnalytics-iOS-SDK: 13241762fa4aea845eb75bef6c0da3427a26e7b3
+  GoogleAnalytics: fcf1f1cad57ae1a9a53520018f0f680ceeeb8b49
+  GoogleNetworkingUtilities: 292992ab31b7b4ba32809a0e8b40e324cdfb2c0c
+  GoogleSymbolUtilities: a7b0feed1fe667c8d5e647177938d0ecd62d6948
+  GoogleUtilities: e3475cd4d45134221d2f3f3626095a1c49b62041
   NendSDK_iOS: 0bcb3f3675387364c6ee7814df743b05c22a77f5
   NendSDK_iOS_MediationAdapter: c6037ed18d46a4918e79d1864110e874e516dd19
   RDVCalendarView: f9702024bbbc235709748812cff6f5f48b147fbb

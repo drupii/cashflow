@@ -11,7 +11,8 @@ pod 'Crashlytics'
 #pod 'BugSense'
 #pod 'CrittercismSDK'
 
-pod 'GoogleAnalytics-iOS-SDK'
+#pod 'GoogleAnalytics-iOS-SDK'
+pod 'Google/Analytics', '~> 1.0.0'
 
 pod 'RDVCalendarView', '~> 1.0.7'
 
