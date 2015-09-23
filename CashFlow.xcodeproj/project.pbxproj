@@ -30,6 +30,7 @@
 		3E13EE59114007D600523938 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13EE58114007D600523938 /* AVFoundation.framework */; };
 		3E197BF7121271D200105B20 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
 		3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19827F1BB2630C00177021 /* AssetEntryTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E2376C51107481F00E4C329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3E338213133211C500861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -192,7 +193,6 @@
 		662AB5865B2BD4F518A4BBB3 /* DBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB551FD151CEF1F579143 /* DBLoadingView.m */; };
 		662AB594A96D2933D66D8545 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB8D90BC1E43B40E0750D /* TransactionCell.xib */; };
 		662AB59E39EDA91A9E2A09B0 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB719DFAE01D69A82BB /* DataModel.m */; };
-		662AB5D51A8462384571543A /* CurrencyManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCA4032D8C12FC18DEA9 /* CurrencyManagerTests.m */; };
 		662AB5F32BF882F46478F771 /* BackupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB45ECA675DB52757BD7D /* BackupView.storyboard */; };
 		662AB613CA5E13EBEB478B3B /* ExportOfx.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF6D0B758426D5919D5B /* ExportOfx.m */; };
 		662AB616F39947A6EFFED9C8 /* BackupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB45ECA675DB52757BD7D /* BackupView.storyboard */; };
@@ -336,6 +336,7 @@
 		3E10A5841BB12A48006BCD6E /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		3E13EE58114007D600523938 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3E19827F1BB2630C00177021 /* AssetEntryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntryTests.swift; sourceTree = "<group>"; };
+		3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyManagerTests.swift; sourceTree = "<group>"; };
 		3E338212133211C500861610 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3E347BB1169DC7B0002307AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3E50B5F81A14FBF400F5D034 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -508,7 +509,6 @@
 		662ABC6E2E2273E1CE77A5B3 /* ViewControllerTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTestCase.h; sourceTree = "<group>"; };
 		662ABC77B99BD7662E07DA30 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
 		662ABC7E3FEE6245876F1B50 /* JournalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalTests.m; sourceTree = "<group>"; };
-		662ABCA4032D8C12FC18DEA9 /* CurrencyManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyManagerTests.m; sourceTree = "<group>"; };
 		662ABCB53174869FC778FDA9 /* ExportView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExportView.storyboard; sourceTree = "<group>"; };
 		662ABCCD3B0BAF2E82DBEBD0 /* LogicTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
 		662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescLRUManager.m; sourceTree = "<group>"; };
@@ -1079,7 +1079,7 @@
 			children = (
 				3E19827F1BB2630C00177021 /* AssetEntryTests.swift */,
 				662ABC0BBC45BD44C15D714B /* AssetTests.m */,
-				662ABCA4032D8C12FC18DEA9 /* CurrencyManagerTests.m */,
+				3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */,
 				662AB79B95B87D749EA03CBF /* DataModelTests.m */,
 				662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */,
 				662ABC7E3FEE6245876F1B50 /* JournalTests.m */,
@@ -1589,7 +1589,6 @@
 				662AB259CBAA4A4D686B8FE7 /* ViewControllerTestCase.m in Sources */,
 				662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */,
 				3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
-				662AB5D51A8462384571543A /* CurrencyManagerTests.m in Sources */,
 				662AB42368874E330C5451F2 /* DataModelTests.m in Sources */,
 				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,
 				3E007ED01BA9BA2900923757 /* Report.swift in Sources */,
@@ -1602,6 +1601,7 @@
 				3E3C01611BB1ACF500A39B97 /* Journal.swift in Sources */,
 				662AB5290BA65A5E254DA9CA /* TimeTests.m in Sources */,
 				662ABA395B0AF6A61160E653 /* TransactionTests.m in Sources */,
+				3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */,
 				662AB3EEBE8359B2C44F885F /* TestCommon.m in Sources */,
 				662AB4DD2EBD20A7937D50F9 /* InfoViewController.swift in Sources */,
 				662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */,
