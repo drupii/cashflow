@@ -29,6 +29,7 @@
 		3E10A5851BB12A48006BCD6E /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5841BB12A48006BCD6E /* Journal.swift */; settings = {ASSET_TAGS = (); }; };
 		3E13EE59114007D600523938 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13EE58114007D600523938 /* AVFoundation.framework */; };
 		3E197BF7121271D200105B20 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
+		3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19827F1BB2630C00177021 /* AssetEntryTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E2376C51107481F00E4C329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3E338213133211C500861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -251,7 +252,6 @@
 		662ABA77682F0EB6D92AB1BB /* WebServerBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3C0142643C4637E480F /* WebServerBackup.m */; };
 		662ABAB8FED7C40CD12A05D2 /* ReportCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABD898171C964B71187B8 /* ReportCatCell.m */; };
 		662ABACB2641D65E69DE2EE4 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8187E121C6CC4711496 /* CurrencyManager.swift */; };
-		662ABACE6F699F4A130E8870 /* AssetEntryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5B6F770639E277F6FC4 /* AssetEntryTests.m */; };
 		662ABAE84AAD7BFDA3C77E44 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */; };
 		662ABAE89582370C0A2C21EE /* DescLRU.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB13166AD062A3AD46234 /* DescLRU.m */; };
 		662ABB13A5DA88C4CA2BB57A /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB8C90AFF3A337196E034 /* PinView.xib */; };
@@ -335,6 +335,7 @@
 		3E10A5821BB11227006BCD6E /* AssetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntry.swift; sourceTree = "<group>"; };
 		3E10A5841BB12A48006BCD6E /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		3E13EE58114007D600523938 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3E19827F1BB2630C00177021 /* AssetEntryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntryTests.swift; sourceTree = "<group>"; };
 		3E338212133211C500861610 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3E347BB1169DC7B0002307AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3E50B5F81A14FBF400F5D034 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -431,7 +432,6 @@
 		662AB551FD151CEF1F579143 /* DBLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBLoadingView.m; sourceTree = "<group>"; };
 		662AB58889E462FBAC441E6C /* EditDescView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditDescView.storyboard; sourceTree = "<group>"; };
 		662AB5A843B0137D18F91C90 /* SwiftUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUtils.swift; sourceTree = "<group>"; };
-		662AB5B6F770639E277F6FC4 /* AssetEntryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetEntryTests.m; sourceTree = "<group>"; };
 		662AB5E6D90C6E0EB353C500 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		662AB5E6EBADB4068083DCBC /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
 		662AB5FC768CAE796CDDEC2A /* TransactionListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionListView.storyboard; sourceTree = "<group>"; };
@@ -1077,7 +1077,7 @@
 		662ABFBD65BC3B2EB91EADCD /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				662AB5B6F770639E277F6FC4 /* AssetEntryTests.m */,
+				3E19827F1BB2630C00177021 /* AssetEntryTests.swift */,
 				662ABC0BBC45BD44C15D714B /* AssetTests.m */,
 				662ABCA4032D8C12FC18DEA9 /* CurrencyManagerTests.m */,
 				662AB79B95B87D749EA03CBF /* DataModelTests.m */,
@@ -1587,7 +1587,6 @@
 				662AB12482FD2CE7593FD54C /* PinControllerTests.m in Sources */,
 				662AB3F4E233DAFD6A216A9B /* PinVCTests.m in Sources */,
 				662AB259CBAA4A4D686B8FE7 /* ViewControllerTestCase.m in Sources */,
-				662ABACE6F699F4A130E8870 /* AssetEntryTests.m in Sources */,
 				662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */,
 				3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
 				662AB5D51A8462384571543A /* CurrencyManagerTests.m in Sources */,
@@ -1597,6 +1596,7 @@
 				662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */,
 				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
 				3E007EC81BA8694E00923757 /* CatReport.swift in Sources */,
+				3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */,
 				662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */,
 				3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */,
 				3E3C01611BB1ACF500A39B97 /* Journal.swift in Sources */,
