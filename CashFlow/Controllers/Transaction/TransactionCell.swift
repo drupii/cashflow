@@ -15,19 +15,30 @@ class TransactionCell : UITableViewCell {
 
     private static let cellIdentifier = "TransactionCell"
     
-    /** TableView に Cell を登録する */
+    /**
+    TableView に Cell を登録する
+    - parameter tableView: Table View
+    */
     class func registerCell(tableView: UITableView) {
         let nib = UINib(nibName: "TransactionCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: cellIdentifier)
     }
 
     /**
-     * TransactionCell を生成する
-     */
+    TransactionCell を生成する
+    - parameter tableView: TableView
+    - parameter indexPath: IndexPath
+    - returns: Cell
+    */
     class func transactionCell(tableView: UITableView, forIndexPath indexPath: NSIndexPath) -> TransactionCell {
         return tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TransactionCell
     }
-
+    
+    /**
+    AssetEntryで内容を更新する
+    - parameter entry: 更新に使用するAssetEntry
+    - returns: self
+    */
     func updateWithAssetEntry(entry: AssetEntry) -> TransactionCell {
         self.setDescriptionLabel(entry.transaction()!.desc)
         self.setDateLabel(entry.transaction()!.date)
@@ -36,6 +47,11 @@ class TransactionCell : UITableViewCell {
         return self
     }
 
+    /**
+    初期残高を設定する。初期残高セルとして扱われる。
+    - parameter initialBalance: 初期残高
+    - returns: self
+    */
     func updateAsInitialBalance(initialBalance: Double) -> TransactionCell {
         self.setDescriptionLabel(_L("Initial Balance"))
         self.setBalanceLabel(initialBalance)
