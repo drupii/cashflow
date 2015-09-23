@@ -9,13 +9,13 @@ import UIKit
 class AssetViewController : UITableViewController,
     GenEditTextViewDelegate, GenSelectListViewDelegate, UIActionSheetDelegate
 {
-    var _assetIndex: Int = 0
-    var _asset: Asset?
+    private var _assetIndex: Int = 0
+    private var _asset: Asset?
 
-    var _delButton: UIButton?
+    //private var _delButton: UIButton?
     
-    let ROW_NAME = 0
-    let ROW_TYPE = 1
+    private let ROW_NAME = 0
+    private let ROW_TYPE = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +46,9 @@ class AssetViewController : UITableViewController,
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 	
-        if (_assetIndex >= 0 && _delButton != nil) {
-            self.view.addSubview(_delButton!)
-        }
+        //if (_assetIndex >= 0 && _delButton != nil) {
+        //    self.view.addSubview(_delButton!)
+        //}
 		
         self.tableView.reloadData()
     }
@@ -61,9 +61,9 @@ class AssetViewController : UITableViewController,
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
 	
-        if (_assetIndex >= 0) {
-            _delButton?.removeFromSuperview()
-        }
+        //if (_assetIndex >= 0) {
+        //    _delButton?.removeFromSuperview()
+        //}
     }
 
     /////////////////////////////////////////////////////////////////////////////////
