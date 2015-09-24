@@ -5,13 +5,13 @@
 import UIKit
 
 class InfoViewController : UIViewController {
-    @IBOutlet var _nameLabel : UILabel!
-    @IBOutlet var _versionLabel: UILabel!
+    @IBOutlet weak var _nameLabel : UILabel!
+    @IBOutlet weak var _versionLabel: UILabel!
     
-    @IBOutlet var _purchaseButton: UIButton!
-    @IBOutlet var _helpButton: UIButton!
-    @IBOutlet var _facebookButton: UIButton!
-    @IBOutlet var _sendMailButton: UIButton!
+    @IBOutlet weak var _purchaseButton: UIButton!
+    @IBOutlet weak var _helpButton: UIButton!
+    @IBOutlet weak var _facebookButton: UIButton!
+    @IBOutlet weak var _sendMailButton: UIButton!
     
     class func instantiate() -> UINavigationController {
         return UIStoryboard(name: "InfoView", bundle:nil).instantiateInitialViewController() as! UINavigationController

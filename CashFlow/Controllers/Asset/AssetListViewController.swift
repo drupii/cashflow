@@ -12,9 +12,9 @@ class AssetListViewController : UIViewController,
     @IBOutlet var tableView: UITableView?
     var splitTransactionListViewController: TransactionListViewController?
 
-    @IBOutlet var barActionButton: UIBarButtonItem?
-    @IBOutlet var barSumLabel: UIBarButtonItem?
-    @IBOutlet var toolbar: UIToolbar?
+    @IBOutlet weak var barActionButton: UIBarButtonItem?
+    @IBOutlet weak var barSumLabel: UIBarButtonItem?
+    @IBOutlet weak var toolbar: UIToolbar?
     
     private var _isLoadDone: Bool = false
     private var _loadingView: DBLoadingView?

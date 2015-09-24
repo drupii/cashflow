@@ -8,10 +8,10 @@
 import UIKit
 
 class TransactionCell : UITableViewCell {
-    @IBOutlet var _descLabel: UILabel?
-    @IBOutlet var _dateLabel: UILabel?
-    @IBOutlet var _valueLabel: UILabel?
-    @IBOutlet var _balanceLabel: UILabel?
+    @IBOutlet weak var _descLabel: UILabel?
+    @IBOutlet weak var _dateLabel: UILabel?
+    @IBOutlet weak var _valueLabel: UILabel?
+    @IBOutlet weak var _balanceLabel: UILabel?
 
     private static let cellIdentifier = "TransactionCell"
     
