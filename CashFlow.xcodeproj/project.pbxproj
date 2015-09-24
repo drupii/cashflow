@@ -93,6 +93,8 @@
 		3EB88E8617F6B5680045780D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB88E8317F6B5590045780D /* libz.dylib */; };
 		3EB88E8D17F700B00045780D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB88E8C17F700B00045780D /* StoreKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3EB88E8E17F702170045780D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB88E8C17F700B00045780D /* StoreKit.framework */; };
+		3EB9D9A51BB4449D00E699A7 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3EB9D9A61BB4449D00E699A7 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3EC572D71107451F00A551D5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3EDA9BE91BB293D700C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -1552,6 +1554,7 @@
 				662AB8FA70258039618A8ACC /* WebServer.m in Sources */,
 				662ABA1C854FC63F02950E08 /* BackupServer.m in Sources */,
 				662AB26125143CC66416EC28 /* DropboxBackup.m in Sources */,
+				3EB9D9A51BB4449D00E699A7 /* AssetViewController.swift in Sources */,
 				662AB804C61CE564A3A06EA8 /* ExportBase.m in Sources */,
 				662AB2D63F4ED87AC56AAAC8 /* ExportServer.m in Sources */,
 				662AB5865B2BD4F518A4BBB3 /* DBLoadingView.m in Sources */,
@@ -1602,6 +1605,7 @@
 				3EDA9BEB1BB2944A00C4F3EB /* TransactionCell.swift in Sources */,
 				3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */,
 				662AB4DD2EBD20A7937D50F9 /* InfoViewController.swift in Sources */,
+				3EB9D9A61BB4449D00E699A7 /* AssetViewController.swift in Sources */,
 				662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */,
 				3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */,
 				662ABACB2641D65E69DE2EE4 /* CurrencyManager.swift in Sources */,
