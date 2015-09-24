@@ -1727,6 +1727,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
+				OTHER_SWIFT_FLAGS = "-D FREE_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.CashFlow-Free";
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
@@ -1759,6 +1760,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
+				OTHER_SWIFT_FLAGS = "-D FREE_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.CashFlow-Free";
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
