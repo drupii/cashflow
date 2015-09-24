@@ -5,11 +5,11 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#if FREE_VERSION
 
 #import "AdManager.h"
 #import "AppDelegate.h"
 
+#if FREE_VERSION
 // 広告リクエスト間隔 (画面遷移時のみ)
 #define AD_REQUEST_INTERVAL     30.0
 
@@ -297,6 +297,17 @@ static AdManager *theAdManager;
         // タイマリセット
         //_lastAdRequestDate = nil;
     }
+}
+
+@end
+
+#else // FREE_VERSION
+
+@implementation AdManager
+
++ (AdManager *)sharedInstance
+{
+    return nil;
 }
 
 @end

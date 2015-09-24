@@ -22,14 +22,21 @@
 //#define DFP_TEST_ID @"/86480491/TestUnit_iOS_320x50"
 //#define ADUNIT_ID     DFP_TEST_ID
 
-@class AdManager;
-
 /**
  *  AdMob 表示用ラッパクラス。xxxBannerView を継承。
  */
 @interface AdView : DFPBannerView <GADBannerViewDelegate>
 //@interface AdView : GADBannerView <GADBannerViewDelegate>
 @end
+
+#else // FREE_VERSION
+
+@interface AdView: UIView // DUMMY
+@end
+
+#endif // FREE_VERSION
+
+@class AdManager;
 
 //
 // AdManager からの通知用インタフェース
@@ -42,6 +49,7 @@
 //
 // AdManager : 広告表示用マネージャ
 //
+#if FREE_VERSION
 @interface AdManager : NSObject <GADBannerViewDelegate>
 
 @property(nonatomic,assign) BOOL isShowAdSucceeded;
@@ -54,5 +62,13 @@
 
 @end
 
-#endif // FREE_VERSION
+#else
+
+@interface AdManager : NSObject
++ (AdManager *)sharedInstance;
+@end
+
+#endif
+
+
 
