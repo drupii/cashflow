@@ -495,7 +495,6 @@
 		662ABA7E583EE4CCC39387C9 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		662ABA85E4FE950C1B4176F3 /* PinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinVC.m; sourceTree = "<group>"; };
 		662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionVC.m; sourceTree = "<group>"; };
-		662ABA9E63C002C76C8E6CA3 /* Info-free.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "Info-free.plist"; sourceTree = "<group>"; };
 		662ABAA20836AB99EE17C031 /* AssetListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetListView.storyboard; sourceTree = "<group>"; };
 		662ABAB142EB1301EB4C50AA /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		662ABAB719DFAE01D69A82BB /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
@@ -869,7 +868,6 @@
 		662AB653E7D74F9EA0577835 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				662ABA9E63C002C76C8E6CA3 /* Info-free.plist */,
 				662ABA2F74973F25E99AC1E1 /* Info.plist */,
 			);
 			path = Resources;
@@ -1736,7 +1734,7 @@
 					FREE_VERSION,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = "CashFlow/Resources/Info-free.plist";
+				INFOPLIST_FILE = CashFlow/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
@@ -1769,7 +1767,7 @@
 					"$(inherited)",
 					FREE_VERSION,
 				);
-				INFOPLIST_FILE = "CashFlow/Resources/Info-free.plist";
+				INFOPLIST_FILE = CashFlow/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
