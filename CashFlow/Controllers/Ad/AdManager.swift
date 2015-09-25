@@ -122,7 +122,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
     }
 
     /**
-    * 広告を表示を要求する
+    * 広告表示を要求する
     */
     func requestShowAd() -> Bool {
         if self.delegate == nil {
