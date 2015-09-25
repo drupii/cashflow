@@ -14,21 +14,15 @@
 
 #import <iAd/iAd.h>
 //#import "GADBannerView.h"
-#import "AdManager.h"
-
-#if FREE_VERSION
-@import GoogleMobileAds;
-#endif
+//#import "AdManager.h"
+//@import GoogleMobileAds;
 
 @class AssetListViewController;
+@protocol AdManagerDelegate;
 
 @interface TransactionListViewController : UIViewController 
     <UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate, CalculatorViewDelegate, UISplitViewControllerDelegate,
-        BackupViewDelegate, UIPopoverControllerDelegate, UISearchDisplayDelegate, UISearchBarDelegate
-#if FREE_VERSION
-        ,AdManagerDelegate
-#endif
->
+    BackupViewDelegate, UIPopoverControllerDelegate, UISearchDisplayDelegate, UISearchBarDelegate, AdManagerDelegate>
 
 @property(nonatomic,strong) AssetListViewController *splitAssetListViewController;
 @property(nonatomic,assign) NSInteger assetKey;

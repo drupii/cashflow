@@ -17,7 +17,7 @@
 #import "BackupVC.h"
 #import "Database.h"
 
-@interface TransactionListViewController ()
+@interface TransactionListViewController()
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,readonly) Asset *asset;
 
@@ -39,10 +39,8 @@
     NSInteger _tappedIndex;
 
     // For Free version
-#if FREE_VERSION
     AdManager *_adManager;
     BOOL _isAdShowing;
-#endif
 
     UIActionSheet *_actionSheet;
 
@@ -224,9 +222,9 @@
 /**
  * 広告表示
  */
-#if FREE_VERSION
-- (void)adManager:(AdManager *)adManager showAd:(AdView *)adView adSize:(CGSize)adSize
+- (void)showAd:(AdManager *)adManager adView:(AdView *)adView adSize:(CGSize)adSize
 {
+#if FREE_VERSION
     if (_isAdShowing) {
         NSLog(@"Ad is already showing!");
         return;
@@ -296,13 +294,15 @@
     [UIView beginAnimations:@"ShowAd" context:NULL];
     adView.frame = aframe;
     [UIView commitAnimations];
+#endif
 }
 
 /**
  * 広告を隠す
  */
-- (void)adManager:(AdManager *)adManager removeAd:(UIView *)adView adSize:(CGSize)adSize
+- (void)removeAd:(AdManager *)adManager adView:(UIView *)adView adSize:(CGSize)adSize
 {
+#if FREE_VERSION
     if (!_isAdShowing) {
         NSLog(@"Ad is already removed!");
         return;
@@ -333,8 +333,8 @@
     [UIView commitAnimations];
     
     [adView removeFromSuperview];
+#endif
 }
-#endif // FREE_VERSION
 
 - (void)updateBalance
 {

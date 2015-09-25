@@ -95,6 +95,12 @@
 		3EB88E8E17F702170045780D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB88E8C17F700B00045780D /* StoreKit.framework */; };
 		3EB9D9A51BB4449D00E699A7 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB9D9A61BB4449D00E699A7 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3EB9D9AA1BB581D800E699A7 /* NullAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9A91BB581D800E699A7 /* NullAdManager.swift */; settings = {ASSET_TAGS = (); }; };
+		3EB9D9AB1BB581DD00E699A7 /* NullAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9A91BB581D800E699A7 /* NullAdManager.swift */; settings = {ASSET_TAGS = (); }; };
+		3EB9D9AC1BB581E100E699A7 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9A71BB446AB00E699A7 /* AdManager.swift */; settings = {ASSET_TAGS = (); }; };
+		3EB9D9AE1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		3EB9D9AF1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		3EB9D9B01BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3EC572D71107451F00A551D5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3EDA9BE91BB293D700C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -200,7 +206,6 @@
 		662AB5F32BF882F46478F771 /* BackupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB45ECA675DB52757BD7D /* BackupView.storyboard */; };
 		662AB613CA5E13EBEB478B3B /* ExportOfx.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF6D0B758426D5919D5B /* ExportOfx.m */; };
 		662AB616F39947A6EFFED9C8 /* BackupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB45ECA675DB52757BD7D /* BackupView.storyboard */; };
-		662AB647AE223A283B3E48C2 /* AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB42C12D48A04A279FF4D /* AdManager.m */; };
 		662AB64868D919F247214D32 /* DateFormatter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */; };
 		662AB64F3A66B62A77BDFD69 /* EditTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662ABB0EA93BB55F0CFA4055 /* EditTypeView.xib */; };
 		662AB65F1A05FBDF6A6E8AE4 /* ReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB11A149EECD59514A19D /* ReportVC.m */; };
@@ -298,7 +303,6 @@
 		662ABE8023DAABB3B4BAD61A /* GenSelectListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF41E1D67D8823553504 /* GenSelectListVC.m */; };
 		662ABE931E423B1C7B72DA08 /* ReportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4F1B1EEDAC64D02C067 /* ReportCell.m */; };
 		662ABEC5386AEBE40DB62EB0 /* EditTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662ABB0EA93BB55F0CFA4055 /* EditTypeView.xib */; };
-		662ABEE6F9B4AEC2170814B4 /* AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB42C12D48A04A279FF4D /* AdManager.m */; };
 		662ABF042574B1352DA5F9B1 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		662ABF2D9D776C71A48B41E2 /* DescLRUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */; };
 		662ABF4E80595B30B2F88BE8 /* ReportCatGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */; };
@@ -370,6 +374,9 @@
 		3EB691E519AA3B9800C83C45 /* ImobileSdkAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImobileSdkAds.framework; sourceTree = "<group>"; };
 		3EB88E8317F6B5590045780D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3EB88E8C17F700B00045780D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StoreKit.framework; sourceTree = "<group>"; };
+		3EB9D9A71BB446AB00E699A7 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		3EB9D9A91BB581D800E699A7 /* NullAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullAdManager.swift; sourceTree = "<group>"; };
+		3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManagerDelegate.swift; sourceTree = "<group>"; };
 		3EC572D61107451F00A551D5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3ECD5A861347603800B499A6 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		3ED414E51A58428A00B1AEB8 /* Pods-free.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-free.debug.xcconfig"; path = "Pods/Target Support Files/Pods-free/Pods-free.debug.xcconfig"; sourceTree = "<group>"; };
@@ -425,7 +432,6 @@
 		662AB3C0142643C4637E480F /* WebServerBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServerBackup.m; sourceTree = "<group>"; };
 		662AB3FA5D32E12BBDA04AB4 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		662AB414AF4CCDC010CC654F /* ReportCatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCatVC.m; sourceTree = "<group>"; };
-		662AB42C12D48A04A279FF4D /* AdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdManager.m; sourceTree = "<group>"; };
 		662AB434E5D488CE9605F27B /* ExportBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportBase.m; sourceTree = "<group>"; };
 		662AB4529F18D3B7927856D5 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		662AB45ECA675DB52757BD7D /* BackupView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BackupView.storyboard; sourceTree = "<group>"; };
@@ -518,7 +524,6 @@
 		662ABD2537D395B94A72B786 /* WebServerBackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServerBackup.h; sourceTree = "<group>"; };
 		662ABD898171C964B71187B8 /* ReportCatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCatCell.m; sourceTree = "<group>"; };
 		662ABDA1038E3F1DC14B1267 /* ExportOfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportOfx.h; sourceTree = "<group>"; };
-		662ABDA5A5CFE796EFCD8935 /* AdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdManager.h; sourceTree = "<group>"; };
 		662ABDACF2882ED559DA9BED /* ReportCatDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCatDetailVC.h; sourceTree = "<group>"; };
 		662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcVC.m; sourceTree = "<group>"; };
 		662ABDE36BB11EB0D3B06596 /* TransactionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionBase.h; sourceTree = "<group>"; };
@@ -999,8 +1004,9 @@
 		662ABCBE63385EB930F924A4 /* Ad */ = {
 			isa = PBXGroup;
 			children = (
-				662ABDA5A5CFE796EFCD8935 /* AdManager.h */,
-				662AB42C12D48A04A279FF4D /* AdManager.m */,
+				3EB9D9A71BB446AB00E699A7 /* AdManager.swift */,
+				3EB9D9A91BB581D800E699A7 /* NullAdManager.swift */,
+				3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */,
 			);
 			path = Ad;
 			sourceTree = "<group>";
@@ -1441,6 +1447,7 @@
 				662AB07FF87CE568D1FBB279 /* Database.m in Sources */,
 				662AB01898315F140F59C485 /* Dbstmt.m in Sources */,
 				662ABAE89582370C0A2C21EE /* DescLRU.m in Sources */,
+				3EB9D9AA1BB581D800E699A7 /* NullAdManager.swift in Sources */,
 				662ABB8414248F5883C66078 /* TransactionBase.m in Sources */,
 				662AB551CAC740B07BF35F23 /* TCategoryBase.m in Sources */,
 				662ABFEFB6047DFEDF362BF7 /* DateFormatter2.m in Sources */,
@@ -1450,7 +1457,6 @@
 				662ABF2D9D776C71A48B41E2 /* DescLRUManager.m in Sources */,
 				662ABBCB303E2177FEE03B9C /* Transaction.m in Sources */,
 				662AB04C0DE1CCA221E2A2E8 /* Asset.m in Sources */,
-				662AB647AE223A283B3E48C2 /* AdManager.m in Sources */,
 				662ABDDF6D92BBB7EE6DD396 /* CalcVC.m in Sources */,
 				662AB3741D5C53C13EC1591A /* GenEditTextVC.m in Sources */,
 				662AB515185A5DB6D66FD86E /* BackupVC.m in Sources */,
@@ -1476,6 +1482,7 @@
 				662ABA238848910180228BBA /* EditTypeVC.m in Sources */,
 				662ABD8BC68E60A50EDDB01F /* EditDescVC.m in Sources */,
 				662AB33C6F671899B846DEEE /* EditDateVC.m in Sources */,
+				3EB9D9AE1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */,
 				662ABC25DF16EB432F3BE48A /* WebServer.m in Sources */,
 				662AB0F90BB60BFAF84D310E /* BackupServer.m in Sources */,
 				662AB912C9FB0167F2727A30 /* DropboxBackup.m in Sources */,
@@ -1520,8 +1527,8 @@
 				662ABBA5D93EE82C5E477F06 /* DescLRUManager.m in Sources */,
 				662ABE4D69C52BF40194AC12 /* Transaction.m in Sources */,
 				662AB18C97EB039056B19D4E /* Asset.m in Sources */,
-				662ABEE6F9B4AEC2170814B4 /* AdManager.m in Sources */,
 				662AB78A217494280430CD95 /* CalcVC.m in Sources */,
+				3EB9D9AC1BB581E100E699A7 /* AdManager.swift in Sources */,
 				662ABA038FC21480AD3CECA9 /* GenEditTextVC.m in Sources */,
 				3E3C01601BB1ACF400A39B97 /* Journal.swift in Sources */,
 				662AB8BF7E4D8BC19AAA0E86 /* BackupVC.m in Sources */,
@@ -1549,6 +1556,7 @@
 				662AB02CA4B7874DBE16D696 /* EditTypeVC.m in Sources */,
 				662AB29A88E05FDE442B8138 /* EditDescVC.m in Sources */,
 				662ABE3BD08184BEDBF9E738 /* EditDateVC.m in Sources */,
+				3EB9D9AF1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */,
 				3E3C015E1BB1ACE000A39B97 /* Config.swift in Sources */,
 				3E5C63EF1BB2EEC000CA60AA /* AssetListViewController.swift in Sources */,
 				662AB8FA70258039618A8ACC /* WebServer.m in Sources */,
@@ -1579,6 +1587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				662ABBE44572B63DD363A17A /* AssetListVCTests.m in Sources */,
+				3EB9D9AB1BB581DD00E699A7 /* NullAdManager.swift in Sources */,
 				3E007ECC1BA86DE700923757 /* ReportEntry.swift in Sources */,
 				3E3C01671BB1ACFF00A39B97 /* DataModelDateUtils.swift in Sources */,
 				3E3C015F1BB1ACE000A39B97 /* Config.swift in Sources */,
@@ -1587,6 +1596,7 @@
 				3E1982841BB266AE00177021 /* DataModelTests.swift in Sources */,
 				662AB3F4E233DAFD6A216A9B /* PinVCTests.m in Sources */,
 				662AB259CBAA4A4D686B8FE7 /* ViewControllerTestCase.m in Sources */,
+				3EB9D9B01BB583E700E699A7 /* AdManagerDelegate.swift in Sources */,
 				662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */,
 				3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
 				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,

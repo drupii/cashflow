@@ -36,11 +36,6 @@ class AdView : DFPBannerView, GADBannerViewDelegate {
     }
 }
 
-protocol AdManagerDelegate {
-    func showAd(adManager: AdManager, adView:AdView, adSize: CGSize)
-    func removeAd(adManager: AdManager, adView:AdView, adSize: CGSize)
-}
-
 /**
  * 広告マネージャ
  *

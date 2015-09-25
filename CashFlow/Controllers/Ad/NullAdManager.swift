@@ -9,11 +9,6 @@ import UIKit
 class AdView : UIView {
 }
 
-protocol AdManagerDelegate {
-    func showAd(adManager: AdManager, adView:AdView, adSize: CGSize)
-    func removeAd(adManager: AdManager, adView:AdView, adSize: CGSize)
-}
-
 class AdManager : NSObject {
     static func sharedInstance() -> AdManager? {
         return nil
