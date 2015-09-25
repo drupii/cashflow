@@ -222,7 +222,7 @@
 /**
  * 広告表示
  */
-- (void)showAd:(AdManager *)adManager adView:(AdView *)adView adSize:(CGSize)adSize
+- (void)showAd:(AdManager *)adManager adView:(UIView *)adView adSize:(CGSize)adSize
 {
 #if FREE_VERSION
     if (_isAdShowing) {

@@ -61,7 +61,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
     private var bannerView: AdView?
     
     // 広告サイズ
-    private var adSize: CGSize?
+    private var adSize: GADAdSize?
 
     // 広告ロード済み状態
     private var isAdLoaded: Bool = false
@@ -136,7 +136,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
             if (self.isAdLoaded) {
                 // ロード済みの場合、表示する
                 print("showAd: show loaded ad");
-                self.delegate!.showAd(self, adView: self.bannerView!, adSize: self.adSize!)
+                self.delegate!.showAd(self, adView: self.bannerView!, adSize: self.adSize!.size)
                 self.isAdShowing = true
             } else {
                 // ロード済みでない場合は、すぐに広告リクエストを発行する
@@ -162,11 +162,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
         // 広告リクエストを開始する
         print("requestAd: start request new ad.")
         let req = GADRequest()
-        req.testDevices = [
-                        //"7f201a0d427175b074ea55a63a482388", // ip6
-                        //"f887d54080341da8df23060f8146ba79", // ipm
-                        //GAD_SIMULATOR_ID
-                        ]
+        req.testDevices = [ kGADSimulatorID ]
         
         self.bannerView!.loadRequest(req)
 
@@ -194,9 +190,8 @@ class AdManager : NSObject, GADBannerViewDelegate {
     private func createAdView() {
         print("create Ad view")
     
-        //let adSize = kGADAdSizeBanner
-        //let adSize = GAD_SIZE_320x50
-        let adSize = GADAdSizeFromCGSize(CGSizeMake(320.0, 50.0))
+        self.adSize = kGADAdSizeBanner
+        //self.adSize = GADAdSizeFromCGSize(CGSizeMake(320.0, 50.0))
     
         /* Note: Mediation では標準サイズバナーのみ
         if (IS_IPAD) {
@@ -238,11 +233,11 @@ class AdManager : NSObject, GADBannerViewDelegate {
         print("Ad loaded : class = \(view.adNetworkClassName)")
         self.isAdLoaded = true
 
-        self.adSize = view.frame.size
+        //self.adSize = view.frame.size
     
         if (self.delegate != nil && !self.isAdShowing) {
             self.isAdShowing = true
-            self.delegate!.showAd(self, adView: self.bannerView!, adSize: self.adSize!)
+            self.delegate!.showAd(self, adView: self.bannerView!, adSize: self.adSize!.size)
         }
     }
 
@@ -266,7 +261,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
          view を残しておくとクラッシュを引き起こすため、一旦削除して作りなおす。
          */
         self.isAdLoaded = false
-        self.delegate!.removeAd(self, adView: self.bannerView!, adSize: self.adSize!)
+        self.delegate!.removeAd(self, adView: self.bannerView!, adSize: self.adSize!.size)
         self.isAdShowing = false
 
         self.releaseAdView()
