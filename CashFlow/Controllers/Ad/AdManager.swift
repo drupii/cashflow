@@ -6,33 +6,33 @@
 
 import UIKit
 
-let DFP_ADUNIT_ID = "/86480491/CashFlowFree_iOS_320x50"
-let ADUNIT_ID = DFP_ADUNIT_ID
-
-// 広告リクエスト間隔 (画面遷移時のみ)
-let AD_REQUEST_INTERVAL = 30.0
-    
+import GoogleMobileAds
+  
 /**
  *  AdMob 表示用ラッパクラス。xxxBannerView を継承。
  */
 class AdView : DFPBannerView, GADBannerViewDelegate {
-    override init(adSize: GADAdsize) {
-        super.init(gadSize)
+    override init(adSize: GADAdSize) {
+        super.init(adSize: adSize)
         self.delegate = self
     }
     
     convenience init() {
-        var gadSize: GADAdSize
+        var adSize: GADAdSize
     
         if isIpad() {
             // 320 x 50 固定。こうしないと在庫でない模様
-            gadSize = kGADAdSizeBanner
+            adSize = kGADAdSizeBanner
         } else {
-            gadSize = kGADAdSizeBanner
+            adSize = kGADAdSizeBanner
             //以下のようにiPhone 6 横幅に自動で合わせたいが、これをやると Nend の広告がでない！
-            //gadSize = GADAdSizeFullWidthPortraitWithHeight(GAD_SIZE_320x50.height);
+            //adSize = GADAdSizeFullWidthPortraitWithHeight(GAD_SIZE_320x50.height);
         }
-        self(gadSize)
+        self.init(adSize: adSize)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -51,29 +51,35 @@ protocol AdManagerDelegate {
  * 4) 広告表示中 (_isAdShowing が true)
  */
 class AdManager : NSObject, GADBannerViewDelegate {
-    var isShowAdSucceeded: Bool = false
+    private static let DFP_ADUNIT_ID = "/86480491/CashFlowFree_iOS_320x50"
+    private static let ADUNIT_ID = DFP_ADUNIT_ID
+
+    // 広告リクエスト間隔 (画面遷移時のみ)
+    private let AD_REQUEST_INTERVAL = 30.0
+
+    private var isShowAdSucceeded: Bool = false
     
-    weak var delegate: AdManagerDelegate?
-    weak var rootViewController: UIViewController?
+    private var delegate: AdManagerDelegate?
+    private weak var rootViewController: UIViewController?
     
     // 広告ビュー
-    var bannerView: AdView?
+    private var bannerView: AdView?
     
     // 広告サイズ
-    var adSize: CGSize
+    private var adSize: CGSize?
 
     // 広告ロード済み状態
-    var isAdLoaded: Bool
+    private var isAdLoaded: Bool = false
 
     // 広告表示中状態
-    var isAdShowing: Bool
+    private var isAdShowing: Bool = false
 
     // 最後に広告をリクエストした日時
-    var lastAdRequestDate: NSDate?
+    private var lastAdRequestDate: NSDate?
 
     private static var theAdManager: AdManager? = nil
 
-    static func sharedInstance() -> ADManager {
+    static func sharedInstance() -> AdManager? {
         if (theAdManager == nil) {
             theAdManager = AdManager()
         }
@@ -86,8 +92,8 @@ class AdManager : NSObject, GADBannerViewDelegate {
 
     deinit {
         // singleton なのでここには原則こない
-        self.releaseAdView
-        self.detach
+        self.releaseAdView()
+        self.detach()
     }
 
     /**
@@ -126,7 +132,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
         if self.bannerView == nil {
             self.createAdView()
         }
-        self.bannerView.rootViewController = self.rootViewController
+        self.bannerView!.rootViewController = self.rootViewController
     
         var forceRequest = false
     
@@ -135,7 +141,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
             if (self.isAdLoaded) {
                 // ロード済みの場合、表示する
                 print("showAd: show loaded ad");
-                self.delegate!.showAd(self, adView: self.bannerView!, adSize: self.adSize)
+                self.delegate!.showAd(self, adView: self.bannerView!, adSize: self.adSize!)
                 self.isAdShowing = true
             } else {
                 // ロード済みでない場合は、すぐに広告リクエストを発行する
@@ -160,14 +166,14 @@ class AdManager : NSObject, GADBannerViewDelegate {
     
         // 広告リクエストを開始する
         print("requestAd: start request new ad.")
-        var req = GADRequest.request()
+        let req = GADRequest()
         req.testDevices = [
                         //"7f201a0d427175b074ea55a63a482388", // ip6
                         //"f887d54080341da8df23060f8146ba79", // ipm
                         //GAD_SIMULATOR_ID
                         ]
         
-        self.bannerView.loadRequest(req)
+        self.bannerView!.loadRequest(req)
 
         // リクエスト時刻を保存
         self.lastAdRequestDate = NSDate()
@@ -177,7 +183,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
     func isAdTimerTimeout() -> Bool {
         if self.lastAdRequestDate != nil {
             let now = NSDate()
-            var diff = now.timeIntervalSinceDate(self.lastAdRequestDate!)
+            let diff = now.timeIntervalSinceDate(self.lastAdRequestDate!)
             if diff < AD_REQUEST_INTERVAL {
                 return false
             }
@@ -193,9 +199,9 @@ class AdManager : NSObject, GADBannerViewDelegate {
     private func createAdView() {
         print("create Ad view")
     
-        //GADAdSize gadSize = kGADAdSizeBanner;
-        let adSize = GAD_SIZE_320x50
-        //CGRect gadSize = CGRectMake(0.0, 0.0, 320.0, 50.0);
+        //let adSize = kGADAdSizeBanner
+        //let adSize = GAD_SIZE_320x50
+        let adSize = GADAdSizeFromCGSize(CGSizeMake(320.0, 50.0))
     
         /* Note: Mediation では標準サイズバナーのみ
         if (IS_IPAD) {
@@ -207,10 +213,10 @@ class AdManager : NSObject, GADBannerViewDelegate {
         let view = AdView()
         view.delegate = self
     
-        print("AdUnit = \(ADUNIT_ID)")
-        view.adUnitID = ADUNIT_ID
+        print("AdUnit = \(AdManager.ADUNIT_ID)")
+        view.adUnitID = AdManager.ADUNIT_ID
         view.rootViewController = nil // この時点では不明
-        view.autoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
+        view.autoresizingMask = [.FlexibleTopMargin, .FlexibleLeftMargin, .FlexibleRightMargin]
 
         // まだリクエストは発行しない
 
@@ -225,8 +231,8 @@ class AdManager : NSObject, GADBannerViewDelegate {
         self.isAdLoaded = false
 
         if (self.bannerView != nil) {
-            self.bannerView.delegate = nil
-            self.bannerView.rootViewController = nil
+            self.bannerView!.delegate = nil
+            self.bannerView!.rootViewController = nil
             self.bannerView = nil
         }
     }
@@ -241,40 +247,41 @@ class AdManager : NSObject, GADBannerViewDelegate {
     
         if (self.delegate != nil && !self.isAdShowing) {
             self.isAdShowing = true
-            self.delegate!.showAd(self, adView: self.bannerView!, adSize: self.adSize)
+            self.delegate!.showAd(self, adView: self.bannerView!, adSize: self.adSize!)
         }
     }
 
-    func adView
-- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
-{
-    NSString *msg;
-
-    if (_bannerView == nil) return;
+    func adView(view: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        if self.bannerView == nil {
+            return
+        }
     
-    if (_bannerView.hasAutoRefreshed) {
-        // auto refresh failed, but previous ad is effective.    
-        msg = @"Ad auto refresh failed";
-    } else {
-        msg = @"Ad load failed";
-    }
-    NSLog(@"%@ : <<%@>>", msg, [error localizedDescription]);
+        var msg: String
+        if self.bannerView!.hasAutoRefreshed {
+            // auto refresh failed, but previous ad is effective.    
+            msg = "Ad auto refresh failed"
+        } else {
+            msg = "Ad load failed"
+        }
+        let errorDesc = error.localizedDescription
+        print("\(msg) : <<\(errorDesc)>>")
     
-    /*
-     AdMob SDK バグ対応。ネットワーク未接続状態で広告取得失敗した場合、
-     view を残しておくとクラッシュを引き起こすため、一旦削除して作りなおす。
-     */
-    _isAdLoaded = NO;
-     [_delegate adManager:self removeAd:_bannerView adSize:_adSize];
-    _isAdShowing = NO;
+        /*
+         AdMob SDK バグ対応。ネットワーク未接続状態で広告取得失敗した場合、
+         view を残しておくとクラッシュを引き起こすため、一旦削除して作りなおす。
+         */
+        self.isAdLoaded = false
+        self.delegate!.removeAd(self, adView: self.bannerView!, adSize: self.adSize!)
+        self.isAdShowing = false
 
-    [self _releaseAdView];
+        self.releaseAdView()
 
-    if (_lastAdRequestDate != nil && [self isAdTimerTimeout]) {
-        // 再試行
-        [self requestShowAd];
-    } else {
-        // タイマリセット
-        //_lastAdRequestDate = nil;
+        if self.lastAdRequestDate != nil && self.isAdTimerTimeout() {
+            // 再試行
+            self.requestShowAd()
+        } else {
+            // タイマリセット
+            //self.lastAdRequestDate = nil
+        }
     }
 }
