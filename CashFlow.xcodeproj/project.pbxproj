@@ -114,6 +114,37 @@
 		3EB9D9AE1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB9D9AF1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB9D9B01BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5811BB7335A00F28325 /* TransactionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8FE55579EB49E68194B /* TransactionBase.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5821BB7335D00F28325 /* TCategoryBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB267427DAA82536D9442 /* TCategoryBase.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5831BB7336400F28325 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3FA5D32E12BBDA04AB4 /* Database.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5841BB7336400F28325 /* ORRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDE6B2440D05D6A85432 /* ORRecord.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5851BB7336400F28325 /* ORQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB1542F3EE3CFBA7E9604 /* ORQuery.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5861BB7336400F28325 /* Dbstmt.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9A739106627A769F3CF /* Dbstmt.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5871BB7336400F28325 /* AssetBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6FB8C37AC0F0BE71195 /* AssetBase.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5881BB7336400F28325 /* DescLRU.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB13166AD062A3AD46234 /* DescLRU.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5891BB7336D00F28325 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB719DFAE01D69A82BB /* DataModel.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E58A1BB7338000F28325 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A3BB4870106242B819 /* Category.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E58B1BB7338000F28325 /* DescLRUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E58C1BB7338000F28325 /* DateFormatter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E58D1BB733DD00F28325 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E58E1BB733DD00F28325 /* EditDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB26BA59401CD8FCDE181 /* EditDateVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E58F1BB733DD00F28325 /* EditTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB93A469BA46121E9E6BF /* EditTypeVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5901BB733DD00F28325 /* EditMemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8E7413740C6A594F849 /* EditMemoVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5911BB733E300F28325 /* CalcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5921BB733EA00F28325 /* ReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB11A149EECD59514A19D /* ReportVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5931BB733EA00F28325 /* ReportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4F1B1EEDAC64D02C067 /* ReportCell.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5941BB733EA00F28325 /* ReportCatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB414AF4CCDC010CC654F /* ReportCatVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5951BB733EA00F28325 /* ReportCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABD898171C964B71187B8 /* ReportCatCell.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5961BB733EA00F28325 /* ReportCatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A9A413A840094876F6 /* ReportCatDetailVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5971BB733EA00F28325 /* ReportCatGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5981BB733EF00F28325 /* PinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA85E4FE950C1B4176F3 /* PinVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E5991BB733EF00F28325 /* PinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABBECC87A505590735192 /* PinController.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E59A1BB733F800F28325 /* GenEditTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6B4A813C37CACEA1B8D /* GenEditTextVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E59B1BB733F800F28325 /* GenSelectListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF41E1D67D8823553504 /* GenSelectListVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E59C1BB733F800F28325 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA7E583EE4CCC39387C9 /* ConfigViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E59D1BB733F800F28325 /* CategoryListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6B4BD5ABDD91D16795C /* CategoryListVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E59E1BB733F800F28325 /* BackupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE0DB0603900D19CF07A /* BackupVC.m */; settings = {ASSET_TAGS = (); }; };
+		3EC0E59F1BB733F800F28325 /* ExportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB38D4410C04B96DF1C5D /* ExportVC.m */; settings = {ASSET_TAGS = (); }; };
 		3EC572D71107451F00A551D5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3EDA9BE91BB293D700C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -1588,47 +1619,78 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC0E59F1BB733F800F28325 /* ExportVC.m in Sources */,
+				3EC0E59D1BB733F800F28325 /* CategoryListVC.m in Sources */,
+				3EC0E58F1BB733DD00F28325 /* EditTypeVC.m in Sources */,
+				3EC0E58C1BB7338000F28325 /* DateFormatter2.m in Sources */,
 				662ABBE44572B63DD363A17A /* AssetListVCTests.m in Sources */,
 				3EB9D9AB1BB581DD00E699A7 /* NullAdManager.swift in Sources */,
 				3E007ECC1BA86DE700923757 /* ReportEntry.swift in Sources */,
 				3EAEE6251BB64E5E00B1DA08 /* TransactionListViewController.swift in Sources */,
+				3EC0E58E1BB733DD00F28325 /* EditDateVC.m in Sources */,
 				3E3C01671BB1ACFF00A39B97 /* DataModelDateUtils.swift in Sources */,
 				3E3C015F1BB1ACE000A39B97 /* Config.swift in Sources */,
 				662ABD51B132C111EDBDD3C0 /* EditDescVCTests.m in Sources */,
 				662AB12482FD2CE7593FD54C /* PinControllerTests.m in Sources */,
+				3EC0E5931BB733EA00F28325 /* ReportCell.m in Sources */,
 				3E1982841BB266AE00177021 /* DataModelTests.swift in Sources */,
+				3EC0E5861BB7336400F28325 /* Dbstmt.m in Sources */,
 				662AB3F4E233DAFD6A216A9B /* PinVCTests.m in Sources */,
 				662AB259CBAA4A4D686B8FE7 /* ViewControllerTestCase.m in Sources */,
 				3EB9D9B01BB583E700E699A7 /* AdManagerDelegate.swift in Sources */,
 				3E26DF7E1BB6DEB000622946 /* EditDescViewController.swift in Sources */,
+				3EC0E5981BB733EF00F28325 /* PinVC.m in Sources */,
 				662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */,
 				3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
 				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,
 				3E007ED01BA9BA2900923757 /* Report.swift in Sources */,
 				662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */,
+				3EC0E5921BB733EA00F28325 /* ReportVC.m in Sources */,
+				3EC0E5941BB733EA00F28325 /* ReportCatVC.m in Sources */,
 				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
+				3EC0E59B1BB733F800F28325 /* GenSelectListVC.m in Sources */,
 				3E007EC81BA8694E00923757 /* CatReport.swift in Sources */,
+				3EC0E5891BB7336D00F28325 /* DataModel.m in Sources */,
+				3EC0E58A1BB7338000F28325 /* Category.m in Sources */,
+				3EC0E59C1BB733F800F28325 /* ConfigViewController.m in Sources */,
 				3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */,
+				3EC0E5851BB7336400F28325 /* ORQuery.m in Sources */,
 				3E5C63F01BB2EEC100CA60AA /* AssetListViewController.swift in Sources */,
 				662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */,
 				3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */,
 				3E3C01611BB1ACF500A39B97 /* Journal.swift in Sources */,
 				3E19828A1BB271E000177021 /* TestCommon.swift in Sources */,
+				3EC0E5821BB7335D00F28325 /* TCategoryBase.m in Sources */,
 				662AB5290BA65A5E254DA9CA /* TimeTests.m in Sources */,
 				662ABA395B0AF6A61160E653 /* TransactionTests.m in Sources */,
 				3EDA9BEB1BB2944A00C4F3EB /* TransactionCell.swift in Sources */,
+				3EC0E5991BB733EF00F28325 /* PinController.m in Sources */,
 				3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */,
+				3EC0E5871BB7336400F28325 /* AssetBase.m in Sources */,
+				3EC0E58B1BB7338000F28325 /* DescLRUManager.m in Sources */,
+				3EC0E5841BB7336400F28325 /* ORRecord.m in Sources */,
+				3EC0E5881BB7336400F28325 /* DescLRU.m in Sources */,
 				662AB4DD2EBD20A7937D50F9 /* InfoViewController.swift in Sources */,
+				3EC0E5951BB733EA00F28325 /* ReportCatCell.m in Sources */,
 				3EB9D9A61BB4449D00E699A7 /* AssetViewController.swift in Sources */,
 				662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */,
 				3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */,
 				3E26DF821BB6ED0800622946 /* Transaction.swift in Sources */,
+				3EC0E58D1BB733DD00F28325 /* TransactionVC.m in Sources */,
 				662ABACB2641D65E69DE2EE4 /* CurrencyManager.swift in Sources */,
+				3EC0E5971BB733EA00F28325 /* ReportCatGraphCell.m in Sources */,
+				3EC0E59A1BB733F800F28325 /* GenEditTextVC.m in Sources */,
+				3EC0E5911BB733E300F28325 /* CalcVC.m in Sources */,
 				3E3C01651BB1ACFB00A39B97 /* AssetEntry.swift in Sources */,
 				3E3C01691BB1AD0200A39B97 /* CashflowDatabase.swift in Sources */,
 				3E26DF861BB6FB7800622946 /* Asset.swift in Sources */,
 				662AB3AF63A652A2728E280B /* SwiftUtils.swift in Sources */,
+				3EC0E5961BB733EA00F28325 /* ReportCatDetailVC.m in Sources */,
+				3EC0E59E1BB733F800F28325 /* BackupVC.m in Sources */,
 				3E3C01631BB1ACF700A39B97 /* Ledger.swift in Sources */,
+				3EC0E5831BB7336400F28325 /* Database.m in Sources */,
+				3EC0E5901BB733DD00F28325 /* EditMemoVC.m in Sources */,
+				3EC0E5811BB7335A00F28325 /* TransactionBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
