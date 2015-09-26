@@ -1734,7 +1734,7 @@
 					FREE_VERSION,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = CashFlow/Resources/Info.plist;
+				INFOPLIST_FILE = "CashFlow/Resources/Info-free.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
@@ -1767,7 +1767,7 @@
 					"$(inherited)",
 					FREE_VERSION,
 				);
-				INFOPLIST_FILE = CashFlow/Resources/Info.plist;
+				INFOPLIST_FILE = "CashFlow/Resources/Info-free.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
