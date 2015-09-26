@@ -5,6 +5,7 @@
  */
 import Foundation
 
+@available(iOS 8.0, *)
 @UIApplicationMain
 class AppDelegate : UIResponder, UIApplicationDelegate {
     var window : UIWindow?

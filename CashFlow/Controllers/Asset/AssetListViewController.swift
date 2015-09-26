@@ -6,6 +6,7 @@
 
 import UIKit
 
+@available(iOS 8.0, *)
 class AssetListViewController : UIViewController,
         DataModelDelegate, UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UIAlertViewDelegate, BackupViewDelegate
 {

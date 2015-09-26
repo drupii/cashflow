@@ -4,6 +4,7 @@
 
 import UIKit
 
+@available(iOS 8.0, *)
 class InfoViewController : UIViewController {
     @IBOutlet weak var _nameLabel : UILabel!
     @IBOutlet weak var _versionLabel: UILabel!
