@@ -25,7 +25,7 @@ class TransactionListViewController : UIViewController,
     var splitAssetListViewController: AssetListViewController!
     var assetKey: Int = 0
 
-    var searchResults: [AssetEntry]?
+    var searchResults: [AssetEntry] = []
     private var tappedIndex: Int = 0
 
     // For Free version
@@ -333,7 +333,7 @@ class TransactionListViewController : UIViewController,
         }
 
         if (tableView == self.searchDisplayController!.searchResultsTableView) {
-            return self.searchResults!.count
+            return self.searchResults.count
         } else {
             return asset.entryCount + 1
         }
@@ -346,7 +346,7 @@ class TransactionListViewController : UIViewController,
     // 指定セル位置に該当する entry Index を返す
     private func entryIndexWithIndexPath(indexPath: NSIndexPath, tableView:UITableView) -> Int {
         if (tableView == self.searchDisplayController!.searchResultsTableView) {
-            return self.searchResults!.count - 1 - indexPath.row
+            return self.searchResults.count - 1 - indexPath.row
         } else {
             return self.asset!.entryCount - 1 - indexPath.row
         }
@@ -361,7 +361,7 @@ class TransactionListViewController : UIViewController,
         }
         var e: AssetEntry
         if (tableView == self.searchDisplayController!.searchResultsTableView) {
-            e = self.searchResults![idx]
+            e = self.searchResults[idx]
         } else {
             e = self.asset!.entryAt(idx)
         }
@@ -419,7 +419,7 @@ class TransactionListViewController : UIViewController,
         } else if idx >= 0 {
             // transaction view を表示
             if tableView == self.searchDisplayController!.searchResultsTableView {
-                let e = self.searchResults![idx] 
+                let e = self.searchResults[idx]
                 self.tappedIndex = e.originalIndex
             } else {
                 self.tappedIndex = idx
@@ -494,7 +494,7 @@ class TransactionListViewController : UIViewController,
 
         if (editingStyle == .Delete) {
             if tableView == self.searchDisplayController!.searchResultsTableView {
-                let e = self.searchResults![entryIndex]
+                let e = self.searchResults[entryIndex]
                 self.asset!.deleteEntryAt(e.originalIndex)
             
                 // 検索結果一覧を更新する
@@ -680,11 +680,7 @@ class TransactionListViewController : UIViewController,
             allMatch = true
         }
 
-        if self.searchResults == nil {
-            self.searchResults = []
-        } else {
-            self.searchResults!.removeAll()
-        }
+        self.searchResults.removeAll()
 
         let searchOptions: NSStringCompareOptions = [NSStringCompareOptions.CaseInsensitiveSearch, NSStringCompareOptions.DiacriticInsensitiveSearch]
 
@@ -694,7 +690,7 @@ class TransactionListViewController : UIViewController,
             e.originalIndex = i
         
             if (allMatch) {
-                self.searchResults!.append(e)
+                self.searchResults.append(e)
                 continue
             }
         
@@ -702,13 +698,13 @@ class TransactionListViewController : UIViewController,
             let desc: String = e.transaction()!.desc
             let foundRange = desc.rangeOfString(searchString!, options: searchOptions)
             if foundRange != nil {
-                self.searchResults!.append(e)
+                self.searchResults.append(e)
             }
         }
     }
 
     func searchDisplayControllerDidEndSearch(controller: UISearchDisplayController) {
-        self.searchResults = nil
+        self.searchResults.removeAll()
     
         // 検索中にデータが変更されるケースがあるので、ここで reload する
         self.tableView.reloadData()
