@@ -283,12 +283,14 @@ class AssetListViewController : UIViewController,
         // 資産
         let asset = _ledger!.assetAtIndex(self.assetIndex(indexPath))
 
-        // 資産タイプ範囲外対応
         var type = asset.type
-        if (type < 0 || _iconArray.count <= type) {
-            type = 0
+        if (_iconArray.count > 0) { // UT の場合のみ count = 0 となる場合がある
+            // 資産タイプ範囲外対応
+            if (type < 0 || _iconArray.count <= type) {
+                type = 0
+            }
+            cell.imageView!.image = _iconArray[type]
         }
-        cell.imageView!.image = _iconArray[type]
 
         // 資産名
         cell.textLabel!.text = asset.name;
