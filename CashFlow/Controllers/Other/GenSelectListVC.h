@@ -16,9 +16,9 @@
 
 @interface GenSelectListViewController : UITableViewController
 
-@property(nonatomic,unsafe_unretained) id<GenSelectListViewDelegate> delegate;
+@property(nonatomic,unsafe_unretained,nonnull) id<GenSelectListViewDelegate> delegate;
 @property(nonatomic,assign) NSInteger identifier;
-@property(nonatomic,strong) NSArray *items;
+@property(nonatomic,strong, nonnull) NSArray *items;
 @property(nonatomic,assign) NSInteger selectedIndex;
 
 + (nonnull GenSelectListViewController *)create:(nonnull id<GenSelectListViewDelegate>)delegate items:(nonnull NSArray*)ary title:(nonnull NSString*)title identifier:(NSInteger)id;
