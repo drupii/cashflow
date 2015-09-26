@@ -34,6 +34,7 @@
 		3E1982841BB266AE00177021 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E19828A1BB271E000177021 /* TestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982881BB26F3D00177021 /* TestCommon.swift */; settings = {ASSET_TAGS = (); }; };
 		3E2376C51107481F00E4C329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3E26DF7A1BB6542700622946 /* Info-free.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E26DF791BB6542700622946 /* Info-free.plist */; settings = {ASSET_TAGS = (); }; };
 		3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3E338213133211C500861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E3382181332122700861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -348,6 +349,7 @@
 		3E1982831BB266AE00177021 /* DataModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelTests.swift; sourceTree = "<group>"; };
 		3E1982851BB2675200177021 /* CashFlowTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CashFlowTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E1982881BB26F3D00177021 /* TestCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCommon.swift; sourceTree = "<group>"; };
+		3E26DF791BB6542700622946 /* Info-free.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-free.plist"; sourceTree = "<group>"; };
 		3E338212133211C500861610 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3E347BB1169DC7B0002307AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3E50B5F81A14FBF400F5D034 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -868,6 +870,7 @@
 		662AB653E7D74F9EA0577835 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E26DF791BB6542700622946 /* Info-free.plist */,
 				662ABA2F74973F25E99AC1E1 /* Info.plist */,
 			);
 			path = Resources;
@@ -1251,6 +1254,7 @@
 				662ABA3E5879DCBD1529CAC3 /* InfoView.storyboard in Resources */,
 				662AB8952EE964FF13B0C7D5 /* ReportView.storyboard in Resources */,
 				662AB17945843BC0B3F2D1E7 /* TransactionListView.storyboard in Resources */,
+				3E26DF7A1BB6542700622946 /* Info-free.plist in Resources */,
 				662AB594A96D2933D66D8545 /* TransactionCell.xib in Resources */,
 				662ABB13A5DA88C4CA2BB57A /* PinView.xib in Resources */,
 				662AB368EE403D72F192DC19 /* LaunchScreen.xib in Resources */,
