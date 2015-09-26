@@ -6,13 +6,9 @@
 
 import UIKit
 
-import iAd
-//import "GADBannerView.h"
-
-#if FREE_VERSION
-//import GoogleMobileAds
-#endif
-
+/**
+ * Transaction List View Controller
+ */
 @available(iOS 8.0, *)
 class TransactionListViewController : UIViewController,
     UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate, CalculatorViewDelegate, UISplitViewControllerDelegate,
@@ -209,7 +205,6 @@ class TransactionListViewController : UIViewController,
      * 広告表示
      */
     func showAd(adManager: AdManager, adView: UIView, adSize: CGSize) {
-#if FREE_VERSION
         if self.isAdShowing {
             print("Ad is already showing!")
             return
@@ -266,7 +261,9 @@ class TransactionListViewController : UIViewController,
         */
     
         // inset を調整する方法
-        self.tableViewInsetSave = tableView.contentInset
+        if self.tableViewInsetSave == nil {
+            self.tableViewInsetSave = tableView.contentInset
+        }
         var inset: UIEdgeInsets = tableView.contentInset
         inset.bottom += adSize.height
         tableView.contentInset = inset
@@ -281,14 +278,12 @@ class TransactionListViewController : UIViewController,
         UIView.beginAnimations("ShowAd", context: nil)
         adView.frame = aframe
         UIView.commitAnimations()
-#endif
     }
 
     /**
      * 広告を隠す
      */
     func removeAd(adManager: AdManager, adView: UIView, adSize: CGSize) {
-#if FREE_VERSION
         if !self.isAdShowing {
             print("Ad is already removed!")
             return
@@ -319,7 +314,6 @@ class TransactionListViewController : UIViewController,
         UIView.commitAnimations()
     
         adView.removeFromSuperview()
-#endif // FREE_VERSION
     }
     
     private func updateBalance() {
