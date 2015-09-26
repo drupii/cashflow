@@ -1,7 +1,7 @@
 // -*-  Mode:ObjC; c-basic-offset:4; tab-width:8; indent-tabs-mode:nil -*-
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import <SenTestingKit/SenTestingKit.h>
 
 @interface ArcBugTest : SenTestCase {

@@ -1,8 +1,7 @@
 // -*-  Mode:ObjC; c-basic-offset:4; tab-width:8; indent-tabs-mode:nil -*-
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <XCTest/XCTest.h>
+@import UIKit;
+@import XCTest;
 
 #ifndef IGNORE_SWIFT_HEADER
 #import "CashFlow-Swift.h" // Bridge

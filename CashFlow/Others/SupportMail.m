@@ -5,7 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "DataModel.h"
 #import "AppDelegate.h"
 #import "SupportMail.h"

@@ -42,6 +42,8 @@
 		3E26DF811BB6ED0800622946 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF7F1BB6E85200622946 /* Transaction.swift */; settings = {ASSET_TAGS = (); }; };
 		3E26DF821BB6ED0800622946 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF7F1BB6E85200622946 /* Transaction.swift */; settings = {ASSET_TAGS = (); }; };
 		3E26DF841BB6EEAC00622946 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF831BB6EEAC00622946 /* Asset.swift */; settings = {ASSET_TAGS = (); }; };
+		3E26DF851BB6FB7800622946 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF831BB6EEAC00622946 /* Asset.swift */; settings = {ASSET_TAGS = (); }; };
+		3E26DF861BB6FB7800622946 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF831BB6EEAC00622946 /* Asset.swift */; settings = {ASSET_TAGS = (); }; };
 		3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3E338213133211C500861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E3382181332122700861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -1574,6 +1576,7 @@
 				3E26DF811BB6ED0800622946 /* Transaction.swift in Sources */,
 				662ABE7E031772A367626D2E /* ExportOfx.m in Sources */,
 				662AB93A9A20F94080B82263 /* ExportCsv.m in Sources */,
+				3E26DF851BB6FB7800622946 /* Asset.swift in Sources */,
 				662AB254335CD0BABE4192B9 /* UIDevice+Hardware.m in Sources */,
 				3E3C01641BB1ACFA00A39B97 /* AssetEntry.swift in Sources */,
 				3E007EC71BA8694E00923757 /* CatReport.swift in Sources */,
@@ -1623,6 +1626,7 @@
 				662ABACB2641D65E69DE2EE4 /* CurrencyManager.swift in Sources */,
 				3E3C01651BB1ACFB00A39B97 /* AssetEntry.swift in Sources */,
 				3E3C01691BB1AD0200A39B97 /* CashflowDatabase.swift in Sources */,
+				3E26DF861BB6FB7800622946 /* Asset.swift in Sources */,
 				662AB3AF63A652A2728E280B /* SwiftUtils.swift in Sources */,
 				3E3C01631BB1ACF700A39B97 /* Ledger.swift in Sources */,
 			);
