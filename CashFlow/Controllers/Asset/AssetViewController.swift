@@ -128,7 +128,7 @@ class AssetViewController : UITableViewController,
             break;
 
         case ROW_TYPE:
-            typeArray = Asset.typeNamesArray()
+            typeArray = Asset.typeNamesArray
             gt = GenSelectListViewController.create(self, items:typeArray!, title:_L("Asset Type"), identifier:0)
             gt!.selectedIndex = _asset!.type
             vc = gt

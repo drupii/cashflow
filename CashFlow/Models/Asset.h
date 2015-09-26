@@ -23,6 +23,7 @@ typedef NS_ENUM(NSInteger, AssetType) {
     AssetTypeEmoney = 4
 };
 
+/*
 @class Database;
 
 //
@@ -49,3 +50,4 @@ typedef NS_ENUM(NSInteger, AssetType) {
 - (void)updateInitialBalance;
 
 @end
+ */
