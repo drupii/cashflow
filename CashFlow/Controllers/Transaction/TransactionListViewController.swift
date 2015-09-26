@@ -573,25 +573,25 @@ class TransactionListViewController : UIViewController,
         var nv: UINavigationController
 
         switch (buttonIndex) {
-            case 0:
+            case 1:
                 nv = ExportVC.instantiate(nil)
                 break
         
-            case 1:
+            case 2:
                 nv = ExportVC.instantiate(self.asset!)
                 break
             
-            case 2:
+            case 3:
                 nv = UIStoryboard(name: "BackupView", bundle: nil).instantiateInitialViewController() as! UINavigationController
                 let backupVC = nv.topViewController as! BackupViewController
                 backupVC.setDelegate(self)
                 break
             
-            case 3:
+            case 4:
                 nv = UIStoryboard(name: "ConfigView", bundle: nil).instantiateInitialViewController() as! UINavigationController
                 break
             
-            case 4:
+            case 5:
                 nv = InfoViewController.instantiate()
                 break
             
