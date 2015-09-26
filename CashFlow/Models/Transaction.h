@@ -14,22 +14,3 @@ typedef NS_ENUM(NSInteger, TransactionType) {
     TransactionTypeAdj = 2, // 残高調整
     TransactionTypeTransfer = 3 // 資産間移動
 };
-
-@class Asset;
-
-@interface Transaction : TransactionBase <NSCopying>
-
-// for balance adjustment
-@property(nonatomic,assign) BOOL hasBalance;
-@property(nonatomic,assign) double balance;
-
-- (nonnull instancetype)initWithDate:(nonnull NSDate *)date description:(nonnull NSString *)desc value:(double)v;
-- (void)updateWithoutUpdateLRU;
-
-@property(nonatomic,assign) TransactionType etype;
-
-+ (nonnull NSDate *)lastUsedDate;
-+ (void)setLastUsedDate:(nullable NSDate *)date;
-+ (BOOL)hasLastUsedDate;
-
-@end
