@@ -10,7 +10,7 @@
 #import "Transaction.h"
 
 #import "EditTypeVC.h"
-#import "EditDescVC.h"
+//#import "EditDescVC.h"
 #import "CalcVC.h"
 #import "EditDateVC.h"
 #import "EditMemoVC.h"
@@ -21,12 +21,6 @@
 @class AssetEntry;
 
 @interface TransactionViewController : UIViewController 
-    <UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate,UIActionSheetDelegate,
-    EditMemoViewDelegate, EditTypeViewDelegate,
-    EditDateViewDelegate, CalculatorViewDelegate,
-    EditDescViewDelegate, CategoryListViewDelegate,
-    CFCalendarViewControllerDelegate,
-    UIPopoverControllerDelegate>
 
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,unsafe_unretained) Asset *asset;

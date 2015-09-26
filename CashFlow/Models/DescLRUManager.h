@@ -12,7 +12,7 @@
 
 + (void)addDescLRU:(nonnull NSString *)description category:(NSInteger)category;
 + (void)addDescLRU:(nonnull NSString *)desc category:(NSInteger)category date:(nonnull NSDate*)date;
-+ (nonnull NSArray *)getDescLRUs:(NSInteger)category;
++ (nonnull NSArray<DescLRU *> *)getDescLRUs:(NSInteger)category;
 
 @end
 

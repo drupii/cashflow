@@ -15,7 +15,12 @@
 #import "CFCalendarViewController.h"
 
 // private methods
-@interface TransactionViewController()
+@interface TransactionViewController() <UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate,UIActionSheetDelegate,
+EditMemoViewDelegate, EditTypeViewDelegate,
+EditDateViewDelegate, CalculatorViewDelegate,
+EditDescViewDelegate, CategoryListViewDelegate,
+CFCalendarViewControllerDelegate,
+UIPopoverControllerDelegate>
 {
     IBOutlet UITableView *_tableView;
     
