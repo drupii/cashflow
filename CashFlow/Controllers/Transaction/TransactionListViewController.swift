@@ -302,7 +302,10 @@ class TransactionListViewController : UIViewController,
     }
     
     private func updateBalance() {
-        let lastBalance = self.asset!.lastBalance
+        guard let asset = self.asset else {
+            return
+        }
+        let lastBalance = asset.lastBalance
         let bstr = CurrencyManager.formatCurrency(lastBalance)
 
         //UILabel *tableTitle = (UILabel *)[self.tableView tableHeaderView];
