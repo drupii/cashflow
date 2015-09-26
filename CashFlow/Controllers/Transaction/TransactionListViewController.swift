@@ -23,7 +23,6 @@ class TransactionListViewController : UIViewController,
     @IBOutlet weak var barActionButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
     
-    
     var splitAssetListViewController: AssetListViewController!
     var assetKey: Int = 0
 
@@ -39,8 +38,7 @@ class TransactionListViewController : UIViewController,
 
     private var actionSheet: UIActionSheet?
 
-    // Note: _popoverController は UIViewController で定義されているため使用不可
-    private var mPopoverController: UIPopoverController?
+    private var popoverController: UIPopoverController?
     private var tableViewInsetSave: UIEdgeInsets?
 
     static func instantiate() -> TransactionListViewController {
@@ -152,7 +150,7 @@ class TransactionListViewController : UIViewController,
         self.tableView?.reloadData()
     
         // 検索中
-        if self.searchController!.active {
+        if isSearching() {
             self.updateSearchResultWithDesc(self.searchController!.searchBar.text)
             self.tableView!.reloadData()
         }
@@ -161,16 +159,16 @@ class TransactionListViewController : UIViewController,
     }
 
     func popoverControllerDidDismissPopover(popoverController: UIPopoverController) {
-        mPopoverController = nil;
+        self.popoverController = nil;
     }
 
     private func dismissPopover() {
         if (isIpad()
-            && mPopoverController != nil
-            && mPopoverController!.popoverVisible
+            && self.popoverController != nil
+            && self.popoverController!.popoverVisible
             && tableView != nil && tableView!.window != nil /* for crash problem */)
         {
-            mPopoverController!.dismissPopoverAnimated(true)
+            self.popoverController!.dismissPopoverAnimated(true)
         }
     }
     
@@ -358,7 +356,7 @@ class TransactionListViewController : UIViewController,
             return 0
         }
 
-        if self.searchController!.active {
+        if isSearching() {
             return self.searchResults.count
         } else {
             return asset.entryCount + 1
@@ -371,7 +369,7 @@ class TransactionListViewController : UIViewController,
 
     // 指定セル位置に該当する entry Index を返す
     private func entryIndexWithIndexPath(indexPath: NSIndexPath, tableView:UITableView) -> Int {
-        if self.searchController!.active {
+        if isSearching() {
             return self.searchResults.count - 1 - indexPath.row
         } else {
             return self.asset!.entryCount - 1 - indexPath.row
@@ -386,7 +384,7 @@ class TransactionListViewController : UIViewController,
             return nil  // initial balance
         }
         var e: AssetEntry
-        if self.searchController!.active {
+        if isSearching() {
             e = self.searchResults[idx]
         } else {
             e = self.asset!.entryAt(idx)
@@ -437,14 +435,14 @@ class TransactionListViewController : UIViewController,
                 self.presentViewController(nv, animated: true, completion: nil)
             } else {
                 self.dismissPopover()
-                mPopoverController = UIPopoverController(contentViewController: nv)
-                mPopoverController!.delegate = self
-                mPopoverController!.presentPopoverFromRect(tableView.cellForRowAtIndexPath(indexPath)!.frame,
+                self.popoverController = UIPopoverController(contentViewController: nv)
+                self.popoverController!.delegate = self
+                self.popoverController!.presentPopoverFromRect(tableView.cellForRowAtIndexPath(indexPath)!.frame,
                     inView: tableView, permittedArrowDirections: .Any, animated: true)
             }
         } else if idx >= 0 {
             // transaction view を表示
-            if self.searchController!.active {
+            if isSearching() {
                 let e = self.searchResults[idx]
                 self.tappedIndex = e.originalIndex
             } else {
@@ -519,7 +517,7 @@ class TransactionListViewController : UIViewController,
         }
 
         if (editingStyle == .Delete) {
-            if self.searchController!.active {
+            if isSearching() {
                 let e = self.searchResults[entryIndex]
                 self.asset!.deleteEntryAt(e.originalIndex)
             
@@ -661,7 +659,7 @@ class TransactionListViewController : UIViewController,
         // が競合してしまう。
         self.dismissPopover()
 
-        mPopoverController = pc
+        self.popoverController = pc
     }
 
 
@@ -694,6 +692,11 @@ class TransactionListViewController : UIViewController,
     }
 
     // MARK: - 検索処理
+
+    func isSearching() -> Bool {
+        return self.searchController!.active
+    }
+
     func updateSearchResultWithDesc(searchString: String?) {
         var allMatch = false
         if (searchString == nil || searchString!.isEmpty) {
