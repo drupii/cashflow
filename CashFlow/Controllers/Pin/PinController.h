@@ -7,8 +7,8 @@
 
 // PIN code controller
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
+
 #import "PinVC.h"
 
 @interface PinController : NSObject <PinViewDelegate>

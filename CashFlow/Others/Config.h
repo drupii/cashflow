@@ -5,7 +5,7 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 // 日時モード
 typedef NS_ENUM(NSInteger, DateTimeMode) {

@@ -5,7 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "Category.h"
 #import "DescLRU.h"
 #import "Database.h"

@@ -5,8 +5,7 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import "TransactionBase.h"
+@import UIKit;
 
 typedef NS_ENUM(NSInteger, TransactionType) {
     TransactionTypeOutgo = 0, //支払い

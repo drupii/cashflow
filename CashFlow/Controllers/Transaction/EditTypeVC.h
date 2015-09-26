@@ -5,8 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
+
 #import "GenSelectListVC.h"
 
 @class EditTypeViewController;

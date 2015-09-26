@@ -6,7 +6,7 @@
  */
 //  ReportCatVC.h
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface CatReportViewController : UITableViewController
 

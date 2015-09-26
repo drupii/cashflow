@@ -5,17 +5,15 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
+
 #import "Transaction.h"
 
 #import "EditTypeVC.h"
-//#import "EditDescVC.h"
 #import "CalcVC.h"
 #import "EditDateVC.h"
 #import "EditMemoVC.h"
 #import "CategoryListVC.h"
-//#import "CalendarViewController.h"
 #import "CFCalendarViewController.h"
 
 @class AssetEntry;

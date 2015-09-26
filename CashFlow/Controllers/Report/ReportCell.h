@@ -6,7 +6,7 @@
  */
 //  ReportCell.h
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface ReportCell : UITableViewCell
 

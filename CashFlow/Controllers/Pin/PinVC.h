@@ -6,8 +6,7 @@
  */
 // PIN code view
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
 
 @class PinViewController;
 

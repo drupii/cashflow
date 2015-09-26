@@ -5,9 +5,9 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import <MessageUI/MessageUI.h>
-#import <MessageUI/MFMailComposeViewController.h>
+@import UIKit;
+@import MessageUI;
+
 #import <DropboxSDK/DropboxSDK.h>
 
 #import "ExportServer.h"
