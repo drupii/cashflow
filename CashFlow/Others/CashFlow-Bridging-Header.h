@@ -6,8 +6,9 @@
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
 
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
+@import Fabric;
+@import Crashlytics;
+
 #import <DropboxSDK/DropboxSDK.h>
 
 #import "DropboxSecret.h"
@@ -24,8 +25,6 @@
 
 // Controllers
 #import "PinController.h"
-//#import "AssetListVC.h"
-//#import "TransactionListVC.h"
 #import "TransactionVC.h"
 #import "GenEditTextVC.h"
 #import "GenSelectListVC.h"
