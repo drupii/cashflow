@@ -19,8 +19,17 @@
 #import "Config.h"
 #import "DateFormatter2.h"
 
+// ormapper
+#import "Database.h"
+#import "ORRecord.h"
+#import "ORQuery.h"
+#import "Dbstmt.h"
+
 // Base Models
+#import "AssetBase.h"
 #import "TransactionBase.h"
+#import "DescLRU.h"
+#import "TCategoryBase.h"
 
 // Models
 #import "Asset.h"
