@@ -14,7 +14,7 @@
 #import "DataModelSync.h"
 
 //#import "AssetListVC.h"
-#import "TransactionListVC.h"
+//#import "TransactionListVC.h"
 
 #define DBNAME  @"CashFlow.db"
 

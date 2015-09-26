@@ -17,7 +17,7 @@ class TransactionListViewController : UIViewController,
     UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate, CalculatorViewDelegate, UISplitViewControllerDelegate,
     BackupViewDelegate, UIPopoverControllerDelegate, UISearchDisplayDelegate, UISearchBarDelegate, AdManagerDelegate
 {
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var barBalanceLabel: UIBarButtonItem!
     @IBOutlet weak var barActionButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
@@ -257,7 +257,7 @@ class TransactionListViewController : UIViewController,
         aframe.size = adSize
     
         // 広告をアニメーション表示させる
-        UIView.beginAnimations("ShowAd", context: NULL)
+        UIView.beginAnimations("ShowAd", context: nil)
         adView.frame = aframe
         UIView.commitAnimations()
 #endif
@@ -284,16 +284,16 @@ class TransactionListViewController : UIViewController,
         frame.size.height += adSize.height;
         _tableView.frame = frame;
         */
-        tableView.contentInset = self.tableViewInsetSave;
+        tableView.contentInset = self.tableViewInsetSave!
     
         // 広告の位置
-        let aframe = frame
+        var aframe = frame
         aframe.origin.x = (frame.size.width - adSize.width) / 2
         aframe.origin.y = frame.size.height
         aframe.size = adSize
     
         // 広告をアニメーション表示させる
-        UIView.beginAnimations("HideAd", context: NULL)
+        UIView.beginAnimations("HideAd", context: nil)
         adView.frame = aframe
         UIView.commitAnimations()
     
@@ -516,7 +516,7 @@ class TransactionListViewController : UIViewController,
     }
 
     // MARK: - Show Report
-    func showReport(sender: AnyObject) {
+    @IBAction func showReport(sender: AnyObject) {
         let reportVC = ReportViewController.instantiate()
         reportVC.setAsset(self.asset)
 
@@ -532,7 +532,7 @@ class TransactionListViewController : UIViewController,
     // MARK: - Action sheet handling
 
     // action sheet
-    func doAction(sender: AnyObject) {
+    @IBAction func doAction(sender: AnyObject) {
         if self.actionSheet != nil {
             return
         }
