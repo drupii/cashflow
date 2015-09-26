@@ -15,7 +15,7 @@
 - (void)editTypeViewChanged:(EditTypeViewController*)vc;
 @end
 
-@interface EditTypeViewController : UITableViewController <GenSelectListViewDelegate>
+@interface EditTypeViewController : UITableViewController
 
 @property(nonatomic,unsafe_unretained) id<EditTypeViewDelegate> delegate;
 @property(nonatomic,assign) NSInteger type;

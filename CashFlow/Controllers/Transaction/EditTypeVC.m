@@ -18,6 +18,9 @@
 #import "EditTypeVC.h"
 #import "Transaction.h"
 
+@interface EditTypeViewController() <GenSelectListViewDelegate>
+@end
+
 @implementation EditTypeViewController
 
 - (instancetype)init

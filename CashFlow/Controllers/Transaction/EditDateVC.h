@@ -19,7 +19,7 @@
 - (void)editDateViewChanged:(EditDateViewController*)vc;
 @end
 
-@interface EditDateViewController : UIViewController <CFCalendarViewControllerDelegate>
+@interface EditDateViewController : UIViewController
 
 @property(nonatomic,unsafe_unretained) id<EditDateViewDelegate> delegate;
 @property(nonatomic,strong) NSDate *date;

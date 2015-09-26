@@ -12,7 +12,7 @@
 #import "AppDelegate.h"
 #import "Config.h"
 
-@interface EditDateViewController ()
+@interface EditDateViewController () <CFCalendarViewControllerDelegate>
 - (void)doneAction;
 @end
 
