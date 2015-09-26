@@ -13,19 +13,24 @@ import iAd
 //import GoogleMobileAds
 #endif
 
+@available(iOS 8.0, *)
 class TransactionListViewController : UIViewController,
     UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate, CalculatorViewDelegate, UISplitViewControllerDelegate,
-    BackupViewDelegate, UIPopoverControllerDelegate, UISearchDisplayDelegate, UISearchBarDelegate, AdManagerDelegate
+    BackupViewDelegate, UIPopoverControllerDelegate, UISearchControllerDelegate, UISearchBarDelegate, AdManagerDelegate
 {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var barBalanceLabel: UIBarButtonItem!
     @IBOutlet weak var barActionButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
     
+    
     var splitAssetListViewController: AssetListViewController!
     var assetKey: Int = 0
 
+    // 検索
+    var searchController: UISearchController!
     var searchResults: [AssetEntry] = []
+
     private var tappedIndex: Int = 0
 
     // For Free version
@@ -40,7 +45,8 @@ class TransactionListViewController : UIViewController,
 
     static func instantiate() -> TransactionListViewController {
         let sb = UIStoryboard(name: "TransactionListView", bundle:nil)
-        return sb.instantiateInitialViewController() as! TransactionListViewController
+        let vc = sb.instantiateInitialViewController() as! TransactionListViewController
+        return vc
     }
 
     required init?(coder: NSCoder) {
@@ -106,6 +112,23 @@ class TransactionListViewController : UIViewController,
         nc.addObserver(self, selector: Selector("willEnterForeground"), name: "willEnterForeground", object: nil)
         nc.addObserver(self, selector: Selector("willResignActive"), name: "willResignActive", object: nil)
 
+        // SearchController 作成
+        let sc = UISearchController(searchResultsController: nil)
+        //sc.searchResultsUpdater = self
+        sc.dimsBackgroundDuringPresentation = false
+        self.definesPresentationContext = true
+        
+        //sc.searchBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, 44)
+        sc.searchBar.sizeToFit()
+        sc.searchBar.returnKeyType = .Done
+        //sc.searchBar.placeholder = "Search"
+        sc.searchBar.delegate = self
+        sc.delegate = self
+        self.searchController = sc
+        
+        // Header に SearchBar を設定
+        self.tableView.tableHeaderView = sc.searchBar
+        
         // AdManager 設定
         self.isAdShowing = false
         self.adManager = AdManager.sharedInstance()
@@ -129,9 +152,9 @@ class TransactionListViewController : UIViewController,
         self.tableView?.reloadData()
     
         // 検索中
-        if self.searchDisplayController!.active {
-            self.updateSearchResultWithDesc(self.searchDisplayController!.searchBar.text)
-            self.searchDisplayController?.searchResultsTableView.reloadData()
+        if self.searchController!.active {
+            self.updateSearchResultWithDesc(self.searchController!.searchBar.text)
+            self.tableView!.reloadData()
         }
     
         self.dismissPopover()
@@ -335,7 +358,7 @@ class TransactionListViewController : UIViewController,
             return 0
         }
 
-        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+        if self.searchController!.active {
             return self.searchResults.count
         } else {
             return asset.entryCount + 1
@@ -348,7 +371,7 @@ class TransactionListViewController : UIViewController,
 
     // 指定セル位置に該当する entry Index を返す
     private func entryIndexWithIndexPath(indexPath: NSIndexPath, tableView:UITableView) -> Int {
-        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+        if self.searchController!.active {
             return self.searchResults.count - 1 - indexPath.row
         } else {
             return self.asset!.entryCount - 1 - indexPath.row
@@ -363,7 +386,7 @@ class TransactionListViewController : UIViewController,
             return nil  // initial balance
         }
         var e: AssetEntry
-        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+        if self.searchController!.active {
             e = self.searchResults[idx]
         } else {
             e = self.asset!.entryAt(idx)
@@ -421,7 +444,7 @@ class TransactionListViewController : UIViewController,
             }
         } else if idx >= 0 {
             // transaction view を表示
-            if tableView == self.searchDisplayController!.searchResultsTableView {
+            if self.searchController!.active {
                 let e = self.searchResults[idx]
                 self.tappedIndex = e.originalIndex
             } else {
@@ -496,12 +519,12 @@ class TransactionListViewController : UIViewController,
         }
 
         if (editingStyle == .Delete) {
-            if tableView == self.searchDisplayController!.searchResultsTableView {
+            if self.searchController!.active {
                 let e = self.searchResults[entryIndex]
                 self.asset!.deleteEntryAt(e.originalIndex)
             
                 // 検索結果一覧を更新する
-                self.updateSearchResultWithDesc(self.searchDisplayController!.searchBar.text)
+                self.updateSearchResultWithDesc(self.searchController!.searchBar.text)
             } else {
                 self.asset!.deleteEntryAt(entryIndex)
             }
@@ -663,17 +686,11 @@ class TransactionListViewController : UIViewController,
         }
     }
 
-    // MARK: - UISearchDisplayController Delegate
-
-    func searchDisplayControllerWillBeginSearch(controller: UISearchDisplayController) {
-        // 検索用の tableView に、TransactionCell を register する。
-        TransactionCell.registerCell(controller.searchResultsTableView)
-    }
-
-    // 検索文字列が入力された
-    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String?) -> Bool {
-        self.updateSearchResultWithDesc(searchString)
-        return true
+    // MARK: - UISearchBar Delegate
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        self.updateSearchResultWithDesc(searchText)
+        self.tableView.reloadData()
     }
 
     // MARK: - 検索処理
@@ -706,7 +723,7 @@ class TransactionListViewController : UIViewController,
         }
     }
 
-    func searchDisplayControllerDidEndSearch(controller: UISearchDisplayController) {
+    func didDismissSearchController(searchController: UISearchController) {
         self.searchResults.removeAll()
     
         // 検索中にデータが変更されるケースがあるので、ここで reload する

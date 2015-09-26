@@ -25,9 +25,6 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <animations/>
                                     <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="MV9-4m-0VN" id="PUq-wP-ePd"/>
-                                    </connections>
                                 </searchBar>
                                 <connections>
                                     <outlet property="dataSource" destination="MV9-4m-0VN" id="lPr-S2-N2b"/>
@@ -72,22 +69,12 @@
                     <connections>
                         <outlet property="barActionButton" destination="7LI-7S-WvY" id="Tfk-eR-0BW"/>
                         <outlet property="barBalanceLabel" destination="HfJ-0C-yuf" id="JB2-nu-iwg"/>
-                        <outlet property="searchDisplayController" destination="jf4-fR-1JB" id="6Lj-Ur-SxU"/>
                         <outlet property="tableView" destination="nmn-sq-Dhs" id="Yrn-cX-ZZE"/>
                         <outlet property="toolbar" destination="GGs-Qd-sVD" id="FCh-Uh-J9Y"/>
                         <segue destination="ap8-oF-I49" kind="push" identifier="show" id="uXG-nQ-oXN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w77-4t-kzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="jf4-fR-1JB">
-                    <connections>
-                        <outlet property="delegate" destination="MV9-4m-0VN" id="ias-b4-RTQ"/>
-                        <outlet property="searchBar" destination="wtF-Oq-kni" id="4wC-pj-sdz"/>
-                        <outlet property="searchContentsController" destination="MV9-4m-0VN" id="twB-yY-PxT"/>
-                        <outlet property="searchResultsDataSource" destination="MV9-4m-0VN" id="1YQ-Nn-eGi"/>
-                        <outlet property="searchResultsDelegate" destination="MV9-4m-0VN" id="Opg-nc-xAG"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="129" y="22"/>
         </scene>
