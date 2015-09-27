@@ -1,6 +1,6 @@
 // -*-  Mode:ObjC; c-basic-offset:4; tab-width:8; indent-tabs-mode:nil -*-
 
-#import "CashFlow-Swift.h"
+#import "CashFlowTests-Swift.h"
 
 #import "TestCommon.h"
 #import "DataModel.h"
