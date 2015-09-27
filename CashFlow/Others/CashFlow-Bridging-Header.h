@@ -33,7 +33,6 @@
 
 // Models
 #import "Asset.h"
-#import "Category.h"
 
 // Controllers
 #import "PinController.h"

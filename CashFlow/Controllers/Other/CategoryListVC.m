@@ -5,9 +5,10 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
+#import "CashFlow-Swift.h"
+
 #import "AppDelegate.h"
 #import "CategoryListVC.h"
-#import "Category.h"
 #import "GenEditTextVC.h"
 
 @implementation CategoryListViewController

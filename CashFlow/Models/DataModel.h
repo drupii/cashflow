@@ -7,12 +7,12 @@
 
 @import UIKit;
 
-#import "Category.h"
 #import "DescLRU.h"
 #import "Database.h"
 
 @class Ledger;
 @class Journal;
+@class Categories;
 
 @protocol DataModelDelegate
 - (void)dataModelLoaded;
