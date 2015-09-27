@@ -1,61 +1,46 @@
-// -*-  Mode:ObjC; c-basic-offset:4; tab-width:8; indent-tabs-mode:nil -*-
+import UIKit
+import XCTest
 
-#import "CashFlow-Swift.h"
+@testable import CashFlow
 
-#import "TestCommon.h"
-#import "DescLRU.h"
-#import "DescLRUManager.h"
+class EditDescViewControllerTest : ViewControllerWithNavBarTestCase, EditDescViewDelegate {
+    var _description: String?
 
-@interface EditDescViewControllerTest : ViewControllerWithNavBarTestCase <EditDescViewDelegate> {
-    NSString *mDescription;
-}
+    override func createViewController() -> UIViewController! {
+        // storyboard から生成
+        let sb = UIStoryboard(name: "EditDescView", bundle: nil)
+        let vc = sb.instantiateInitialViewController()!
 
-@property(retain, readonly) EditDescViewController *vc;
+        // 重要: loadView を実行する
+        vc.performSelectorOnMainThread(Selector("loadView"), withObject: nil, waitUntilDone: true)
+        return vc
+    }
 
-@end
+    func editDescViewController() -> EditDescViewController {
+        return self.viewController as! EditDescViewController
+    }
 
-@implementation EditDescViewControllerTest
+    // MARK: - UIViewControllerTest methods
 
-- (UIViewController *)createViewController
-{
-    // storyboard から生成
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"EditDescView" bundle:nil];
-    UIViewController *vc = [sb instantiateInitialViewController];
+    override func viewControllerName() -> String! {
+        return "EditDescViewController";
+    }
 
-    // 重要: loadView を実行する
-    [vc performSelectorOnMainThread:@selector(loadView) withObject:nil waitUntilDone:YES];
-    return vc;
-}
+    override func viewControllerNibName() -> String! {
+        return "EditDescView"
+    }
 
-- (EditDescViewController *)vc
-{
-    return (EditDescViewController *)self.viewController;
-}
+    func hasNavigationController() -> Bool {
+        return true
+    }
+    
+    // MARK: - EditDescViewDelegate
 
-#pragma mark UIViewControllerTest methods
+    func editDescViewChanged(vc: EditDescViewController) {
+        self._description = vc.desc
+    }
 
-- (NSString *)viewControllerName
-{
-    return @"EditDescViewController";
-}
-
-- (NSString *)viewControllerNibName
-{
-    return @"EditDescView";
-}
-
-- (BOOL)hasNavigationController
-{
-    return YES;
-}
-
-#pragma mark EditDescViewDelegate
-
-- (void)editDescViewChanged:(EditDescViewController*)v
-{
-    mDescription = v.desc;
-}
-
+/*
 #pragma mark -
 
 - (void)setUp
@@ -180,5 +165,5 @@
     [self.vc tableView:self.vc.tableView didSelectRowAtIndexPath:indexPath];
     XCTAssertEqualObjects(@"test4", mDescription);
 }
-
-@end
+*/
+}
