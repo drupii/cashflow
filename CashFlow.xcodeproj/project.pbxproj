@@ -22,6 +22,7 @@
 		3E007ED01BA9BA2900923757 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007ECD1BA9BA2900923757 /* Report.swift */; settings = {ASSET_TAGS = (); }; };
 		3E035E9B1182B6E000711865 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
 		3E06C8EE1BB7B36600218B30 /* CashFlowTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E06C8ED1BB7B36600218B30 /* CashFlowTests-Info.plist */; settings = {ASSET_TAGS = (); }; };
+		3E06C8EF1BB7B40B00218B30 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB719DFAE01D69A82BB /* DataModel.m */; settings = {ASSET_TAGS = (); }; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -123,7 +124,6 @@
 		3EC0E5861BB7336400F28325 /* Dbstmt.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9A739106627A769F3CF /* Dbstmt.m */; settings = {ASSET_TAGS = (); }; };
 		3EC0E5871BB7336400F28325 /* AssetBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6FB8C37AC0F0BE71195 /* AssetBase.m */; settings = {ASSET_TAGS = (); }; };
 		3EC0E5881BB7336400F28325 /* DescLRU.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB13166AD062A3AD46234 /* DescLRU.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5891BB7336D00F28325 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB719DFAE01D69A82BB /* DataModel.m */; settings = {ASSET_TAGS = (); }; };
 		3EC0E58A1BB7338000F28325 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A3BB4870106242B819 /* Category.m */; settings = {ASSET_TAGS = (); }; };
 		3EC0E58B1BB7338000F28325 /* DescLRUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */; settings = {ASSET_TAGS = (); }; };
 		3EC0E58C1BB7338000F28325 /* DateFormatter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */; settings = {ASSET_TAGS = (); }; };
@@ -1652,7 +1652,6 @@
 				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
 				3EC0E59B1BB733F800F28325 /* GenSelectListVC.m in Sources */,
 				3E007EC81BA8694E00923757 /* CatReport.swift in Sources */,
-				3EC0E5891BB7336D00F28325 /* DataModel.m in Sources */,
 				3EC0E58A1BB7338000F28325 /* Category.m in Sources */,
 				3EC0E59C1BB733F800F28325 /* ConfigViewController.m in Sources */,
 				3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */,
@@ -1687,6 +1686,7 @@
 				3E3C01691BB1AD0200A39B97 /* CashflowDatabase.swift in Sources */,
 				3E26DF861BB6FB7800622946 /* Asset.swift in Sources */,
 				662AB3AF63A652A2728E280B /* SwiftUtils.swift in Sources */,
+				3E06C8EF1BB7B40B00218B30 /* DataModel.m in Sources */,
 				3EC0E5961BB733EA00F28325 /* ReportCatDetailVC.m in Sources */,
 				3EC0E59E1BB733F800F28325 /* BackupVC.m in Sources */,
 				3E3C01631BB1ACF700A39B97 /* Ledger.swift in Sources */,
