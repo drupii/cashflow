@@ -29,6 +29,7 @@
 		3E06C90D1BB7C2AB00218B30 /* ViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4A2307B1C969DF62F57 /* ViewControllerTestCase.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C90E1BB7C2B300218B30 /* PinVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF4EAE053DFFBB925491 /* PinVCTests.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9101BB7C2F600218B30 /* TransactionTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E06C9151BB7C40B00218B30 /* ReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9131BB7C40600218B30 /* ReportTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -316,6 +317,7 @@
 		3E06C8ED1BB7B36600218B30 /* CashFlowTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CashFlowTests-Info.plist"; sourceTree = "<group>"; };
 		3E06C9051BB7BDFC00218B30 /* AssetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		3E06C9101BB7C2F600218B30 /* TransactionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
+		3E06C9131BB7C40600218B30 /* ReportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTests.swift; sourceTree = "<group>"; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E10A5801BB10BFD006BCD6E /* Ledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		3E10A5821BB11227006BCD6E /* AssetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntry.swift; sourceTree = "<group>"; };
@@ -387,7 +389,6 @@
 		662AB0D857F2C229E01A0A86 /* InfoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoView.storyboard; sourceTree = "<group>"; };
 		662AB0FB7BC05AC8974EF01D /* EditTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTypeVC.h; sourceTree = "<group>"; };
 		662AB102FEA9549692A14BA3 /* PinView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "PinView-ipad.xib"; sourceTree = "<group>"; };
-		662AB114258914291C3316FE /* ReportTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTests.m; sourceTree = "<group>"; };
 		662AB119875202C3CFD13515 /* TimeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTests.m; sourceTree = "<group>"; };
 		662AB11A149EECD59514A19D /* ReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportVC.m; sourceTree = "<group>"; };
 		662AB12E9D846E31BB9DD3BA /* ExportCsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportCsv.h; sourceTree = "<group>"; };
@@ -1061,7 +1062,7 @@
 				662ABC7E3FEE6245876F1B50 /* JournalTests.m */,
 				662AB263111447B37A3E9A60 /* LedgerTests.m */,
 				3E06C9101BB7C2F600218B30 /* TransactionTests.swift */,
-				662AB114258914291C3316FE /* ReportTests.m */,
+				3E06C9131BB7C40600218B30 /* ReportTests.swift */,
 				662AB119875202C3CFD13515 /* TimeTests.m */,
 				662AB6289EDF57F52B01FB0E /* Common */,
 				662AB9C58D97809F43D54127 /* Supporting Files */,
@@ -1568,6 +1569,7 @@
 				3E06C90E1BB7C2B300218B30 /* PinVCTests.m in Sources */,
 				3E06C9011BB7BBF100218B30 /* AssetEntryTests.swift in Sources */,
 				3E06C90D1BB7C2AB00218B30 /* ViewControllerTestCase.m in Sources */,
+				3E06C9151BB7C40B00218B30 /* ReportTests.swift in Sources */,
 				3E06C9021BB7BD6800218B30 /* CurrencyManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
