@@ -555,20 +555,30 @@ class TransactionListViewController : UIViewController,
             return
         }
 
-        let s = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: _L("Cancel"), destructiveButtonTitle: nil)
+        let s = UIActionSheet()
+        //s.title = ""
+        s.delegate = self
+        s.addButtonWithTitle(_L("Cancel"))
+        s.cancelButtonIndex = 0
 
+        // 1
         let strExport = _L("Export")
         let strAllAssets = _L("All assets")
         s.addButtonWithTitle("\(strExport) \(strAllAssets)")
         
+        // 2
         let strThisAsset = _L("This asset")
         s.addButtonWithTitle("\(strExport) \(strThisAsset)")
         
+        // 3
         let strSync = _L("Sync")
         let strBackup = _L("Backup")
         s.addButtonWithTitle("\(strSync) / \(strBackup)")
         
+        // 4
         s.addButtonWithTitle(_L("Config"))
+        
+        // 5
         s.addButtonWithTitle(_L("Info"))
         
         self.actionSheet = s
