@@ -1754,6 +1754,7 @@
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:identifier}";
+				PRODUCT_MODULE_NAME = CashFlow;
 				PRODUCT_NAME = CashFlow;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
@@ -1777,6 +1778,7 @@
 					"$(SRCROOT)/Libraries/AdMob/AdapterIMobile",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:identifier}";
+				PRODUCT_MODULE_NAME = CashFlow;
 				PRODUCT_NAME = CashFlow;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7bf73d0f-2a24-4a77-a907-ea42930d8b68";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -1813,6 +1815,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "-D FREE_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.CashFlow-Free";
+				PRODUCT_MODULE_NAME = CashFlowFree;
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
 			};
@@ -1846,6 +1849,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "-D FREE_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.CashFlow-Free";
+				PRODUCT_MODULE_NAME = CashFlowFree;
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3196f994-8a42-4aea-9841-addd8fbda8cc";
@@ -1881,6 +1885,7 @@
 					XCTest,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_MODULE_NAME = CashFlowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CashFlowTests/CashFlowTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1914,6 +1919,7 @@
 					XCTest,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_MODULE_NAME = CashFlowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CashFlowTests/CashFlowTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1949,7 +1955,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_MODULE_NAME = CashFlow;
+				PRODUCT_MODULE_NAME = "";
 				PRODUCT_NAME = CashFlow;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -1980,7 +1986,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_MODULE_NAME = CashFlow;
+				PRODUCT_MODULE_NAME = "";
 				PRODUCT_NAME = CashFlow;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
