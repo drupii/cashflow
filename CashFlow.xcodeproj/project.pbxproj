@@ -24,7 +24,6 @@
 		3E06C9021BB7BD6800218B30 /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9051BB7BDFC00218B30 /* AssetTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3E06C9081BB7C23700218B30 /* DescLRUManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C90C1BB7C29800218B30 /* TimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB119875202C3CFD13515 /* TimeTests.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C90D1BB7C2AB00218B30 /* ViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4A2307B1C969DF62F57 /* ViewControllerTestCase.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C90E1BB7C2B300218B30 /* PinVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF4EAE053DFFBB925491 /* PinVCTests.m */; settings = {ASSET_TAGS = (); }; };
@@ -32,6 +31,7 @@
 		3E06C9151BB7C40B00218B30 /* ReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9131BB7C40600218B30 /* ReportTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9181BB7C50900218B30 /* LedgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9161BB7C50500218B30 /* LedgerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C91B1BB7C5FD00218B30 /* JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9191BB7C5F900218B30 /* JournalTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E06C91E1BB7C94800218B30 /* DescLRUManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C91C1BB7C94400218B30 /* DescLRUManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -322,6 +322,7 @@
 		3E06C9131BB7C40600218B30 /* ReportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTests.swift; sourceTree = "<group>"; };
 		3E06C9161BB7C50500218B30 /* LedgerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedgerTests.swift; sourceTree = "<group>"; };
 		3E06C9191BB7C5F900218B30 /* JournalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalTests.swift; sourceTree = "<group>"; };
+		3E06C91C1BB7C94400218B30 /* DescLRUManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescLRUManagerTests.swift; sourceTree = "<group>"; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E10A5801BB10BFD006BCD6E /* Ledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		3E10A5821BB11227006BCD6E /* AssetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntry.swift; sourceTree = "<group>"; };
@@ -401,7 +402,6 @@
 		662AB14DDD3F0ABF1D8365B0 /* TransactionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionVC.h; sourceTree = "<group>"; };
 		662AB1542F3EE3CFBA7E9604 /* ORQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORQuery.m; sourceTree = "<group>"; };
 		662AB1660F47E12F623BB039 /* ReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportVC.h; sourceTree = "<group>"; };
-		662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescLRUManagerTests.m; sourceTree = "<group>"; };
 		662AB18E3A787D95D81A463B /* ORQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORQuery.h; sourceTree = "<group>"; };
 		662AB1B4CEC8AFE20AE85E01 /* LogicTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		662AB1DC3351798DF355157B /* DescLRU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRU.h; sourceTree = "<group>"; };
@@ -1059,8 +1059,8 @@
 				3E06C9051BB7BDFC00218B30 /* AssetTests.swift */,
 				3E19827F1BB2630C00177021 /* AssetEntryTests.swift */,
 				3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */,
+				3E06C91C1BB7C94400218B30 /* DescLRUManagerTests.swift */,
 				3E1982831BB266AE00177021 /* DataModelTests.swift */,
-				662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */,
 				3E06C9191BB7C5F900218B30 /* JournalTests.swift */,
 				3E06C9161BB7C50500218B30 /* LedgerTests.swift */,
 				3E06C9101BB7C2F600218B30 /* TransactionTests.swift */,
@@ -1565,8 +1565,8 @@
 				3E06C90C1BB7C29800218B30 /* TimeTests.m in Sources */,
 				3E06C9001BB7BBEC00218B30 /* TestCommon.swift in Sources */,
 				3E06C9181BB7C50900218B30 /* LedgerTests.swift in Sources */,
+				3E06C91E1BB7C94800218B30 /* DescLRUManagerTests.swift in Sources */,
 				3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */,
-				3E06C9081BB7C23700218B30 /* DescLRUManagerTests.m in Sources */,
 				3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */,
 				3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */,
 				3E06C91B1BB7C5FD00218B30 /* JournalTests.swift in Sources */,
