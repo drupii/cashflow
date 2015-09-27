@@ -33,7 +33,6 @@
 
 // Models
 #import "Asset.h"
-#import "DescLRUManager.h"
 #import "Category.h"
 
 // Controllers

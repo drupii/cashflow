@@ -13,7 +13,6 @@
 #import "AppDelegate.h"
 #import "DataModel.h"
 #import "Config.h"
-#import "DescLRUManager.h"
 
 @implementation DataModel(Sync)
 
