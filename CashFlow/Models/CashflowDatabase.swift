@@ -6,7 +6,7 @@
 
 import Foundation
 
-class CashflowDatabase: Database {
+public class CashflowDatabase: Database {
 
     private(set) var needFixDateFormat: Bool
 
@@ -19,17 +19,17 @@ class CashflowDatabase: Database {
     /**
      * 初期化
      */
-    static func instantiate() {
+    public static func instantiate() {
         let db = CashflowDatabase()
         theInstance = db
         Database._setInstance(db)
     }
 
-    override static func instance() -> CashflowDatabase {
+    override public static func instance() -> CashflowDatabase {
         return theInstance!
     }
     
-    override init() {
+    override public init() {
         needFixDateFormat = false;
 	
         let utc = NSTimeZone(abbreviation: "UTC")
@@ -56,7 +56,7 @@ class CashflowDatabase: Database {
         super.init()
     }
 
-    override func dateFromString(str: String) -> NSDate {
+    override public func dateFromString(str: String) -> NSDate {
         var date: NSDate?
 
         if (str.characters.count == 14) { // yyyyMMddHHmmss
@@ -78,7 +78,7 @@ class CashflowDatabase: Database {
         return date!
     }
 
-    override func stringFromDate(date: NSDate) -> String {
+    override public func stringFromDate(date: NSDate) -> String {
         let str = dateFormatter1.stringFromDate(date)
         return str
     }

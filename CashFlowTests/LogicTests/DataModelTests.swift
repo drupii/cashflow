@@ -1,6 +1,8 @@
 import Foundation
 import XCTest
 
+@testable import CashFlow
+
 class DataModelTest : XCTestCase {
     var dm : DataModel! = nil
     

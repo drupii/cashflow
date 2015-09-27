@@ -1,6 +1,8 @@
 import UIKit
 import XCTest
 
+@testable import CashFlow
+
 class AssetEntryTest : XCTestCase {
     override func setUp() {
         super.setUp()

@@ -13,16 +13,16 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		3E007EC61BA8694E00923757 /* CatReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC51BA8694E00923757 /* CatReport.swift */; settings = {ASSET_TAGS = (); }; };
 		3E007EC71BA8694E00923757 /* CatReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC51BA8694E00923757 /* CatReport.swift */; settings = {ASSET_TAGS = (); }; };
-		3E007EC81BA8694E00923757 /* CatReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC51BA8694E00923757 /* CatReport.swift */; settings = {ASSET_TAGS = (); }; };
 		3E007ECA1BA86DE700923757 /* ReportEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC91BA86DE700923757 /* ReportEntry.swift */; settings = {ASSET_TAGS = (); }; };
 		3E007ECB1BA86DE700923757 /* ReportEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC91BA86DE700923757 /* ReportEntry.swift */; settings = {ASSET_TAGS = (); }; };
-		3E007ECC1BA86DE700923757 /* ReportEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007EC91BA86DE700923757 /* ReportEntry.swift */; settings = {ASSET_TAGS = (); }; };
 		3E007ECE1BA9BA2900923757 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007ECD1BA9BA2900923757 /* Report.swift */; settings = {ASSET_TAGS = (); }; };
 		3E007ECF1BA9BA2900923757 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007ECD1BA9BA2900923757 /* Report.swift */; settings = {ASSET_TAGS = (); }; };
-		3E007ED01BA9BA2900923757 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E007ECD1BA9BA2900923757 /* Report.swift */; settings = {ASSET_TAGS = (); }; };
 		3E035E9B1182B6E000711865 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
 		3E06C8EE1BB7B36600218B30 /* CashFlowTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E06C8ED1BB7B36600218B30 /* CashFlowTests-Info.plist */; settings = {ASSET_TAGS = (); }; };
-		3E06C8EF1BB7B40B00218B30 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB719DFAE01D69A82BB /* DataModel.m */; settings = {ASSET_TAGS = (); }; };
+		3E06C9001BB7BBEC00218B30 /* TestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982881BB26F3D00177021 /* TestCommon.swift */; settings = {ASSET_TAGS = (); }; };
+		3E06C9011BB7BBF100218B30 /* AssetEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19827F1BB2630C00177021 /* AssetEntryTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E06C9021BB7BD6800218B30 /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -31,22 +31,14 @@
 		3E10A5851BB12A48006BCD6E /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5841BB12A48006BCD6E /* Journal.swift */; settings = {ASSET_TAGS = (); }; };
 		3E13EE59114007D600523938 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13EE58114007D600523938 /* AVFoundation.framework */; };
 		3E197BF7121271D200105B20 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E035E9A1182B6E000711865 /* SystemConfiguration.framework */; };
-		3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19827F1BB2630C00177021 /* AssetEntryTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3E1982841BB266AE00177021 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3E19828A1BB271E000177021 /* TestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982881BB26F3D00177021 /* TestCommon.swift */; settings = {ASSET_TAGS = (); }; };
 		3E2376C51107481F00E4C329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E26DF7A1BB6542700622946 /* Info-free.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E26DF791BB6542700622946 /* Info-free.plist */; settings = {ASSET_TAGS = (); }; };
 		3E26DF7C1BB6D58700622946 /* EditDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF7B1BB6D58700622946 /* EditDescViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E26DF7D1BB6DEAF00622946 /* EditDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF7B1BB6D58700622946 /* EditDescViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3E26DF7E1BB6DEB000622946 /* EditDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF7B1BB6D58700622946 /* EditDescViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E26DF801BB6E85200622946 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF7F1BB6E85200622946 /* Transaction.swift */; settings = {ASSET_TAGS = (); }; };
 		3E26DF811BB6ED0800622946 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF7F1BB6E85200622946 /* Transaction.swift */; settings = {ASSET_TAGS = (); }; };
-		3E26DF821BB6ED0800622946 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF7F1BB6E85200622946 /* Transaction.swift */; settings = {ASSET_TAGS = (); }; };
 		3E26DF841BB6EEAC00622946 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF831BB6EEAC00622946 /* Asset.swift */; settings = {ASSET_TAGS = (); }; };
 		3E26DF851BB6FB7800622946 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF831BB6EEAC00622946 /* Asset.swift */; settings = {ASSET_TAGS = (); }; };
-		3E26DF861BB6FB7800622946 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DF831BB6EEAC00622946 /* Asset.swift */; settings = {ASSET_TAGS = (); }; };
-		3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3E338213133211C500861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E3382181332122700861610 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E338212133211C500861610 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E33821A1332123200861610 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13EE58114007D600523938 /* AVFoundation.framework */; };
@@ -54,17 +46,11 @@
 		3E347BB4169DC7CE002307AA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E347BB1169DC7B0002307AA /* CoreData.framework */; };
 		3E347BB5169DC7CF002307AA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E347BB1169DC7B0002307AA /* CoreData.framework */; };
 		3E3C015E1BB1ACE000A39B97 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
-		3E3C015F1BB1ACE000A39B97 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		3E3C01601BB1ACF400A39B97 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5841BB12A48006BCD6E /* Journal.swift */; settings = {ASSET_TAGS = (); }; };
-		3E3C01611BB1ACF500A39B97 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5841BB12A48006BCD6E /* Journal.swift */; settings = {ASSET_TAGS = (); }; };
 		3E3C01621BB1ACF700A39B97 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5801BB10BFD006BCD6E /* Ledger.swift */; settings = {ASSET_TAGS = (); }; };
-		3E3C01631BB1ACF700A39B97 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5801BB10BFD006BCD6E /* Ledger.swift */; settings = {ASSET_TAGS = (); }; };
 		3E3C01641BB1ACFA00A39B97 /* AssetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5821BB11227006BCD6E /* AssetEntry.swift */; settings = {ASSET_TAGS = (); }; };
-		3E3C01651BB1ACFB00A39B97 /* AssetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10A5821BB11227006BCD6E /* AssetEntry.swift */; settings = {ASSET_TAGS = (); }; };
 		3E3C01661BB1ACFE00A39B97 /* DataModelDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB94C91BB18B630083ACA7 /* DataModelDateUtils.swift */; settings = {ASSET_TAGS = (); }; };
-		3E3C01671BB1ACFF00A39B97 /* DataModelDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB94C91BB18B630083ACA7 /* DataModelDateUtils.swift */; settings = {ASSET_TAGS = (); }; };
 		3E3C01681BB1AD0200A39B97 /* CashflowDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */; settings = {ASSET_TAGS = (); }; };
-		3E3C01691BB1AD0200A39B97 /* CashflowDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */; settings = {ASSET_TAGS = (); }; };
 		3E3F525014651654005CBD9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF966FD1464FD3900A24626 /* libsqlite3.dylib */; };
 		3E3F525114651654005CBD9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF966FD1464FD3900A24626 /* libsqlite3.dylib */; };
 		3E3F525214651654005CBD9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF966FD1464FD3900A24626 /* libsqlite3.dylib */; };
@@ -74,7 +60,6 @@
 		3E50B5FA1A14FBF400F5D034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E50B5F71A14FBF400F5D034 /* Localizable.strings */; };
 		3E5C63EE1BB2D41600CA60AA /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E5C63EF1BB2EEC000CA60AA /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3E5C63F01BB2EEC100CA60AA /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E648E281B54181F00ED3AEA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E261B54181F00ED3AEA /* Fabric.framework */; };
 		3E648E291B54182000ED3AEA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E261B54181F00ED3AEA /* Fabric.framework */; };
 		3E648E2A1B54182000ED3AEA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E271B54181F00ED3AEA /* Crashlytics.framework */; };
@@ -94,7 +79,6 @@
 		3E8B25B90F348C090007929E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6F5D5E0EB8C30B0082F50A /* AudioToolbox.framework */; };
 		3EAEE6231BB64E5B00B1DA08 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEE6221BB64E5B00B1DA08 /* TransactionListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3EAEE6241BB64E5E00B1DA08 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEE6221BB64E5B00B1DA08 /* TransactionListViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3EAEE6251BB64E5E00B1DA08 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEE6221BB64E5B00B1DA08 /* TransactionListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB554B4103B92D700BA13D4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB554B3103B92D700BA13D4 /* QuartzCore.framework */; };
 		3EB554B5103B92D700BA13D4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB554B3103B92D700BA13D4 /* QuartzCore.framework */; };
 		3EB5552E103B930D00BA13D4 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB5552D103B930D00BA13D4 /* AddressBook.framework */; };
@@ -109,56 +93,20 @@
 		3EB88E8D17F700B00045780D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB88E8C17F700B00045780D /* StoreKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3EB88E8E17F702170045780D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB88E8C17F700B00045780D /* StoreKit.framework */; };
 		3EB9D9A51BB4449D00E699A7 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3EB9D9A61BB4449D00E699A7 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB9D9AA1BB581D800E699A7 /* NullAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9A91BB581D800E699A7 /* NullAdManager.swift */; settings = {ASSET_TAGS = (); }; };
-		3EB9D9AB1BB581DD00E699A7 /* NullAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9A91BB581D800E699A7 /* NullAdManager.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB9D9AC1BB581E100E699A7 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9A71BB446AB00E699A7 /* AdManager.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB9D9AE1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB9D9AF1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		3EB9D9B01BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5811BB7335A00F28325 /* TransactionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8FE55579EB49E68194B /* TransactionBase.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5821BB7335D00F28325 /* TCategoryBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB267427DAA82536D9442 /* TCategoryBase.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5831BB7336400F28325 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3FA5D32E12BBDA04AB4 /* Database.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5841BB7336400F28325 /* ORRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDE6B2440D05D6A85432 /* ORRecord.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5851BB7336400F28325 /* ORQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB1542F3EE3CFBA7E9604 /* ORQuery.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5861BB7336400F28325 /* Dbstmt.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9A739106627A769F3CF /* Dbstmt.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5871BB7336400F28325 /* AssetBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6FB8C37AC0F0BE71195 /* AssetBase.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5881BB7336400F28325 /* DescLRU.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB13166AD062A3AD46234 /* DescLRU.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E58A1BB7338000F28325 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A3BB4870106242B819 /* Category.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E58B1BB7338000F28325 /* DescLRUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E58C1BB7338000F28325 /* DateFormatter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E58D1BB733DD00F28325 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E58E1BB733DD00F28325 /* EditDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB26BA59401CD8FCDE181 /* EditDateVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E58F1BB733DD00F28325 /* EditTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB93A469BA46121E9E6BF /* EditTypeVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5901BB733DD00F28325 /* EditMemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8E7413740C6A594F849 /* EditMemoVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5911BB733E300F28325 /* CalcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5921BB733EA00F28325 /* ReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB11A149EECD59514A19D /* ReportVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5931BB733EA00F28325 /* ReportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4F1B1EEDAC64D02C067 /* ReportCell.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5941BB733EA00F28325 /* ReportCatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB414AF4CCDC010CC654F /* ReportCatVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5951BB733EA00F28325 /* ReportCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABD898171C964B71187B8 /* ReportCatCell.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5961BB733EA00F28325 /* ReportCatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A9A413A840094876F6 /* ReportCatDetailVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5971BB733EA00F28325 /* ReportCatGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5981BB733EF00F28325 /* PinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA85E4FE950C1B4176F3 /* PinVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E5991BB733EF00F28325 /* PinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABBECC87A505590735192 /* PinController.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E59A1BB733F800F28325 /* GenEditTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6B4A813C37CACEA1B8D /* GenEditTextVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E59B1BB733F800F28325 /* GenSelectListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF41E1D67D8823553504 /* GenSelectListVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E59C1BB733F800F28325 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA7E583EE4CCC39387C9 /* ConfigViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E59D1BB733F800F28325 /* CategoryListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6B4BD5ABDD91D16795C /* CategoryListVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E59E1BB733F800F28325 /* BackupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE0DB0603900D19CF07A /* BackupVC.m */; settings = {ASSET_TAGS = (); }; };
-		3EC0E59F1BB733F800F28325 /* ExportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB38D4410C04B96DF1C5D /* ExportVC.m */; settings = {ASSET_TAGS = (); }; };
 		3EC572D71107451F00A551D5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3EDA9BE91BB293D700C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
 		3EDA9BEA1BB2944900C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
-		3EDA9BEB1BB2944A00C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A1D1BB13A82009CBE96 /* CashflowDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A271BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A281BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
-		3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A2C1BB14EF2009CBE96 /* DataModelSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */; settings = {ASSET_TAGS = (); }; };
 		3EE38A2D1BB14EF2009CBE96 /* DataModelSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */; settings = {ASSET_TAGS = (); }; };
-		3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A2A1BB14EF2009CBE96 /* DataModelSync.m */; settings = {ASSET_TAGS = (); }; };
 		3EE5E70C18A9260200B23A99 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C01831495600070F72 /* libAdapterNend.a */; };
 		3EE5E70F18A9260700B23A99 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2C11831495600070F72 /* libNendAd.a */; };
 		3EE5E71218A9262200B23A99 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDC2CF18314B6500070F72 /* libAdapterIMobile.a */; };
@@ -191,7 +139,6 @@
 		662AB0CE75D927C4DBAE15D6 /* ExportBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB434E5D488CE9605F27B /* ExportBase.m */; };
 		662AB0D9A2A8FCFE00D50E4B /* EditDateView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB766200385B37D7BC644 /* EditDateView.storyboard */; };
 		662AB0F90BB60BFAF84D310E /* BackupServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB82EB1487667CBB05D82 /* BackupServer.m */; };
-		662AB12482FD2CE7593FD54C /* PinControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4FA3A3D31822B02B065 /* PinControllerTests.m */; };
 		662AB1336AD22E95E3570DB5 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		662AB139188CAF1D60B68416 /* ReportCatGraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */; };
 		662AB1513C67FD3E858A9CEF /* ORQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB1542F3EE3CFBA7E9604 /* ORQuery.m */; };
@@ -203,7 +150,6 @@
 		662AB22C82AC33027AC91839 /* ReportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4F1B1EEDAC64D02C067 /* ReportCell.m */; };
 		662AB240A402D571C6A9123B /* EditMemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB86FCD18774AE9154079 /* EditMemoView.xib */; };
 		662AB254335CD0BABE4192B9 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5E6EBADB4068083DCBC /* UIDevice+Hardware.m */; };
-		662AB259CBAA4A4D686B8FE7 /* ViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4A2307B1C969DF62F57 /* ViewControllerTestCase.m */; };
 		662AB26125143CC66416EC28 /* DropboxBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB7BBE61AA613A3167C9A /* DropboxBackup.m */; };
 		662AB269A706F0A0823AF3E1 /* ORRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDE6B2440D05D6A85432 /* ORRecord.m */; };
 		662AB28E1B66AAE37838FF78 /* ReportCatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A9A413A840094876F6 /* ReportCatDetailVC.m */; };
@@ -221,23 +167,18 @@
 		662AB380190581C76DCC7DB0 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5A843B0137D18F91C90 /* SwiftUtils.swift */; };
 		662AB380A90DE10CE0670AE3 /* ExportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABCB53174869FC778FDA9 /* ExportView.storyboard */; };
 		662AB38D91112AB8DB431A49 /* BackupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB45ECA675DB52757BD7D /* BackupView.storyboard */; };
-		662AB3AF63A652A2728E280B /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5A843B0137D18F91C90 /* SwiftUtils.swift */; };
 		662AB3B22938BFFC206F3C13 /* ReportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB943BAFEE09051FD3803 /* ReportView.storyboard */; };
-		662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */; };
 		662AB3ECDBD28A5D2C89DA56 /* AssetListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABAA20836AB99EE17C031 /* AssetListView.storyboard */; };
 		662AB3F4042957BAF12DA6DA /* PinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA85E4FE950C1B4176F3 /* PinVC.m */; };
-		662AB3F4E233DAFD6A216A9B /* PinVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF4EAE053DFFBB925491 /* PinVCTests.m */; };
 		662AB44A22AE94B0BA8720E1 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB8D90BC1E43B40E0750D /* TransactionCell.xib */; };
 		662AB4B2F4FF8E013FC96291 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB5E6EBADB4068083DCBC /* UIDevice+Hardware.m */; };
 		662AB4B65DB2951A0D24A841 /* SupportMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9D9EC684EED6E3555C2 /* SupportMail.m */; };
 		662AB4D633989C2F96647019 /* PinView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB102FEA9549692A14BA3 /* PinView-ipad.xib */; };
-		662AB4DD2EBD20A7937D50F9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABAB142EB1301EB4C50AA /* InfoViewController.swift */; };
 		662AB4F31A14A00F7BB7D6A5 /* ReportCatDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB0A9A413A840094876F6 /* ReportCatDetailVC.m */; };
 		662AB5076F346FEB346306F9 /* PinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA85E4FE950C1B4176F3 /* PinVC.m */; };
 		662AB50BCAB8EA701356AB0B /* EditDescView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB58889E462FBAC441E6C /* EditDescView.storyboard */; };
 		662AB515185A5DB6D66FD86E /* BackupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABE0DB0603900D19CF07A /* BackupVC.m */; };
 		662AB52221B79D526A39006C /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662AB4529F18D3B7927856D5 /* images.xcassets */; };
-		662AB5290BA65A5E254DA9CA /* TimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB119875202C3CFD13515 /* TimeTests.m */; };
 		662AB5443A91C480DD9BD947 /* TransactionListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB5FC768CAE796CDDEC2A /* TransactionListView.storyboard */; };
 		662AB551CAC740B07BF35F23 /* TCategoryBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB267427DAA82536D9442 /* TCategoryBase.m */; };
 		662AB5865B2BD4F518A4BBB3 /* DBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB551FD151CEF1F579143 /* DBLoadingView.m */; };
@@ -252,7 +193,6 @@
 		662AB66BC78257CCA56CDEC8 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA7E583EE4CCC39387C9 /* ConfigViewController.m */; };
 		662AB6903B2E7C34EC08BA92 /* GenSelectListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662ABE1B8C01DCFD97686C08 /* GenSelectListView.xib */; };
 		662AB6B9A9F4ADABF69B7C54 /* ExportServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8350396E665A2067FD1 /* ExportServer.m */; };
-		662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB114258914291C3316FE /* ReportTests.m */; };
 		662AB6E3F98479830414021B /* ExportView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABCB53174869FC778FDA9 /* ExportView.storyboard */; };
 		662AB70C19C4922E2397393F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC685A4413C6D86C01C6 /* AppDelegate.swift */; };
 		662AB72EF67749114D54020B /* AssetBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6FB8C37AC0F0BE71195 /* AssetBase.m */; };
@@ -294,20 +234,17 @@
 		662ABA16D73263CBA361C8B5 /* ConfigView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662ABB559663B1709F31433C /* ConfigView.storyboard */; };
 		662ABA1C854FC63F02950E08 /* BackupServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB82EB1487667CBB05D82 /* BackupServer.m */; };
 		662ABA238848910180228BBA /* EditTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB93A469BA46121E9E6BF /* EditTypeVC.m */; };
-		662ABA395B0AF6A61160E653 /* TransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB1C7750C5BC665D2901D /* TransactionTests.m */; };
 		662ABA3E5879DCBD1529CAC3 /* InfoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB0D857F2C229E01A0A86 /* InfoView.storyboard */; };
 		662ABA6BD448E5FE1BF94425 /* GenSelectListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662ABE1B8C01DCFD97686C08 /* GenSelectListView.xib */; };
 		662ABA6F2C6B93ED5A77ABE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB518A2EB0E46E7308358 /* LaunchScreen.xib */; };
 		662ABA77682F0EB6D92AB1BB /* WebServerBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3C0142643C4637E480F /* WebServerBackup.m */; };
 		662ABAB8FED7C40CD12A05D2 /* ReportCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABD898171C964B71187B8 /* ReportCatCell.m */; };
-		662ABACB2641D65E69DE2EE4 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8187E121C6CC4711496 /* CurrencyManager.swift */; };
 		662ABAE84AAD7BFDA3C77E44 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */; };
 		662ABAE89582370C0A2C21EE /* DescLRU.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB13166AD062A3AD46234 /* DescLRU.m */; };
 		662ABB13A5DA88C4CA2BB57A /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB8C90AFF3A337196E034 /* PinView.xib */; };
 		662ABB1EBD7201F2ADB780C6 /* GenEditTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB7F1C8388EF9E38A4D79 /* GenEditTextView.xib */; };
 		662ABB21611C4469358C9708 /* EditDescView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB58889E462FBAC441E6C /* EditDescView.storyboard */; };
 		662ABB290254E7C52AC6BC5D /* PinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABBECC87A505590735192 /* PinController.m */; };
-		662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */; };
 		662ABB8414248F5883C66078 /* TransactionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8FE55579EB49E68194B /* TransactionBase.m */; };
 		662ABB8984ADF017D9E55B6B /* EditMemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8E7413740C6A594F849 /* EditMemoVC.m */; };
 		662ABB91B652141D39C26383 /* artwork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 662AB64D40A3695CC9DC421C /* artwork.jpg */; };
@@ -315,20 +252,15 @@
 		662ABBA5D93EE82C5E477F06 /* DescLRUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABCD7D7693C8A2740B9F5 /* DescLRUManager.m */; };
 		662ABBBB404C1E439FC4A414 /* CFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */; };
 		662ABBC04AC5A71CF6990A9A /* ReportCatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB414AF4CCDC010CC654F /* ReportCatVC.m */; };
-		662ABBE44572B63DD363A17A /* AssetListVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB65EEB4F00F6B04073C7 /* AssetListVCTests.m */; };
 		662ABBF3F9BEEB2B9343E5E0 /* EditDescView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB58889E462FBAC441E6C /* EditDescView.storyboard */; };
 		662ABBF51EAB1CD7FF1E530F /* CategoryListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662ABFD92A03C72D8D61AE38 /* CategoryListView.xib */; };
-		662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB263111447B37A3E9A60 /* LedgerTests.m */; };
 		662ABC25DF16EB432F3BE48A /* WebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB75AE68253A138C2AB3A /* WebServer.m */; };
 		662ABC4D89910A0A3E352132 /* CFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABB5457A1B6CE2CF4BD6D /* CFCalendarViewController.m */; };
 		662ABC5386E278B457F6D73A /* AssetBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB6FB8C37AC0F0BE71195 /* AssetBase.m */; };
 		662ABC54D88370A1A7DAAB05 /* EditDateView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB766200385B37D7BC644 /* EditDateView.storyboard */; };
-		662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC7E3FEE6245876F1B50 /* JournalTests.m */; };
 		662ABC95D956E3773A2EC0E4 /* ExportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB38D4410C04B96DF1C5D /* ExportVC.m */; };
 		662ABCBBE88473E97FB17DAB /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		662ABD2214EA890DFD188364 /* EditDateView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB766200385B37D7BC644 /* EditDateView.storyboard */; };
-		662ABD51B132C111EDBDD3C0 /* EditDescVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB8BF186568524BD6F97B /* EditDescVCTests.m */; };
-		662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABC0BBC45BD44C15D714B /* AssetTests.m */; };
 		662ABD6A6701E8DAE26CFC18 /* Dbstmt.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9A739106627A769F3CF /* Dbstmt.m */; };
 		662ABDC864D93C8B12B622A6 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */; };
 		662ABDDF6D92BBB7EE6DD396 /* CalcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */; };
@@ -1621,78 +1553,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EC0E59F1BB733F800F28325 /* ExportVC.m in Sources */,
-				3EC0E59D1BB733F800F28325 /* CategoryListVC.m in Sources */,
-				3EC0E58F1BB733DD00F28325 /* EditTypeVC.m in Sources */,
-				3EC0E58C1BB7338000F28325 /* DateFormatter2.m in Sources */,
-				662ABBE44572B63DD363A17A /* AssetListVCTests.m in Sources */,
-				3EB9D9AB1BB581DD00E699A7 /* NullAdManager.swift in Sources */,
-				3E007ECC1BA86DE700923757 /* ReportEntry.swift in Sources */,
-				3EAEE6251BB64E5E00B1DA08 /* TransactionListViewController.swift in Sources */,
-				3EC0E58E1BB733DD00F28325 /* EditDateVC.m in Sources */,
-				3E3C01671BB1ACFF00A39B97 /* DataModelDateUtils.swift in Sources */,
-				3E3C015F1BB1ACE000A39B97 /* Config.swift in Sources */,
-				662ABD51B132C111EDBDD3C0 /* EditDescVCTests.m in Sources */,
-				662AB12482FD2CE7593FD54C /* PinControllerTests.m in Sources */,
-				3EC0E5931BB733EA00F28325 /* ReportCell.m in Sources */,
-				3E1982841BB266AE00177021 /* DataModelTests.swift in Sources */,
-				3EC0E5861BB7336400F28325 /* Dbstmt.m in Sources */,
-				662AB3F4E233DAFD6A216A9B /* PinVCTests.m in Sources */,
-				662AB259CBAA4A4D686B8FE7 /* ViewControllerTestCase.m in Sources */,
-				3EB9D9B01BB583E700E699A7 /* AdManagerDelegate.swift in Sources */,
-				3E26DF7E1BB6DEB000622946 /* EditDescViewController.swift in Sources */,
-				3EC0E5981BB733EF00F28325 /* PinVC.m in Sources */,
-				662ABD5E00E8804F981EE235 /* AssetTests.m in Sources */,
-				3EE38A2E1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
-				662ABB6F3508462E039D9ABC /* DescLRUManagerTests.m in Sources */,
-				3E007ED01BA9BA2900923757 /* Report.swift in Sources */,
-				662ABC6837E8C5709A5DE594 /* JournalTests.m in Sources */,
-				3EC0E5921BB733EA00F28325 /* ReportVC.m in Sources */,
-				3EC0E5941BB733EA00F28325 /* ReportCatVC.m in Sources */,
-				662ABC0FDA8B6AF845871609 /* LedgerTests.m in Sources */,
-				3EC0E59B1BB733F800F28325 /* GenSelectListVC.m in Sources */,
-				3E007EC81BA8694E00923757 /* CatReport.swift in Sources */,
-				3EC0E58A1BB7338000F28325 /* Category.m in Sources */,
-				3EC0E59C1BB733F800F28325 /* ConfigViewController.m in Sources */,
-				3E1982801BB2630C00177021 /* AssetEntryTests.swift in Sources */,
-				3EC0E5851BB7336400F28325 /* ORQuery.m in Sources */,
-				3E5C63F01BB2EEC100CA60AA /* AssetListViewController.swift in Sources */,
-				662AB6C912BE7D6B0D43E3CF /* ReportTests.m in Sources */,
-				3EE38A291BB14D93009CBE96 /* DataModelBackup.m in Sources */,
-				3E3C01611BB1ACF500A39B97 /* Journal.swift in Sources */,
-				3E19828A1BB271E000177021 /* TestCommon.swift in Sources */,
-				3EC0E5821BB7335D00F28325 /* TCategoryBase.m in Sources */,
-				662AB5290BA65A5E254DA9CA /* TimeTests.m in Sources */,
-				662ABA395B0AF6A61160E653 /* TransactionTests.m in Sources */,
-				3EDA9BEB1BB2944A00C4F3EB /* TransactionCell.swift in Sources */,
-				3EC0E5991BB733EF00F28325 /* PinController.m in Sources */,
-				3E1982821BB2649D00177021 /* CurrencyManagerTests.swift in Sources */,
-				3EC0E5871BB7336400F28325 /* AssetBase.m in Sources */,
-				3EC0E58B1BB7338000F28325 /* DescLRUManager.m in Sources */,
-				3EC0E5841BB7336400F28325 /* ORRecord.m in Sources */,
-				3EC0E5881BB7336400F28325 /* DescLRU.m in Sources */,
-				662AB4DD2EBD20A7937D50F9 /* InfoViewController.swift in Sources */,
-				3EC0E5951BB733EA00F28325 /* ReportCatCell.m in Sources */,
-				3EB9D9A61BB4449D00E699A7 /* AssetViewController.swift in Sources */,
-				662AB3CD7210BFA70CAE5494 /* CFCalendarViewController.m in Sources */,
-				3E2F33071BA3CBA900EF0DE5 /* AppDelegate.swift in Sources */,
-				3E26DF821BB6ED0800622946 /* Transaction.swift in Sources */,
-				3EC0E58D1BB733DD00F28325 /* TransactionVC.m in Sources */,
-				662ABACB2641D65E69DE2EE4 /* CurrencyManager.swift in Sources */,
-				3EC0E5971BB733EA00F28325 /* ReportCatGraphCell.m in Sources */,
-				3EC0E59A1BB733F800F28325 /* GenEditTextVC.m in Sources */,
-				3EC0E5911BB733E300F28325 /* CalcVC.m in Sources */,
-				3E3C01651BB1ACFB00A39B97 /* AssetEntry.swift in Sources */,
-				3E3C01691BB1AD0200A39B97 /* CashflowDatabase.swift in Sources */,
-				3E26DF861BB6FB7800622946 /* Asset.swift in Sources */,
-				662AB3AF63A652A2728E280B /* SwiftUtils.swift in Sources */,
-				3E06C8EF1BB7B40B00218B30 /* DataModel.m in Sources */,
-				3EC0E5961BB733EA00F28325 /* ReportCatDetailVC.m in Sources */,
-				3EC0E59E1BB733F800F28325 /* BackupVC.m in Sources */,
-				3E3C01631BB1ACF700A39B97 /* Ledger.swift in Sources */,
-				3EC0E5831BB7336400F28325 /* Database.m in Sources */,
-				3EC0E5901BB733DD00F28325 /* EditMemoVC.m in Sources */,
-				3EC0E5811BB7335A00F28325 /* TransactionBase.m in Sources */,
+				3E06C9001BB7BBEC00218B30 /* TestCommon.swift in Sources */,
+				3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */,
+				3E06C9011BB7BBF100218B30 /* AssetEntryTests.swift in Sources */,
+				3E06C9021BB7BD6800218B30 /* CurrencyManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1873,7 +1737,6 @@
 				);
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "CashFlowTests/CashFlowTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1907,7 +1770,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "CashFlowTests/CashFlowTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

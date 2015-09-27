@@ -1,6 +1,8 @@
 import Foundation
 import XCTest
 
+@testable import CashFlow
+
 class CurrencyManagerTests : XCTestCase {
     var manager: CurrencyManager = CurrencyManager.instance
 

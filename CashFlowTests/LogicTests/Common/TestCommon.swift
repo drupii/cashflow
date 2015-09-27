@@ -1,5 +1,7 @@
 import Foundation
 
+@testable import CashFlow
+
 class TestCommon : NSObject {
     static let kTestDbName = "CashFlowTest.db"
 
