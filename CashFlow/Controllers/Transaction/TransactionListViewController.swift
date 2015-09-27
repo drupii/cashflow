@@ -11,7 +11,7 @@ import UIKit
  */
 @available(iOS 8.0, *)
 class TransactionListViewController : UIViewController,
-    UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate, CalculatorViewDelegate, UISplitViewControllerDelegate,
+    UITableViewDelegate,UITableViewDataSource, CalculatorViewDelegate, UISplitViewControllerDelegate,
     BackupViewDelegate, UIPopoverControllerDelegate, UISearchControllerDelegate, UISearchBarDelegate, AdManagerDelegate
 {
     @IBOutlet weak var tableView: UITableView!
@@ -31,8 +31,6 @@ class TransactionListViewController : UIViewController,
     // For Free version
     private var adManager: AdManager?
     private var isAdShowing: Bool = false
-
-    private var actionSheet: UIActionSheet?
 
     private var popoverController: UIPopoverController?
     private var tableViewInsetSave: UIEdgeInsets?
@@ -185,10 +183,12 @@ class TransactionListViewController : UIViewController,
      * アプリが background に入るときの処理
      */
     func willResignActive() {
+        /*
         if let s = self.actionSheet {
             s.dismissWithClickedButtonIndex(0, animated: false)
             self.actionSheet = nil
         }
+        */
         //[self _dismissPopover];  // TODO: 効かない、、、
     }
 
@@ -547,97 +547,66 @@ class TransactionListViewController : UIViewController,
         self.navigationController?.presentViewController(nv, animated: true, completion: nil)
     }
 
-    // MARK: - Action sheet handling
+    // MARK: - Action Controller handling
 
     // action sheet
     @IBAction func doAction(sender: AnyObject) {
-        if self.actionSheet != nil {
-            return
-        }
-
-        let s = UIActionSheet()
-        //s.title = ""
-        s.delegate = self
-        s.addButtonWithTitle(_L("Cancel"))
-        s.cancelButtonIndex = 0
-
-        // 1
+        let c = UIAlertController(title: "Action", message: "", preferredStyle: .ActionSheet)
+        
+        c.addAction(UIAlertAction(title: _L("Cancel"), style: .Cancel, handler: { action in
+            // do nothing
+        }))
+        
         let strExport = _L("Export")
         let strAllAssets = _L("All assets")
-        s.addButtonWithTitle("\(strExport) \(strAllAssets)")
+        c.addAction(UIAlertAction(title: "\(strExport) \(strAllAssets)", style: .Default, handler: { action in
+            self.showActionView(ExportVC.instantiate(nil))
+        }))
         
-        // 2
+
         let strThisAsset = _L("This asset")
-        s.addButtonWithTitle("\(strExport) \(strThisAsset)")
+        c.addAction(UIAlertAction(title: "\(strExport) \(strThisAsset)", style: .Default, handler: { action in
+            self.showActionView(ExportVC.instantiate(self.asset!))
+        }))
         
         // 3
         let strSync = _L("Sync")
         let strBackup = _L("Backup")
-        s.addButtonWithTitle("\(strSync) / \(strBackup)")
+        c.addAction(UIAlertAction(title: "\(strSync) / \(strBackup)", style: .Default, handler: { action in
+            let nv = UIStoryboard(name: "BackupView", bundle: nil).instantiateInitialViewController() as! UINavigationController
+            let backupVC = nv.topViewController as! BackupViewController
+            backupVC.setDelegate(self)
+            self.showActionView(nv)
+        }))
         
         // 4
-        s.addButtonWithTitle(_L("Config"))
+        c.addAction(UIAlertAction(title: _L("Config"), style: .Default, handler: { action in
+            let nv = UIStoryboard(name: "ConfigView", bundle: nil).instantiateInitialViewController() as! UINavigationController
+            self.showActionView(nv)
+        }))
         
         // 5
-        s.addButtonWithTitle(_L("Info"))
-        
-        self.actionSheet = s
-        
+        c.addAction(UIAlertAction(title: _L("Info"), style: .Default, handler: { action in
+            self.showActionView(InfoViewController.instantiate())
+        }))
+
         if isIpad() {
-            s.showFromBarButtonItem(self.barActionButton, animated: true)
-        } else {
-            s.showInView(self.view)
+            c.popoverPresentationController?.sourceView = self.view
+            c.popoverPresentationController?.barButtonItem = self.barActionButton
         }
+        self.presentViewController(c, animated: true, completion: nil)
     }
 
-    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        //BackupViewController *backupVC;
-    
-        //UIViewController *vc;
-        //UIModalPresentationStyle modalPresentationStyle = UIModalPresentationFormSheet;
-    
-        self.actionSheet = nil
-    
-        var nv: UINavigationController
-
-        switch (buttonIndex) {
-            case 1:
-                nv = ExportVC.instantiate(nil)
-                break
-        
-            case 2:
-                nv = ExportVC.instantiate(self.asset!)
-                break
-            
-            case 3:
-                nv = UIStoryboard(name: "BackupView", bundle: nil).instantiateInitialViewController() as! UINavigationController
-                let backupVC = nv.topViewController as! BackupViewController
-                backupVC.setDelegate(self)
-                break
-            
-            case 4:
-                nv = UIStoryboard(name: "ConfigView", bundle: nil).instantiateInitialViewController() as! UINavigationController
-                break
-            
-            case 5:
-                nv = InfoViewController.instantiate()
-                break
-            
-            default:
-                return
-        }
-
+    private func showActionView(nv: UINavigationController) {
         if isIpad() {
             nv.modalPresentationStyle = .FormSheet
         }
-
-
-        
+            
         // iPad: actionsheet から presentViewController を直接呼び出せなくなった
         // http://stackoverflow.com/questions/24854802/presenting-a-view-controller-modally-from-an-action-sheets-delegate-in-ios8
-        dispatch_async(dispatch_get_main_queue(), { () in
+         dispatch_async(dispatch_get_main_queue(), { () in
             self.navigationController?.presentViewController(nv, animated: true, completion: nil)
-            })
+        })
     }
 
     // MARK: - BackupViewDelegate
