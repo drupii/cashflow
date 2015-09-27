@@ -24,7 +24,6 @@
 		3E06C9021BB7BD6800218B30 /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9051BB7BDFC00218B30 /* AssetTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3E06C90C1BB7C29800218B30 /* TimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB119875202C3CFD13515 /* TimeTests.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9101BB7C2F600218B30 /* TransactionTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9151BB7C40B00218B30 /* ReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9131BB7C40600218B30 /* ReportTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9181BB7C50900218B30 /* LedgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9161BB7C50500218B30 /* LedgerTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -71,6 +70,7 @@
 		3E4C6775134793A400DA87F6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E50B5F91A14FBF400F5D034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E50B5F71A14FBF400F5D034 /* Localizable.strings */; };
 		3E50B5FA1A14FBF400F5D034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E50B5F71A14FBF400F5D034 /* Localizable.strings */; };
+		3E511AAA1BB832010068E30A /* TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E511AA81BB8310C0068E30A /* TimeTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E5C63EE1BB2D41600CA60AA /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E5C63EF1BB2EEC000CA60AA /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E648E281B54181F00ED3AEA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E648E261B54181F00ED3AEA /* Fabric.framework */; };
@@ -358,6 +358,7 @@
 		3E50B6011A14FC1100F5D034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3E50B6021A14FC1600F5D034 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3E50B6031A14FC1900F5D034 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3E511AA81BB8310C0068E30A /* TimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTests.swift; sourceTree = "<group>"; };
 		3E5C63ED1BB2D41600CA60AA /* AssetListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListViewController.swift; sourceTree = "<group>"; };
 		3E648E261B54181F00ED3AEA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = /Users/tmurakam/dev/cashflow/Pods/CrashlyticsFramework/Fabric.framework; sourceTree = "<absolute>"; };
 		3E648E271B54181F00ED3AEA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = /Users/tmurakam/dev/cashflow/Pods/CrashlyticsFramework/Crashlytics.framework; sourceTree = "<absolute>"; };
@@ -404,7 +405,6 @@
 		662AB0D857F2C229E01A0A86 /* InfoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoView.storyboard; sourceTree = "<group>"; };
 		662AB0FB7BC05AC8974EF01D /* EditTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTypeVC.h; sourceTree = "<group>"; };
 		662AB102FEA9549692A14BA3 /* PinView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "PinView-ipad.xib"; sourceTree = "<group>"; };
-		662AB119875202C3CFD13515 /* TimeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTests.m; sourceTree = "<group>"; };
 		662AB11A149EECD59514A19D /* ReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportVC.m; sourceTree = "<group>"; };
 		662AB12E9D846E31BB9DD3BA /* ExportCsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportCsv.h; sourceTree = "<group>"; };
 		662AB13166AD062A3AD46234 /* DescLRU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescLRU.m; sourceTree = "<group>"; };
@@ -1069,7 +1069,7 @@
 				3E06C9161BB7C50500218B30 /* LedgerTests.swift */,
 				3E06C9101BB7C2F600218B30 /* TransactionTests.swift */,
 				3E06C9131BB7C40600218B30 /* ReportTests.swift */,
-				662AB119875202C3CFD13515 /* TimeTests.m */,
+				3E511AA81BB8310C0068E30A /* TimeTests.swift */,
 				662AB6289EDF57F52B01FB0E /* Common */,
 				662AB9C58D97809F43D54127 /* Supporting Files */,
 				662ABF37CBC04DDC23015463 /* testdata */,
@@ -1567,11 +1567,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E06C92E1BB8259E00218B30 /* ViewControllerWithNavBarTestCase.swift in Sources */,
-				3E06C90C1BB7C29800218B30 /* TimeTests.m in Sources */,
 				3E06C9001BB7BBEC00218B30 /* TestCommon.swift in Sources */,
 				3E06C9181BB7C50900218B30 /* LedgerTests.swift in Sources */,
 				3E06C9311BB82E1200218B30 /* PinViewControllerTests.swift in Sources */,
 				3E06C91E1BB7C94800218B30 /* DescLRUManagerTests.swift in Sources */,
+				3E511AAA1BB832010068E30A /* TimeTests.swift in Sources */,
 				3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */,
 				3E06C9211BB81DC700218B30 /* AssetListViewControllerTests.swift in Sources */,
 				3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */,
