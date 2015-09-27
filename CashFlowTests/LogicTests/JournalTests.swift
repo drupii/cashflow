@@ -30,7 +30,7 @@ class JournalTest : XCTestCase {
         journal = DataModel.getJournal();
     
         for (idx, t) in journal.entries.enumerate() {
-            XCTAssertEqual(idx, t.pid);
+            XCTAssertEqual(idx + 1, t.pid);
         }
     }
     
