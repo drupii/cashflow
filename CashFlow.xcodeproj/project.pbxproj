@@ -30,6 +30,7 @@
 		3E06C90E1BB7C2B300218B30 /* PinVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF4EAE053DFFBB925491 /* PinVCTests.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9101BB7C2F600218B30 /* TransactionTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9151BB7C40B00218B30 /* ReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9131BB7C40600218B30 /* ReportTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E06C9181BB7C50900218B30 /* LedgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9161BB7C50500218B30 /* LedgerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -318,6 +319,7 @@
 		3E06C9051BB7BDFC00218B30 /* AssetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		3E06C9101BB7C2F600218B30 /* TransactionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		3E06C9131BB7C40600218B30 /* ReportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTests.swift; sourceTree = "<group>"; };
+		3E06C9161BB7C50500218B30 /* LedgerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedgerTests.swift; sourceTree = "<group>"; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E10A5801BB10BFD006BCD6E /* Ledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		3E10A5821BB11227006BCD6E /* AssetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntry.swift; sourceTree = "<group>"; };
@@ -403,7 +405,6 @@
 		662AB1DC3351798DF355157B /* DescLRU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRU.h; sourceTree = "<group>"; };
 		662AB2241CAFB76B86B3ECD4 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
 		662AB24B435ECE7C9389383A /* ReportCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCell.h; sourceTree = "<group>"; };
-		662AB263111447B37A3E9A60 /* LedgerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LedgerTests.m; sourceTree = "<group>"; };
 		662AB267427DAA82536D9442 /* TCategoryBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCategoryBase.m; sourceTree = "<group>"; };
 		662AB26BA59401CD8FCDE181 /* EditDateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDateVC.m; sourceTree = "<group>"; };
 		662AB29509F20565BA43545B /* DBLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBLoadingView.h; sourceTree = "<group>"; };
@@ -1060,7 +1061,7 @@
 				3E1982831BB266AE00177021 /* DataModelTests.swift */,
 				662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */,
 				662ABC7E3FEE6245876F1B50 /* JournalTests.m */,
-				662AB263111447B37A3E9A60 /* LedgerTests.m */,
+				3E06C9161BB7C50500218B30 /* LedgerTests.swift */,
 				3E06C9101BB7C2F600218B30 /* TransactionTests.swift */,
 				3E06C9131BB7C40600218B30 /* ReportTests.swift */,
 				662AB119875202C3CFD13515 /* TimeTests.m */,
@@ -1562,6 +1563,7 @@
 			files = (
 				3E06C90C1BB7C29800218B30 /* TimeTests.m in Sources */,
 				3E06C9001BB7BBEC00218B30 /* TestCommon.swift in Sources */,
+				3E06C9181BB7C50900218B30 /* LedgerTests.swift in Sources */,
 				3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */,
 				3E06C9081BB7C23700218B30 /* DescLRUManagerTests.m in Sources */,
 				3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */,
