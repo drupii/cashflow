@@ -23,6 +23,7 @@
 		3E06C9011BB7BBF100218B30 /* AssetEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E19827F1BB2630C00177021 /* AssetEntryTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9021BB7BD6800218B30 /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9051BB7BDFC00218B30 /* AssetTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -308,6 +309,7 @@
 		3E035E9A1182B6E000711865 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3E06C8EC1BB7B35600218B30 /* CashFlowTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CashFlowTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E06C8ED1BB7B36600218B30 /* CashFlowTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CashFlowTests-Info.plist"; sourceTree = "<group>"; };
+		3E06C9051BB7BDFC00218B30 /* AssetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E10A5801BB10BFD006BCD6E /* Ledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		3E10A5821BB11227006BCD6E /* AssetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntry.swift; sourceTree = "<group>"; };
@@ -479,7 +481,6 @@
 		662ABBABD58A75D6EC5469F4 /* ExportServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportServer.h; sourceTree = "<group>"; };
 		662ABBCF4900BC8E8DBEBF83 /* DescLRUManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRUManager.h; sourceTree = "<group>"; };
 		662ABBECC87A505590735192 /* PinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinController.m; sourceTree = "<group>"; };
-		662ABC0BBC45BD44C15D714B /* AssetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetTests.m; sourceTree = "<group>"; };
 		662ABC30AB29FE2EE37E5C09 /* WebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServer.h; sourceTree = "<group>"; };
 		662ABC3216C27E47D21B4F68 /* ReportCatGraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCatGraphCell.m; sourceTree = "<group>"; };
 		662ABC41E0B08C545BD4EEA6 /* DateFormatter2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter2.m; sourceTree = "<group>"; };
@@ -1047,8 +1048,8 @@
 		662ABFBD65BC3B2EB91EADCD /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
+				3E06C9051BB7BDFC00218B30 /* AssetTests.swift */,
 				3E19827F1BB2630C00177021 /* AssetEntryTests.swift */,
-				662ABC0BBC45BD44C15D714B /* AssetTests.m */,
 				3E1982811BB2649D00177021 /* CurrencyManagerTests.swift */,
 				3E1982831BB266AE00177021 /* DataModelTests.swift */,
 				662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */,
@@ -1554,6 +1555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E06C9001BB7BBEC00218B30 /* TestCommon.swift in Sources */,
+				3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */,
 				3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */,
 				3E06C9011BB7BBF100218B30 /* AssetEntryTests.swift in Sources */,
 				3E06C9021BB7BD6800218B30 /* CurrencyManagerTests.swift in Sources */,
