@@ -1,28 +1,36 @@
-// -*-  Mode:ObjC; c-basic-offset:4; tab-width:8; indent-tabs-mode:nil -*-
+import UIKit
+import XCTest
 
-#import "CashFlow-Swift.h"
+@testable import CashFlow
 
-#import "TestCommon.h"
+class TransactionTest : XCTestCase {
+    var transaction: Transaction!
 
-@interface TransactionTest : XCTestCase {
-    Transaction *transaction;
-}
-@end
+    override func setUp() {
+        super.setUp()
 
-@implementation TransactionTest
+        TestCommon.deleteDatabase()
+        DataModel.instance().load()
+    }
 
-- (void)setUp
-{
-    [super setUp];
-    [TestCommon deleteDatabase];
-    [[DataModel instance] load];
-}
+    override func tearDown() {
+        super.tearDown()
+    }
 
-- (void)tearDown
-{
-    [super tearDown];
-}
+    // 最終使用日のテスト
+    func testLastUsedDate() {
+        // 解除
+        Transaction.setLastUsedDate(nil)
+        XCTAssertFalse(Transaction.hasLastUsedDate())
 
+        let t = NSDate(timeIntervalSince1970: 0)
+        Transaction.setLastUsedDate(t)
+        XCTAssert(Transaction.hasLastUsedDate())
+
+        let t2 = Transaction.lastUsedDate()
+        XCTAssertEqual(t, t2)
+    }
+    
 // 日付のアップグレードテスト (ver 3.2.1 -> 3.3以降 へのアップグレード)
 /*
 - (void)testMigrateDate
@@ -51,18 +59,6 @@
 }
 */
 
-// 最終使用日のテスト
-- (void)testLastUsedDate
-{
-    // 解除
-    [Transaction setLastUsedDate:nil];
-    XCTAssertFalse([Transaction hasLastUsedDate]);
 
-    NSDate *t = [NSDate dateWithTimeIntervalSince1970:0];
-    [Transaction setLastUsedDate:t];
-    XCTAssert([Transaction hasLastUsedDate]);
-    NSDate *t2 = [Transaction lastUsedDate];
-    XCTAssert([t2 isEqualToDate:t]);
 }
 
-@end

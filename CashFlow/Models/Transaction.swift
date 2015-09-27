@@ -111,7 +111,7 @@ class Transaction : TransactionBase, NSCopying {
         }
     }
 
-    static func setLastUsedDate(date: NSDate) {
+    static func setLastUsedDate(date: NSDate?) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(date, forKey: "lastUsedDate")
         defaults.synchronize()

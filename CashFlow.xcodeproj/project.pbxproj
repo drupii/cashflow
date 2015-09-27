@@ -28,6 +28,7 @@
 		3E06C90C1BB7C29800218B30 /* TimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB119875202C3CFD13515 /* TimeTests.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C90D1BB7C2AB00218B30 /* ViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB4A2307B1C969DF62F57 /* ViewControllerTestCase.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C90E1BB7C2B300218B30 /* PinVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF4EAE053DFFBB925491 /* PinVCTests.m */; settings = {ASSET_TAGS = (); }; };
+		3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9101BB7C2F600218B30 /* TransactionTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06D5E2157FA8EE00D9A454 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E0AC6AE13A786E8006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
 		3E0AC6AF13A786F7006F505C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0AC6AD13A786E8006F505C /* CFNetwork.framework */; };
@@ -314,6 +315,7 @@
 		3E06C8EC1BB7B35600218B30 /* CashFlowTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CashFlowTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E06C8ED1BB7B36600218B30 /* CashFlowTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CashFlowTests-Info.plist"; sourceTree = "<group>"; };
 		3E06C9051BB7BDFC00218B30 /* AssetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
+		3E06C9101BB7C2F600218B30 /* TransactionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		3E0AC6AD13A786E8006F505C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E10A5801BB10BFD006BCD6E /* Ledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		3E10A5821BB11227006BCD6E /* AssetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetEntry.swift; sourceTree = "<group>"; };
@@ -397,7 +399,6 @@
 		662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescLRUManagerTests.m; sourceTree = "<group>"; };
 		662AB18E3A787D95D81A463B /* ORQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORQuery.h; sourceTree = "<group>"; };
 		662AB1B4CEC8AFE20AE85E01 /* LogicTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogicTests-Prefix.pch"; sourceTree = "<group>"; };
-		662AB1C7750C5BC665D2901D /* TransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTests.m; sourceTree = "<group>"; };
 		662AB1DC3351798DF355157B /* DescLRU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescLRU.h; sourceTree = "<group>"; };
 		662AB2241CAFB76B86B3ECD4 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
 		662AB24B435ECE7C9389383A /* ReportCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCell.h; sourceTree = "<group>"; };
@@ -1059,9 +1060,9 @@
 				662AB18470F16EC138A8E42C /* DescLRUManagerTests.m */,
 				662ABC7E3FEE6245876F1B50 /* JournalTests.m */,
 				662AB263111447B37A3E9A60 /* LedgerTests.m */,
+				3E06C9101BB7C2F600218B30 /* TransactionTests.swift */,
 				662AB114258914291C3316FE /* ReportTests.m */,
 				662AB119875202C3CFD13515 /* TimeTests.m */,
-				662AB1C7750C5BC665D2901D /* TransactionTests.m */,
 				662AB6289EDF57F52B01FB0E /* Common */,
 				662AB9C58D97809F43D54127 /* Supporting Files */,
 				662ABF37CBC04DDC23015463 /* testdata */,
@@ -1562,6 +1563,7 @@
 				3E06C9001BB7BBEC00218B30 /* TestCommon.swift in Sources */,
 				3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */,
 				3E06C9081BB7C23700218B30 /* DescLRUManagerTests.m in Sources */,
+				3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */,
 				3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */,
 				3E06C90E1BB7C2B300218B30 /* PinVCTests.m in Sources */,
 				3E06C9011BB7BBF100218B30 /* AssetEntryTests.swift in Sources */,
