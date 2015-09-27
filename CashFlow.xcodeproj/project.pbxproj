@@ -443,7 +443,6 @@
 		662AB6205E31D1678D5FE04F /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		662AB62B9A455175E2A76DC0 /* GenEditTextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenEditTextVC.h; sourceTree = "<group>"; };
 		662AB64D40A3695CC9DC421C /* artwork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = artwork.jpg; sourceTree = "<group>"; };
-		662AB67AFDF6279282F327C1 /* TestCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCommon.h; sourceTree = "<group>"; };
 		662AB68107DC2C386A764C4A /* SupportMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportMail.h; sourceTree = "<group>"; };
 		662AB684249CA0E490B8CFFD /* CategoryListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryListVC.h; sourceTree = "<group>"; };
 		662AB69944CC356EEE70DA28 /* EditDateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDateVC.h; sourceTree = "<group>"; };
@@ -841,7 +840,6 @@
 		662AB6289EDF57F52B01FB0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				662AB67AFDF6279282F327C1 /* TestCommon.h */,
 				3E1982881BB26F3D00177021 /* TestCommon.swift */,
 			);
 			path = Common;
