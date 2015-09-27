@@ -7,15 +7,12 @@ class AssetListViewControllerTest: ViewControllerWithNavBarTestCase {
     var vc: AssetListViewController!
 
     override func createViewController() -> UIViewController {
-        // AssetListView は storyboard から生成する
-        let sb = UIStoryboard(name: "AssetListView", bundle: nil)
-
         // 最上位は navigation controller なので、ここから AssetListViewController を取り出す
-        let nv = sb.instantiateInitialViewController() as! UINavigationController
+        let nv = createViewControllerFromStoryboard("AssetListView") as! UINavigationController
         self.vc = nv.topViewController as! AssetListViewController
 
         // 重要: loadView を実行する
-        vc.performSelectorOnMainThread(Selector("loadView"), withObject: nil, waitUntilDone: true)
+        execLoadView(vc)
         return vc
     }
 

@@ -7,15 +7,12 @@ class PinControllerTest : ViewControllerWithNavBarTestCase {
     var pinController: PinController!
     
     override func createViewController() -> UIViewController {
-        // AssetListView は storyboard から生成する
-        let sb = UIStoryboard(name: "AssetListView", bundle: nil)
-
         // 最上位は navigation controller なので、ここから AssetListViewController を取り出す
-        let nv = sb.instantiateInitialViewController() as! UINavigationController
+        let nv = createViewControllerFromStoryboard("AssetListView") as! UINavigationController
         let av = nv.topViewController!
 
         // 重要: loadView を実行する
-        av.performSelectorOnMainThread(Selector("loadView"), withObject: nil, waitUntilDone: true)
+        execLoadView(av)
         return av
     }
 
@@ -23,23 +20,8 @@ class PinControllerTest : ViewControllerWithNavBarTestCase {
         return self.viewController as? AssetListViewController
     }
 
-    // MARK: - UIViewControllerTest methods
 
-    override func viewControllerName() -> String {
-        return "AssetListViewController"
-    }
-
-    override func viewControllerNibName() -> String {
-        return "AssetListView"
-    }
-
-    func hasNavigationController() -> Bool {
-        return true
-    }
-    
     // MARK: -
-
-    
     override func setUp() {
         super.setUp()
 

@@ -8,11 +8,10 @@ class EditDescViewControllerTest : ViewControllerWithNavBarTestCase, EditDescVie
 
     override func createViewController() -> UIViewController! {
         // storyboard から生成
-        let sb = UIStoryboard(name: "EditDescView", bundle: nil)
-        let vc = sb.instantiateInitialViewController()!
+        let vc = createViewControllerFromStoryboard("EditDescView")
 
         // 重要: loadView を実行する
-        vc.performSelectorOnMainThread(Selector("loadView"), withObject: nil, waitUntilDone: true)
+        execLoadView(vc)
         return vc
     }
 
@@ -20,20 +19,6 @@ class EditDescViewControllerTest : ViewControllerWithNavBarTestCase, EditDescVie
         return self.viewController as! EditDescViewController
     }
 
-    // MARK: - UIViewControllerTest methods
-
-    override func viewControllerName() -> String! {
-        return "EditDescViewController";
-    }
-
-    override func viewControllerNibName() -> String! {
-        return "EditDescView"
-    }
-
-    func hasNavigationController() -> Bool {
-        return true
-    }
-    
     // MARK: - EditDescViewDelegate
 
     func editDescViewChanged(vc: EditDescViewController) {

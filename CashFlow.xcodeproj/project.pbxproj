@@ -25,7 +25,6 @@
 		3E06C9031BB7BD6E00218B30 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1982831BB266AE00177021 /* DataModelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9071BB7BE9100218B30 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9051BB7BDFC00218B30 /* AssetTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C90C1BB7C29800218B30 /* TimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB119875202C3CFD13515 /* TimeTests.m */; settings = {ASSET_TAGS = (); }; };
-		3E06C90E1BB7C2B300218B30 /* PinVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABF4EAE053DFFBB925491 /* PinVCTests.m */; settings = {ASSET_TAGS = (); }; };
 		3E06C9121BB7C2FE00218B30 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9101BB7C2F600218B30 /* TransactionTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9151BB7C40B00218B30 /* ReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9131BB7C40600218B30 /* ReportTests.swift */; settings = {ASSET_TAGS = (); }; };
 		3E06C9181BB7C50900218B30 /* LedgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E06C9161BB7C50500218B30 /* LedgerTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -1578,7 +1577,6 @@
 				3E06C9251BB820D500218B30 /* PinControllerTests.swift in Sources */,
 				3E06C9281BB8224B00218B30 /* EditDescViewControllerTests.swift in Sources */,
 				3E06C91B1BB7C5FD00218B30 /* JournalTests.swift in Sources */,
-				3E06C90E1BB7C2B300218B30 /* PinVCTests.m in Sources */,
 				3E06C9011BB7BBF100218B30 /* AssetEntryTests.swift in Sources */,
 				3E06C9151BB7C40B00218B30 /* ReportTests.swift in Sources */,
 				3E06C9021BB7BD6800218B30 /* CurrencyManagerTests.swift in Sources */,
