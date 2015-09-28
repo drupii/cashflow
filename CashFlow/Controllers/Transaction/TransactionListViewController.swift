@@ -12,7 +12,7 @@ import UIKit
 @available(iOS 8.0, *)
 class TransactionListViewController : UIViewController,
     UITableViewDelegate,UITableViewDataSource, CalculatorViewDelegate, UISplitViewControllerDelegate,
-    BackupViewDelegate, UIPopoverControllerDelegate, UISearchControllerDelegate, UISearchBarDelegate, AdManagerDelegate
+    BackupViewDelegate, UIPopoverControllerDelegate, UISearchControllerDelegate, UISearchResultsUpdating, AdManagerDelegate
 {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var barBalanceLabel: UIBarButtonItem!
@@ -114,7 +114,8 @@ class TransactionListViewController : UIViewController,
         sc.searchBar.sizeToFit()
         sc.searchBar.returnKeyType = .Done
         //sc.searchBar.placeholder = "Search"
-        sc.searchBar.delegate = self
+        sc.searchResultsUpdater = self
+        //sc.searchBar.delegate = self
         sc.delegate = self
         self.searchController = sc
         
@@ -657,10 +658,10 @@ class TransactionListViewController : UIViewController,
         }
     }
 
-    // MARK: - UISearchBar Delegate
+    // MARK: - UISearchResultsUpdating Delegate
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        self.updateSearchResultWithDesc(searchText)
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        self.updateSearchResultWithDesc(searchController.searchBar.text)
         self.tableView.reloadData()
     }
 
