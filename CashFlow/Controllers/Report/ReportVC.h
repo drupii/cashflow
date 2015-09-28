@@ -8,7 +8,9 @@
 
 @import UIKit;
 
-#import "Asset.h"
+//#import "Asset.h"
+
+@class Asset;
 
 @interface ReportViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 

@@ -11,6 +11,8 @@
 #import "ExportCsv.h"
 #import "ExportOfx.h"
 
+@class Asset;
+
 @interface ExportVC : UIViewController
 
 @property(nonatomic,unsafe_unretained) Asset *asset;

@@ -17,6 +17,7 @@
 #import "CFCalendarViewController.h"
 
 @class AssetEntry;
+@class Asset;
 
 @interface TransactionViewController : UIViewController 
 
