@@ -10,7 +10,7 @@ import UIKit
     func editDescViewChanged(vc: EditDescViewController)
 }
 
-class EditDescViewController: UITableViewController, UITextFieldDelegate, UISearchDisplayDelegate {
+class EditDescViewController: UITableViewController, UITextFieldDelegate, UISearchControllerDelegate, UISearchResultsUpdating {
     weak var delegate: EditDescViewDelegate?
     var desc: String = ""
     var category: Int = -1
@@ -19,6 +19,8 @@ class EditDescViewController: UITableViewController, UITextFieldDelegate, UISear
 
     private var descArray: [DescLRU] = []
     private var filteredDescArray: [DescLRU] = []
+    
+    private var searchController: UISearchController!
 
     static func instantiate() -> EditDescViewController {
         return UIStoryboard(name: "EditDescView", bundle: nil).instantiateInitialViewController() as! EditDescViewController
@@ -50,10 +52,19 @@ class EditDescViewController: UITableViewController, UITextFieldDelegate, UISear
         tf.delegate = self;
         self.textField = tf
     
-        /*
-        [mTextField addTarget:self action:@selector(onTextChange:)
-                forControlEvents:UIControlEventEditingDidEndOnExit];
-        */
+        // Search Controller 作成
+        let sc = UISearchController(searchResultsController: nil)
+        self.searchController = sc
+        
+        sc.searchResultsUpdater = self
+        sc.searchBar.sizeToFit()
+        sc.searchBar.returnKeyType = .Done
+        self.tableView!.tableHeaderView = sc.searchBar
+        
+        sc.delegate = self
+        sc.dimsBackgroundDuringPresentation = false
+        
+        self.definesPresentationContext = true
     }
 
     /**
@@ -94,7 +105,7 @@ class EditDescViewController: UITableViewController, UITextFieldDelegate, UISear
     // MARK: - TableViewDataSource
 
     private func isSearching() -> Bool {
-        return self.searchDisplayController!.active
+        return self.searchController!.active
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -204,28 +215,37 @@ class EditDescViewController: UITableViewController, UITextFieldDelegate, UISear
         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
     }
     
-    // MARK: - UISearchDisplayController Delegate
+    // MARK: - 検索 delegate
 
-    // iOS7 バグ回避
-    // see http://stackoverflow.com/questions/18924710/uisearchdisplaycontroller-overlapping-original-table-view
-    func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
-        tableView.backgroundColor = UIColor.whiteColor()
+    // 検索開始
+    func willPresentSearchController(searchController: UISearchController) {
+        self.filteredDescArray = self.descArray // copy
+        //self.tableView.reloadData()
     }
-
-    // 検索開始 : サーチバーの文字列が変更されたときに呼び出される
-    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String?) -> Bool {
-        self.updateFilteredDescArray(searchString)
-        return true
-    }
-
+    
     // 検索終了
-    func searchDisplayControllerDidEndSearch(controller: UISearchDisplayController) {
+    func didDismissSearchController(searchController: UISearchController) {
         self.filteredDescArray = self.descArray // copy
         self.tableView.reloadData()
     }
 
-
-    // MARK: -
+    // 検索
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        self.updateFilteredDescArray(searchController.searchBar.text)
+        self.tableView.reloadData()
+    }
+    
+    // 検索
+    //func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    //    self.updateFilteredDescArray(searchText)
+    //    self.tableView.reloadData()
+    //}
+    
+    // iOS7 バグ回避
+    // see http://stackoverflow.com/questions/18924710/uisearchdisplaycontroller-overlapping-original-table-view
+    //func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
+    //    tableView.backgroundColor = UIColor.whiteColor()
+    //}
 
     // サーチテキスト変更時の処理：フィルタリングをし直す
     private func updateFilteredDescArray(searchString: String?) {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mwr-5z-clr">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -39,20 +40,8 @@
                             <outlet property="delegate" destination="mwr-5z-clr" id="T5P-mu-H2r"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="KVM-hl-OcN" id="ifN-aa-mZw"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Okl-Zs-DLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="KVM-hl-OcN">
-                    <connections>
-                        <outlet property="delegate" destination="mwr-5z-clr" id="sbp-Eh-xMK"/>
-                        <outlet property="searchBar" destination="Nrj-Hq-V51" id="fvB-O7-iCl"/>
-                        <outlet property="searchContentsController" destination="mwr-5z-clr" id="Fme-K7-5Jp"/>
-                        <outlet property="searchResultsDataSource" destination="mwr-5z-clr" id="Hlr-fZ-SbV"/>
-                        <outlet property="searchResultsDelegate" destination="mwr-5z-clr" id="dEq-p4-IpP"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="554" y="23"/>
         </scene>
