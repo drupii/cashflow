@@ -349,7 +349,7 @@ class AssetListViewController : UIViewController,
     }
 
     // 新規アセット追加
-    private func addAsset() {
+    func addAsset() {
         _selectedAssetIndex = -1;
         self.performSegueWithIdentifier("show", sender:self)
     }
