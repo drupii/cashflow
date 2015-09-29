@@ -18,8 +18,8 @@ PODS:
   - GoogleNetworkingUtilities (1.0.0):
     - GoogleSymbolUtilities (~> 1.0)
   - GoogleSymbolUtilities (1.0.0)
-  - GoogleUtilities (1.0.1):
-    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleUtilities (1.1.0):
+    - GoogleSymbolUtilities (~> 1.0.0)
   - NendSDK_iOS (2.7.2)
   - NendSDK_iOS_MediationAdapter (1.2.2)
   - RDVCalendarView (1.0.7)
@@ -45,7 +45,7 @@ SPEC CHECKSUMS:
   GoogleAnalytics: fcf1f1cad57ae1a9a53520018f0f680ceeeb8b49
   GoogleNetworkingUtilities: 292992ab31b7b4ba32809a0e8b40e324cdfb2c0c
   GoogleSymbolUtilities: a7b0feed1fe667c8d5e647177938d0ecd62d6948
-  GoogleUtilities: e3475cd4d45134221d2f3f3626095a1c49b62041
+  GoogleUtilities: 8ed9134debe11719097881711464752900668f10
   NendSDK_iOS: a3bd732a956cc85eb7b48447b63c4fc1c744503e
   NendSDK_iOS_MediationAdapter: f15502f99f12a83a00d061989eef3d17f60a405f
   RDVCalendarView: f9702024bbbc235709748812cff6f5f48b147fbb
