@@ -120,6 +120,9 @@
 		3EB9D9AE1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB9D9AF1BB583E700E699A7 /* AdManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		3EC572D71107451F00A551D5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC572D61107451F00A551D5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3ECC8F561BBAD5C30057F134 /* TransactionBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D07AD1BB997FF00F4C7D4 /* TransactionBase.swift */; settings = {ASSET_TAGS = (); }; };
+		3ECC8F571BBAD5C60057F134 /* TCategoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D07AC1BB997FF00F4C7D4 /* TCategoryBase.swift */; settings = {ASSET_TAGS = (); }; };
+		3ECC8F581BBAD5C90057F134 /* DescLRU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D07AB1BB997FF00F4C7D4 /* DescLRU.swift */; settings = {ASSET_TAGS = (); }; };
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3EDA9BE91BB293D700C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
 		3EDA9BEA1BB2944900C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -1480,6 +1483,7 @@
 				662AB9C92C71ADA3CDA9CBEE /* Database.m in Sources */,
 				662ABD6A6701E8DAE26CFC18 /* Dbstmt.m in Sources */,
 				3E3C01681BB1AD0200A39B97 /* CashflowDatabase.swift in Sources */,
+				3ECC8F571BBAD5C60057F134 /* TCategoryBase.swift in Sources */,
 				662AB64868D919F247214D32 /* DateFormatter2.m in Sources */,
 				662ABFECFCD6CEEC48222E25 /* DataModel.m in Sources */,
 				662AB78A217494280430CD95 /* CalcVC.m in Sources */,
@@ -1495,6 +1499,7 @@
 				662AB856F134AFE4837D56F6 /* GenSelectListVC.m in Sources */,
 				662AB8B7604AC82268B92219 /* ConfigViewController.m in Sources */,
 				3EE38A281BB14D93009CBE96 /* DataModelBackup.m in Sources */,
+				3ECC8F581BBAD5C90057F134 /* DescLRU.swift in Sources */,
 				662ABB290254E7C52AC6BC5D /* PinController.m in Sources */,
 				662AB3F4042957BAF12DA6DA /* PinVC.m in Sources */,
 				662AB28E1B66AAE37838FF78 /* ReportCatDetailVC.m in Sources */,
@@ -1524,6 +1529,7 @@
 				662AB2D63F4ED87AC56AAAC8 /* ExportServer.m in Sources */,
 				662AB5865B2BD4F518A4BBB3 /* DBLoadingView.m in Sources */,
 				662AB96F022FDC56F35ECC27 /* CurrencyManager.swift in Sources */,
+				3ECC8F561BBAD5C30057F134 /* TransactionBase.swift in Sources */,
 				662AB8363B5693B5D8C94E5D /* SwiftUtils.swift in Sources */,
 				3EE38A2D1BB14EF2009CBE96 /* DataModelSync.m in Sources */,
 				3EDA9BEA1BB2944900C4F3EB /* TransactionCell.swift in Sources */,
@@ -1688,6 +1694,7 @@
 				PRODUCT_MODULE_NAME = CashFlowFree;
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "CashFlow-Swift.h";
 			};
 			name = Debug;
 		};
@@ -1723,6 +1730,7 @@
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3196f994-8a42-4aea-9841-addd8fbda8cc";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "CashFlow-Swift.h";
 			};
 			name = Release;
 		};
