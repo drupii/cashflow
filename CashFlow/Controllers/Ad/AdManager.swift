@@ -22,7 +22,7 @@ class AdManager : NSObject, GADBannerViewDelegate {
     private static let ADUNIT_ID = DFP_ADUNIT_ID
 
     // 広告リクエスト間隔 (画面遷移時のみ)
-    private let AD_REQUEST_INTERVAL = 30.0
+    private let AD_REQUEST_INTERVAL = 15.0
 
     private var isShowAdSucceeded: Bool = false
     
