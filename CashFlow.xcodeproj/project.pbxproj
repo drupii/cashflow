@@ -99,6 +99,7 @@
 		3E8B25B70F348C090007929E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3E8B25B80F348C090007929E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		3E8B25B90F348C090007929E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6F5D5E0EB8C30B0082F50A /* AudioToolbox.framework */; };
+		3E9B09B41BBC1AB0002F65FE /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B09B31BBC1AB0002F65FE /* AdView.swift */; settings = {ASSET_TAGS = (); }; };
 		3EAEE6231BB64E5B00B1DA08 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEE6221BB64E5B00B1DA08 /* TransactionListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3EAEE6241BB64E5E00B1DA08 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEE6221BB64E5B00B1DA08 /* TransactionListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3EB554B4103B92D700BA13D4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB554B3103B92D700BA13D4 /* QuartzCore.framework */; };
@@ -374,6 +375,7 @@
 		3E7D07AD1BB997FF00F4C7D4 /* TransactionBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionBase.swift; sourceTree = "<group>"; };
 		3E869305185F40C1007F2979 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Social.framework; sourceTree = "<group>"; };
 		3E8B25C20F348C090007929E /* CashFlowFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlowFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E9B09B31BBC1AB0002F65FE /* AdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
 		3EAEE6221BB64E5B00B1DA08 /* TransactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		3EB554B3103B92D700BA13D4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3EB5552D103B930D00BA13D4 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -972,6 +974,7 @@
 		662ABCBE63385EB930F924A4 /* Ad */ = {
 			isa = PBXGroup;
 			children = (
+				3E9B09B31BBC1AB0002F65FE /* AdView.swift */,
 				3EB9D9A71BB446AB00E699A7 /* AdManager.swift */,
 				3EB9D9A91BB581D800E699A7 /* NullAdManager.swift */,
 				3EB9D9AD1BB583E700E699A7 /* AdManagerDelegate.swift */,
@@ -1541,6 +1544,7 @@
 				662AB93A9A20F94080B82263 /* ExportCsv.m in Sources */,
 				3E26DF851BB6FB7800622946 /* Asset.swift in Sources */,
 				662AB254335CD0BABE4192B9 /* UIDevice+Hardware.m in Sources */,
+				3E9B09B41BBC1AB0002F65FE /* AdView.swift in Sources */,
 				3E38CF0D1BB8403F0051E688 /* DescLRUManager.swift in Sources */,
 				3E3C01641BB1ACFA00A39B97 /* AssetEntry.swift in Sources */,
 				3E007EC71BA8694E00923757 /* CatReport.swift in Sources */,
