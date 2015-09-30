@@ -1660,7 +1660,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tmurakam.${PRODUCT_NAME:identifier}";
 				PRODUCT_MODULE_NAME = CashFlow;
 				PRODUCT_NAME = CashFlow;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7bf73d0f-2a24-4a77-a907-ea42930d8b68";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "854b1e62-d599-4c40-8de8-54b8ec057493";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1733,7 +1733,7 @@
 				PRODUCT_MODULE_NAME = CashFlowFree;
 				PRODUCT_NAME = CashFlowFree;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3196f994-8a42-4aea-9841-addd8fbda8cc";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "608d3182-69dc-4441-b420-4ca7d564bd21";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "CashFlow-Swift.h";
 			};
 			name = Release;
