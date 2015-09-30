@@ -44,13 +44,19 @@ class AdManager : NSObject, GADBannerViewDelegate {
     // 最後に広告をリクエストした日時
     private var lastAdRequestDate: NSDate?
 
-    private static var theAdManager: AdManager? = nil
+    //private static var theAdManager: AdManager? = nil
 
+    /*
     static func sharedInstance() -> AdManager? {
         if (theAdManager == nil) {
             theAdManager = AdManager()
         }
         return theAdManager;
+    }
+    */
+    
+    static func getInstance() -> AdManager? {
+        return AdManager()
     }
 
     override init() {

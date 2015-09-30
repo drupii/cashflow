@@ -10,7 +10,7 @@ class AdView : UIView {
 }
 
 class AdManager : NSObject {
-    static func sharedInstance() -> AdManager? {
+    static func getInstance() -> AdManager? {
         return nil
     }
 

@@ -124,7 +124,7 @@ class TransactionListViewController : UIViewController,
         
         // AdManager 設定
         self.isAdShowing = false
-        self.adManager = AdManager.sharedInstance()
+        self.adManager = AdManager.getInstance()
         self.adManager?.attach(self, rootViewController: self)
     }
 
