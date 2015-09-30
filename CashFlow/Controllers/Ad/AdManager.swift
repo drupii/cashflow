@@ -23,12 +23,19 @@ class AdView : DFPBannerView, GADBannerViewDelegate {
         if isIpad() {
             // 320 x 50 固定。こうしないと在庫でない模様
             adSize = kGADAdSizeBanner
+            
+            //adSize = kGADAdSizeSmartBannerPortrait
         } else {
             adSize = kGADAdSizeBanner
-            //以下のようにiPhone 6 横幅に自動で合わせたいが、これをやると Nend の広告がでない！
-            //adSize = GADAdSizeFullWidthPortraitWithHeight(GAD_SIZE_320x50.height);
+
+            // option 2
+            //adSize = GADAdSizeFullWidthPortraitWithHeight(50);
+            
+            // option 3 : SmartBanner
+            //adSize = kGADAdSizeSmartBannerPortrait
         }
         self.init(adSize: adSize)
+        //print(self.frame.size)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -190,24 +197,20 @@ class AdManager : NSObject, GADBannerViewDelegate {
     private func createAdView() {
         print("create Ad view")
     
-        self.adSize = kGADAdSizeBanner
-        //self.adSize = GADAdSizeFromCGSize(CGSizeMake(320.0, 50.0))
-    
-        /* Note: Mediation では標準サイズバナーのみ
-        if (IS_IPAD) {
-            gadSize = kGADAdSizeFullBanner;
-            mAdMobSize = GAD_SIZE_468x60;
-        }
-        */
-
         let view = AdView()
         view.delegate = self
-    
+        
         print("AdUnit = \(AdManager.ADUNIT_ID)")
         view.adUnitID = AdManager.ADUNIT_ID
         view.rootViewController = nil // この時点では不明
         view.autoresizingMask = [.FlexibleTopMargin, .FlexibleLeftMargin, .FlexibleRightMargin]
 
+        // TODO: サイズ調整。
+        let sz = view.frame.size
+        //print(sz)
+        self.adSize = kGADAdSizeBanner
+        self.adSize!.size = sz
+    
         // まだリクエストは発行しない
 
         self.bannerView = view
