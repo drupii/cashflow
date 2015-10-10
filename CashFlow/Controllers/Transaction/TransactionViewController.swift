@@ -24,7 +24,7 @@ class TransactionViewController: UIViewController,
     var asset: Asset!
     
     /** 編集中のエントリ */
-    var editingEntry: AssetEntry!
+    var editingEntry: AssetEntry = AssetEntry() // dummy initial
     
     private var transactionIndex: Int = -1
 
@@ -48,7 +48,7 @@ class TransactionViewController: UIViewController,
 
     // for debug
     //#define REFCOUNT(x) CFGetRetainCount((__bridge void *)(x))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -86,8 +86,6 @@ class TransactionViewController: UIViewController,
     // 処理するトランザクションをロードしておく
     func setTransactionIndex(n: Int) {
         self.transactionIndex = n
-
-        self.editingEntry = nil
 
         if self.transactionIndex < 0 {
             // 新規トランザクション
@@ -440,7 +438,6 @@ class TransactionViewController: UIViewController,
 
     @IBAction func delButtonTapped(sender: AnyObject?) {
         self.asset.deleteEntryAt(self.transactionIndex)
-        self.editingEntry = nil
 
         self.navigationController!.popViewControllerAnimated(true)
     }
@@ -500,8 +497,6 @@ class TransactionViewController: UIViewController,
 	
         let date = e.transaction()!.date
         self.asset.deleteOldEntriesBefore(date)
-	
-        self.editingEntry = nil
         
         self.navigationController!.popViewControllerAnimated(true)
     }
@@ -526,7 +521,6 @@ class TransactionViewController: UIViewController,
             self.asset.replaceEntryAtIndex(self.transactionIndex, withObject: self.editingEntry)
             //[asset sortByDate]
         }
-        self.editingEntry = nil
 
         self.navigationController!.popViewControllerAnimated(true)
     }
