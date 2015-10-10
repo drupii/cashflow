@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MV9-4m-0VN">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -81,7 +82,7 @@
         <!--Transaction View Controller-->
         <scene sceneID="ye4-nn-rNP">
             <objects>
-                <viewController storyboardIdentifier="TransactionView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ap8-oF-I49" customClass="TransactionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TransactionView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ap8-oF-I49" customClass="TransactionViewController" customModule="CashFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9a3-Gc-jsP"/>
                         <viewControllerLayoutGuide type="bottom" id="k3D-eM-07o"/>
@@ -109,7 +110,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="u4Q-4N-N2W"/>
                                     <barButtonItem style="plain" systemItem="action" id="99H-8X-qMh">
                                         <connections>
-                                            <action selector="doAction:" destination="ap8-oF-I49" id="NLB-0A-7c4"/>
+                                            <action selector="doAction:" destination="ap8-oF-I49" id="m8o-by-iQ1"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -132,7 +133,7 @@
                                         <rect key="frame" x="219" y="15" width="51" height="31"/>
                                         <animations/>
                                         <connections>
-                                            <action selector="rememberLastUsedDateChanged:" destination="ap8-oF-I49" eventType="valueChanged" id="rm3-Wh-4qb"/>
+                                            <action selector="rememberLastUsedDateChanged:" destination="ap8-oF-I49" eventType="valueChanged" id="NBd-CN-LuF"/>
                                         </connections>
                                     </switch>
                                 </subviews>
@@ -155,7 +156,7 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="DELETE TRANSACTION"/>
                                 <connections>
-                                    <action selector="delButtonTapped:" destination="ap8-oF-I49" eventType="touchUpInside" id="LdB-Le-ghD"/>
+                                    <action selector="delButtonTapped:" destination="ap8-oF-I49" eventType="touchDown" id="q7z-Ti-rd0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -179,12 +180,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="mPd-Cv-FPd"/>
                     <connections>
-                        <outlet property="_barActionButton" destination="99H-8X-qMh" id="PfB-25-uwP"/>
-                        <outlet property="_delButton" destination="KJG-Cj-xF7" id="HGJ-ns-UqS"/>
-                        <outlet property="_rememberDateLabel" destination="O30-EE-jhS" id="VmC-hi-4rv"/>
-                        <outlet property="_rememberDateSwitch" destination="lRD-86-vqI" id="jYQ-hM-zCf"/>
-                        <outlet property="_rememberDateView" destination="Smy-Fh-ABE" id="Er2-cE-Kb3"/>
-                        <outlet property="_tableView" destination="Xo4-uJ-etI" id="02U-bx-Dhy"/>
+                        <outlet property="barActionButon" destination="99H-8X-qMh" id="PUv-VO-hCP"/>
+                        <outlet property="delButton" destination="KJG-Cj-xF7" id="5Sj-sT-Qml"/>
+                        <outlet property="rememberDateLabel" destination="O30-EE-jhS" id="Dfl-x0-rMa"/>
+                        <outlet property="rememberDateSwitch" destination="lRD-86-vqI" id="Na0-u6-YG3"/>
+                        <outlet property="rememberDateView" destination="Smy-Fh-ABE" id="HCz-48-Hsy"/>
+                        <outlet property="tableView" destination="Xo4-uJ-etI" id="Bli-wf-GMj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecH-KB-nZq" userLabel="First Responder" sceneMemberID="firstResponder"/>

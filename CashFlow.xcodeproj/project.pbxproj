@@ -86,6 +86,7 @@
 		3E69E8F51616B41A00FAD808 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E69E8F61616B41A00FAD808 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3E6F5D5F0EB8C30B0082F50A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6F5D5E0EB8C30B0082F50A /* AudioToolbox.framework */; };
+		3E7157111BBD5F95000C9360 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7157101BBD5F95000C9360 /* TransactionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E75D53F1BB29D9C00C76CF2 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E7D07A91BB9972C00F4C7D4 /* AssetBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D07A81BB9972C00F4C7D4 /* AssetBase.swift */; settings = {ASSET_TAGS = (); }; };
 		3E7D07AA1BB9976A00F4C7D4 /* AssetBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D07A81BB9972C00F4C7D4 /* AssetBase.swift */; settings = {ASSET_TAGS = (); }; };
@@ -259,7 +260,6 @@
 		662ABA6F2C6B93ED5A77ABE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB518A2EB0E46E7308358 /* LaunchScreen.xib */; };
 		662ABA77682F0EB6D92AB1BB /* WebServerBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB3C0142643C4637E480F /* WebServerBackup.m */; };
 		662ABAB8FED7C40CD12A05D2 /* ReportCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABD898171C964B71187B8 /* ReportCatCell.m */; };
-		662ABAE84AAD7BFDA3C77E44 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */; };
 		662ABB13A5DA88C4CA2BB57A /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB8C90AFF3A337196E034 /* PinView.xib */; };
 		662ABB1EBD7201F2ADB780C6 /* GenEditTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662AB7F1C8388EF9E38A4D79 /* GenEditTextView.xib */; };
 		662ABB21611C4469358C9708 /* EditDescView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB58889E462FBAC441E6C /* EditDescView.storyboard */; };
@@ -277,7 +277,6 @@
 		662ABCBBE88473E97FB17DAB /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AB9ED9DFCC8F292D57BA8 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		662ABD2214EA890DFD188364 /* EditDateView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662AB766200385B37D7BC644 /* EditDateView.storyboard */; };
 		662ABD6A6701E8DAE26CFC18 /* Dbstmt.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB9A739106627A769F3CF /* Dbstmt.m */; };
-		662ABDC864D93C8B12B622A6 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */; };
 		662ABDDF6D92BBB7EE6DD396 /* CalcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABDD44BD7D8F14BB3FFD0 /* CalcVC.m */; };
 		662ABE3BD08184BEDBF9E738 /* EditDateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AB26BA59401CD8FCDE181 /* EditDateVC.m */; };
 		662ABE6A5505E7FDB1A9237E /* PinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ABBECC87A505590735192 /* PinController.m */; };
@@ -368,6 +367,7 @@
 		3E69E8E91616B3D800FAD808 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3E69E8EB1616B3ED00FAD808 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3E6F5D5E0EB8C30B0082F50A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3E7157101BBD5F95000C9360 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		3E75D53E1BB29D9C00C76CF2 /* AssetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetViewController.swift; sourceTree = "<group>"; };
 		3E7D07A81BB9972C00F4C7D4 /* AssetBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetBase.swift; sourceTree = "<group>"; };
 		3E7D07AB1BB997FF00F4C7D4 /* DescLRU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescLRU.swift; sourceTree = "<group>"; };
@@ -415,7 +415,6 @@
 		662AB11A149EECD59514A19D /* ReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportVC.m; sourceTree = "<group>"; };
 		662AB12E9D846E31BB9DD3BA /* ExportCsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportCsv.h; sourceTree = "<group>"; };
 		662AB14CBF21BAA3849668FF /* CalcVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcVC.h; sourceTree = "<group>"; };
-		662AB14DDD3F0ABF1D8365B0 /* TransactionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionVC.h; sourceTree = "<group>"; };
 		662AB1542F3EE3CFBA7E9604 /* ORQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORQuery.m; sourceTree = "<group>"; };
 		662AB1660F47E12F623BB039 /* ReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportVC.h; sourceTree = "<group>"; };
 		662AB18E3A787D95D81A463B /* ORQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORQuery.h; sourceTree = "<group>"; };
@@ -482,7 +481,6 @@
 		662ABA7E40E71F01D1F98AAF /* ReportCatGraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCatGraphCell.h; sourceTree = "<group>"; };
 		662ABA7E583EE4CCC39387C9 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		662ABA85E4FE950C1B4176F3 /* PinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinVC.m; sourceTree = "<group>"; };
-		662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionVC.m; sourceTree = "<group>"; };
 		662ABAA20836AB99EE17C031 /* AssetListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetListView.storyboard; sourceTree = "<group>"; };
 		662ABAB142EB1301EB4C50AA /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		662ABAB719DFAE01D69A82BB /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
@@ -956,8 +954,7 @@
 			children = (
 				3EAEE6221BB64E5B00B1DA08 /* TransactionListViewController.swift */,
 				3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */,
-				662AB14DDD3F0ABF1D8365B0 /* TransactionVC.h */,
-				662ABA862A8F2CA51C3D3BC6 /* TransactionVC.m */,
+				3E7157101BBD5F95000C9360 /* TransactionViewController.swift */,
 				662AB69944CC356EEE70DA28 /* EditDateVC.h */,
 				662AB26BA59401CD8FCDE181 /* EditDateVC.m */,
 				662AB0FB7BC05AC8974EF01D /* EditTypeVC.h */,
@@ -1438,10 +1435,10 @@
 				662ABBC04AC5A71CF6990A9A /* ReportCatVC.m in Sources */,
 				3E007ECE1BA9BA2900923757 /* Report.swift in Sources */,
 				662AB139188CAF1D60B68416 /* ReportCatGraphCell.m in Sources */,
+				3E7157111BBD5F95000C9360 /* TransactionViewController.swift in Sources */,
 				662AB65F1A05FBDF6A6E8AE4 /* ReportVC.m in Sources */,
 				662ABAB8FED7C40CD12A05D2 /* ReportCatCell.m in Sources */,
 				662ABB8984ADF017D9E55B6B /* EditMemoVC.m in Sources */,
-				662ABAE84AAD7BFDA3C77E44 /* TransactionVC.m in Sources */,
 				662ABC4D89910A0A3E352132 /* CFCalendarViewController.m in Sources */,
 				662ABA238848910180228BBA /* EditTypeVC.m in Sources */,
 				662AB33C6F671899B846DEEE /* EditDateVC.m in Sources */,
@@ -1515,7 +1512,6 @@
 				662AB9C489A90A07A482941B /* ReportVC.m in Sources */,
 				662AB3346EF8247197E7B57A /* ReportCatCell.m in Sources */,
 				662AB2B4E362DA9B6BF786A2 /* EditMemoVC.m in Sources */,
-				662ABDC864D93C8B12B622A6 /* TransactionVC.m in Sources */,
 				662ABBBB404C1E439FC4A414 /* CFCalendarViewController.m in Sources */,
 				662AB02CA4B7874DBE16D696 /* EditTypeVC.m in Sources */,
 				662ABE3BD08184BEDBF9E738 /* EditDateVC.m in Sources */,

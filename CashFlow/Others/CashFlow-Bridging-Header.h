@@ -36,13 +36,19 @@
 
 // Controllers
 #import "PinController.h"
-#import "TransactionVC.h"
+//#import "TransactionVC.h"
 #import "GenEditTextVC.h"
 #import "GenSelectListVC.h"
 #import "ReportVC.h"
 #import "BackupVC.h"
 #import "CalcVC.h"
 #import "ExportVC.h"
+#import "EditMemoVC.h"
+#import "EditDateVC.h"
+#import "EditTypeVC.h"
+#import "CategoryListVC.h"
+
+
 
 
 
