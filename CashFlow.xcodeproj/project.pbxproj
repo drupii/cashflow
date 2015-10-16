@@ -128,6 +128,7 @@
 		3ECD5A871347603800B499A6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECD5A861347603800B499A6 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3EDA9BE91BB293D700C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
 		3EDA9BEA1BB2944900C4F3EB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA9BE81BB293D700C4F3EB /* TransactionCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3EE09FB51BD141CA0070EF98 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7157101BBD5F95000C9360 /* TransactionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A1B1BB13421009CBE96 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1A1BB13421009CBE96 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A1D1BB13A82009CBE96 /* CashflowDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A1C1BB13A82009CBE96 /* CashflowDatabase.swift */; settings = {ASSET_TAGS = (); }; };
 		3EE38A271BB14D93009CBE96 /* DataModelBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE38A251BB14D93009CBE96 /* DataModelBackup.m */; settings = {ASSET_TAGS = (); }; };
@@ -1557,6 +1558,7 @@
 				3E3C01621BB1ACF700A39B97 /* Ledger.swift in Sources */,
 				3E007ECF1BA9BA2900923757 /* Report.swift in Sources */,
 				662ABF4E80595B30B2F88BE8 /* ReportCatGraphCell.m in Sources */,
+				3EE09FB51BD141CA0070EF98 /* TransactionViewController.swift in Sources */,
 				662AB9C489A90A07A482941B /* ReportVC.m in Sources */,
 				662AB3346EF8247197E7B57A /* ReportCatCell.m in Sources */,
 				662AB2B4E362DA9B6BF786A2 /* EditMemoVC.m in Sources */,
