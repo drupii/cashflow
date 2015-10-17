@@ -29,7 +29,7 @@ class Journal : NSObject {
         // upgrade data
         let db = CashflowDatabase.instance()
         if db.needFixDateFormat {
-            self._sortByDate()
+            self._sortByDateAndPid()
         
             db.beginTransaction()
             for t in self.entries {
@@ -85,16 +85,24 @@ class Journal : NSObject {
 
         let idx = self.entries.indexOf(from)
         self.entries[idx!] = to
-        self._sortByDate()
+        self._sortByDateAndPid()
     }
     
     /**
      * ソート
      */
-    private func _sortByDate() {
+    private func _sortByDateAndPid() {
         entries.sortInPlace {(x, y) -> Bool in
-            // Note: == OrderedAscending にしてはいけない。同一日時の取引を逆転してしまう。
-            x.date.compare(y.date) != NSComparisonResult.OrderedDescending
+            let comp = x.date.compare(y.date)
+            switch (comp) {
+            case NSComparisonResult.OrderedAscending: // x<y
+                return true;
+            case NSComparisonResult.OrderedDescending: // x>y
+                return false;
+            case NSComparisonResult.OrderedSame:
+                // fix bug #18: date が同一の場合は pid でソート
+                return x.pid <= y.pid
+            }
         }
     }
 
