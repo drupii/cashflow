@@ -78,6 +78,7 @@ class Asset : AssetBase {
                     t.value = t.balance - balance
                     if (t.value != oldval) {
                         // 金額が変更された場合、DBを更新
+                        //print("\(self.name) \(t.date) \(t.desc) oldV:\(oldval) newV:\(t.value) oldBal:\(t.balance) newBal:\(balance)")
                         t.save()
                     }
                     balance = t.balance
@@ -93,6 +94,8 @@ class Asset : AssetBase {
                         t.balance = balance
                         t.hasBalance = true
                     }
+                    
+                    //print("\(self.name) \(t.date) \(t.desc) value:\(t.value) bal:\(balance)")
                 }
 
                 self.entries.append(e)
@@ -126,7 +129,7 @@ class Asset : AssetBase {
 
     func replaceEntryAtIndex(index: Int, withObject entry:AssetEntry) {
         let orig = self.entryAt(index)
-
+        
         DataModel.getJournal().replaceTransaction(orig.transaction()!, to: entry.transaction()!)
         DataModel.getLedger().rebuild()
     }
