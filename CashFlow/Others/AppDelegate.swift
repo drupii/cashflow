@@ -262,4 +262,10 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         let v = UIAlertView(title: "Assersion Failed", message: "\(filename) line \(lineno)", delegate: nil, cancelButtonTitle: "Close")
         v.show()
     }
+    
+    class func getCurrentTime() -> String {
+        let f = NSDateFormatter()
+        f.dateFormat = "HH:mm:ss.SSS"
+        return f.stringFromDate(NSDate())
+    }
 }
