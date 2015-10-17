@@ -5,10 +5,10 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface DateFormatter2 :NSDateFormatter
 
-- (NSString *)fixDateString:(NSString *)string;
+- (nonnull NSString *)fixDateString:(nonnull NSString *)string;
 
 @end

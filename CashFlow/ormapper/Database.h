@@ -31,6 +31,8 @@
 
 #import "Dbstmt.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
    Wrapper class of sqlite3 database (base class)
 */
@@ -38,19 +40,19 @@
 
 @property(nonatomic,readonly) sqlite3 *handle;
 
-+ (Database*)instance;
++ (nonnull Database*)instance;
 
 + (Database*)_instance;
 + (void)_setInstance:(Database*)db;
 
 + (void)shutdown;
 
-- (id)init;
+- (instancetype)init;
 - (void)dealloc;
 
 - (BOOL)exec:(NSString *)sql;
 - (dbstmt*)prepare:(NSString *)sql;
-- (NSInteger)lastInsertRowId;
+@property (nonatomic, readonly) NSInteger lastInsertRowId;
 
 - (void)beginTransaction;
 - (void)commitTransaction;
@@ -63,8 +65,10 @@
 - (void)updateModificationDate;
 
 // utilities
-- (NSDateFormatter *)dateFormatter;
+@property (nonatomic, readonly, copy) NSDateFormatter *dateFormatter;
 - (NSDate*)dateFromString:(NSString *)str;
 - (NSString *)stringFromDate:(NSDate*)date;
 
 @end
+
+NS_ASSUME_NONNULL_END

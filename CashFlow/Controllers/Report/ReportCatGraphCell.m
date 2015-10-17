@@ -6,6 +6,8 @@
  */
 // ReportCatGraphCell.m
 
+#import "CashFlow-Swift.h"
+
 #import "ReportCatGraphCell.h"
 #import "AppDelegate.h"
 
@@ -17,7 +19,7 @@
     IBOutlet UIImageView *_imageView;
     
     double _total;
-    NSMutableArray *_catReports;
+    NSArray *_catReports;
 }
 
 + (CGFloat)cellHeight
@@ -34,7 +36,7 @@
 */
 - (void)setReport:(ReportEntry*)reportEntry isOutgo:(BOOL)isOutgo
 {
-    NSMutableArray *ary;
+    NSArray *ary;
 
     if (isOutgo) {
         ary = reportEntry.outgoCatReports;
@@ -123,7 +125,7 @@ static inline double radians(double deg)
 
         // 色設定
         UIColor *color = [ReportCatGraphCell getGraphColor:n];
-        CGContextSetFillColorWithColor(context, [color CGColor]);
+        CGContextSetFillColorWithColor(context, color.CGColor);
 
         // 円弧の描画
         CGContextMoveToPoint(context, graph_x, graph_y);
@@ -150,7 +152,7 @@ static inline double radians(double deg)
 
         // 色設定
         UIColor *color = [ReportCatGraphCell getGraphColor:n];
-        CGContextSetFillColorWithColor(context, [color CGColor]);
+        CGContextSetFillColorWithColor(context, color.CGColor);
 
         // ■を描画
         CGContextAddRect(context, CGRectMake(width * 0.6, n * LegendHeight + 5, LegendHeight * 0.8, LegendHeight * 0.8));

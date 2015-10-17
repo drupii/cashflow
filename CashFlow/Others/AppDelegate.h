@@ -5,28 +5,16 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import <DropboxSDK/DropboxSDK.h>
 
 #import "DataModel.h"
-#import "AssetListVC.h"
-#import "TransactionListVC.h"
+//#import "DataModelDateUtils.h"
+#import "DataModelBackup.h"
+#import "DataModelSync.h"
 
 #define DBNAME  @"CashFlow.db"
-
-@interface AppDelegate : NSObject <UIApplicationDelegate>
-
-@property (nonatomic,strong) UIWindow *window;
-@property (nonatomic,strong) UINavigationController *navigationController;
-@property (nonatomic,strong) UISplitViewController *splitViewController;
-
-- (void)checkPin;
-+ (NSString *)appVersion;
-
-+ (BOOL)isFreeVersion;
-
-//+ (void)trackPageview:(NSString *)url;
-+ (void)trackEvent:(NSString *)category action:(NSString *)action label:(NSString *)label value:(NSInteger)value;
 
 // Utility
 #define _L(msg)  NSLocalizedString(msg, @"")
@@ -38,11 +26,5 @@ void AssertFailed(const char *filename, int lineno);
 #define ASSERT(x) /**/
 #endif
 
-#ifndef UI_USER_INTERFACE_IDIOM
-#define IS_IPAD NO
-#else
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#endif
-
-@end
 

@@ -5,8 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
+
 #import "Transaction.h"
 
 //#import "CalendarViewController.h"
@@ -19,7 +19,7 @@
 - (void)editDateViewChanged:(EditDateViewController*)vc;
 @end
 
-@interface EditDateViewController : UIViewController <CFCalendarViewControllerDelegate>
+@interface EditDateViewController : UIViewController
 
 @property(nonatomic,unsafe_unretained) id<EditDateViewDelegate> delegate;
 @property(nonatomic,strong) NSDate *date;

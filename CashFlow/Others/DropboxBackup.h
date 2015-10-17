@@ -5,16 +5,19 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import <DropboxSDK/DropboxSDK.h>
 #import "DataModel.h"
 
-#define MODE_BACKUP 0
-#define MODE_RESTORE 1
-#define MODE_SYNC 2
+typedef NS_ENUM(NSInteger, BackupMode) {
+    BackupModeBackup = 0,
+    BackupModeRestore = 1,
+    BackupModeSync = 2
+};
 
 @protocol DropboxBackupDelegate
-- (void)dropboxBackupStarted:(int)mode;
+- (void)dropboxBackupStarted:(BackupMode)mode;
 - (void)dropboxBackupFinished;
 - (void)dropboxBackupConflicted;
 @end
@@ -23,7 +26,8 @@
 
 @property(strong,readonly) DBRestClient *restClient;
 
-- (id)init:(id<DropboxBackupDelegate>)delegate;
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init:(id<DropboxBackupDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 
 - (void)doSync:(UIViewController *)viewController;
 - (void)doBackup:(UIViewController *)viewController;

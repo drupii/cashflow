@@ -5,7 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import <sys/socket.h>
 #import <netinet/in.h>
 
@@ -14,15 +15,15 @@
 */
 @interface WebServer : NSObject
 
-- (BOOL)startServer;
+@property (nonatomic, readonly) BOOL startServer;
 - (void)stopServer;
 
 // private
-- (NSString*)serverUrl;
+@property (nonatomic, readonly, copy) NSString *serverUrl;
 - (void)threadMain:(id)dummy;
 
 - (BOOL)readLine:(int)s line:(char *)line size:(NSInteger)size;
-- (char *)readBody:(int)s contentLength:(NSInteger)contentLength;
+- (char *)readBody:(int)s contentLength:(NSInteger)contentLength NS_RETURNS_INNER_POINTER;
 - (void)handleHttpRequest:(int)s;
 - (void)send:(int)s string:(NSString *)string;
 - (void)requestHandler:(int)s filereq:(NSString*)filereq body:(char *)body bodylen:(NSInteger)bodylen;

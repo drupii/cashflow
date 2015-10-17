@@ -78,10 +78,10 @@
 
     switch (section) {
         case 0:
-            rows = [_reportEntry.outgoCatReports count];
+            rows = (_reportEntry.outgoCatReports).count;
             break;
         case 1:
-            rows = [_reportEntry.incomeCatReports count];
+            rows = (_reportEntry.incomeCatReports).count;
             break;
         case 2:
             return 0;
@@ -154,14 +154,23 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    CatReportDetailViewController *vc = [segue destinationViewController];
+    CatReportDetailViewController *vc = segue.destinationViewController;
 
     vc.title = [_selectedCatReport title];
     vc.catReport = _selectedCatReport;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark Rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

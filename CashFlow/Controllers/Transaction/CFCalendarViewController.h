@@ -3,7 +3,8 @@
 //  カスタム RDVCalendarViewController
 //
 
-#import <Foundation/Foundation.h>
+@import UIKit;
+
 #import "RDVCalendarViewController.h"
 
 @class CFCalendarViewController;

@@ -6,9 +6,11 @@
  */
 //  ReportViewController.h
 
-#import <UIKit/UIKit.h>
-#import "Report.h"
-#import "Asset.h"
+@import UIKit;
+
+//#import "Asset.h"
+
+@class Asset;
 
 @interface ReportViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 

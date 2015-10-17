@@ -35,7 +35,7 @@ static PinController *thePinController = nil;
     thePinController = nil;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {

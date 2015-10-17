@@ -5,9 +5,9 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import <MessageUI/MessageUI.h>
-#import <MessageUI/MFMailComposeViewController.h>
+@import UIKit;
+@import MessageUI;
+
 #import <DropboxSDK/DropboxSDK.h>
 
 #import "ExportServer.h"
@@ -28,14 +28,14 @@
 // public methods
 - (BOOL)sendMail:(UIViewController*)parent error:(NSError**)error;
 - (BOOL)sendToDropbox:(UIViewController*)parent error:(NSError**)error;
-- (BOOL)sendWithWebServer;
+@property (nonatomic, readonly) BOOL sendWithWebServer;
 
 // You must override following methods
-- (NSString *)mailSubject;
-- (NSString*)fileName;
-- (NSString *)mimeType;
-- (NSString *)contentType;
-- (NSData*)generateBody;
+@property (nonatomic, readonly, copy) NSString *mailSubject;
+@property (nonatomic, readonly, copy) NSString *fileName;
+@property (nonatomic, readonly, copy) NSString *mimeType;
+@property (nonatomic, readonly, copy) NSString *contentType;
+@property (nonatomic, readonly, copy) NSData *generateBody;
 
 @end
 

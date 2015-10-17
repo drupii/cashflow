@@ -8,6 +8,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <LocalAuthentication/LocalAuthentication.h>
 
+#import "CashFlow-Swift.h"
+
 #import "PinVC.h"
 #import "AppDelegate.h"
 #import "Config.h"
@@ -39,7 +41,7 @@
 
 @implementation PinViewController
 
-- (id)init
+- (instancetype)init
 {
     if (IS_IPAD) {
         self = [super initWithNibName:@"PinView-ipad" bundle:nil];
@@ -178,10 +180,18 @@
     _valueLabel.text = @"";
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD ? YES : interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark Rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 /**
  * アプリが foreground になった時の処理。

@@ -9,13 +9,13 @@
 
 @implementation DateFormatter2
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
 
     // JP locale では特に 12時間制のときの日付フォーマットがおかしいので、
     // US locale にする
-    [self setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"US"]];
+    self.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"US"];
     return self;
 }
 
@@ -45,7 +45,7 @@
         NSRange hrange = range;
         hrange.location += range.length;
         hrange.length = 2;
-        int hour = [[string substringWithRange:hrange] intValue];
+        int hour = [string substringWithRange:hrange].intValue;
 
         // 時刻を調整
         if (hour == 12) {

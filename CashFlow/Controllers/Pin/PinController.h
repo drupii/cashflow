@@ -7,8 +7,8 @@
 
 // PIN code controller
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
+
 #import "PinVC.h"
 
 @interface PinController : NSObject <PinViewDelegate>
@@ -21,7 +21,7 @@
 - (void)firstPinCheck:(UIViewController *)currentVc;
 - (void)modifyPin:(UIViewController *)currentVc;
 
-- (BOOL)hasPin;
+@property (nonatomic, readonly) BOOL hasPin;
 - (void)deletePin;
 
 // for debug / test

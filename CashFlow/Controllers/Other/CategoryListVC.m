@@ -5,9 +5,10 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
+#import "CashFlow-Swift.h"
+
 #import "AppDelegate.h"
 #import "CategoryListVC.h"
-#import "Category.h"
 #import "GenEditTextVC.h"
 
 @implementation CategoryListViewController
@@ -15,7 +16,7 @@
     BOOL _isAddCategoryRowDisplayed;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithNibName:@"CategoryListView" bundle:nil];
     if (self) {
@@ -125,7 +126,7 @@
         idx = -1; // insert row
     }
     GenEditTextViewController *vc = [GenEditTextViewController
-                                        genEditTextViewController:self
+                                        create:self
                                         title:_L(@"Category")
                                         identifier:idx];
     if (idx >= 0) {
@@ -192,7 +193,7 @@
 {
     if (indexPath.row >= [[DataModel instance].categories count]) {
         // add
-        GenEditTextViewController *vc = [GenEditTextViewController genEditTextViewController:self title:_L(@"Category") identifier:-1];
+        GenEditTextViewController *vc = [GenEditTextViewController create:self title:_L(@"Category") identifier:-1];
         [self.navigationController pushViewController:vc animated:YES];
     }
 	
@@ -232,8 +233,15 @@
 
 #pragma mark - Rotation
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

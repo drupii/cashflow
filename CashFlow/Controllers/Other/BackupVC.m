@@ -10,6 +10,8 @@
 #import "DropboxBackup.h"
 #import "WebServerBackup.h"
 
+#import "CashFlow-Swift.h"
+
 @implementation BackupViewController
 {
     __weak id<BackupViewDelegate> _delegate;
@@ -37,9 +39,9 @@
     [_labelUpload setText:_L(@"Upload")];
     [_labelDownload setText:_L(@"Download")];
     [_labelBackupRestore setText:_L(@"Backup / Restore")];
-    [_labelBackupRestore setText:[NSString stringWithFormat:@"%@ / %@",
+    _labelBackupRestore.text = [NSString stringWithFormat:@"%@ / %@",
                            _L(@"Backup"),
-                           _L(@"Restore")]];
+                           _L(@"Restore")];
 }
 
 - (IBAction)doneAction:(id)sender
@@ -182,27 +184,27 @@
 
 #pragma mark DropboxBackupDelegate
 
-- (void)dropboxBackupStarted:(int)mode
+- (void)dropboxBackupStarted:(BackupMode)mode
 {
     NSLog(@"DropboxBackupStarted");
     
     NSString *msg = nil;
     switch (mode) {
-        case MODE_SYNC:
+        case BackupModeSync:
             msg = _L(@"Syncing");
             break;
 
-        case MODE_BACKUP:
+        case BackupModeBackup:
             msg = _L(@"Uploading");
             break;
             
-        case MODE_RESTORE:
+        case BackupModeRestore:
             msg = _L(@"Downloading");
             break;
     }
     _loadingView = [[DBLoadingView alloc] initWithTitle:msg];
     _loadingView.userInteractionEnabled = YES; // 下の View の操作不可にする
-    [_loadingView setOrientation:self.interfaceOrientation];
+    [_loadingView setOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
     [_loadingView show:self.view.window];
 }
 
@@ -226,7 +228,7 @@
                        cancelButtonTitle:_L(@"Cancel")
                   destructiveButtonTitle:nil
                        otherButtonTitles:_L(@"Use local (upload)"), _L(@"Use remote (download)"), nil];
-    [as showInView:[self view]];
+    [as showInView:self.view];
 }
 
 - (void)actionSheet:(UIActionSheet*)as clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -241,11 +243,18 @@
             break;
     }
 }
-    
-#pragma mark utils
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

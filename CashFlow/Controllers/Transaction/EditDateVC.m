@@ -5,12 +5,14 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import "TransactionVC.h"
+#import "CashFlow-Swift.h"
+
+//#import "TransactionVC.h"
 #import "EditDateVC.h"
 #import "AppDelegate.h"
 #import "Config.h"
 
-@interface EditDateViewController ()
+@interface EditDateViewController () <CFCalendarViewControllerDelegate>
 - (void)doneAction;
 @end
 
@@ -52,7 +54,7 @@
         }
     }
     
-    [_datePicker setTimeZone:[NSTimeZone systemTimeZone]];
+    _datePicker.timeZone = [NSTimeZone systemTimeZone];
     
     [_calendarButton setTitle:_L(@"Calendar") forState:UIControlStateNormal];
     [_setCurrentButton setTitle:_L(@"Current Time") forState:UIControlStateNormal];
@@ -94,8 +96,17 @@
     [_datePicker setDate:self.date animated:YES];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark Rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 #pragma mark CFCalendarViewControllerDelegate
@@ -104,11 +115,11 @@
     if (aDate == nil) return; // do nothing (Clear button)
 
     // 時刻を取り出す
-    NSDateComponents *comps = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] 
-                                components:(NSHourCalendarUnit | NSMinuteCalendarUnit) 
-                                fromDate:_datePicker.date];
-    NSInteger hour = [comps hour];
-    NSInteger min = [comps minute];
+    NSCalendar *greg = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [greg components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:_datePicker.date];
+
+    NSInteger hour = comps.hour;
+    NSInteger min = comps.minute;
     
     // カレンダーで指定した日時(0:00) に以前の時刻の値を加算する
     self.date = [aDate dateByAddingTimeInterval:(hour * 3600 + min * 60)];

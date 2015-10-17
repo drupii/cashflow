@@ -12,14 +12,18 @@
    理由は、別の View を上に乗せており、利用する側のクラスで
    popToViewController するため。
 */
+#import "CashFlow-Swift.h"
 
 #import "AppDelegate.h"
 #import "EditTypeVC.h"
 #import "Transaction.h"
 
+@interface EditTypeViewController() <GenSelectListViewDelegate>
+@end
+
 @implementation EditTypeViewController
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithNibName:@"EditTypeView" bundle:nil];
     if (self) {
@@ -44,7 +48,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[self tableView] reloadData];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
@@ -99,14 +103,14 @@
 {
     self.type = indexPath.row;
 
-    if (self.type != TYPE_TRANSFER) {
+    if (self.type != TransactionTypeTransfer) {
         // pop しない
         [_delegate editTypeViewChanged:self];
         return;
     }
 
     // 資産間移動
-    Ledger *ledger = [DataModel ledger];
+    Ledger *ledger = [DataModel getLedger];
     NSInteger assetCount = [ledger assetCount];
     NSMutableArray *assetNames = [[NSMutableArray alloc] initWithCapacity:assetCount];
     for (int i = 0; i < assetCount; i++) {
@@ -115,7 +119,7 @@
     }
     
     GenSelectListViewController *vc;
-    vc = [GenSelectListViewController genSelectListViewController:self
+    vc = [GenSelectListViewController create:self
                                     items:assetNames
                                       title:_L(@"Asset")
                                     identifier:0];
@@ -127,7 +131,7 @@
 // 資産選択
 - (BOOL)genSelectListViewChanged:(GenSelectListViewController*)vc identifier:(NSInteger)id
 {
-    Asset *as = [[DataModel ledger] assetAtIndex:vc.selectedIndex];
+    Asset *as = [[DataModel getLedger] assetAtIndex:vc.selectedIndex];
     _dstAsset = as.pid;
 
     [_delegate editTypeViewChanged:self];
@@ -135,8 +139,17 @@
     return NO; // pop しない
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark Rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

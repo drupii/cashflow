@@ -5,22 +5,21 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
 
 @class GenSelectListViewController;
 
 @protocol GenSelectListViewDelegate
-- (BOOL)genSelectListViewChanged:(GenSelectListViewController*)vc identifier:(NSInteger)id;
+- (BOOL)genSelectListViewChanged:(nonnull GenSelectListViewController*)vc identifier:(NSInteger)id;
 @end
 
 @interface GenSelectListViewController : UITableViewController
 
-@property(nonatomic,unsafe_unretained) id<GenSelectListViewDelegate> delegate;
+@property(nonatomic,unsafe_unretained,nonnull) id<GenSelectListViewDelegate> delegate;
 @property(nonatomic,assign) NSInteger identifier;
-@property(nonatomic,strong) NSArray *items;
+@property(nonatomic,strong, nonnull) NSArray *items;
 @property(nonatomic,assign) NSInteger selectedIndex;
 
-+ (GenSelectListViewController *)genSelectListViewController:(id<GenSelectListViewDelegate>)delegate items:(NSArray*)ary title:(NSString*)title identifier:(NSInteger)id;
++ (nonnull GenSelectListViewController *)create:(nonnull id<GenSelectListViewDelegate>)delegate items:(nonnull NSArray*)ary title:(nonnull NSString*)title identifier:(NSInteger)id;
 
 @end

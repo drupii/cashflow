@@ -6,8 +6,7 @@
 //  Copyright 2010 Dropbox, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 
 @interface DBLoadingView : UIView {
     UIInterfaceOrientation orientation;

@@ -84,8 +84,8 @@
 {
     if (!IS_IPAD) {
         // キーボード領域を計算
-        CGRect keyboardRect = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        keyboardRect = [[self.view superview] convertRect:keyboardRect fromView:nil];
+        CGRect keyboardRect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+        keyboardRect = [(self.view).superview convertRect:keyboardRect fromView:nil];
 
         // テキストビューのフレーム
         CGRect frame = _textView.frame;
@@ -127,8 +127,17 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark Rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

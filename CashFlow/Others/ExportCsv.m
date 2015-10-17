@@ -5,6 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
+#import "CashFlow-Swift.h"
+
 #import "ExportCsv.h"
 #import "AppDelegate.h"
 
@@ -35,7 +37,7 @@
     NSMutableString *data = [[NSMutableString alloc] initWithCapacity:1024];
     
     for (Asset *asset in self.assets) {
-        if ([self.assets count] > 1) {
+        if ((self.assets).count > 1) {
             // show asset name
             [data appendString:asset.name];
             [data appendString:@"\n"];
@@ -86,7 +88,7 @@
     const char *p = [data cStringUsingEncoding:encoding];
     if (!p) {
         encoding = NSUTF8StringEncoding;
-        p = [data UTF8String]; // fallback
+        p = data.UTF8String; // fallback
     }
     if (encoding == NSUTF8StringEncoding) {
         // UTF-8 BOM を追加

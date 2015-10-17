@@ -13,7 +13,7 @@
     IBOutlet UITextField *_textField;
 }
 
-+ (GenEditTextViewController *)genEditTextViewController:(id<GenEditTextViewDelegate>)delegate title:(NSString*)title identifier:(NSInteger)id
++ (GenEditTextViewController *)create:(id<GenEditTextViewDelegate>)delegate title:(NSString*)title identifier:(NSInteger)id
 {
     GenEditTextViewController *vc = [[GenEditTextViewController alloc]
                                          initWithNibName:@"GenEditTextView"
@@ -69,8 +69,17 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark - Rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

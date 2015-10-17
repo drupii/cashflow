@@ -13,14 +13,14 @@
     [super viewDidLoad];
 
     self.title = _L(@"Calendar");
-    [[self.navigationController navigationBar] setTranslucent:NO];
+    [(self.navigationController).navigationBar setTranslucent:NO];
 
     UIBarButtonItem *todayButton = [[UIBarButtonItem alloc]
             initWithTitle:@"Today"
                     style:UIBarButtonItemStylePlain
                    target:self
                    action:@selector(today)];
-    [self.navigationItem setRightBarButtonItem:todayButton];
+    (self.navigationItem).rightBarButtonItem = todayButton;
     
     // 指定された日付を CalendarView に設定
     self.calendarView.selectedDate = self.selectedDate;

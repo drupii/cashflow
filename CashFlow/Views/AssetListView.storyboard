@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lg6-VT-1DK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lg6-VT-1DK">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -11,6 +11,7 @@
                 <navigationController definesPresentationContext="YES" id="lg6-VT-1DK" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TVX-oG-mRp">
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="Vdb-PT-i2f" kind="relationship" relationship="rootViewController" id="oYw-ML-rFT"/>
@@ -23,7 +24,7 @@
         <!--Asset List View Controller-->
         <scene sceneID="Tnj-K4-BWw">
             <objects>
-                <viewController storyboardIdentifier="AssetListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vdb-PT-i2f" customClass="AssetListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AssetListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vdb-PT-i2f" customClass="AssetListViewController" customModule="CashFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sx5-zI-TjO"/>
                         <viewControllerLayoutGuide type="bottom" id="f7c-pt-g0a"/>
@@ -34,6 +35,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Udy-Zd-Z8t">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="assetCell" textLabel="CSY-CQ-DQu" detailTextLabel="GDM-Xr-qvm" style="IBUITableViewCellStyleSubtitle" id="BZX-eg-bND">
@@ -44,21 +46,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CSY-CQ-DQu">
-                                                    <rect key="frame" x="15" y="4" width="31" height="20"/>
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GDM-Xr-qvm">
-                                                    <rect key="frame" x="15" y="24" width="32" height="15"/>
+                                                    <rect key="frame" x="15" y="25" width="31" height="14"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                         </tableViewCellContentView>
+                                        <animations/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -68,13 +74,14 @@
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXr-PA-ZRf">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4vX-ey-zLX"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem image="report" style="plain" id="0jD-q6-gmW">
                                         <connections>
-                                            <action selector="showReport:" destination="Vdb-PT-i2f" id="vzq-ms-fZs"/>
+                                            <action selector="showReport:" destination="Vdb-PT-i2f" id="mZk-vk-wL8"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4eV-XY-SBr"/>
@@ -82,12 +89,13 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="RwM-QF-XT4"/>
                                     <barButtonItem style="plain" systemItem="action" id="3dd-HN-aXn">
                                         <connections>
-                                            <action selector="doAction:" destination="Vdb-PT-i2f" id="Hnm-le-ilT"/>
+                                            <action selector="doAction:" destination="Vdb-PT-i2f" id="3wV-An-JS8"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Udy-Zd-Z8t" firstAttribute="top" secondItem="Un0-Fx-aI9" secondAttribute="top" id="0H3-xS-mIT"/>
@@ -101,10 +109,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Di4-NF-TxR"/>
                     <connections>
-                        <outlet property="_barActionButton" destination="3dd-HN-aXn" id="AWY-Ae-Aea"/>
-                        <outlet property="_barSumLabel" destination="evo-CX-0Zk" id="HHa-Ce-KpA"/>
-                        <outlet property="_tableView" destination="Udy-Zd-Z8t" id="n4y-Fd-oje"/>
-                        <outlet property="_toolbar" destination="YXr-PA-ZRf" id="jaj-p8-4dM"/>
+                        <outlet property="barActionButton" destination="3dd-HN-aXn" id="5LE-9X-mAO"/>
+                        <outlet property="barSumLabel" destination="evo-CX-0Zk" id="yEw-TH-Oda"/>
+                        <outlet property="tableView" destination="Udy-Zd-Z8t" id="9cL-Ww-ZgU"/>
+                        <outlet property="toolbar" destination="YXr-PA-ZRf" id="g7o-eP-uaL"/>
                         <segue destination="Jb5-rH-b9t" kind="push" identifier="show" id="cmp-Kl-W5O"/>
                     </connections>
                 </viewController>
@@ -115,14 +123,15 @@
         <!--Asset View Controller-->
         <scene sceneID="RHw-4f-xyR">
             <objects>
-                <tableViewController id="Jb5-rH-b9t" customClass="AssetViewController" sceneMemberID="viewController">
+                <tableViewController id="Jb5-rH-b9t" customClass="AssetViewController" customModule="CashFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="icB-gx-hpz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="assetViewCell" textLabel="JDM-Qi-LQn" detailTextLabel="gsm-2b-13X" style="IBUITableViewCellStyleValue2" id="jOG-pJ-DI0">
-                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="114" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jOG-pJ-DI0" id="gBP-11-OmI">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -131,19 +140,23 @@
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JDM-Qi-LQn">
                                             <rect key="frame" x="15" y="13" width="91" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gsm-2b-13X">
-                                            <rect key="frame" x="112" y="13" width="37" height="17"/>
+                                            <rect key="frame" x="112" y="13" width="38" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -161,9 +174,4 @@
     <resources>
         <image name="report" width="21" height="21"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

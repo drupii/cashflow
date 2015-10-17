@@ -5,11 +5,14 @@ link_with ['CashFlow', 'CashFlowFree', 'UnitTests']
 
 pod 'Dropbox-iOS-SDK'
 
-pod 'CrashlyticsFramework'
+#pod 'CrashlyticsFramework'
+pod 'Fabric'
+pod 'Crashlytics'
 #pod 'BugSense'
 #pod 'CrittercismSDK'
 
-pod 'GoogleAnalytics-iOS-SDK'
+#pod 'GoogleAnalytics-iOS-SDK'
+pod 'Google/Analytics', '~> 1.0.0'
 
 pod 'RDVCalendarView', '~> 1.0.7'
 
@@ -18,6 +21,9 @@ target :free do
 
   pod 'Google-Mobile-Ads-SDK'
   pod 'AdMobMediationAdapterIAd'
+
+  pod 'NendSDK_iOS'
+  pod 'NendSDK_iOS_MediationAdapter'
 
   ### うまく動作しないため、一旦解除
   #pod 'InMobiSDK'

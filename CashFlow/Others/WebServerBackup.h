@@ -5,7 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <Foundation/Foundation.h>
+@import UIKit;
+
 #import "BackupServer.h"
 
 @interface WebServerBackup : NSObject <UIAlertViewDelegate>

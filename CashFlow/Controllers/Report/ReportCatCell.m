@@ -39,9 +39,13 @@
 - (void)setValue:(double)value maxValue:(double)maxValue
 {
     double ratio;
-    ratio = value / maxValue;
-    if (ratio < 0) ratio = -ratio; // fail safe...
-    if (ratio > 1.0) ratio = 1.0;
+    if (maxValue == 0.0) {
+        ratio = 0.0;
+    } else {
+        ratio = value / maxValue;
+        if (ratio < 0) ratio = -ratio; // fail safe...
+        if (ratio > 1.0) ratio = 1.0;
+    }
     
     _valueLabel.text = [NSString stringWithFormat:@"%@ (%.1f%%)",
                         [CurrencyManager formatCurrency:value],

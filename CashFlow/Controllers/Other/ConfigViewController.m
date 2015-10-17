@@ -132,7 +132,7 @@
     }
 
     currencyLabel.text = _L(@"Currency");
-    NSString *currency = [[CurrencyManager instance] baseCurrency];
+    NSString *currency = [CurrencyManager instance].baseCurrency;
     if (currency == nil) {
         currency = @"System";
     }
@@ -188,7 +188,7 @@
     Config *config = [Config instance];
 
     GenSelectListViewController *gt = nil;
-    NSMutableArray *typeArray;
+    NSMutableArray<NSString *> *typeArray;
     CategoryListViewController *categoryVC;
     DropboxBackup *dbb;
 
@@ -200,7 +200,7 @@
                 case ROW_DATE_TIME_MODE:
                     typeArray = [@[_L(@"Date and time (1 min)"), _L(@"Date and time (5 min)"), _L(@"Date only")] mutableCopy];
                     gt = [GenSelectListViewController
-                          genSelectListViewController:self
+                          create:self
                           items:typeArray
                           title:_L(@"Date style")
                           identifier:ROW_DATE_TIME_MODE];
@@ -210,7 +210,7 @@
                 case ROW_START_OF_WEEK:
                     typeArray = [@[_L(@"Sunday"), _L(@"Monday")] mutableCopy];
                     gt = [GenSelectListViewController
-                          genSelectListViewController:self
+                          create:self
                           items:typeArray
                           title:_L(@"Start of week")
                           identifier:ROW_START_OF_WEEK];
@@ -224,7 +224,7 @@
                         [typeArray addObject:[NSString stringWithFormat:@"%d", i]];
                     }
                     gt = [GenSelectListViewController
-                          genSelectListViewController:self
+                          create:self
                           items:typeArray
                           title:_L(@"Cutoff date")
                           identifier:ROW_CUTOFF_DATE];
@@ -232,17 +232,17 @@
                     break;
                     
                 case ROW_CURRENCY:
-                    typeArray = [[NSMutableArray alloc] initWithArray:[[CurrencyManager instance] currencies]];
+                    typeArray = [[NSMutableArray alloc] initWithArray:[CurrencyManager instance].currencies];
                     [typeArray insertObject:@"System" atIndex:0];
                     gt = [GenSelectListViewController
-                          genSelectListViewController:self
+                          create:self
                           items:typeArray
                           title:_L(@"Currency")
                           identifier:ROW_CURRENCY];
-                    NSString *currency = [[CurrencyManager instance] baseCurrency];
+                    NSString *currency = [CurrencyManager instance].baseCurrency;
                     gt.selectedIndex = 0;
                     if (currency != nil) {
-                        for (int i = 1; i < [typeArray count]; i++) {
+                        for (int i = 1; i < typeArray.count; i++) {
                             if ([currency isEqualToString:typeArray[i]]) {
                                 gt.selectedIndex = i;
                                 break;
@@ -306,8 +306,17 @@
     return YES;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

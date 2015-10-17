@@ -98,7 +98,7 @@
         
     [data appendString:@"</OFX>\n"];
 
-    const char *p = [data UTF8String];
+    const char *p = data.UTF8String;
     //const unsigned char bom[3] = {0xEF, 0xBB, 0xBF};
     NSMutableData *d = [NSMutableData dataWithLength:0];
     //[d appendBytes:bom length:sizeof(bom)];
@@ -136,7 +136,7 @@
     [data appendString:@"  <STMTRS>\n"];
 	
     CurrencyManager *cm = [CurrencyManager instance];
-    NSString *ccode = [cm baseCurrency];
+    NSString *ccode = cm.baseCurrency;
     if (ccode == nil) {
         ccode = [CurrencyManager systemCurrency];
     }
@@ -171,7 +171,7 @@
         /* トランザクションの ID は日付と取引番号で生成 */
         [data appendFormat:@"     <FITID>%@</FITID>\n", [self _fitIdWithAssetEntry:e]];
         [data appendFormat:@"     <NAME>%@</NAME>\n", [self _escapeXmlString:e.transaction.desc]];
-        if ([e.transaction.memo length] > 0) {
+        if ((e.transaction.memo).length > 0) {
             [data appendFormat:@"     <MEMO>%@</MEMO>\n", [self _escapeXmlString:e.transaction.memo]];
         }
         [data appendString:@"    </STMTTRN>\n"];
@@ -215,18 +215,18 @@
 - (NSString*)_dateStr:(NSDate *)date
 {
     if (mGregCalendar == nil) {
-        mGregCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        mGregCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         mDateFormatter = [NSDateFormatter new];
     }
-    NSTimeZone *tz = [mDateFormatter timeZone];
+    NSTimeZone *tz = mDateFormatter.timeZone;
 			  
-    NSDateComponents *c = [mGregCalendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit 
-                                            | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit)
+    NSDateComponents *c = [mGregCalendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
+                                            | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond)
                                 fromDate:date];
 
     NSString *d = [NSString stringWithFormat:@"%04d%02d%02d%02d%02d%02d[%+d:%@]",
-                            (int)[c year], (int)[c month], (int)[c day], (int)[c hour], (int)[c minute], (int)[c second],
-                   (int)([tz secondsFromGMT]/3600), [tz abbreviation]];
+                            (int)c.year, (int)c.month, (int)c.day, (int)c.hour, (int)c.minute, (int)c.second,
+                   (int)(tz.secondsFromGMT/3600), tz.abbreviation];
     return d;
 }
 
@@ -235,8 +235,8 @@
  */
 - (NSString*)_fitIdWithAssetEntry:(AssetEntry*)e
 {
-    NSDateComponents *c = [mGregCalendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:e.transaction.date];
-    NSString *f = [NSString stringWithFormat:@"%04d%02d%02d%ld", (int)[c year], (int)[c month], (int)[c day], (long)e.transaction.pid];
+    NSDateComponents *c = [mGregCalendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:e.transaction.date];
+    NSString *f = [NSString stringWithFormat:@"%04d%02d%02d%ld", (int)c.year, (int)c.month, (int)c.day, (long)e.transaction.pid];
     return f;
 }
 

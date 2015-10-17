@@ -5,6 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
+#import "CashFlow-Swift.h"
+
 #import "AppDelegate.h"
 #import "ReportVC.h"
 #import "ReportCatVC.h"
@@ -29,7 +31,7 @@
     return [[UIStoryboard storyboardWithName:@"ReportView" bundle:nil] instantiateInitialViewController];
 }
 
-- (id)initWithCoder:(NSCoder *)coder
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
     _dateFormatter = [NSDateFormatter new];
@@ -83,30 +85,22 @@
         _type = config.lastReportType;
     }
 
-    switch (_type) {
-        default:
-            _type = REPORT_DAILY;
-            // FALLTHROUGH
-        case REPORT_DAILY:
-            self.title = _L(@"Daily Report");
-            [_dateFormatter setDateFormat:@"yyyy/MM/dd"];
-            break;
-
-        case REPORT_WEEKLY:
-            self.title = _L(@"Weekly Report");
-            [_dateFormatter setDateFormat:@"yyyy/MM/dd~"];
-            break;
-
-        case REPORT_MONTHLY:
-            self.title = _L(@"Monthly Report");
-            //[dateFormatter setDateFormat:@"yyyy/MM"];
-            [_dateFormatter setDateFormat:@"~yyyy/MM/dd"];
-            break;
-
-        case REPORT_ANNUAL:
-            self.title = _L(@"Annual Report");
-            [_dateFormatter setDateFormat:@"yyyy"];
-            break;
+    if (_type == Report.DAILY) {
+        self.title = _L(@"Daily Report");
+        _dateFormatter.dateFormat = @"yyyy/MM/dd";
+    }
+    else if (_type == Report.WEEKLY) {
+        self.title = _L(@"Weekly Report");
+        _dateFormatter.dateFormat = @"yyyy/MM/dd~";
+    }
+    else if (_type == Report.MONTHLY) {
+        self.title = _L(@"Monthly Report");
+        //[dateFormatter setDateFormat:@"yyyy/MM"];
+        _dateFormatter.dateFormat = @"~yyyy/MM/dd";
+    }
+    else if (_type == Report.ANNUAL) {
+        self.title = _L(@"Annual Report");
+        _dateFormatter.dateFormat = @"yyyy";
     }
 
     // 設定保存
@@ -126,7 +120,7 @@
 // レポートのタイトルを得る
 - (NSString *)_reportTitle:(ReportEntry *)report
 {
-    if (_reports.type == REPORT_MONTHLY) {
+    if (_reports.type == Report.MONTHLY) {
         // 終了日の時刻の１分前の時刻から年月を得る
         //
         // 1) 締め日が月末の場合、endDate は翌月1日0:00を指しているので、
@@ -144,25 +138,25 @@
 
 - (IBAction)setReportDaily:(id)sender
 {
-    _type = REPORT_DAILY;
+    _type = Report.DAILY;
     [self _updateReport];
 }
 
 - (IBAction)setReportWeekly:(id)sender;
 {
-    _type = REPORT_WEEKLY;
+    _type = Report.WEEKLY;
     [self _updateReport];
 }
 
 - (IBAction)setReportMonthly:(id)sender;
 {
-    _type = REPORT_MONTHLY;
+    _type = Report.MONTHLY;
     [self _updateReport];
 }
 
 - (IBAction)setReportAnnual:(id)sender;
 {
-    _type = REPORT_ANNUAL;
+    _type = Report.ANNUAL;
     [self _updateReport];
 }
 
@@ -173,7 +167,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_reports.reportEntries count];
+    return (_reports.reportEntries).count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -183,7 +177,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger count = [_reports.reportEntries count];
+    NSInteger count = (_reports.reportEntries).count;
     ReportEntry *report = (_reports.reportEntries)[count - indexPath.row - 1];
 	
     ReportCell *cell = (ReportCell*)[tv dequeueReusableCellWithIdentifier:@"ReportCell"];
@@ -200,7 +194,7 @@
 {
     [tv deselectRowAtIndexPath:indexPath animated:NO];
 	
-    NSInteger count = [_reports.reportEntries count];
+    NSInteger count = (_reports.reportEntries).count;
     _showingReportEntry = (_reports.reportEntries)[count - indexPath.row - 1];
 
     [self performSegueWithIdentifier:@"show" sender:self];
@@ -208,15 +202,24 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    CatReportViewController *vc = [segue destinationViewController];
+    CatReportViewController *vc = segue.destinationViewController;
     
     vc.title = [self _reportTitle:_showingReportEntry];
     vc.reportEntry = _showingReportEntry;
 }
 
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return IS_IPAD || interfaceOrientation == UIInterfaceOrientationPortrait;
+#pragma mark Rotation
+
+- (BOOL)shouldAutorotate
+{
+    return IS_IPAD;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if (IS_IPAD) return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

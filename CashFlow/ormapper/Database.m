@@ -43,7 +43,7 @@ static Database *sDatabase = nil;
    @return Database singleton instance
    @note If you want to modify this class, use category.
 */
-+ (Database *)instance
++ (nonnull Database *)instance
 {
     if (sDatabase == nil) {
         sDatabase = [[self class] new];
@@ -75,7 +75,7 @@ static Database *sDatabase = nil;
 /**
    Constructor
 */
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self != nil) {
@@ -114,11 +114,11 @@ static Database *sDatabase = nil;
     _dbPath = [self dbPath:dbname];
     BOOL isExistedDb = [fileManager fileExistsAtPath:_dbPath];
 
-    if (sqlite3_open([_dbPath UTF8String], &_handle) != 0) {
+    if (sqlite3_open(_dbPath.UTF8String, &_handle) != 0) {
         // ouch!
         // re-create database
         [fileManager removeItemAtPath:_dbPath error:NULL];
-        sqlite3_open([_dbPath UTF8String], &_handle);
+        sqlite3_open(_dbPath.UTF8String, &_handle);
 
         isExistedDb = NO;
     }
@@ -135,7 +135,7 @@ static Database *sDatabase = nil;
     //ASSERT(mHandle != 0);
 
     //LOG(@"SQL: %s", sql);
-    NSInteger result = sqlite3_exec(_handle, [sql UTF8String], NULL, NULL, NULL);
+    NSInteger result = sqlite3_exec(_handle, sql.UTF8String, NULL, NULL, NULL);
     if (result != SQLITE_OK) {
         //LOG(@"sqlite3: %s", sqlite3_errmsg(mHandle));
         return NO;
@@ -152,7 +152,7 @@ static Database *sDatabase = nil;
 - (dbstmt *)prepare:(NSString *)sql
 {
     sqlite3_stmt *stmt;
-    NSInteger result = sqlite3_prepare_v2(_handle, [sql UTF8String], -1, &stmt, NULL);
+    NSInteger result = sqlite3_prepare_v2(_handle, sql.UTF8String, -1, &stmt, NULL);
     if (result != SQLITE_OK) {
         //LOG(@"sqlite3: %s", sqlite3_errmsg(mHandle));
         //ASSERT(0);
@@ -254,11 +254,11 @@ static Database *sDatabase = nil;
     static NSDateFormatter *dateFormatter = nil;
     if (dateFormatter == nil) {
         dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
-        [dateFormatter setDateFormat: @"yyyyMMddHHmmss"];
+        dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+        dateFormatter.dateFormat = @"yyyyMMddHHmmss";
 
         // Avoid trivial bug for 'AM/PM' handling for some locales.
-        [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"US"]];
+        dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"US"];
     }
     return dateFormatter;
 }

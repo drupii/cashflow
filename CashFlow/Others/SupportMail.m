@@ -5,11 +5,14 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "DataModel.h"
 #import "AppDelegate.h"
 #import "SupportMail.h"
 #import "UIDevice+Hardware.h"
+
+#import "CashFlow-Swift.h"
 
 @implementation SupportMail
 
@@ -48,19 +51,19 @@ static SupportMail *theInstance;
     } else {
         [info appendString:@"Version: CashFlow Std. ver "];
     }
-    [info appendString:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"]];
+    [info appendString:[[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleVersion"]];
     [info appendString:@"\n"];
 
     UIDevice *device = [UIDevice currentDevice];
     [info appendFormat:@"Device: %@\n", [device platform]];
-    [info appendFormat:@"OS: %@\n", [device systemVersion]];
+    [info appendFormat:@"OS: %@\n", device.systemVersion];
 
     DataModel *dm = [DataModel instance];
     [info appendFormat:@"# Assets: %ld\n", (long)[dm.ledger assetCount]];
-    [info appendFormat:@"# Transactions: %lu\n", (unsigned long)[dm.journal.entries count]];
+    [info appendFormat:@"# Transactions: %lu\n", (unsigned long)(dm.journal.entries).count];
     
     NSMutableData *d = [NSMutableData dataWithLength:0];
-    const char *p = [info UTF8String];
+    const char *p = info.UTF8String;
     [d appendBytes:p length:strlen(p)];
 
     [vc addAttachmentData:d mimeType:@"text/plain" fileName:@"SupportInfo.txt"];

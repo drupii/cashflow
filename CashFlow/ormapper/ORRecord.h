@@ -27,6 +27,8 @@
 #import <UIKit/UIKit.h>
 #import "Database.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
    O/R Record base class
  */
@@ -34,10 +36,11 @@
 
 @property(nonatomic,assign) NSInteger pid;
 
-+ (BOOL)migrate:(NSArray *)array primaryKey:(NSString*)key;
-+ (NSMutableArray *)find_all;
-+ (NSMutableArray *)find_all:(NSString *)cond;
-+ (id)find:(NSInteger)id;
++ (BOOL)migrate:(NSArray<NSString *> *)array primaryKey:(NSString*)key;
+
+//+ (NSMutableArray<T> *)find_all;
+//+ (NSMutableArray<T> *)find_all:(nullable NSString *)cond;
+//+ (nullable T)find:(NSInteger)id;
 
 - (void)save;
 - (void)delete;
@@ -53,5 +56,8 @@
 - (void)_loadRow:(dbstmt *)stmt;
 
 @end
+
+NS_ASSUME_NONNULL_END
+
 
 

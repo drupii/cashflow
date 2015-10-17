@@ -5,20 +5,19 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
 
 @class GenEditTextViewController;
 
 @protocol GenEditTextViewDelegate
-- (void)genEditTextViewChanged:(GenEditTextViewController *)vc identifier:(NSInteger)id;
+- (void)genEditTextViewChanged:(nonnull GenEditTextViewController *)vc identifier:(NSInteger)id;
 @end
 
 @interface GenEditTextViewController : UIViewController
 
-@property(nonatomic,unsafe_unretained) id<GenEditTextViewDelegate> delegate;
+@property(nonatomic,unsafe_unretained,nonnull) id<GenEditTextViewDelegate> delegate;
 @property(nonatomic,assign) NSInteger identifier;
-@property(nonatomic,strong) NSString *text;
+@property(nonatomic,strong,nonnull) NSString *text;
 
-+ (GenEditTextViewController *)genEditTextViewController:(id<GenEditTextViewDelegate>)delegate title:(NSString*)title identifier:(NSInteger)id;
++ (nonnull GenEditTextViewController *)create:(nonnull id<GenEditTextViewDelegate>)delegate title:(nonnull NSString*)title identifier:(NSInteger)id;
 @end

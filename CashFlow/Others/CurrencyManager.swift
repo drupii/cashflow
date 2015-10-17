@@ -6,7 +6,7 @@ import Foundation
 import UIKit
 
 class CurrencyManager: NSObject {
-    let currencies = NSLocale.ISOCurrencyCodes() as [String];
+    let currencies = NSLocale.ISOCurrencyCodes() ;
     /*
     ["AED",
     "AUD",
@@ -75,7 +75,7 @@ class CurrencyManager: NSObject {
         _numberFormatter.numberStyle = .CurrencyStyle
         _numberFormatter.locale = NSLocale.currentLocale()
 
-        self.baseCurrency = NSUserDefaults.standardUserDefaults().objectForKey(kBaseCurrency) as NSString?
+        self.baseCurrency = NSUserDefaults.standardUserDefaults().objectForKey(kBaseCurrency) as! String?
         
         // TEST : get currency code list
         /*
@@ -90,7 +90,7 @@ class CurrencyManager: NSObject {
      * システムデフォルトの通貨コードを返す
      */
     class func systemCurrency() -> String {
-        var nf = NSNumberFormatter()
+        let nf = NSNumberFormatter()
         nf.numberStyle = .CurrencyStyle
         return nf.currencyCode
     }
@@ -117,7 +117,7 @@ class CurrencyManager: NSObject {
         }
     }
     
-    private var _baseCurrency: NSString?
+    private var _baseCurrency: String?
     
     class func formatCurrency(value: Double) -> String {
         return CurrencyManager.instance._formatCurrency(value)

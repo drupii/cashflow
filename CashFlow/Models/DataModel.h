@@ -5,12 +5,14 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
-#import <UIKit/UIKit.h>
-#import "Journal.h"
-#import "Ledger.h"
-#import "Category.h"
-#import "DescLRU.h"
+@import UIKit;
+
+//#import "DescLRU.h"
 #import "Database.h"
+
+@class Ledger;
+@class Journal;
+@class Categories;
 
 @protocol DataModelDelegate
 - (void)dataModelLoaded;
@@ -18,47 +20,32 @@
 
 @interface DataModel : NSObject
 
-@property(nonatomic,strong) Journal *journal;
-@property(nonatomic,strong) Ledger *ledger;
-@property(nonatomic,strong) Categories *categories;
+@property(nonatomic,strong,nonnull) Journal *journal;
+@property(nonatomic,strong,nonnull) Ledger *ledger;
+@property(nonatomic,strong,nonnull) Categories *categories;
 @property(readonly) BOOL isLoadDone;
 
-+ (DataModel *)instance;
++ (nonnull DataModel *)instance;
 + (void)finalize;
 
-+ (void)setDbName:(NSString *)dbname; // for unit testing...
++ (nonnull NSString *)dbname;
++ (void)setDbName:(nonnull NSString *)dbname; // for unit testing...
 
-+ (Journal *)journal;
-+ (Ledger *)ledger;
-+ (Categories *)categories;
-
-+ (NSDateFormatter *)dateFormatter;
-+ (NSDateFormatter *)dateFormatter:(BOOL)withDayOfWeek;
-+ (NSDateFormatter *)dateFormatter:(NSDateFormatterStyle)timeStyle withDayOfWeek:(BOOL)withDayOfWeek;
-
++ (nonnull Journal *)getJournal;
++ (nonnull Ledger *)getLedger;
++ (nonnull Categories *)getCategories;
 
 // initializer
-- (id)init;
+- (nonnull instancetype)init NS_DESIGNATED_INITIALIZER;
 
 // load/save
-- (void)startLoad:(id<DataModelDelegate>)delegate;
-- (void)loadThread:(id)dummy;
+- (void)startLoad:(nonnull id<DataModelDelegate>)delegate;
+- (void)loadThread:(nonnull id)dummy;
 - (void)load;
 
 // utility operation
 //+ (NSString*)currencyString:(double)x;
 
-- (NSInteger)categoryWithDescription:(NSString *)desc;
-
-// sql backup operation
-- (BOOL)backupDatabaseToSql:(NSString *)path;
-- (BOOL)restoreDatabaseFromSql:(NSString *)path;
-- (NSString *)getBackupSqlPath;
-
-// for sync
-- (void)setLastSyncRemoteRev:(NSString *)rev;
-- (BOOL)isRemoteModifiedAfterSync:(NSString *)currev;
-- (void)setSyncFinished;
-- (BOOL)isModifiedAfterSync;
+- (NSInteger)categoryWithDescription:(nonnull NSString *)desc;
 
 @end

@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 /*
 Platforms:
@@ -27,6 +27,6 @@ iPad3,3      iPad 3G CDMA
 */
 
 @interface UIDevice(Hardware)
-- (NSString *)platform;
+@property (nonatomic, readonly, copy) NSString *platform;
 @end
 

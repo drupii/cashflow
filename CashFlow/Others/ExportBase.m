@@ -5,6 +5,8 @@
  * For conditions of distribution and use, see LICENSE file.
  */
 
+@import UIKit;
+
 #import <DropboxSDK/DropboxSDK.h>
 #import "ExportBase.h"
 #import "AppDelegate.h"

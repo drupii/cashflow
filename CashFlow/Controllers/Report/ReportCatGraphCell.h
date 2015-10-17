@@ -6,8 +6,7 @@
  */
 //  ReportCatCell.h
 
-#import <UIKit/UIKit.h>
-#import "Report.h"
+@import UIKit;
 
 @class GraphEntry;
 

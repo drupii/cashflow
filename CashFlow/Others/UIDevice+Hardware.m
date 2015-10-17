@@ -13,7 +13,7 @@
         char *buf = malloc(size);
         sysctlbyname("hw.machine", buf, &size, NULL, 0);
         
-        _platform = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
+        _platform = @(buf);
         
         free(buf);
     }

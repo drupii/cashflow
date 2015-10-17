@@ -68,7 +68,7 @@
         return;
     }
 
-    int f = open([path UTF8String], O_RDONLY);
+    int f = open(path.UTF8String, O_RDONLY);
     if (f < 0) {
         // file open error...
         // TBD
@@ -119,7 +119,7 @@
     DataModel *m = [DataModel instance];
     NSString *path = [m getBackupSqlPath];
 
-    int f = open([path UTF8String], O_CREAT | O_WRONLY, 0644);
+    int f = open(path.UTF8String, O_CREAT | O_WRONLY, 0644);
     if (f < 0) {
         // TBD;
         return;

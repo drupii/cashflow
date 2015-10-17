@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IwR-Dx-fab">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IwR-Dx-fab">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -11,6 +10,7 @@
                 <navigationController definesPresentationContext="YES" id="IwR-Dx-fab" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0TS-Oq-2se">
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="MK3-Mb-9mQ" kind="relationship" relationship="rootViewController" id="Hqv-J3-8Tg"/>
@@ -34,9 +34,11 @@
                         <subviews>
                             <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFill" image="artwork.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="d1c-Vg-p3W">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="CashFlow" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="77P-dl-CsX">
                                 <rect key="frame" x="13" y="74" width="287" height="46"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="cJq-KV-X6V"/>
@@ -48,6 +50,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Version 1.1" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9g0-J4-Iw5">
                                 <rect key="frame" x="99" y="118" width="201" height="31"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="fFI-aC-Jcv"/>
@@ -59,6 +62,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="8" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="271" translatesAutoresizingMaskIntoConstraints="NO" id="fYx-ou-1wo">
                                 <rect key="frame" x="29" y="177" width="271" height="50"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="271" id="CkG-VZ-GZt"/>
                                     <constraint firstAttribute="height" constant="50" id="Vgh-Q7-0C8"/>
@@ -71,6 +75,7 @@ Takuya Murakami</string>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="8" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="Q0I-80-r9y">
                                 <rect key="frame" x="56" y="227" width="244" height="53"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="UAx-Y5-K9G"/>
                                     <constraint firstAttribute="width" constant="244" id="qI1-H8-YHT"/>
@@ -84,6 +89,7 @@ Some icons: iStockPhoto.com/Lushik</string>
                             </label>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efU-EB-nec">
                                 <rect key="frame" x="80" y="288" width="220" height="37"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="WEh-qw-QQ8"/>
                                     <constraint firstAttribute="height" constant="37" id="xGP-2b-e7u"/>
@@ -101,6 +107,7 @@ Some icons: iStockPhoto.com/Lushik</string>
                             </button>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjZ-sd-Nhx">
                                 <rect key="frame" x="80" y="333" width="220" height="37"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="JLv-Sm-6yk"/>
                                     <constraint firstAttribute="height" constant="37" id="UIR-8T-Bqb"/>
@@ -118,6 +125,7 @@ Some icons: iStockPhoto.com/Lushik</string>
                             </button>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHl-sn-fes">
                                 <rect key="frame" x="80" y="378" width="220" height="37"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="bey-Ne-AGc"/>
                                     <constraint firstAttribute="height" constant="37" id="kx8-ur-9HJ"/>
@@ -135,6 +143,7 @@ Some icons: iStockPhoto.com/Lushik</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ho-cq-eXG">
                                 <rect key="frame" x="80" y="423" width="220" height="37"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="NDy-cD-Drb"/>
                                     <constraint firstAttribute="width" constant="220" id="Uty-6M-Kcp"/>
@@ -148,6 +157,7 @@ Some icons: iStockPhoto.com/Lushik</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="77P-dl-CsX" secondAttribute="trailing" constant="20" id="38A-z6-djs"/>
