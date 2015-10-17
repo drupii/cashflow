@@ -93,7 +93,8 @@ class Journal : NSObject {
      */
     private func _sortByDate() {
         entries.sortInPlace {(x, y) -> Bool in
-            x.date.compare(y.date) == NSComparisonResult.OrderedAscending
+            // Note: == OrderedAscending にしてはいけない。同一日時の取引を逆転してしまう。
+            x.date.compare(y.date) != NSComparisonResult.OrderedDescending
         }
     }
 
