@@ -17,7 +17,7 @@ let MAX_TRANSACTIONS:Int = 50000
 // 仕訳帳
 // 
 class Journal : NSObject {
-    private(set) var entries: [Transaction] = []
+    internal(set) var entries: [Transaction] = []
 
     override init() {
         super.init()
@@ -91,7 +91,7 @@ class Journal : NSObject {
     /**
      * ソート
      */
-    private func _sortByDateAndPid() {
+    internal func _sortByDateAndPid() {
         entries.sortInPlace {(x, y) -> Bool in
             let comp = x.date.compare(y.date)
             switch (comp) {
