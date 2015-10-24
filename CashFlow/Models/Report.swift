@@ -60,7 +60,7 @@ class Report : NSObject {
         var nextStartDay: NSDate? = nil
         var dateComponents : NSDateComponents
 	
-        var steps = NSDateComponents()
+        let steps = NSDateComponents()
         switch (self.type) {
             case Report.DAILY:
                 dateComponents = greg.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate: firstDate!)

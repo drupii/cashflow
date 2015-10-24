@@ -6,7 +6,7 @@ import XCTest
 class EditDescViewControllerTest : ViewControllerWithNavBarTestCase, EditDescViewDelegate {
     var _description: String?
 
-    override func createViewController() -> UIViewController! {
+    override func createViewController() -> UIViewController? {
         // storyboard から生成
         let vc = createViewControllerFromStoryboard("EditDescView")
 
