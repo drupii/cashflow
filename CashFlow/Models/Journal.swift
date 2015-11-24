@@ -17,7 +17,7 @@ let MAX_TRANSACTIONS:Int = 50000
 // 仕訳帳
 // 
 class Journal : NSObject {
-    private(set) var entries: [Transaction] = []
+    internal(set) var entries: [Transaction] = []
 
     override init() {
         super.init()
@@ -29,7 +29,7 @@ class Journal : NSObject {
         // upgrade data
         let db = CashflowDatabase.instance()
         if db.needFixDateFormat {
-            self._sortByDate()
+            self._sortByDateAndPid()
         
             db.beginTransaction()
             for t in self.entries {
@@ -55,6 +55,7 @@ class Journal : NSObject {
         let max = self.entries.count
 
         // 挿入位置を探す
+        // この時点ではまだ保存前なので、tr.key == -1 のはず。したがって順序は日付のみ見る。
         for (i = 0; i < max; i++) {
             let t = self.entries[i]
             if (tr.date.compare(t.date) == NSComparisonResult.OrderedAscending) {
@@ -85,16 +86,39 @@ class Journal : NSObject {
 
         let idx = self.entries.indexOf(from)
         self.entries[idx!] = to
-        self._sortByDate()
+        self._sortByDateAndPid()
     }
     
     /**
      * ソート
      */
-    private func _sortByDate() {
+    internal func _sortByDateAndPid() {
         entries.sortInPlace {(x, y) -> Bool in
-            // Note: == OrderedAscending にしてはいけない。同一日時の取引を逆転してしまう。
-            x.date.compare(y.date) != NSComparisonResult.OrderedDescending
+            return compareTransactionOrder(x, y: y) < 0
+        }
+    }
+    
+    /**
+     * 取引順比較
+     */
+    private func compareTransactionOrder(x: Transaction, y: Transaction) -> Int {
+        let comp = x.date.compare(y.date)
+        switch (comp) {
+        case NSComparisonResult.OrderedAscending: // x<y
+            return -1;
+            
+        case NSComparisonResult.OrderedDescending: // x>y
+            return 1;
+            
+        case NSComparisonResult.OrderedSame:
+            // fix bug #18: date が同一の場合は pid で比較
+            if (x.pid < y.pid) {
+                return -1;
+            } else if (x.pid == y.pid) {
+                return 0;
+            } else {
+                return 1;
+            }
         }
     }
 

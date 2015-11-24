@@ -158,6 +158,63 @@ class JournalTest : XCTestCase {
         XCTAssertEqual(0, journal.entries.count)
     }
 
+    /**
+     sort : 日付昇順に並び替えられること
+    */
+    func testSort() {
+        journal = DataModel.getJournal()
+    
+        let t1 = Transaction()
+        t1.date = NSDate(timeIntervalSince1970: 300)
+        t1.pid = 1
+        journal.entries.append(t1)
+        
+        let t2 = Transaction()
+        t2.date = NSDate(timeIntervalSince1970: 100)
+        t2.pid = 2
+        journal.entries.append(t2)
+        
+        let t3 = Transaction()
+        t3.date = NSDate(timeIntervalSince1970: 200)
+        t3.pid = 3
+        journal.entries.append(t3)
+        
+        journal._sortByDateAndPid()
+        
+        XCTAssertEqual(2, journal.entries[0].pid)
+        XCTAssertEqual(3, journal.entries[1].pid)
+        XCTAssertEqual(1, journal.entries[2].pid)
+    }
+    
+    /**
+     sort: 日付が同一の場合、pid 順に並び替えられること。
+    */
+    func testSortSameDate() {
+        journal = DataModel.getJournal()
+
+        let t1 = Transaction()
+        t1.date = NSDate()
+        t1.pid = 3
+        journal.entries.append(t1)
+
+        let t2 = Transaction()
+        t2.date = t1.date
+        t2.pid = 1
+        journal.entries.append(t2)
+        
+        let t3 = Transaction()
+        t3.date = t1.date
+        t3.pid = 2
+        journal.entries.append(t3)
+        
+        journal._sortByDateAndPid()
+        
+        XCTAssertEqual(1, journal.entries[0].pid)
+        XCTAssertEqual(2, journal.entries[1].pid)
+        XCTAssertEqual(3, journal.entries[2].pid)
+    }
+
+
     /*
 // Journal 上限数チェック
 #if 0

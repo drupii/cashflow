@@ -1,3 +1,20 @@
+2015-11-25 : Takuya Murakami
+
+	* ver 7.0.2 (86)
+	* バグ #18 修正: 取引順序逆転残問題修正。
+	  同一日付の場合の pid ソート順序対応。
+
+2015-11-22 : Takuya Murakami
+
+	* Crashlytics: 3.3.4 -> 3.4.1
+	* Fabric: 1.5.5 -> 1.6.0
+	* AdMobMediationAdapterIAd: 6.6.0 -> 7.5.2
+	* Analytics: 3.13.0 -> 3.14.0
+
+2015-10-18 : Takuya Murakami
+
+	* Google-Mobile-Ads 7.5.0 -> 7.5.2
+
 2015-10-17 : Takuya Murakami
 
 	* ver 7.0.1 (85)

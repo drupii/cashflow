@@ -90,7 +90,7 @@ class AssetTest : XCTestCase {
         XCTAssertEqual(9000, asset.lastBalance)
 
         // 新規エントリ
-        var ae = AssetEntry(transaction: nil, asset: asset)
+        let ae = AssetEntry(transaction: nil, asset: asset)
 
         ae.assetKey = asset.pid
         ae.transaction()!.etype = TransactionType.Adj
@@ -162,7 +162,7 @@ class AssetTest : XCTestCase {
         TestCommon.installDatabase("testdata1")
         let ledger = DataModel.getLedger()
 
-        var asset = ledger.assetAtIndex(0)
+        let asset = ledger.assetAtIndex(0)
         XCTAssertEqual(4, asset.entryCount)
 
         // 最初よりも早い日付の場合に何も削除されないこと
@@ -171,7 +171,7 @@ class AssetTest : XCTestCase {
         XCTAssertEqual(4, asset.entryCount)
 
         // 途中削除
-        var e = asset.entryAt(2)
+        let e = asset.entryAt(2)
         asset.deleteOldEntriesBefore(e.transaction()!.date)
         XCTAssertEqual(2, asset.entryCount)
 
