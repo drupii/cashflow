@@ -35,6 +35,8 @@ target :free do
   #pod 'JSONKit'
 end
 
-
-
-
+# XCode7.1 向け一時対応
+# see: https://github.com/CocoaPods/CocoaPods/issues/4420
+post_install do |installer|
+  `find Pods -regex 'Pods/Google.*\\.h' -print0 | xargs -0 sed -i '' 's/\\(<\\)GoogleMobileAds\\/\\(.*\\)\\(>\\)/\\"\\2\\"/'`
+end
