@@ -55,6 +55,7 @@ class Journal : NSObject {
         let max = self.entries.count
 
         // 挿入位置を探す
+        // この時点ではまだ保存前なので、tr.key == -1 のはず。したがって順序は日付のみ見る。
         for (i = 0; i < max; i++) {
             let t = self.entries[i]
             if (tr.date.compare(t.date) == NSComparisonResult.OrderedAscending) {
@@ -93,15 +94,30 @@ class Journal : NSObject {
      */
     internal func _sortByDateAndPid() {
         entries.sortInPlace {(x, y) -> Bool in
-            let comp = x.date.compare(y.date)
-            switch (comp) {
-            case NSComparisonResult.OrderedAscending: // x<y
-                return true;
-            case NSComparisonResult.OrderedDescending: // x>y
-                return false;
-            case NSComparisonResult.OrderedSame:
-                // fix bug #18: date が同一の場合は pid でソート
-                return x.pid <= y.pid
+            return compareTransactionOrder(x, y: y) < 0
+        }
+    }
+    
+    /**
+     * 取引順比較
+     */
+    private func compareTransactionOrder(x: Transaction, y: Transaction) -> Int {
+        let comp = x.date.compare(y.date)
+        switch (comp) {
+        case NSComparisonResult.OrderedAscending: // x<y
+            return -1;
+            
+        case NSComparisonResult.OrderedDescending: // x>y
+            return 1;
+            
+        case NSComparisonResult.OrderedSame:
+            // fix bug #18: date が同一の場合は pid で比較
+            if (x.pid < y.pid) {
+                return -1;
+            } else if (x.pid == y.pid) {
+                return 0;
+            } else {
+                return 1;
             }
         }
     }
